@@ -1,4 +1,7 @@
 #!/bin/sh
 
-find ./xbian-package-xbmc -type f | grep -v DEBIAN/ | xargs md5sum > ./xbian-package-xbmc/DEBIAN/md5sums
-dpkg-deb -b ./xbian-package-xbmc-tools xbian-package-xbmc-tools-2.3.deb
+package=$(cat ./content/DEBIAN/control | grep Package | awk '{print $2}')
+version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
+
+fakeroot find ./content  | grep -v DEBIAN/ | xargs md5sum > ./content/DEBIAN/md5sums 
+fakeroot dpkg-deb -b ./content "${package}"-"${version}".deb
