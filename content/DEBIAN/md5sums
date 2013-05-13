@@ -1,4 +1,6 @@
-cb04e2de341b7c4545e3ace85a58b0b1  ./content/.DS_Store
+c1e5ee1a92cda633920f870ea24f734f  ./content/tmp/init/xbmc-exits.conf
+3d3478b4566cbb98f667b3b0f78e8da4  ./content/tmp/init/xbmc.conf
+8e37cdd73e7e9bc330176ee0d2439ba3  ./content/tmp/init/xbmc-preload.conf
 ecde94f3a4ba04e7c42abf1d2f80e17a  ./content/etc/init.d/xbmc
 a4fc7dd8861fe60272f8716a6c351c2e  ./content/usr/local/.DS_Store
 a146764fdb4b973d2bd1ff5d85cf6fec  ./content/usr/local/lib/.DS_Store
@@ -39,7 +41,7 @@ dceb524a9155fdb501905a85320c53ff  ./content/usr/local/lib/xbmc/addons/pvr.njoy/X
 29f2f19b56354ec511dc119caa30d2ce  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
 8cc546712bbca946036bec7674032fdd  ./content/usr/local/lib/xbmc/addons/visualization.glspectrum/opengl_spectrum.vis
 31f687961d8a0ab6816b8f7edd2a12fe  ./content/usr/local/lib/xbmc/addons/pvr.mediaportal.tvserver/XBMC_Mediaportal.pvr
-d090b8255f2b35c92eca19a1c1b7c28b  ./content/usr/local/lib/xbmc/xbmc.bin
+1d9edd76e6c94c67316e5686aa1695b2  ./content/usr/local/lib/xbmc/xbmc.bin
 5b4da7e03d1b086228aaf1cff8c45f8b  ./content/usr/local/share/.DS_Store
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt

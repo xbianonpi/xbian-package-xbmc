@@ -3,7 +3,6 @@ Package: xbian-package-xbmc
 Version: 2.3
 Section: video
 Priority: optional
-Codename: wheezy
 Architecture: armhf
 Depends: xbian-package-firmware (>=1.4), libbluetooth3, xbian-package-cec (>= 1.0)
 Installed-Size: 79190
