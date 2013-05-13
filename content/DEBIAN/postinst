@@ -1,6 +1,11 @@
 #!/bin/bash
 
 if [[ $1 == "configure" ]]; then
+	
+	if [ -d "/tmp/init" ]; then
+		cp -a --remove-destination /tmp/init/* /etc/init/ > /dev/null 2>&1
+		insserv -d
+	fi
 
 	if [ -f "/tmp/startxbmc" ]; then
 		/etc/init.d/xbmc start 1>/dev/null 2>/dev/null >/dev/null
