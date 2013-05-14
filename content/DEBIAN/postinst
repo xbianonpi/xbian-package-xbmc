@@ -2,12 +2,12 @@
 
 if [[ $1 == "configure" ]]; then
 	
-	if [ -d "/tmp/init" ]; then
-		cp -a --remove-destination /tmp/init/* /etc/init/ > /dev/null 2>&1
-		insserv -d
-	fi
-
-	if [ -f "/tmp/startxbmc" ]; then
+	if [ -e /sbin/initctl ]; then
+#		cp -a --remove-destination /tmp/init/* /etc/init/ > /dev/null 2>&1
+		initctl reload-configuration
+		insserv -r /etc/init.d/xbmc > /dev/null 2>&1
+		chmod -x /etc/init.d/xbmc > /dev/null 2>&1
+	elif [ -f "/tmp/startxbmc" ]; then
 		/etc/init.d/xbmc start 1>/dev/null 2>/dev/null >/dev/null
 		rm /tmp/startxbmc
 	fi
