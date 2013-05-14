@@ -1,7 +1,7 @@
 #!/bin/sh
 
-package=$(cat ./content/DEBIAN/control | grep Package | awk '{print $2}')
-version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
+package=$(cat ./content-nightly-frodo/DEBIAN/control | grep Package | awk '{print $2}')
+version=$(cat ./content-nightly-frodo/DEBIAN/control | grep Version | awk '{print $2}')
 
-fakeroot find ./content  | grep -v DEBIAN/ | sort | xargs md5sum > ./content/DEBIAN/md5sums 
-fakeroot dpkg-deb -b ./content "${package}""${version}".deb
+fakeroot find ./content-nightly-frodo  | grep -v DEBIAN/ | sort | xargs md5sum > ./content-nightly-frodo/DEBIAN/md5sums
+fakeroot dpkg-deb -b ./content-nightly-frodo "${package}""${version}".deb

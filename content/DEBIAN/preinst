@@ -7,6 +7,8 @@ if [ $1 == "install" -o $1 == "upgrade" ]; then
 		touch /tmp/startxbmc
 	fi
 
+	/usr/bin/splash --infinitebar --msgtxt="updating XBMC..."
+
 	if [ ! -d "/etc/init.d" ]; then
 		mkdir -p "/etc/init.d";
 	fi
