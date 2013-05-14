@@ -2,10 +2,7 @@ ecde94f3a4ba04e7c42abf1d2f80e17a  ./content/etc/init.d/xbmc
 3d3478b4566cbb98f667b3b0f78e8da4  ./content/etc/init/xbmc.conf
 c1e5ee1a92cda633920f870ea24f734f  ./content/etc/init/xbmc-exits.conf
 ffc8d109f6f709832b8425429a4e828b  ./content/etc/init/xbmc-preload.conf
-3c3eb9e9ecdbb950be34b936f26e818f  ./content/usr/.DS_Store
-a4fc7dd8861fe60272f8716a6c351c2e  ./content/usr/local/.DS_Store
-a146764fdb4b973d2bd1ff5d85cf6fec  ./content/usr/local/lib/.DS_Store
-b0db97b954a8f47bf8e08767300e39d9  ./content/usr/local/lib/xbmc/addons/.DS_Store
+d41d8cd98f00b204e9800998ecf8427e  ./content/tmp/hash.xbmc
 30c2f6caa560b4a0138ed4abce845d50  ./content/usr/local/lib/xbmc/addons/library.xbmc.addon/libXBMC_addon-arm.so
 29f2f19b56354ec511dc119caa30d2ce  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
 1a76fb6f7f0e8399cbc4103136da1939  ./content/usr/local/lib/xbmc/addons/library.xbmc.pvr/libXBMC_pvr-arm.so
@@ -21,7 +18,6 @@ cc2e9577ce7a2dad858812878f42816b  ./content/usr/local/lib/xbmc/addons/pvr.vdr.vn
 f5699079bf18b575bef2e393154d9312  ./content/usr/local/lib/xbmc/addons/pvr.vuplus/XBMC_vuplus.pvr
 8cc546712bbca946036bec7674032fdd  ./content/usr/local/lib/xbmc/addons/visualization.glspectrum/opengl_spectrum.vis
 fcc60729150681bae2ef9bfef9658ddf  ./content/usr/local/lib/xbmc/addons/visualization.waveform/Waveform.vis
-21d373845332c2b86c76d8d69b54ab85  ./content/usr/local/lib/xbmc/.DS_Store
 85d5733a8e290186d3f6c6293925945b  ./content/usr/local/lib/xbmc/system/hdhomerun-arm.so
 4a495b6f997e12f6374781a3c7a4b8ed  ./content/usr/local/lib/xbmc/system/ImageLib-arm.so
 17149c5ca10dac4bdb54f0ab56767cc0  ./content/usr/local/lib/xbmc/system/libcmyth-arm.so
@@ -46,8 +42,6 @@ ad30215c9d45eb05cf96894a7436e05c  ./content/usr/local/lib/xbmc/system/players/dv
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 b9587b11a1dda4b49171fe2c18a80f54  ./content/usr/local/share/doc/xbmc/README.linux
-5b4da7e03d1b086228aaf1cff8c45f8b  ./content/usr/local/share/.DS_Store
-408483b114a31c2c94186793a4893a5d  ./content/usr/local/share/xbmc/addons/.DS_Store
 c38245a923ebc22fab108a5266946b4a  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/dlfcn-win32.cpp
 c3e0579ad2db6433b9d1ca2a7d198c4e  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/dlfcn-win32.h
 5c9fac15dc29eb2fa3fb3b34fca7d346  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/libXBMC_addon.h
@@ -1680,7 +1674,6 @@ cc4b6b4ef8b441ac4b64168725852178  ./content/usr/local/share/xbmc/addons/xbmc.pvr
 1f405e5b38128d3ae3689dd2fb819b19  ./content/usr/local/share/xbmc/addons/xbmc.python/addon.xml
 861b26cd5e77c23f3b94e848bc127651  ./content/usr/local/share/xbmc/addons/xbmc.python/pluginsource.xsd
 d58d892d1013f91b5b12117a5ca481dc  ./content/usr/local/share/xbmc/addons/xbmc.python/script.xsd
-7a43593f7b2a6b6be74fcc0905393cee  ./content/usr/local/share/xbmc/.DS_Store
 4ed34edea301e3a62a9f08cf17c5be8e  ./content/usr/local/share/xbmc/FEH.py
 73cbbe400c778fddf6d05a776a6dcfd9  ./content/usr/local/share/xbmc/language/Afrikaans/langinfo.xml
 f4779de99ea9a72938501c6ccda6bc1d  ./content/usr/local/share/xbmc/language/Afrikaans/strings.po
