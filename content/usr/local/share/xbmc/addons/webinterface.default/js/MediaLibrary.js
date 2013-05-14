@@ -259,18 +259,18 @@ MediaLibrary.prototype = {
           });
         case 'forward':
           return xbmc.rpc.request({
-            'method': 'Player.SetSpeed',
+            'method': 'Player.Seek',
             'params': {
               'playerid': player,
-              'speed': 'increment'
+              'value': 'smallforward'
             }
           });
         case 'rewind':
           return xbmc.rpc.request({
-            'method': 'Player.SetSpeed',
+            'method': 'Player.Seek',
             'params': {
               'playerid': player,
-              'speed': 'decrement'
+              'value': 'smallbackward'
             }
           });
       }
