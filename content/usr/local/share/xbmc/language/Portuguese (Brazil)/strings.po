@@ -1,4 +1,5 @@
 # XBMC Media Center language file
+# XBMC-core v12.0
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
@@ -43,7 +44,7 @@ msgstr "XBMC SVN"
 
 msgctxt "#7"
 msgid "File manager"
-msgstr "Gerenciador de arquivos"
+msgstr "Gerenciar arquivos"
 
 msgctxt "#8"
 msgid "Weather"
@@ -295,19 +296,19 @@ msgstr "Variável"
 
 msgctxt "#98"
 msgid "View: Auto"
-msgstr "Visualização: Auto"
+msgstr "Ver: Auto"
 
 msgctxt "#99"
 msgid "View: Auto big"
-msgstr "Visualização: Auto grande"
+msgstr "Ver: Auto grande"
 
 msgctxt "#100"
 msgid "View: Icons"
-msgstr "Visualização: Ícones"
+msgstr "Ver: Ícones"
 
 msgctxt "#101"
 msgid "View: List"
-msgstr "Visualização: Lista"
+msgstr "Ver: Lista"
 
 msgctxt "#102"
 msgid "Scan"
@@ -383,15 +384,15 @@ msgstr "Nova pasta"
 
 msgctxt "#120"
 msgid "Confirm file copy"
-msgstr "Confirmar cópia de arquivo"
+msgstr "Confirme cópia de arquivo"
 
 msgctxt "#121"
 msgid "Confirm file move"
-msgstr "Confirmar mover arquivos"
+msgstr "Confirme mover arquivos"
 
 msgctxt "#122"
 msgid "Confirm file delete?"
-msgstr "Confirma exclusão de arquivos?"
+msgstr "Confirma excluir arquivos?"
 
 msgctxt "#123"
 msgid "Copy these files?"
@@ -423,7 +424,7 @@ msgstr "Apresentação"
 
 msgctxt "#130"
 msgid "System info"
-msgstr "Informações do sistema"
+msgstr "Informação do Sistema"
 
 msgctxt "#131"
 msgid "Display"
@@ -455,7 +456,7 @@ msgstr "Buscar"
 
 msgctxt "#138"
 msgid "System Information"
-msgstr "Informações do Sistema"
+msgstr "Informação do Sistema"
 
 msgctxt "#139"
 msgid "Temperatures:"
@@ -715,11 +716,11 @@ msgstr "Anterior"
 
 msgctxt "#213"
 msgid "Calibrate user interface..."
-msgstr "Calibrar interface do usuário..."
+msgstr "Ajustar interface..."
 
 msgctxt "#214"
 msgid "Video calibration..."
-msgstr "Calibragem do vídeo..."
+msgstr "Ajustando tela e posicionamento de legenda..."
 
 msgctxt "#215"
 msgid "Soften"
@@ -747,7 +748,7 @@ msgstr "Compartilhamento remoto"
 
 msgctxt "#221"
 msgid "Network is not connected"
-msgstr "Rede não conectada"
+msgstr "Rede não está conectada"
 
 msgctxt "#222"
 msgid "Cancel"
@@ -767,7 +768,7 @@ msgstr "Padrões de teste...."
 
 msgctxt "#227"
 msgid "Lookup audio CD track names from freedb.org"
-msgstr "Procurar nomes das faixas dos CDs de áudio no freedb.org"
+msgstr "Procurar nome das faixas do CDs de áudio na Internet"
 
 msgctxt "#228"
 msgid "Shuffle playlist on load"
@@ -839,7 +840,7 @@ msgstr "Tela Cheia"
 
 msgctxt "#245"
 msgid "Sizing: (%i,%i)->(%i,%i) (Zoom x%2.2f) AR:%2.2f:1 (Pixels: %2.2f:1) (VShift: %2.2f)"
-msgstr "Dimensionando: (%i,%i)->(%i,%i) (Zoom x%2.2f) AR:%2.2f:1 (Pixels: %2.2f:1) (VShift: %2.2f)"
+msgstr "Dimensionando: (%i,%i)->(%i,%i) (Zoom x%2.2f) AR:%2.2f:1 (Pixels: %2.2f:1)"
 
 msgctxt "#247"
 msgid "Scripts"
@@ -871,7 +872,7 @@ msgstr "Número de canais"
 
 msgctxt "#254"
 msgid "- DTS capable receiver"
-msgstr "- Receiver com suporte a DTS"
+msgstr "- Receiver decodifica DTS"
 
 msgctxt "#255"
 msgid "CDDB"
@@ -1047,19 +1048,19 @@ msgstr "Marcadores"
 
 msgctxt "#299"
 msgid "- AAC capable receiver"
-msgstr "- Receiver com suporte a AAC"
+msgstr "- Receiver decodifica AAC"
 
 msgctxt "#300"
 msgid "- MP1 capable receiver"
-msgstr "- Receiver com suporte a MP1"
+msgstr "- Receiver decodifica MP1"
 
 msgctxt "#301"
 msgid "- MP2 capable receiver"
-msgstr "- Receiver com suporte a MP2"
+msgstr "- Receiver decodifica MP2"
 
 msgctxt "#302"
 msgid "- MP3 capable receiver"
-msgstr "- Receiver com suporte a MP3"
+msgstr "- Receiver decodifica MP3"
 
 msgctxt "#303"
 msgid "Delay"
@@ -1119,7 +1120,7 @@ msgstr "Erro ao limpar músicas"
 
 msgctxt "#320"
 msgid "Cleaning artists..."
-msgstr "Limpando artistas..."
+msgstr "Limpando Artistas no Banco de Dados"
 
 msgctxt "#321"
 msgid "Error cleaning artists"
@@ -1175,7 +1176,7 @@ msgstr "Deseja limpar a coleção?"
 
 msgctxt "#334"
 msgid "Clean library..."
-msgstr "Executar limpeza da coleção..."
+msgstr "Limpar a coleção nos bancos de dados do XBMC..."
 
 msgctxt "#335"
 msgid "Start"
@@ -1199,11 +1200,11 @@ msgstr "Óptico/Coaxial"
 
 msgctxt "#340"
 msgid "Various artists"
-msgstr "Vários artistas"
+msgstr "Diversos Artistas"
 
 msgctxt "#341"
 msgid "Play disc"
-msgstr "Repr. disco"
+msgstr "Reproduzir disco"
 
 msgctxt "#342"
 msgid "Movies"
@@ -1227,11 +1228,11 @@ msgstr "Aumentar nível do volume no downmix"
 
 msgctxt "#347"
 msgid "- DTS-HD capable receiver"
-msgstr "- Receiver com suporte a DTS-HD"
+msgstr "- Receiver decodifica áudio DTS-HD"
 
 msgctxt "#348"
 msgid "- Multichannel LPCM capable receiver"
-msgstr "- Receiver com suporte a LPCM Multicanal"
+msgstr "- Receiver suporta  áudio LPCM Multicanal"
 
 msgctxt "#349"
 msgid "- TrueHD capable receiver"
@@ -1291,11 +1292,11 @@ msgstr "Nível de escurecimento da proteção de tela"
 
 msgctxt "#363"
 msgid "Sort by: File"
-msgstr "Ordenar por: Arquivo"
+msgstr "Ordenar por: arquivo"
 
 msgctxt "#364"
 msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "- Receiver com suporte a Dolby Digital (AC3)"
+msgstr "- Receiver decodifica Dolby Digital (AC3)"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1307,7 +1308,7 @@ msgstr "Ordenar por: Ano"
 
 msgctxt "#367"
 msgid "Sort by: Rating"
-msgstr "Ordenar por: Nota"
+msgstr "Ordenar por: Votação"
 
 msgctxt "#368"
 msgid "IMDb"
@@ -1315,7 +1316,7 @@ msgstr "IMDb"
 
 msgctxt "#369"
 msgid "Title"
-msgstr "Título"
+msgstr "Títulos"
 
 msgctxt "#370"
 msgid "Thunderstorms"
@@ -1499,7 +1500,7 @@ msgstr "Não disponível"
 
 msgctxt "#417"
 msgid "View: Big icons"
-msgstr "Visualização: Ícones grandes"
+msgstr "Ver: Ícones grandes"
 
 msgctxt "#418"
 msgid "Low"
@@ -1543,7 +1544,7 @@ msgstr "Insira o CD/DVD/BD correto"
 
 msgctxt "#429"
 msgid "Please insert the following disc:"
-msgstr "Por favor, insira o seguinte disco:"
+msgstr "Por favor insira o seguinte disco:"
 
 msgctxt "#430"
 msgid "Sort by: DVD#"
@@ -1555,7 +1556,7 @@ msgstr "Nenhum cache"
 
 msgctxt "#432"
 msgid "Remove movie from library"
-msgstr "Remover filme da coleção"
+msgstr "Excluir filme da coleção"
 
 msgctxt "#433"
 msgid "Really remove '%s'?"
@@ -1771,7 +1772,7 @@ msgstr "- Usar ícones grandes"
 
 msgctxt "#492"
 msgid "Resize VobSubs"
-msgstr "Redimensionar legendas VobSub"
+msgstr "Redimensionar legendas"
 
 msgctxt "#493"
 msgid "Advanced options (Experts Only!)"
@@ -1871,7 +1872,7 @@ msgstr "Compilações"
 
 msgctxt "#522"
 msgid "Remove source"
-msgstr "Remover fonte"
+msgstr "Remover origem"
 
 msgctxt "#523"
 msgid "Switch media"
@@ -1883,7 +1884,7 @@ msgstr "Selecionar lista de reprodução"
 
 msgctxt "#525"
 msgid "New playlist..."
-msgstr "Nova lista de reprodução..."
+msgstr "Nova lista de reprodução"
 
 msgctxt "#526"
 msgid "Add to playlist"
@@ -1959,7 +1960,7 @@ msgstr "DVD"
 
 msgctxt "#544"
 msgid "Media info"
-msgstr "Info. de mídia"
+msgstr "Mídia/info."
 
 msgctxt "#545"
 msgid "Audio output device"
@@ -2079,7 +2080,7 @@ msgstr "País"
 
 msgctxt "#575"
 msgid "In progress"
-msgstr "Em andamento"
+msgstr "Em progresso"
 
 msgctxt "#576"
 msgid "Times played"
@@ -2235,7 +2236,7 @@ msgstr "Todas as músicas de"
 
 msgctxt "#626"
 msgid "In progress TV shows"
-msgstr "Séries em andamento"
+msgstr "Seriados em progresso"
 
 msgctxt "#629"
 msgid "View mode"
@@ -2355,7 +2356,7 @@ msgstr "Procurar pasta"
 
 msgctxt "#658"
 msgid "Song information"
-msgstr "Informações da música"
+msgstr "Informação da música"
 
 msgctxt "#659"
 msgid "Non-linear stretch"
@@ -2367,7 +2368,7 @@ msgstr "Amplificação de volume"
 
 msgctxt "#661"
 msgid "Choose export folder"
-msgstr "Escolha a pasta para exportar"
+msgstr "Pasta de exportação"
 
 msgctxt "#662"
 msgid "This file is no longer available."
@@ -2531,7 +2532,7 @@ msgstr "Arquivos"
 
 msgctxt "#745"
 msgid "No scanned information for this view"
-msgstr "Não há informações nesta visualização"
+msgstr "Não há informação para essa visualização"
 
 msgctxt "#746"
 msgid "Please turn off library mode"
@@ -2555,7 +2556,7 @@ msgstr "Tem certeza?"
 
 msgctxt "#751"
 msgid "Removing source"
-msgstr "Removendo fonte"
+msgstr "Removendo origem"
 
 msgctxt "#754"
 msgid "Add program link"
@@ -2575,7 +2576,7 @@ msgstr "Editar a profundidade do caminho"
 
 msgctxt "#759"
 msgid "View: Big list"
-msgstr "Visualização: Lista grande"
+msgstr "Ver: lista grande"
 
 msgctxt "#760"
 msgid "Yellow"
@@ -2747,15 +2748,15 @@ msgstr "Intervalor de portas válido 1024-65535"
 
 msgctxt "#998"
 msgid "Add Music..."
-msgstr "Adicionar Música..."
+msgstr "Adicione Música..."
 
 msgctxt "#999"
 msgid "Add Videos..."
-msgstr "Adicionar Vídeos..."
+msgstr "Adicione Vídeos..."
 
 msgctxt "#1000"
 msgid "- Preview"
-msgstr "- Pré-visualização"
+msgstr "- Visualização"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2807,7 +2808,7 @@ msgstr "Porta"
 
 msgctxt "#1014"
 msgid "Username"
-msgstr "Nome de usuário"
+msgstr "Nome do usuário"
 
 msgctxt "#1015"
 msgid "Browse for network server"
@@ -2815,31 +2816,31 @@ msgstr "Procurar servidor de rede"
 
 msgctxt "#1016"
 msgid "Enter the network address of the server"
-msgstr "Insira o endereço de rede do servidor"
+msgstr "Digite o endereço de rede do servidor"
 
 msgctxt "#1017"
 msgid "Enter the path on the server"
-msgstr "Insira o caminho no servidor"
+msgstr "Digite o caminho no servidor"
 
 msgctxt "#1018"
 msgid "Enter the port number"
-msgstr "Insira o número da porta"
+msgstr "Digite o número da porta"
 
 msgctxt "#1019"
 msgid "Enter the username"
-msgstr "Insira o nome de usuário"
+msgstr "Digite o nome de usuário"
 
 msgctxt "#1020"
 msgid "Add %s source"
-msgstr "Adicionar fonte de %s"
+msgstr "Adicionar origem %s"
 
 msgctxt "#1021"
 msgid "Enter the paths or browse for the media locations."
-msgstr "Insira o caminho ou procure por locais de mídia."
+msgstr "Digite o caminho ou procure a localização de mídia."
 
 msgctxt "#1022"
 msgid "Enter a name for this media Source."
-msgstr "Insira um nome para esta fonte de mídia."
+msgstr "Digite um nome para a mídia de origem."
 
 msgctxt "#1023"
 msgid "Browse for new share"
@@ -2847,27 +2848,27 @@ msgstr "Procurar novo compartilhamento"
 
 msgctxt "#1024"
 msgid "Browse"
-msgstr "Procurar"
+msgstr "Navegar"
 
 msgctxt "#1025"
 msgid "Could not retrieve directory information."
-msgstr "Não foi possível obter informações sobre o diretório."
+msgstr "Não foi possível encontrar informações do diretório."
 
 msgctxt "#1026"
 msgid "Add source"
-msgstr "Adicionar fonte"
+msgstr "Adicionar origem"
 
 msgctxt "#1027"
 msgid "Edit source"
-msgstr "Editar fonte"
+msgstr "Editar origem"
 
 msgctxt "#1028"
 msgid "Edit %s source"
-msgstr "Editar fonte de %s "
+msgstr "Editar origem %s "
 
 msgctxt "#1029"
 msgid "Enter the new label"
-msgstr "Digite o novo rótulo"
+msgstr "Digite o novo nome"
 
 msgctxt "#1030"
 msgid "Browse for image"
@@ -2903,7 +2904,7 @@ msgstr "Add-ons de Vídeo"
 
 msgctxt "#1038"
 msgid "Music Add-ons"
-msgstr "Add-ons de Música"
+msgstr "Add-ons de Áudio"
 
 msgctxt "#1039"
 msgid "Picture Add-ons"
@@ -2947,7 +2948,7 @@ msgstr "- Usuário"
 
 msgctxt "#1049"
 msgid "Script settings"
-msgstr "Ajustes do script"
+msgstr "Ajustes do Script"
 
 msgctxt "#1050"
 msgid "Singles"
@@ -2955,7 +2956,7 @@ msgstr "Singles"
 
 msgctxt "#1051"
 msgid "Enter web address"
-msgstr "Insira o endereço web"
+msgstr "Digite a URL"
 
 msgctxt "#1200"
 msgid "SMB client"
@@ -3027,7 +3028,7 @@ msgstr "Imagens & arquivos"
 
 msgctxt "#1221"
 msgid "Music & video & pictures"
-msgstr "Música & vídeo & imagens"
+msgstr "Música & vídeo & imag."
 
 msgctxt "#1222"
 msgid "Music & video & pictures & files"
@@ -3091,7 +3092,7 @@ msgstr "Permitir ao XBMC receber conteúdo AirPlay"
 
 msgctxt "#1271"
 msgid "Device name"
-msgstr "Nome do dispositivo"
+msgstr "Nome do Dispositivo"
 
 msgctxt "#1272"
 msgid "- Use password protection"
@@ -3387,7 +3388,7 @@ msgstr "Vídeos"
 
 msgctxt "#10007"
 msgid "System information"
-msgstr "Informações do sistema"
+msgstr "Informação do sistema"
 
 msgctxt "#10008"
 msgid "Settings - General"
@@ -3511,11 +3512,11 @@ msgstr "Editor de lista de reprodução"
 
 msgctxt "#10504"
 msgid "Top 100 songs"
-msgstr "As 100 melhores músicas"
+msgstr "100 melhores músicas"
 
 msgctxt "#10505"
 msgid "Top 100 albums"
-msgstr "Os 100 melhores álbuns"
+msgstr "100 melhores álbuns"
 
 msgctxt "#10506"
 msgid "Programs"
@@ -3527,7 +3528,7 @@ msgstr "Configurações"
 
 msgctxt "#10508"
 msgid "Weather forecast"
-msgstr "Previsão do tempo"
+msgstr "Previsão Climática"
 
 msgctxt "#10509"
 msgid "Network gaming"
@@ -3539,7 +3540,7 @@ msgstr "Extensões"
 
 msgctxt "#10511"
 msgid "System info"
-msgstr "Info. do sistema"
+msgstr "Informações do sistema"
 
 msgctxt "#10516"
 msgid "Music - Library"
@@ -3555,11 +3556,11 @@ msgstr "Reproduzindo agora - Vídeos"
 
 msgctxt "#10523"
 msgid "Album info"
-msgstr "Informações do álbum"
+msgstr "Informação do álbum"
 
 msgctxt "#10524"
 msgid "Movie info"
-msgstr "Informações do filme"
+msgstr "Informações de filmes"
 
 msgctxt "#12000"
 msgid "Select dialog"
@@ -3567,7 +3568,7 @@ msgstr "Janela de seleção"
 
 msgctxt "#12001"
 msgid "Music/Info"
-msgstr "Música/Info."
+msgstr "Música/informação"
 
 msgctxt "#12002"
 msgid "Dialog OK"
@@ -3575,11 +3576,11 @@ msgstr "Janela OK"
 
 msgctxt "#12003"
 msgid "Videos/Info"
-msgstr "Vídeos/Info."
+msgstr "Vídeos/Informação"
 
 msgctxt "#12004"
 msgid "Scripts/Info"
-msgstr "Scripts/Info."
+msgstr "Scripts/Informação"
 
 msgctxt "#12005"
 msgid "Fullscreen video"
@@ -3667,19 +3668,19 @@ msgstr "*"
 
 msgctxt "#12325"
 msgid "Locked! Enter code..."
-msgstr "Bloqueada! Insira o código..."
+msgstr "Bloqueada! Digite o código..."
 
 msgctxt "#12326"
 msgid "Enter password"
-msgstr "Insira a senha"
+msgstr "Entre com a senha"
 
 msgctxt "#12327"
 msgid "Enter master code"
-msgstr "Insira o código mestre"
+msgstr "Entre com o código-mestre"
 
 msgctxt "#12328"
 msgid "Enter unlock code"
-msgstr "Insira o código de desbloqueio"
+msgstr "Entre com o código de desbloqueio"
 
 msgctxt "#12329"
 msgid "or press C to cancel"
@@ -3687,7 +3688,7 @@ msgstr "ou pressione C para cancelar"
 
 msgctxt "#12330"
 msgid "Enter gamepad button combo and"
-msgstr "Insira a combinação de botões do controle e "
+msgstr "Selecione a combinação de botões e "
 
 msgctxt "#12331"
 msgid "press OK, or Back to cancel"
@@ -3723,11 +3724,11 @@ msgstr "Senha com texto"
 
 msgctxt "#12340"
 msgid "Enter new password"
-msgstr "Insira a nova senha"
+msgstr "Entre com a nova senha"
 
 msgctxt "#12341"
 msgid "Re-Enter new password"
-msgstr "Re-insira a nova senha"
+msgstr "Re-digite a nova senha"
 
 msgctxt "#12342"
 msgid "Incorrect password,"
@@ -3739,7 +3740,7 @@ msgstr "tentativas restantes "
 
 msgctxt "#12344"
 msgid "Passwords entered did not match."
-msgstr "As senhas informadas são diferentes."
+msgstr "As senhas digitadas são diferentes."
 
 msgctxt "#12345"
 msgid "Access denied"
@@ -3787,7 +3788,7 @@ msgstr "Alterar bloqueio"
 
 msgctxt "#12357"
 msgid "Source lock"
-msgstr "Bloqueio de fonte"
+msgstr "Bloqueio de origem"
 
 msgctxt "#12358"
 msgid "Password entry was blank. Try again."
@@ -3807,11 +3808,11 @@ msgstr "Código-mestre não é válido!"
 
 msgctxt "#12368"
 msgid "Please enter a valid master code"
-msgstr "Insira um código mestre válido!"
+msgstr "Digite um código-mestre válido!"
 
 msgctxt "#12373"
 msgid "Settings & file manager"
-msgstr "Configurações & arquivos"
+msgstr "Configurações &  arquivos"
 
 msgctxt "#12376"
 msgid "Set as default for all videos"
@@ -3943,11 +3944,11 @@ msgstr "Desligar o sistema"
 
 msgctxt "#13017"
 msgid "Inhibit idle shutdown"
-msgstr "Inibir desligar por inatividade"
+msgstr "Inibir Desligar idle"
 
 msgctxt "#13018"
 msgid "Allow idle shutdown"
-msgstr "Permitir desligar por inatividade"
+msgstr "Permitir desligar idle"
 
 msgctxt "#13020"
 msgid "Is another session active, perhaps over ssh?"
@@ -4419,7 +4420,7 @@ msgstr "Mover abaixo"
 
 msgctxt "#13334"
 msgid "Edit label"
-msgstr "Editar rótulo"
+msgstr "Editar etiqueta"
 
 msgctxt "#13335"
 msgid "Make default"
@@ -4455,7 +4456,7 @@ msgstr "Desligar o LED durante a execução"
 
 msgctxt "#13346"
 msgid "Movie information"
-msgstr "Informações do filme"
+msgstr "Informações de filmes"
 
 msgctxt "#13347"
 msgid "Queue item"
@@ -4475,11 +4476,11 @@ msgstr "Reproduzindo agora..."
 
 msgctxt "#13351"
 msgid "Album information"
-msgstr "Informações do álbum"
+msgstr "Informação do álbum"
 
 msgctxt "#13352"
 msgid "Scan item to library"
-msgstr "Buscar itens para adicionar a coleção"
+msgstr "Examinar item para a coleção"
 
 msgctxt "#13353"
 msgid "Stop scanning"
@@ -4575,11 +4576,11 @@ msgstr "Pré-ajustes"
 
 msgctxt "#13389"
 msgid "There are no presets available\nfor this visualization"
-msgstr "Não há predefinições disponíveis\n para esta visualização"
+msgstr "Não há pré-ajustes disponíveis para esta visualização"
 
 msgctxt "#13390"
 msgid "There are no settings available\nfor this visualization"
-msgstr "Não há configurações disponíveis\n para esta visualização"
+msgstr "Não há configurações disponíveis para esta visualização"
 
 msgctxt "#13391"
 msgid "Eject/Load"
@@ -4643,7 +4644,7 @@ msgstr "Obter ícone"
 
 msgctxt "#13406"
 msgid "Picture information"
-msgstr "Informações da imagem"
+msgstr "Informação da imagem"
 
 msgctxt "#13407"
 msgid "%s presets"
@@ -4963,7 +4964,7 @@ msgstr "Sem TV"
 
 msgctxt "#14024"
 msgid "Enter the nearest large town"
-msgstr "Insira a cidade grande mais próxima"
+msgstr "Digite a cidade (grande) mais próxima"
 
 msgctxt "#14025"
 msgid "Video/Audio/DVD cache - Harddisk"
@@ -5075,7 +5076,7 @@ msgstr "Parar busca"
 
 msgctxt "#14057"
 msgid "Not possible while scanning for media info"
-msgstr "Impossível enquanto estiver buscando informações de mídia"
+msgstr "Impossível enquanto estiver buscando informações da mídia"
 
 msgctxt "#14058"
 msgid "Film grain effect"
@@ -5095,7 +5096,7 @@ msgstr "Auto"
 
 msgctxt "#14062"
 msgid "Enter username for"
-msgstr "Insira nome de usuário para"
+msgstr "Entre nome de usuário para"
 
 msgctxt "#14063"
 msgid "Date & time"
@@ -5111,15 +5112,15 @@ msgstr "Definir hora"
 
 msgctxt "#14066"
 msgid "Enter the time in 24 hour HH:MM format"
-msgstr "Insira a hora no formato HH:MM de 24 horas"
+msgstr "Digite a hora no formato 24 horas HH:MM"
 
 msgctxt "#14067"
 msgid "Enter the date in DD/MM/YYYY format"
-msgstr "Insira a data no formato DD/MM/AAAA"
+msgstr "Digite a data no formato DD/MM/AAAA"
 
 msgctxt "#14068"
 msgid "Enter the IP address"
-msgstr "Insira o endereço IP"
+msgstr "Digite o endereço IP"
 
 msgctxt "#14069"
 msgid "Apply these settings now?"
@@ -5263,11 +5264,11 @@ msgstr "Banco de dados"
 
 msgctxt "#15102"
 msgid "* All albums"
-msgstr "* Todos os álbuns"
+msgstr "* Todos álbuns"
 
 msgctxt "#15103"
 msgid "* All artists"
-msgstr "* Todos os artistas"
+msgstr "* Todos artistas"
 
 msgctxt "#15104"
 msgid "* All songs"
@@ -5275,7 +5276,7 @@ msgstr "* Todas as músicas"
 
 msgctxt "#15105"
 msgid "* All genres"
-msgstr "* Todos os gêneros"
+msgstr "* Todos gêneros"
 
 msgctxt "#15107"
 msgid "Buffering..."
@@ -5511,11 +5512,11 @@ msgstr "Não pude recuperar lista do Last.fm..."
 
 msgctxt "#15281"
 msgid "Enter an artist name to find related ones"
-msgstr "Insira o nome de um artista para encontrar outros relacionados"
+msgstr "Digite o nome do artista para encontrar outros similares"
 
 msgctxt "#15282"
 msgid "Enter a tag name to find similar ones"
-msgstr "Insira um gênero para encontrar similares"
+msgstr "Digite um gênero para encontrar similares"
 
 msgctxt "#15283"
 msgid "Tracks recently listened by %name%"
@@ -5595,7 +5596,7 @@ msgstr "Grupo de trabalho não encontrado"
 
 msgctxt "#15310"
 msgid "Opening multi-path source"
-msgstr "Abrindo fonte de múltiplos caminhos"
+msgstr "Abrindo múltiplos caminhos para os marcadores"
 
 msgctxt "#15311"
 msgid "Path:"
@@ -5619,31 +5620,31 @@ msgstr "Reproduzir mídia do disco"
 
 msgctxt "#16008"
 msgid "Enter new title"
-msgstr "Insira um novo título"
+msgstr "Digite um novo título"
 
 msgctxt "#16009"
 msgid "Enter the movie name"
-msgstr "Insira o nome do filme"
+msgstr "Nome do filme"
 
 msgctxt "#16010"
 msgid "Enter the profile name"
-msgstr "Insira o nome do perfil"
+msgstr "Nome do perfil"
 
 msgctxt "#16011"
 msgid "Enter the album name"
-msgstr "Insira o nome do álbum"
+msgstr "Nome do álbum"
 
 msgctxt "#16012"
 msgid "Enter the playlist name"
-msgstr "Insira o nome da lista de reprodução"
+msgstr "Nome da lista de reprodução"
 
 msgctxt "#16013"
 msgid "Enter new filename"
-msgstr "Insira o novo nome do arquivo"
+msgstr "Entre novo nome de arquivo"
 
 msgctxt "#16014"
 msgid "Enter folder name"
-msgstr "Insira o nome da pasta"
+msgstr "Nome da pasta"
 
 msgctxt "#16015"
 msgid "Enter directory"
@@ -5683,7 +5684,7 @@ msgstr "Cancelando..."
 
 msgctxt "#16025"
 msgid "Enter the artist name"
-msgstr "Insira o nome do artista"
+msgstr "Coloque o nome do artista"
 
 msgctxt "#16026"
 msgid "Playback failed"
@@ -5695,7 +5696,7 @@ msgstr "Um ou mais itens falharam na execução."
 
 msgctxt "#16028"
 msgid "Enter value"
-msgstr "Insira o valor"
+msgstr "Digite valor"
 
 msgctxt "#16029"
 msgid "Check the log file for details."
@@ -5723,7 +5724,7 @@ msgstr "Não pôde obter músicas do banco de dados."
 
 msgctxt "#16035"
 msgid "Party mode playlist"
-msgstr "Lista de reprodução em modo festa"
+msgstr "Lista de execução em modo-festa"
 
 msgctxt "#16036"
 msgid "De-interlace (Half)"
@@ -5903,7 +5904,7 @@ msgstr "Software Blend"
 
 msgctxt "#16325"
 msgid "Auto - ION Optimized"
-msgstr "Auto - Optimizado para ION"
+msgstr "Auto - ION Optimizado"
 
 msgctxt "#16400"
 msgid "Post-processing"
@@ -5947,19 +5948,19 @@ msgstr "Importando EPG dos clientes"
 
 msgctxt "#19005"
 msgid "PVR stream information"
-msgstr "Informações do stream PVR"
+msgstr "PVR informação do stream"
 
 msgctxt "#19006"
 msgid "Receiving device"
-msgstr "Dispositivo receptor"
+msgstr "Recebendo do equipamento"
 
 msgctxt "#19007"
 msgid "Device status"
-msgstr "Status do dispositivo"
+msgstr "Estatus do equipamento"
 
 msgctxt "#19008"
 msgid "Signal quality"
-msgstr "Qualidade do sinal"
+msgstr "Qualidade do Sinal"
 
 msgctxt "#19009"
 msgid "SNR"
@@ -5979,7 +5980,7 @@ msgstr "PVR Backend"
 
 msgctxt "#19013"
 msgid "Free to air"
-msgstr "Canais abertos"
+msgstr "Canais Abertos"
 
 msgctxt "#19014"
 msgid "Fixed"
@@ -6019,11 +6020,11 @@ msgstr "Oculto"
 
 msgctxt "#19023"
 msgid "TV channels"
-msgstr "Canais de TV"
+msgstr "Canais TV"
 
 msgctxt "#19024"
 msgid "Radio channels"
-msgstr "Canais de rádio"
+msgstr "Canais Rádio"
 
 msgctxt "#19025"
 msgid "Upcoming recordings"
@@ -6059,7 +6060,7 @@ msgstr "Linha do Tempo"
 
 msgctxt "#19033"
 msgid "Information"
-msgstr "Informações"
+msgstr "Informação"
 
 msgctxt "#19034"
 msgid "Already started recording on this channel"
@@ -6115,7 +6116,7 @@ msgstr "Novo canal"
 
 msgctxt "#19047"
 msgid "Programme info"
-msgstr "Informações sobre o programa"
+msgstr "Informação do Programa"
 
 msgctxt "#19048"
 msgid "Group management"
@@ -6139,7 +6140,7 @@ msgstr "mover canal para:"
 
 msgctxt "#19053"
 msgid "Recording information"
-msgstr "Informações da gravação"
+msgstr "Informação da gravação"
 
 msgctxt "#19054"
 msgid "Hide channel"
@@ -6147,7 +6148,7 @@ msgstr "Ocultar canal"
 
 msgctxt "#19055"
 msgid "No information available"
-msgstr "Nenhuma informação disponível"
+msgstr "Nenhum informação disponível"
 
 msgctxt "#19056"
 msgid "New timer"
@@ -6263,7 +6264,7 @@ msgstr "Canal desconhecido %"
 
 msgctxt "#19086"
 msgid "Mo-__-__-__-__-__-__"
-msgstr "Se-__-__-__-__-__-__"
+msgstr "SE-__-__-__-__-__-__"
 
 msgctxt "#19087"
 msgid "__-Tu-__-__-__-__-__"
@@ -6283,7 +6284,7 @@ msgstr "__-__-__-__-Se-__-__"
 
 msgctxt "#19091"
 msgid "__-__-__-__-__-Sa-__"
-msgstr "__-__-__-__-__-Sá-__"
+msgstr "__-__-__-__-__-Sa-__"
 
 msgctxt "#19092"
 msgid "__-__-__-__-__-__-Su"
@@ -6295,19 +6296,19 @@ msgstr "Se-Te-Qu-Qi-Se-__-__"
 
 msgctxt "#19094"
 msgid "Mo-Tu-We-Th-Fr-Sa-__"
-msgstr "Se-Te-Qu-Qi-Se-Sá-__"
+msgstr "Se-Te-Qu-Qi-Se-Sa-__"
 
 msgctxt "#19095"
 msgid "Mo-Tu-We-Th-Fr-Sa-Su"
-msgstr "Se-Te-Qu-Qi-Se-Sá-Do"
+msgstr "Se-Te-Qu-Qi-Se-Sa-Do"
 
 msgctxt "#19096"
 msgid "__-__-__-__-__-Sa-Su"
-msgstr "__-__-__-__-__-Sá-Do"
+msgstr "__-__-__-__-__-Sa-Do"
 
 msgctxt "#19097"
 msgid "Enter the name for the recording"
-msgstr "Insira o nome para a gravação"
+msgstr "Entre o nome para a gravação"
 
 msgctxt "#19098"
 msgid "Warning"
@@ -6319,7 +6320,7 @@ msgstr "Por favor troque para outro canal."
 
 msgctxt "#19104"
 msgid "Enter the name of the folder for the recording"
-msgstr "Insira o nome da pasta para a gravação"
+msgstr "Entre o nome da pasta para a gravação"
 
 msgctxt "#19106"
 msgid "Next timer on"
@@ -6543,7 +6544,7 @@ msgstr "Trocar"
 
 msgctxt "#19166"
 msgid "PVR information"
-msgstr "Informações de PVR"
+msgstr "PVR informação"
 
 msgctxt "#19167"
 msgid "Scan for missing icons"
@@ -6551,7 +6552,7 @@ msgstr "Escanear por ícones faltantes"
 
 msgctxt "#19169"
 msgid "Hide video information box"
-msgstr "Ocultar caixa de informações sobre o vídeo"
+msgstr "Ocultar box com informações de vídeo"
 
 msgctxt "#19170"
 msgid "Timeout when starting playback"
@@ -6587,11 +6588,11 @@ msgstr "Reprodução"
 
 msgctxt "#19178"
 msgid "Show channel information when switching channels"
-msgstr "Mostrar informações do canal ao mudar canais"
+msgstr "Mostrar informação do canal quando alternando canais"
 
 msgctxt "#19179"
 msgid "Automatically hide channel information"
-msgstr "Ocultar informações do canal automaticamente"
+msgstr "Automaticamente ocultar informações do canal"
 
 msgctxt "#19180"
 msgid "TV"
@@ -6607,7 +6608,7 @@ msgstr "Dias para mostrar no EPG"
 
 msgctxt "#19184"
 msgid "Channel information duration"
-msgstr "Duração das informações do canal"
+msgstr "Duração Informação do Canal"
 
 msgctxt "#19185"
 msgid "Reset the PVR database"
@@ -6615,7 +6616,7 @@ msgstr "Resetar o Banco de Dados do PVR"
 
 msgctxt "#19186"
 msgid "All data in the PVR database is being erased"
-msgstr "Todos os dados no banco de dados PVR estão sendo apagados"
+msgstr "Todos os dados na base de dados do PVR serão eliminados"
 
 msgctxt "#19187"
 msgid "Reset the EPG database"
@@ -6675,11 +6676,11 @@ msgstr "Fonte EPG:"
 
 msgctxt "#19201"
 msgid "Channel name:"
-msgstr "Nome do canal:"
+msgstr "Nome Canal:"
 
 msgctxt "#19202"
 msgid "Channel icon:"
-msgstr "Ícone do canal:"
+msgstr "Ícone Canal:"
 
 msgctxt "#19203"
 msgid "Edit channel"
@@ -6687,15 +6688,15 @@ msgstr "Editar Canal"
 
 msgctxt "#19204"
 msgid "New channel"
-msgstr "Novo canal"
+msgstr "Novo Canal"
 
 msgctxt "#19205"
 msgid "Group management"
-msgstr "Administrar grupo"
+msgstr "Administrar Grupo"
 
 msgctxt "#19206"
 msgid "Activate EPG:"
-msgstr "Ativar EPG:"
+msgstr "EPG Ativos"
 
 msgctxt "#19207"
 msgid "Group:"
@@ -6703,7 +6704,7 @@ msgstr "Grupo:"
 
 msgctxt "#19208"
 msgid "Enter the name of the new channel"
-msgstr "Insira o nome do novo canal"
+msgstr "Entre o nome para o novo canal"
 
 msgctxt "#19209"
 msgid "XBMC virtual backend"
@@ -6727,7 +6728,7 @@ msgstr "Selecione backend"
 
 msgctxt "#19214"
 msgid "Enter a valid URL for the new channel"
-msgstr "Insira uma URL válida para o novo canal"
+msgstr "Entre uma URL válida para o novo canal"
 
 msgctxt "#19215"
 msgid "The PVR backend does not support timers."
@@ -6763,7 +6764,7 @@ msgstr "EPG"
 
 msgctxt "#19223"
 msgid "No PVR add-on could be enabled. Check your settings or the log for more info."
-msgstr "Nenhum add-on PVR pôde ser ativado. Verifique seus ajustes ou o registro para mais informações."
+msgstr "Nenhum add-on PVR pôde ser ativado. Verifique seus ajustes ou o registro para maiores informações."
 
 msgctxt "#19224"
 msgid "Recording aborted"
@@ -6843,7 +6844,7 @@ msgstr "addon de PVR ativado. Ative ao menos um addon de PVR"
 
 msgctxt "#19243"
 msgid "in order to use the PVR functionality."
-msgstr "para usar as funcionalidades de PVR."
+msgstr "na ordem para usar as funcionalidades de PVR"
 
 msgctxt "#19244"
 msgid "Backend idle time"
@@ -6875,7 +6876,7 @@ msgstr "Carregando EPG do banco de dados"
 
 msgctxt "#19251"
 msgid "Update EPG information"
-msgstr "Atualizar informações sobre o EPG"
+msgstr "Atualizar informações EPG"
 
 msgctxt "#19252"
 msgid "Schedule EPG update for this channel?"
@@ -6919,11 +6920,11 @@ msgstr "Alterar PIN"
 
 msgctxt "#19262"
 msgid "Parental control. Enter PIN:"
-msgstr "Controle dos pais. Insira o PIN:"
+msgstr "Controle dos pais. Entre PIN:"
 
 msgctxt "#19263"
 msgid "Locked channel. Enter PIN:"
-msgstr "Canal bloqueado. Insira o PIN:"
+msgstr "Canal Travado. Entre PIN:"
 
 msgctxt "#19264"
 msgid "Incorrect PIN"
@@ -6931,7 +6932,7 @@ msgstr "PIN Incorreto"
 
 msgctxt "#19265"
 msgid "The entered PIN number was incorrect."
-msgstr "O número PIN inserido está incorreto."
+msgstr "O número PIN digitado está incorreto."
 
 msgctxt "#19266"
 msgid "Parental locked"
@@ -6943,7 +6944,7 @@ msgstr "Travado Controle Pais:"
 
 msgctxt "#19268"
 msgid "Do not show 'no information available' labels"
-msgstr "Não mostrar rótulo 'Nenhuma informação disponível'"
+msgstr "Não mostre rótulo 'Nenhuma informação disponível'"
 
 msgctxt "#19269"
 msgid "Do not show 'connection lost' warnings"
@@ -7011,11 +7012,11 @@ msgstr "Detetive/Thriller"
 
 msgctxt "#19502"
 msgid "Adventure/Western/War"
-msgstr "Aventura/Velho-Oeste/Guerra"
+msgstr "Aventura/Oeste/Guerra"
 
 msgctxt "#19503"
 msgid "Science Fiction/Fantasy/Horror"
-msgstr "Ficção Científica/Fantasia/Terror"
+msgstr "Ficção Científica/Fantasia/Horror"
 
 msgctxt "#19504"
 msgid "Comedy"
@@ -7043,11 +7044,11 @@ msgstr "Atualidades"
 
 msgctxt "#19517"
 msgid "News/Weather Report"
-msgstr "Notícias/Clima"
+msgstr "Atualidades/Clima"
 
 msgctxt "#19518"
 msgid "News Magazine"
-msgstr "Revistas de Notícias"
+msgstr "Revistas Atualidades"
 
 msgctxt "#19519"
 msgid "Documentary"
@@ -7123,11 +7124,11 @@ msgstr "Esportes Marciais"
 
 msgctxt "#19564"
 msgid "Children's/Youth Programmes"
-msgstr "Programas Infantis/Jovens"
+msgstr "Programação Infantil/Jovem"
 
 msgctxt "#19565"
 msgid "Pre-school Children's Programmes"
-msgstr "Programas para crianças na pré-escola"
+msgstr "Programção para crianças na pré-escola"
 
 msgctxt "#19566"
 msgid "Entertainment Programmes for 6 to 14"
@@ -7135,11 +7136,11 @@ msgstr "Programas de entretenimento de 6 a 14 anos"
 
 msgctxt "#19567"
 msgid "Entertainment Programmes for 10 to 16"
-msgstr "Programas de entretenimento de 10 a 16 anos"
+msgstr "Programas de entretenimento de 10 até 16 anos"
 
 msgctxt "#19568"
 msgid "Informational/Educational/School Programme"
-msgstr "Programa Informativo/Educacional/Escolar"
+msgstr "Informações/Educacional"
 
 msgctxt "#19569"
 msgid "Cartoons/Puppets"
@@ -7375,7 +7376,7 @@ msgstr "Pasta para captura de tela"
 
 msgctxt "#20006"
 msgid "Playlists folder"
-msgstr "Pasta de listas de reprodução"
+msgstr "Pasta lista de reprodução"
 
 msgctxt "#20007"
 msgid "Recordings"
@@ -7431,7 +7432,7 @@ msgstr "Conflito"
 
 msgctxt "#20024"
 msgid "Scan new"
-msgstr "Novo exame"
+msgstr "Examinar novo"
 
 msgctxt "#20025"
 msgid "Scan all"
@@ -7511,7 +7512,7 @@ msgstr "Sair do modo-mestre"
 
 msgctxt "#20054"
 msgid "Entered master mode"
-msgstr "Modo mestre iniciado"
+msgstr "Entrou no modo-mestre"
 
 msgctxt "#20055"
 msgid "Allmusic.com thumb"
@@ -7527,11 +7528,11 @@ msgstr "Adicionar perfil..."
 
 msgctxt "#20059"
 msgid "Query info for all albums"
-msgstr "Consultar informações para todos os álbuns"
+msgstr "Obter informações para todos os álbuns"
 
 msgctxt "#20060"
 msgid "Media info"
-msgstr "Informações de mídia"
+msgstr "Informação de mídia"
 
 msgctxt "#20061"
 msgid "Separate"
@@ -7575,7 +7576,7 @@ msgstr "Diretório do perfil"
 
 msgctxt "#20071"
 msgid "Start with fresh media sources"
-msgstr "Iniciar com novas fontes de mídia"
+msgstr "Iniciar com novas origens de mídia"
 
 msgctxt "#20072"
 msgid "Make sure the selected folder is writable"
@@ -7591,7 +7592,7 @@ msgstr "Classificação MPAA:"
 
 msgctxt "#20075"
 msgid "Enter master lock code"
-msgstr "Insira o código mestre de bloqueio"
+msgstr "Digite o código-mestre de bloqueio"
 
 msgctxt "#20076"
 msgid "Ask for master lock code on startup"
@@ -7627,7 +7628,7 @@ msgstr "Mostrar informações da música"
 
 msgctxt "#20084"
 msgid "Show weather info"
-msgstr "Mostrar informações do clima"
+msgstr "Mostrar informações do Clima"
 
 msgctxt "#20085"
 msgid "Show system info"
@@ -7651,7 +7652,7 @@ msgstr "Espaço livre em disco"
 
 msgctxt "#20090"
 msgid "Enter the name of an existing share"
-msgstr "Insira o nome de um compartilhamento existente"
+msgstr "Nome de um compartilhamento existente"
 
 msgctxt "#20091"
 msgid "Lock code"
@@ -7667,11 +7668,11 @@ msgstr "Nome do Perfil"
 
 msgctxt "#20094"
 msgid "Media sources"
-msgstr "Fontes de mídia"
+msgstr "Origens de mídia"
 
 msgctxt "#20095"
 msgid "Enter profile lock code"
-msgstr "Insira o código de bloqueio do perfil"
+msgstr "Digite o código de bloqueio do perfil"
 
 msgctxt "#20096"
 msgid "Login screen"
@@ -7695,7 +7696,7 @@ msgstr "Código-mestre e bloqueios"
 
 msgctxt "#20101"
 msgid "Entering master lock code always enables master mode"
-msgstr "Inserir um código de bloqueio mestre sempre ativa modo mestre"
+msgstr "Digitar código-mestre sempre ativa modo-mestre"
 
 msgctxt "#20102"
 msgid "or copy from default?"
@@ -7859,7 +7860,7 @@ msgstr "Nome de usuário"
 
 msgctxt "#20143"
 msgid "Enter password for"
-msgstr "Insira a senha para"
+msgstr "Digite senha para"
 
 msgctxt "#20144"
 msgid "Shutdown timer"
@@ -7907,27 +7908,27 @@ msgstr "Informação resumida"
 
 msgctxt "#20155"
 msgid "Storage information"
-msgstr "Informações de armazenamento"
+msgstr "Informação de armazenamento"
 
 msgctxt "#20156"
 msgid "Hard disk information"
-msgstr "Informações do disco rígido"
+msgstr "Informação do disco rígido"
 
 msgctxt "#20157"
 msgid "DVD-ROM information"
-msgstr "Informações do DVD/BD-ROM"
+msgstr "Informação do DVD/BD-ROM"
 
 msgctxt "#20158"
 msgid "Network information"
-msgstr "Informações de rede"
+msgstr "Informação de rede"
 
 msgctxt "#20159"
 msgid "Video information"
-msgstr "Informações de vídeo"
+msgstr "Informação de vídeo"
 
 msgctxt "#20160"
 msgid "Hardware information"
-msgstr "Informações de hardware"
+msgstr "Informação de hardware"
 
 msgctxt "#20161"
 msgid "Total"
@@ -8023,11 +8024,11 @@ msgstr "Reiniciar skin"
 
 msgctxt "#20184"
 msgid "Rotate pictures using EXIF information"
-msgstr "Girar imagens usando informações EXIF"
+msgstr "Rotacionar imagens usando informação do EXIF"
 
 msgctxt "#20185"
 msgid "Use poster view styles for TV shows"
-msgstr "Usar estilo de visualização pôster para séries"
+msgstr "Usar estilo de visualização poster para seriados"
 
 msgctxt "#20186"
 msgid "Please wait"
@@ -8055,15 +8056,15 @@ msgstr "Habilitar registro de depuração"
 
 msgctxt "#20192"
 msgid "Download additional information during updates"
-msgstr "Baixar informações adicionais durante atualizações"
+msgstr "Baixar informação adicional durante atualizações"
 
 msgctxt "#20193"
 msgid "Default service for album information"
-msgstr "Serviço padrão de informação sobre álbuns"
+msgstr "Serviço padrão para buscar informações de álbuns"
 
 msgctxt "#20194"
 msgid "Default service for artist information"
-msgstr "Serviço padrão de informação sobre artistas"
+msgstr "Serviço padrão para buscar informações de artistas"
 
 msgctxt "#20195"
 msgid "Change scraper"
@@ -8143,7 +8144,7 @@ msgstr "Cliente MythTV"
 
 msgctxt "#20259"
 msgid "Network Filesystem (NFS)"
-msgstr "Sistema de Arquivos de Rede (NFS)"
+msgstr "Sistema Arquivos Rede(NFS)"
 
 msgctxt "#20260"
 msgid "Secure Shell (SSH/SFTP)"
@@ -8247,7 +8248,7 @@ msgstr "Procurar destino"
 
 msgctxt "#20329"
 msgid "Movies are in separate folders that match the movie title"
-msgstr "Filmes em pastas separadas que combinam com o título"
+msgstr "Filmes em pastas separadas que combinam com o título do filme"
 
 msgctxt "#20330"
 msgid "Use folder names for lookups"
@@ -8259,7 +8260,7 @@ msgstr "Arquivo"
 
 msgctxt "#20332"
 msgid "Use file or folder names in lookups?"
-msgstr "Usar nome das pastas ou dos arquivos nas buscas?"
+msgstr "Usar pasta ou nomes de arquivos em buscas?"
 
 msgctxt "#20333"
 msgid "Set content"
@@ -8303,7 +8304,7 @@ msgstr "Filmes"
 
 msgctxt "#20343"
 msgid "TV shows"
-msgstr "Séries"
+msgstr "Seriados"
 
 msgctxt "#20344"
 msgid "This directory contains"
@@ -8335,7 +8336,7 @@ msgstr "votos"
 
 msgctxt "#20351"
 msgid "TV show information"
-msgstr "Informações sobre a série"
+msgstr "Informações do seriado"
 
 msgctxt "#20352"
 msgid "Episode information"
@@ -8343,7 +8344,7 @@ msgstr "Informações do episódio"
 
 msgctxt "#20353"
 msgid "Loading TV show details"
-msgstr "Carregando detalhes da série"
+msgstr "Carregando detalhes do seriado"
 
 msgctxt "#20354"
 msgid "Fetching episode guide"
@@ -8355,11 +8356,11 @@ msgstr "Carregando informações para episódios no diretório"
 
 msgctxt "#20356"
 msgid "Select TV show:"
-msgstr "Selecione a série:"
+msgstr "Selecione o seriado:"
 
 msgctxt "#20357"
 msgid "Enter the TV show name"
-msgstr "Insira o nome da série"
+msgstr "Digite o nome do seriado"
 
 msgctxt "#20358"
 msgid "Season %i"
@@ -8383,11 +8384,11 @@ msgstr "Remover episódio da coleção"
 
 msgctxt "#20363"
 msgid "Remove TV show from library"
-msgstr "Remover série da coleção"
+msgstr "Remover seriado da coleção"
 
 msgctxt "#20364"
 msgid "TV show"
-msgstr "Série"
+msgstr "Seriado"
 
 msgctxt "#20365"
 msgid "Episode plot"
@@ -8439,7 +8440,7 @@ msgstr "Título original"
 
 msgctxt "#20377"
 msgid "Refresh TV show information"
-msgstr "Recarregar informações da série"
+msgstr "Atualizar informações de seriado"
 
 msgctxt "#20378"
 msgid "Refresh info for all episodes?"
@@ -8447,11 +8448,11 @@ msgstr "Recarregar informações para todos os episódios?"
 
 msgctxt "#20379"
 msgid "Selected folder contains a single TV show"
-msgstr "A pasta contém uma única série de TV"
+msgstr "Pasta contém um único seriado"
 
 msgctxt "#20380"
 msgid "Exclude selected folder from scans"
-msgstr "Excluir pasta selecionada da lista de procura"
+msgstr "Excluir pasta da lista de procura"
 
 msgctxt "#20381"
 msgid "Specials"
@@ -8467,11 +8468,11 @@ msgstr "Pasta contém um único vídeo"
 
 msgctxt "#20384"
 msgid "Link to TV show"
-msgstr "Link para série de TV"
+msgstr "Link para seriado"
 
 msgctxt "#20385"
 msgid "Remove link to TV show"
-msgstr "Remover link série de TV"
+msgstr "Remover link para seriado"
 
 msgctxt "#20386"
 msgid "Recently added movies"
@@ -8487,27 +8488,27 @@ msgstr "Estúdios"
 
 msgctxt "#20389"
 msgid "Music videos"
-msgstr "Videoclipes"
+msgstr "Concertos"
 
 msgctxt "#20390"
 msgid "Recently added music videos"
-msgstr "Videoclipes adicionados recentemente"
+msgstr "Concertos adicionados recentemente"
 
 msgctxt "#20391"
 msgid "Music video"
-msgstr "Videoclipe"
+msgstr "Vídeo musical"
 
 msgctxt "#20392"
 msgid "Remove music video from library"
-msgstr "Remover videoclipe da coleção"
+msgstr "Remover vídeo musical da coleção"
 
 msgctxt "#20393"
 msgid "Music video information"
-msgstr "Informações do videoclipe"
+msgstr "Informações do concerto"
 
 msgctxt "#20394"
 msgid "Loading music video information"
-msgstr "Carregando informações do videoclipe"
+msgstr "Carregando informações de concertos"
 
 msgctxt "#20395"
 msgid "Mixed"
@@ -8527,15 +8528,15 @@ msgstr "Reproduzir música"
 
 msgctxt "#20399"
 msgid "Go to music videos from album"
-msgstr "Ir para videoclipes do álbum"
+msgstr "Ir para concertos do álbum"
 
 msgctxt "#20400"
 msgid "Go to music videos by artist"
-msgstr "Ir para videoclipes por artista"
+msgstr "Ir para concertos do artista"
 
 msgctxt "#20401"
 msgid "Play music video"
-msgstr "Reproduzir videoclipe"
+msgstr "Reproduzir vídeo musical"
 
 msgctxt "#20402"
 msgid "Download actor thumbnails when adding to library"
@@ -8559,11 +8560,11 @@ msgstr "Opções de scraper"
 
 msgctxt "#20408"
 msgid "Downloading music video information"
-msgstr "Baixando informações de videoclipes"
+msgstr "Recebendo informações de concertos"
 
 msgctxt "#20409"
 msgid "Downloading TV show information"
-msgstr "Baixando informações sobre a série"
+msgstr "Recebendo informações do seriado"
 
 msgctxt "#20410"
 msgid "Trailer"
@@ -8575,7 +8576,7 @@ msgstr "Unificar"
 
 msgctxt "#20412"
 msgid "Flatten TV shows"
-msgstr "Unificar séries com temporada única"
+msgstr "Unificar seriados com temporada única"
 
 msgctxt "#20413"
 msgid "Get fanart"
@@ -8655,7 +8656,7 @@ msgstr "Excluir caminho da atualização de coleções"
 
 msgctxt "#20433"
 msgid "Extract thumbnails and video information"
-msgstr "Extrair miniaturas e informações de vídeo"
+msgstr "Extrair ícones e etiquetas"
 
 msgctxt "#20434"
 msgid "Sets"
@@ -8711,7 +8712,7 @@ msgstr "Ignorar e atualizar da Internet?"
 
 msgctxt "#20448"
 msgid "Could not download information"
-msgstr "Não foi possível baixar as informações"
+msgstr "Não é possível baixar as informações"
 
 msgctxt "#20449"
 msgid "Unable to connect to remote server"
@@ -8723,7 +8724,7 @@ msgstr "Deseja continuar a procura?"
 
 msgctxt "#20451"
 msgid "Countries"
-msgstr "Países"
+msgstr "PaÍses"
 
 msgctxt "#20452"
 msgid "episode"
@@ -8747,7 +8748,7 @@ msgstr "Coletânea de filmes"
 
 msgctxt "#20458"
 msgid "Group movies in sets"
-msgstr "Agrupar filmes em coletâneas"
+msgstr "Agrupar filmes em coletâneas - sets"
 
 msgctxt "#20459"
 msgid "Tags"
@@ -8755,7 +8756,7 @@ msgstr "Tags"
 
 msgctxt "#20460"
 msgid "Add %s"
-msgstr "Adicionar %s"
+msgstr "Adicione %s"
 
 msgctxt "#20461"
 msgid "Remove %s"
@@ -8883,11 +8884,11 @@ msgstr "Habilitar 1080i"
 
 msgctxt "#21381"
 msgid "Enter name of new playlist"
-msgstr "Insira o nome da nova lista de reprodução"
+msgstr "Nome da nova lista de reprodução"
 
 msgctxt "#21382"
 msgid "Show \"Add source\" buttons in file lists"
-msgstr "Exibir botões \"Adicionar fonte\" em listas de arquivos"
+msgstr "Exibir botões \"adicionar origem\" em listas"
 
 msgctxt "#21383"
 msgid "Enable scrollbars"
@@ -9019,7 +9020,7 @@ msgstr "Scraper padrão de seriados"
 
 msgctxt "#21415"
 msgid "Default music video scraper"
-msgstr "Scraper padrão para videoclipes"
+msgstr "Scraper padrão para vídeo músical (clipe)"
 
 msgctxt "#21417"
 msgid "- Settings"
@@ -9075,11 +9076,11 @@ msgstr "Ordenar por"
 
 msgctxt "#21430"
 msgid "ascending"
-msgstr "crescente"
+msgstr "ascendente"
 
 msgctxt "#21431"
 msgid "descending"
-msgstr "decrescente"
+msgstr "descendente"
 
 msgctxt "#21432"
 msgid "Edit smart playlist"
@@ -9395,7 +9396,7 @@ msgstr "Crédito"
 
 msgctxt "#21870"
 msgid "Source"
-msgstr "Fonte"
+msgstr "Origem"
 
 msgctxt "#21871"
 msgid "Copyright notice"
@@ -9451,15 +9452,15 @@ msgstr "Música salva"
 
 msgctxt "#21884"
 msgid "Query info for all artists"
-msgstr "Buscar info. para todos os artistas"
+msgstr "Buscar informações para todos os artistas"
 
 msgctxt "#21885"
 msgid "Downloading album information"
-msgstr "Baixando informações do álbum"
+msgstr "Baixando informações do album"
 
 msgctxt "#21886"
 msgid "Downloading artist information"
-msgstr "Baixando informações sobre o artista"
+msgstr "Baixando informação do artista"
 
 msgctxt "#21887"
 msgid "Biography"
@@ -9479,7 +9480,7 @@ msgstr "Selecione o artista"
 
 msgctxt "#21891"
 msgid "Artist information"
-msgstr "Informações sobre o artista"
+msgstr "Informação do artista"
 
 msgctxt "#21892"
 msgid "Instruments"
@@ -9511,7 +9512,7 @@ msgstr "Anos de atividade"
 
 msgctxt "#21899"
 msgid "Label"
-msgstr "Gravadora"
+msgstr "Gravadora/marca"
 
 msgctxt "#21900"
 msgid "Born/Formed"
@@ -9603,7 +9604,7 @@ msgstr "Guia"
 
 msgctxt "#22021"
 msgid "Allowed error in aspect ratio to minimize black bars"
-msgstr "Margem de erro permitida na proporção de aspecto para diminuir as barras pretas"
+msgstr "Erro (%) permitido na proporção de aspecto"
 
 msgctxt "#22022"
 msgid "Show video files in listings"
@@ -9655,7 +9656,7 @@ msgstr "Exportar itens de karaokê..."
 
 msgctxt "#22039"
 msgid "Enter song number"
-msgstr "Insira o número da música"
+msgstr "Informe número da música"
 
 msgctxt "#22040"
 msgid "white/green"
@@ -9683,7 +9684,7 @@ msgstr "Escolher"
 
 msgctxt "#22081"
 msgid "Show Information"
-msgstr "Mostrar Informações"
+msgstr "Mostrar Informação"
 
 msgctxt "#22082"
 msgid "More..."
@@ -9747,15 +9748,15 @@ msgstr "Opções Add-on"
 
 msgctxt "#24003"
 msgid "Add-on Information"
-msgstr "Informações do Add-on"
+msgstr "Informação do Add-on"
 
 msgctxt "#24005"
 msgid "Media sources"
-msgstr "Fontes de mídia"
+msgstr "Locais de Midia"
 
 msgctxt "#24007"
 msgid "Movie information"
-msgstr "Informações de filmes"
+msgstr "Informações de Filmes"
 
 msgctxt "#24008"
 msgid "Screensaver"
@@ -9779,23 +9780,23 @@ msgstr "Legendas"
 
 msgctxt "#24013"
 msgid "Lyrics"
-msgstr "Letras de Música"
+msgstr "Letras de Músicas"
 
 msgctxt "#24014"
 msgid "TV information"
-msgstr "Informações de séries"
+msgstr "Informações de seriados"
 
 msgctxt "#24015"
 msgid "Music video information"
-msgstr "Informações de videoclipes"
+msgstr "Informações de concertos (shows, Clipes)"
 
 msgctxt "#24016"
 msgid "Album information"
-msgstr "Informações de álbuns"
+msgstr "Informações de Álbuns"
 
 msgctxt "#24017"
 msgid "Artist information"
-msgstr "Informações de artistas"
+msgstr "Informações de Artistas"
 
 msgctxt "#24018"
 msgid "Services"
@@ -9843,7 +9844,7 @@ msgstr "Erro ao carregar as configurações"
 
 msgctxt "#24032"
 msgid "All Add-ons"
-msgstr "Todos os Add-ons"
+msgstr "Todos Add-ons"
 
 msgctxt "#24033"
 msgid "Get Add-ons"
@@ -9963,7 +9964,7 @@ msgstr "Cancelar download do Add-on?"
 
 msgctxt "#24067"
 msgid "Currently downloading Add-ons"
-msgstr "Add-ons sendo baixados"
+msgstr "Baixando Add-ons"
 
 msgctxt "#24068"
 msgid "Update available"
@@ -10059,7 +10060,7 @@ msgstr "Notificações"
 
 msgctxt "#25001"
 msgid "Hide foreign"
-msgstr "Ocultar Estrangeiros"
+msgstr "Oculte Entrangeiro"
 
 msgctxt "#25002"
 msgid "Select from all titles ..."
@@ -10499,7 +10500,7 @@ msgstr "Falha ao iniciar zeroconf"
 
 msgctxt "#34301"
 msgid "Is Apple's Bonjour Service installed? See log for more info."
-msgstr "O serviço do Bonjour da Apple está instalado? Veja o registro para mais informações."
+msgstr "O serviço Apple's Bonjour está instalado? Veja o registro para maiores informações."
 
 msgctxt "#34400"
 msgid "Video Rendering"
@@ -10555,7 +10556,7 @@ msgstr "Disco Genérico"
 
 msgctxt "#35004"
 msgid "There are no settings available\nfor this peripheral."
-msgstr "Não existe ajustes disponíveis\n para este periférico."
+msgstr "Não existe ajustes disponíveis\npara este periférico."
 
 msgctxt "#35005"
 msgid "New device configured"
@@ -10627,7 +10628,7 @@ msgstr "Pressione  botão de comando \"usuário\""
 
 msgctxt "#36005"
 msgid "Enable switch side commands"
-msgstr "Ativar alternância de side commands"
+msgstr "Ativar mudar lado dos comandos"
 
 msgctxt "#36006"
 msgid "Could not open the adapter"
@@ -10663,7 +10664,7 @@ msgstr "Conectado"
 
 msgctxt "#36017"
 msgid "Could not initialise the CEC adapter: libCEC was not found on your system."
-msgstr "Não foi possível inicializar o adaptador CEC: libCEC não foi encontrada no seu sistema"
+msgstr "Adaptador encontrado, mas libcec não esta disponível"
 
 msgctxt "#36018"
 msgid "Use the TV's language setting"
@@ -10675,7 +10676,7 @@ msgstr "Conectado a um dispositivo HDMI"
 
 msgctxt "#36020"
 msgid "Make XBMC the active source when starting"
-msgstr "Tornar o XBMC a fonte ativa ao iniciar"
+msgstr "Faça XBMC a fonte ativa quando se inicia"
 
 msgctxt "#36021"
 msgid "Physical address (overrules HDMI port)"
@@ -10695,7 +10696,7 @@ msgstr "Falha ao definir a nova configuração. Por favor, verifique suas config
 
 msgctxt "#36025"
 msgid "Send 'inactive source' command when stopping XBMC"
-msgstr "Enviar comando 'fonte inativa' ao parar o XBMC"
+msgstr "Envie comando 'fonte inativa' quando parando XBMC"
 
 msgctxt "#36026"
 msgid "Put devices in standby mode when putting the PC in standby"

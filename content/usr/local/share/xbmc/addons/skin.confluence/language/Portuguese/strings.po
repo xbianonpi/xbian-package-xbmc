@@ -1,6 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Confluence
 # Addon id: skin.confluence
+# Addon version: 2.1.3
 # Addon Provider: Jezz_X, Team XBMC
 msgid ""
 msgstr ""
@@ -50,7 +51,7 @@ msgstr "Música - Ficheiros"
 
 msgctxt "#31023"
 msgid "Playing"
-msgstr "Reproduzindo"
+msgstr "A reproduzir"
 
 msgctxt "#31024"
 msgid "Page"
@@ -90,7 +91,7 @@ msgstr "Info"
 
 msgctxt "#31040"
 msgid "Now Playing"
-msgstr "A Reproduzir Agora"
+msgstr "A reproduzir"
 
 msgctxt "#31042"
 msgid "PLAYING"
@@ -182,7 +183,7 @@ msgstr "Ocultar botões do Menu Principal"
 
 msgctxt "#31109"
 msgid "Enable Custom Background"
-msgstr "Activar ecrã de fundo personalizado"
+msgstr "Activar ecrã de fundo personalizado."
 
 msgctxt "#31110"
 msgid "Background path:"

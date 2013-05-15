@@ -1,4 +1,5 @@
 # XBMC Media Center language file
+# XBMC-core v12.0
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
@@ -5287,7 +5288,7 @@ msgstr "Navigatiegeluiden"
 
 msgctxt "#15109"
 msgid "Skin default"
-msgstr "Standaarduiterlijk"
+msgstr "Standaarduiterijk"
 
 msgctxt "#15111"
 msgid "- Theme"
@@ -6203,7 +6204,7 @@ msgstr "TV gids"
 
 msgctxt "#19071"
 msgid "EPG update interval"
-msgstr "Vernieuwingsinterval van TV-gids"
+msgstr "Vernieuwingsinterval van TV gids"
 
 msgctxt "#19072"
 msgid "Do not store the EPG in the database"
@@ -6619,7 +6620,7 @@ msgstr "Alle gegevens in de TV database worden gewist"
 
 msgctxt "#19187"
 msgid "Reset the EPG database"
-msgstr "Wis TV-gids informatie en lees nieuwe in"
+msgstr "Wis TV gids informatie en lees nieuwe in"
 
 msgctxt "#19188"
 msgid "EPG is being reset"
@@ -7547,7 +7548,7 @@ msgstr "Gebruik standaard (alleen-lezen)"
 
 msgctxt "#20064"
 msgid "Copy default"
-msgstr "Kopieer standaard"
+msgstr "Kopiëren"
 
 msgctxt "#20065"
 msgid "Profile picture"
@@ -7699,7 +7700,7 @@ msgstr "Invoeren vergrendelcode activeert altijd de ontgrendelde modus"
 
 msgctxt "#20102"
 msgid "or copy from default?"
-msgstr "of maak een kopie van standaard instellingen?"
+msgstr "of maak een kopie van de huidige instellingen?"
 
 msgctxt "#20103"
 msgid "Save changes to profile?"
@@ -8059,11 +8060,11 @@ msgstr "Extra informatie downloaden tijdens het scannen"
 
 msgctxt "#20193"
 msgid "Default service for album information"
-msgstr "Standaardservice voor albuminformatie"
+msgstr "Standaardscraper voor albuminformatie"
 
 msgctxt "#20194"
 msgid "Default service for artist information"
-msgstr "Standaardservice voor artiestenformatie"
+msgstr "Standaardscraper voor artiestinformatie"
 
 msgctxt "#20195"
 msgid "Change scraper"
@@ -9799,7 +9800,7 @@ msgstr "Artiestinformatie"
 
 msgctxt "#24018"
 msgid "Services"
-msgstr "Diensten"
+msgstr "Processen"
 
 msgctxt "#24019"
 msgid "PVR clients"
@@ -10059,7 +10060,7 @@ msgstr "Mededelingen"
 
 msgctxt "#25001"
 msgid "Hide foreign"
-msgstr "Verberg buitenlandse"
+msgstr "Verberg onbekende"
 
 msgctxt "#25002"
 msgid "Select from all titles ..."

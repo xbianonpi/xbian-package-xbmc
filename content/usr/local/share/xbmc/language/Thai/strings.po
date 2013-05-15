@@ -1,4 +1,5 @@
 # XBMC Media Center language file
+# XBMC-core v12.0
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
@@ -9943,7 +9944,7 @@ msgstr "ส่วนเสริม ที่พร้อมปรับรุ�
 
 msgctxt "#24062"
 msgid "Enabled Add-ons"
-msgstr "ส่วนเสริม ที่เปิดใช้"
+msgstr "เปิดใช้ ส่วนเสริม"
 
 msgctxt "#24063"
 msgid "Auto update"
