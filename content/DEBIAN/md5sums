@@ -42,7 +42,7 @@ ad30215c9d45eb05cf96894a7436e05c  ./content/usr/local/lib/xbmc/system/players/dv
 9f02c65df42b935ce3e71861e71f2c85  ./content/usr/local/lib/xbmc/system/players/paplayer/stsoundlibrary-arm.so
 9066218f537843e77ae23ab8f638eb58  ./content/usr/local/lib/xbmc/system/players/paplayer/timidity-arm.so
 601447129f125965d4407c4a42fe9094  ./content/usr/local/lib/xbmc/system/players/paplayer/vgmstream-arm.so
-1d9edd76e6c94c67316e5686aa1695b2  ./content/usr/local/lib/xbmc/xbmc.bin
+13af765c86d4fa53b0e851869c9ba9d9  ./content/usr/local/lib/xbmc/xbmc.bin
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 b9587b11a1dda4b49171fe2c18a80f54  ./content/usr/local/share/doc/xbmc/README.linux
@@ -1661,7 +1661,7 @@ fb7f87f2102ea10e9fccf29270ee377e  ./content/usr/local/share/xbmc/addons/webinter
 bd5abaf15410488f65d41e0fe3f1da61  ./content/usr/local/share/xbmc/addons/webinterface.default/js/iscroll-min.js
 883bf0ec72cf386d4dc7b045db8a5241  ./content/usr/local/share/xbmc/addons/webinterface.default/js/jquery-1.8.2.min.js
 2ae07a68fc44f0ef8d92cce25620bd5f  ./content/usr/local/share/xbmc/addons/webinterface.default/js/json2.js
-ae8e4098124d7c24e5d664eabe3fe4a6  ./content/usr/local/share/xbmc/addons/webinterface.default/js/MediaLibrary.js
+d899a519e2ec65ac1bca98b1e72649f6  ./content/usr/local/share/xbmc/addons/webinterface.default/js/MediaLibrary.js
 b74698586448ba2fe03872c1dacf3cb7  ./content/usr/local/share/xbmc/addons/webinterface.default/js/NowPlayingManager.js
 53118436071f69397ccbb4c2324ebee0  ./content/usr/local/share/xbmc/addons/webinterface.default/js/xbmc.core.js
 50e2cf2cb2e79e3440517f7712c4d2f5  ./content/usr/local/share/xbmc/addons/webinterface.default/js/xbmc.init.js
