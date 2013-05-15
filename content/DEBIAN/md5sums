@@ -2,7 +2,10 @@ ecde94f3a4ba04e7c42abf1d2f80e17a  ./content/etc/init.d/xbmc
 c1e5ee1a92cda633920f870ea24f734f  ./content/etc/init/xbmc-exits.conf
 ffc8d109f6f709832b8425429a4e828b  ./content/etc/init/xbmc-preload.conf
 3d3478b4566cbb98f667b3b0f78e8da4  ./content/etc/init/xbmc.conf
-d41d8cd98f00b204e9800998ecf8427e  ./content/tmp/hash.xbmc
+fd47436a7e3af5bdb264cfcdab441c0d  ./content/tmp/applied.patch-xbmc.sh
+2ee1a98a4671fdf179721adc7cbd4963  ./content/tmp/compile.log
+cf4c89dd4a9d23786c57a749f044835f  ./content/tmp/hash.patches
+769d2266a0c7922d503783d251236f75  ./content/tmp/hash.xbmc
 30c2f6caa560b4a0138ed4abce845d50  ./content/usr/local/lib/xbmc/addons/library.xbmc.addon/libXBMC_addon-arm.so
 29f2f19b56354ec511dc119caa30d2ce  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
 1a76fb6f7f0e8399cbc4103136da1939  ./content/usr/local/lib/xbmc/addons/library.xbmc.pvr/libXBMC_pvr-arm.so
@@ -38,7 +41,7 @@ ad30215c9d45eb05cf96894a7436e05c  ./content/usr/local/lib/xbmc/system/players/dv
 9f02c65df42b935ce3e71861e71f2c85  ./content/usr/local/lib/xbmc/system/players/paplayer/stsoundlibrary-arm.so
 9066218f537843e77ae23ab8f638eb58  ./content/usr/local/lib/xbmc/system/players/paplayer/timidity-arm.so
 601447129f125965d4407c4a42fe9094  ./content/usr/local/lib/xbmc/system/players/paplayer/vgmstream-arm.so
-1d9edd76e6c94c67316e5686aa1695b2  ./content/usr/local/lib/xbmc/xbmc.bin
+cd53692c391766e5a8c57ab991476ae1  ./content/usr/local/lib/xbmc/xbmc.bin
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 b9587b11a1dda4b49171fe2c18a80f54  ./content/usr/local/share/doc/xbmc/README.linux
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
@@ -1653,7 +1656,7 @@ b72b4c9afbef3517eb1e61ba09e1c539  ./content/usr/local/share/xbmc/addons/webinter
 ab6562c7b037e42bbdf0e606f3a23894  ./content/usr/local/share/xbmc/addons/webinterface.default/images/close-button.png
 6c02a7b6875ea145d4c64577095f2cd2  ./content/usr/local/share/xbmc/addons/webinterface.default/images/remote.jpg
 302d284f887c28a1a6797dfdf63fed9f  ./content/usr/local/share/xbmc/addons/webinterface.default/index.html
-ae8e4098124d7c24e5d664eabe3fe4a6  ./content/usr/local/share/xbmc/addons/webinterface.default/js/MediaLibrary.js
+d899a519e2ec65ac1bca98b1e72649f6  ./content/usr/local/share/xbmc/addons/webinterface.default/js/MediaLibrary.js
 b74698586448ba2fe03872c1dacf3cb7  ./content/usr/local/share/xbmc/addons/webinterface.default/js/NowPlayingManager.js
 bd5abaf15410488f65d41e0fe3f1da61  ./content/usr/local/share/xbmc/addons/webinterface.default/js/iscroll-min.js
 883bf0ec72cf386d4dc7b045db8a5241  ./content/usr/local/share/xbmc/addons/webinterface.default/js/jquery-1.8.2.min.js
