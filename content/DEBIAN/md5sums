@@ -2,10 +2,6 @@ ecde94f3a4ba04e7c42abf1d2f80e17a  ./content/etc/init.d/xbmc
 3d3478b4566cbb98f667b3b0f78e8da4  ./content/etc/init/xbmc.conf
 c1e5ee1a92cda633920f870ea24f734f  ./content/etc/init/xbmc-exits.conf
 ffc8d109f6f709832b8425429a4e828b  ./content/etc/init/xbmc-preload.conf
-3c3eb9e9ecdbb950be34b936f26e818f  ./content/usr/.DS_Store
-a4fc7dd8861fe60272f8716a6c351c2e  ./content/usr/local/.DS_Store
-a146764fdb4b973d2bd1ff5d85cf6fec  ./content/usr/local/lib/.DS_Store
-b0db97b954a8f47bf8e08767300e39d9  ./content/usr/local/lib/xbmc/addons/.DS_Store
 30c2f6caa560b4a0138ed4abce845d50  ./content/usr/local/lib/xbmc/addons/library.xbmc.addon/libXBMC_addon-arm.so
 29f2f19b56354ec511dc119caa30d2ce  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
 1a76fb6f7f0e8399cbc4103136da1939  ./content/usr/local/lib/xbmc/addons/library.xbmc.pvr/libXBMC_pvr-arm.so
@@ -21,7 +17,6 @@ cc2e9577ce7a2dad858812878f42816b  ./content/usr/local/lib/xbmc/addons/pvr.vdr.vn
 f5699079bf18b575bef2e393154d9312  ./content/usr/local/lib/xbmc/addons/pvr.vuplus/XBMC_vuplus.pvr
 8cc546712bbca946036bec7674032fdd  ./content/usr/local/lib/xbmc/addons/visualization.glspectrum/opengl_spectrum.vis
 fcc60729150681bae2ef9bfef9658ddf  ./content/usr/local/lib/xbmc/addons/visualization.waveform/Waveform.vis
-21d373845332c2b86c76d8d69b54ab85  ./content/usr/local/lib/xbmc/.DS_Store
 85d5733a8e290186d3f6c6293925945b  ./content/usr/local/lib/xbmc/system/hdhomerun-arm.so
 4a495b6f997e12f6374781a3c7a4b8ed  ./content/usr/local/lib/xbmc/system/ImageLib-arm.so
 17149c5ca10dac4bdb54f0ab56767cc0  ./content/usr/local/lib/xbmc/system/libcmyth-arm.so
@@ -46,8 +41,6 @@ ad30215c9d45eb05cf96894a7436e05c  ./content/usr/local/lib/xbmc/system/players/dv
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 b9587b11a1dda4b49171fe2c18a80f54  ./content/usr/local/share/doc/xbmc/README.linux
-5b4da7e03d1b086228aaf1cff8c45f8b  ./content/usr/local/share/.DS_Store
-408483b114a31c2c94186793a4893a5d  ./content/usr/local/share/xbmc/addons/.DS_Store
 c38245a923ebc22fab108a5266946b4a  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/dlfcn-win32.cpp
 c3e0579ad2db6433b9d1ca2a7d198c4e  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/dlfcn-win32.h
 5c9fac15dc29eb2fa3fb3b34fca7d346  ./content/usr/local/share/xbmc/addons/library.xbmc.addon/libXBMC_addon.h
@@ -67,6 +60,9 @@ a37a870593a26c7a815699bed6f43495  ./content/usr/local/share/xbmc/addons/metadata
 57dca2fcef614c51c9fbd2659b5bb775  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Burmese/strings.xml
 91c2a0afbf5a0d727f1844ad570b6713  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Catalan/strings.po
 68c676ff25f26b0142b7232f537c28c3  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Catalan/strings.xml
+d08156dd553af661a052c3d00e61263a  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Chinese (Simple)/strings.po
+b6649d06231dafd8ec512badb4a88efc  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Chinese (Simple)/strings.xml
+f0e02e8fd5573d7cde17e86325fd7bee  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Chinese (Traditional)/strings.xml
 3d120688e7fa28b8bdb2bd3aaa1b94bb  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Croatian/strings.xml
 f8777f236436c8cabc1f201b02755ce0  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Czech/strings.po
 52851dee2bd0104d29705b528f94aea3  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Czech/strings.xml
@@ -103,6 +99,8 @@ fc25bc81978c08ffc560bdb65534310a  ./content/usr/local/share/xbmc/addons/metadata
 8f4dabfe54e011416b6a6165f97d6b71  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Norwegian/strings.xml
 198034d18e3200118d43107fcd3270b0  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Polish/strings.po
 ce755e68fbd3ff18e62a68223aa404cf  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Polish/strings.xml
+cac5ad93ffb3628248618a5b9371590f  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Portuguese (Brazil)/strings.po
+42a879c92a3f0a627b98d26f1cc7e866  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Portuguese (Brazil)/strings.xml
 c5484e35010654fec7aa9d145073c333  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Portuguese/strings.po
 7b3d958fa606e7b44dd2eb3062ccd6ff  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Portuguese/strings.xml
 1c36c73e7d77a5b2d27ba06fcb440bce  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Romanian/strings.xml
@@ -111,10 +109,15 @@ c5484e35010654fec7aa9d145073c333  ./content/usr/local/share/xbmc/addons/metadata
 35862a94ae3a183d58ac11a161a3e3db  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Slovak/strings.po
 d0048d500cb3acc0d2a3903b15a95477  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Slovak/strings.xml
 9e0244dcc7f159252a39e826942438a3  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Slovenian/strings.xml
+54f440f6271e0e12adea8f31ee81f779  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish (Argentina)/strings.po
+4b969e6430f0a8c5f5c74fe95918c72e  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish (Argentina)/strings.xml
+7aad9629ff7ce8ee749aac5bc9205f93  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish (Mexico)/strings.po
+3119000fd1c71297282d555a98a28e6e  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish (Mexico)/strings.xml
 a3567c7254cb7f31f57fe7cd73e677b3  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish/strings.po
 9093b292aeb8724e57b4af5b9664d0b9  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Spanish/strings.xml
 3b698c5a83ebbc29713fa640ae3e41b2  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Swedish/strings.po
 14605627ffabfbd657c1242f7754690b  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Swedish/strings.xml
+7f30c93f29f71a362aa0b1d174642d60  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Tamil (India)/strings.xml
 1b05d7ffc23b749ebe0d1143d55e35b7  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Thai/strings.xml
 dbd2064afac32a66c4bd9c1f22fddecc  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Turkish/strings.xml
 5710f782c8c9fa515a04e02153ba3a8b  ./content/usr/local/share/xbmc/addons/metadata.album.universal/resources/language/Ukrainian/strings.xml
@@ -133,6 +136,8 @@ f6df3aaa9ab16b3ba941a3532edc4cb4  ./content/usr/local/share/xbmc/addons/metadata
 aa713624b8f8c6d838e92405e4e3368a  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Bulgarian/strings.xml
 0c02178f90bfb9d530d0c7ea67c9405b  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Burmese/strings.xml
 6f526829162c93e9eb1959cd9870f0b8  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Catalan/strings.xml
+9dbd70c0ede4b91401aa6278a4723cff  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Chinese (Simple)/strings.xml
+a6aa0c6624b3c91366efe6a4ed6f562d  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Chinese (Traditional)/strings.xml
 ae2eb7a98fe5b1a48b4cd05059a777bc  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Croatian/strings.xml
 f2599056e105566a6d73f9d154e8c908  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Czech/strings.xml
 0646b70c0b33eae02946ae3dc7d03131  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Danish/strings.xml
@@ -154,13 +159,17 @@ b6750dc6808024ee7ab9aa1dfc21e540  ./content/usr/local/share/xbmc/addons/metadata
 fc35861b94d478a7ac490c552f5111af  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Macedonian/strings.xml
 2966e0f794bc0aa87295a089a93c4d1f  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Norwegian/strings.xml
 1541559bd0598e534b7175d98bd3f9ab  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Polish/strings.xml
+e404b5801b40312f204b457a935d7a65  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Portuguese (Brazil)/strings.xml
 ab92a68308edf7250146f401096209b4  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Portuguese/strings.xml
 669ea55342ed13429b6db4bea0947cfd  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Romanian/strings.xml
 f26d2a53f158438649f436806f96e0ac  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Russian/strings.xml
 d88fcdb8418544d9202e665c31d21afd  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Slovak/strings.xml
 9f7786b8dcb6c383b5eb5ef02ed66610  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Slovenian/strings.xml
+210428c31d87be9f4e7c71814d65ab9d  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Spanish (Argentina)/strings.xml
+80513395cd00e22fb0c0d09003d979fe  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Spanish (Mexico)/strings.xml
 dd1649d7303c04993c745955f72261f6  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Spanish/strings.xml
 2f3902021013235e0971e651c898d93a  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Swedish/strings.xml
+9cf38f95bb7d95db5f1bafa8c1ee44af  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Tamil (India)/strings.xml
 045d94ca2ae5276955c46b9bd31759f2  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Thai/strings.xml
 fb4f7303e9298d59563ae7cf3e336611  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Turkish/strings.xml
 f24c989d58547d73c8f9dfa31f6da0a6  ./content/usr/local/share/xbmc/addons/metadata.artists.universal/resources/language/Ukrainian/strings.xml
@@ -202,6 +211,7 @@ f4b79948bb16a6ffdb0a4558316e6a73  ./content/usr/local/share/xbmc/addons/metadata
 0cc0c654faa5f41d1dce430a9dd7bc2f  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Belarusian/strings.xml
 40f286be7972a02a0a70b4023af15053  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Bulgarian/strings.xml
 d4201038b83ab036a4838fa20047a0fc  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Catalan/strings.xml
+0e4c0a5b14f64b952490f91eac5611c9  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Chinese (Simple)/strings.xml
 2be133680292e74d79e83d99b330e5ea  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Czech/strings.xml
 d04e3901609c8091a1ac93d16478fb23  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Danish/strings.xml
 6722a460828f1925ce0aef3c17351790  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Dutch/strings.xml
@@ -219,11 +229,14 @@ af4b44e75273edb179f4a42d20cb06fb  ./content/usr/local/share/xbmc/addons/metadata
 d5865c2708d8183f59bc1aed4f5103e1  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Lithuanian/strings.xml
 75c93525e9c4b6621f8f0aa01922f85e  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Macedonian/strings.xml
 f569ee6d8a69214ce428afb8dc7eaa06  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Polish/strings.xml
+333a92a89af44c3971020354ae1e7909  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Portuguese (Brazil)/strings.xml
 44e99a1a4b336600bdcaffe14eb4ab93  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Portuguese/strings.xml
 a4f52edacbf28c15e696665fb5bb710d  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Romanian/strings.xml
 8b900da29b6fec89250408855f895e61  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Russian/strings.xml
 e23991e471a2f93c1bfb50d5a318aa5b  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Slovak/strings.xml
 a75149077b9a2154ba8b6dc6e82f0db6  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Slovenian/strings.xml
+cd7a16a914953b882cd8e1ae8d0c7387  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Spanish (Argentina)/strings.xml
+50e6dfa53b8768e16d5d7dccc9d6f435  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Spanish (Mexico)/strings.xml
 60b386ce98d9e6ab4ba22b117e00d40f  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Spanish/strings.xml
 52adb9dc0e1e13074c472d81d9a35c56  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Swedish/strings.xml
 c1952ec8a6e5ede4bbd1f47c4ee83e57  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.last.fm/resources/language/Thai/strings.xml
@@ -236,6 +249,8 @@ c6fc2ac9726b3aef75ba6592cd874d0c  ./content/usr/local/share/xbmc/addons/metadata
 8b8f66280ecceeae94b83f19256f1525  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Bulgarian/strings.xml
 03b4ec55393fa1cc1e3de495a907a35f  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Burmese/strings.xml
 3bbc0e9a94893542a8647911e814d531  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Catalan/strings.xml
+d5f7f66e38120919c7dde707870f6d9f  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Chinese (Simple)/strings.xml
+1d3de9f5617e9c0bdfaff8fb48d25981  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Chinese (Traditional)/strings.xml
 42fa45dbcc6582e849f2544229c8c873  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Croatian/strings.xml
 a2a647e7732dfffd1f95dbbb445c05a9  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Czech/strings.xml
 b629140369d3e91c638853593ccb857a  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Danish/strings.xml
@@ -256,13 +271,17 @@ b74455a253ac0f44053e3425c0dd3ff8  ./content/usr/local/share/xbmc/addons/metadata
 a7c7c59c3795227f1784f55168fbbc5d  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Macedonian/strings.xml
 3d5a3f24e102a03fb743423e0fb8037e  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Norwegian/strings.xml
 71eb8c261a8de9e54aaca6ef0cbe5da3  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Polish/strings.xml
+efc4485560bba7f4c3aa96a67886ea77  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Portuguese (Brazil)/strings.xml
 66878fbc8ff0c19d57764b2275a77bae  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Portuguese/strings.xml
 e955e645edd40cf1ad02e5c3018bc420  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Romanian/strings.xml
 a93de829135db3bc14a82369f51e5011  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Russian/strings.xml
 d20bb2f565ca8144afcf00d012ea5ec5  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Slovak/strings.xml
 d6e2c5112184eaecd45f275fe024c0ff  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Slovenian/strings.xml
+93d4cd9a98b451af65f41c34318102fa  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Spanish (Argentina)/strings.xml
+1e2f6f337bc2effeccaeeac2f8c869a1  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Spanish (Mexico)/strings.xml
 ab1ac6b1fe21c32603e4d3f7729b3f14  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Spanish/strings.xml
 3c36bfbc2526a5b56e486bf71aa84f43  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Swedish/strings.xml
+73e880d9704c286660c5ec9e3bbc920f  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Tamil (India)/strings.xml
 745f63edf623cbea24c1e007bc556f7c  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Thai/strings.xml
 988481d81e3d971d4b29671a8cec49c2  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Turkish/strings.xml
 fc62b7e4f17b2884249d740748a9b09d  ./content/usr/local/share/xbmc/addons/metadata.musicvideos.theaudiodb.com/resources/language/Ukrainian/strings.xml
@@ -281,6 +300,8 @@ de33067386eaf67fde7ca1c0f30dfe1f  ./content/usr/local/share/xbmc/addons/metadata
 2f407c9067a0d07c237fb4ddb015c11e  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Bulgarian/strings.xml
 a44ed7df99905e393a9c3fd5c92a55be  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Burmese/strings.xml
 f284dc325629ea02904c5cd10e57db50  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Catalan/strings.xml
+550ddb9d0317344ad12e72dfdd5aa501  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Chinese (Simple)/strings.xml
+f0e0148de4fd3ae4251f62865ff6d84c  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Chinese (Traditional)/strings.xml
 9e88efbc8f8935e2c6736e7f1604f1b8  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Croatian/strings.xml
 87c79c85e5615d097f821359883eceee  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Czech/strings.xml
 78d1a2d3c46e867667e74685ae23081d  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Danish/strings.xml
@@ -303,13 +324,17 @@ fab2e16667a7c3cad34501114b75e6a8  ./content/usr/local/share/xbmc/addons/metadata
 c9a7d9b3f812b789e5d8f6e8fbf5b0e2  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Malay/strings.xml
 7e24f84dcacda2875134760aeebd0e94  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Norwegian/strings.xml
 f6a312440c6168ccbac9979352fa9bae  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Polish/strings.xml
+eab5567da840b5faf27a675246063915  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Portuguese (Brazil)/strings.xml
 e8bdc02678ee771930ce50b4b0eb2ce0  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Portuguese/strings.xml
 ddce21d8717f4046ae3715b934cd532c  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Romanian/strings.xml
 36450e134f08f7b7ef9a7bb3ca0d1103  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Russian/strings.xml
 319694d19965ec91d44160b06e377582  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Slovak/strings.xml
 aae97f00a4df5718f2033e95cbf269f7  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Slovenian/strings.xml
+71c64ba2115319d3256438456f838522  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Spanish (Argentina)/strings.xml
+6a0f8984858db366a72ddf8012fc7dce  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Spanish (Mexico)/strings.xml
 35b60aa66a074d313f9570327cc73b75  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Spanish/strings.xml
 06b4600ce6a887cd1c68fe64e54a42fc  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Swedish/strings.xml
+f48c2224b3c98cf04a7e1c139e00ca92  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Tamil (India)/strings.xml
 bca7b368c480d799e371bd1541270d91  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Thai/strings.xml
 b31f292dfafeb39ce4c963f26b3147e3  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Turkish/strings.xml
 d6c21ad968efa8b6c133bc49146b074a  ./content/usr/local/share/xbmc/addons/metadata.themoviedb.org/resources/language/Ukrainian/strings.xml
@@ -331,6 +356,8 @@ b61219ca68833b4e9cb114140902238c  ./content/usr/local/share/xbmc/addons/metadata
 33a69d2fa7af3ff924bc5fef59216b97  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Bulgarian/strings.xml
 46fe3f9f1f09cca6b2077b30fee25ac8  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Burmese/strings.xml
 78c75896ebb075021f585658fabeadc1  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Catalan/strings.xml
+d3b0be16ec6c5e008ebfdb01de985a2c  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Chinese (Simple)/strings.xml
+2b6b704203e75963ff2a55e18586ee67  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Chinese (Traditional)/strings.xml
 8aad221ab5ad0c1b9dde685ca04c0d7d  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Croatian/strings.xml
 7062d0bf3ff85dba2230bd16d64ecbdd  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Czech/strings.xml
 c882661646dd3f201b46f6d61da2a02f  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Danish/strings.xml
@@ -345,6 +372,7 @@ c9b24642b5f5fbd3dbf2dc2672e4d301  ./content/usr/local/share/xbmc/addons/metadata
 0623647ed7685ec92e42c8229c356b01  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/German/strings.xml
 43177a74d19867305c47dc669408e3cf  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Greek/strings.xml
 788d78eba6d0c82905014a9133852d3b  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Hebrew/strings.xml
+4a1f515c004a5c12bd41cc8788808b2d  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Hindi (Devanagiri)/strings.xml
 0371ff7eeb0a8cd8e35c8da02645f084  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Hungarian/strings.xml
 decd4bce1d4f71dc0624a4ddb4fc16bf  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Icelandic/strings.xml
 aa8feea55a4288a40a171326d847e884  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Indonesian/strings.xml
@@ -358,16 +386,22 @@ c157e24eb23ddcc1bd992abd534e2dd4  ./content/usr/local/share/xbmc/addons/metadata
 28f1ebeac3879c9765eb444281abb5d3  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Malay/strings.xml
 768c105adcf8a9eec982462761421a78  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Maltese/strings.xml
 6794fce7b172d9a67550e22e21491438  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Norwegian/strings.xml
+9e75bac8527d9f3715bbeaf1ddac28d9  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Persian (Iran)/strings.xml
 bf69fe910182adf75b84ab846b4f1ea9  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Persian/strings.xml
 e984c39042a1267e11cc898827092457  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Polish/strings.xml
+51e6c7474f5ad152d529d92b258957a0  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Portuguese (Brazil)/strings.xml
 9299d0f22e5cb5734a4a941a0bb79cc6  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Portuguese/strings.xml
 10895b935962ac86d283cb06b3511d28  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Romanian/strings.xml
 0f46f1d6fa1a9a5822d1803e46abcd6f  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Russian/strings.xml
+be904cd7a8202bcb06ca2c723c6b5e92  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Serbian (Cyrillic)/strings.xml
 7b2c49fbf4a8e0a4cffc2652aaabf857  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Serbian/strings.xml
 244e338e1dec636a0a78b637a1ff85b6  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Slovak/strings.xml
 3c9172d16385bbb412ec9392c527a70e  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Slovenian/strings.xml
+39097cc6d77e6a33a327a71fced61168  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Spanish (Argentina)/strings.xml
+4faa52ed100a75c51ff23b162420cbbd  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Spanish (Mexico)/strings.xml
 44e0b29361f6783101472d29e956e5b5  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Spanish/strings.xml
 6cec2f3b8b14f249be0a3ef45278e1b3  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Swedish/strings.xml
+4ef82d7a64986a217ffceffe263eb03d  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Tamil (India)/strings.xml
 2982a70eea6a1128221972e35c4ab57c  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Thai/strings.xml
 5b658bdf1ffa6e86960c4999a14f7a65  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Turkish/strings.xml
 ab8e22e9599835af2d2c2abb0953a6e8  ./content/usr/local/share/xbmc/addons/metadata.tvdb.com/resources/language/Ukrainian/strings.xml
@@ -388,6 +422,8 @@ fc2930944f50fa259cc9c98de3a71553  ./content/usr/local/share/xbmc/addons/pvr.argu
 ee887d304c7cdb276fb5a5dec436cb3b  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Bosnian/strings.po
 145268b0cf7c8c47aaaf9b42a1d6894d  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Bulgarian/strings.po
 630ccd5e2a0792ba695f083bf233b82d  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Catalan/strings.po
+489729bc0ccad8df18a8382523084bc8  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Chinese (Simple)/strings.po
+f6887f2531137a5bcfc91287dafcc5b0  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Chinese (Traditional)/strings.po
 0d9209dc17f5d5f27d5ce9ed88760ace  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Croatian/strings.po
 f4086c827bdfe0ba321a70fa49b6c0f1  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Czech/strings.po
 f8a0ac244c34e3bff651a5649f007513  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Danish/strings.po
@@ -400,6 +436,7 @@ c77e5399fd68a27097d220b6e558f53a  ./content/usr/local/share/xbmc/addons/pvr.argu
 fa6d336c26a2a0cab3cad488eaacea3e  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Galician/strings.po
 b2774c1c58738954091ea6d0e489e19b  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/German/strings.po
 32e3eb045eb709fb1c38e6a37e700cd6  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Greek/strings.po
+b32a5aeafaf22f2382574330b0fc899a  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Haitian (Haitian Creole)/strings.po
 d546afacb6b5782a7e7aeb7070a46d25  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Hebrew/strings.po
 a53d23e2143191a7c24eddb332dcf00f  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Hungarian/strings.po
 0ebfb879aad351cd181ab4516b990e6d  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Icelandic/strings.po
@@ -412,12 +449,16 @@ e5f717f66e52566aeedfb5858d08a6b0  ./content/usr/local/share/xbmc/addons/pvr.argu
 3523bea4f1da7d338724feb584786470  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Norwegian/strings.po
 d986fad4f372922c253efe21412780f8  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Persian/strings.po
 591103b41ee2a1681d873172316b3799  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Polish/strings.po
+44ab8167546550411f1acf249082b769  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Portuguese (Brazil)/strings.po
 5680cc140b4cb901ac2370a2b9ab3a45  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Portuguese/strings.po
 08d9fdfe12003444e3bd12f0f9074f38  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Romanian/strings.po
 988ff9e314ef0d0822b7ad2910d4eac8  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Russian/strings.po
+6fcd67e660215feb5562da7ea6b10065  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Serbian (Cyrillic)/strings.po
 c3bffc8293a9ae9a08d919d440ede3c9  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Serbian/strings.po
 83df91122eba2daa8880d0512e8ab54e  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Slovak/strings.po
 c03d3975fb039a2dcdb61d9d73788242  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Slovenian/strings.po
+d766009cf57340daf50ea41fdbafbbbf  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Spanish (Argentina)/strings.po
+cf6aaac72263ab08777f3a75692e5825  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Spanish (Mexico)/strings.po
 5247e41f40ca21b3f4b0bd43ce368a41  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Spanish/strings.po
 706d3b93440e021233fb11fa472f47e5  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Swedish/strings.po
 2db7e2d866798e5cef18681a224b9c15  ./content/usr/local/share/xbmc/addons/pvr.argustv/resources/language/Thai/strings.po
@@ -439,6 +480,8 @@ cde3d76406d6ee6ab1299d25a1892662  ./content/usr/local/share/xbmc/addons/pvr.dvbv
 13da7ba57905be506f11318fb8cc00d0  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Bosnian/strings.po
 ded246dc9c64e1b6d693a8a3b7a415f5  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Bulgarian/strings.po
 2022bf2e326869fa5851fe8313fde929  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Catalan/strings.po
+1afa15b494c2a044073417c215ed0f56  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Chinese (Simple)/strings.po
+2c2205f8128902ed5269926f58567fd8  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Chinese (Traditional)/strings.po
 6108cc43b9038075536fb4f72f4ec2cc  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Croatian/strings.po
 09e23fab95199efccb370888dac5c397  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Czech/strings.po
 f1843b65a156f016b3ce905f691c268e  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Danish/strings.po
@@ -451,7 +494,9 @@ a971634e04f5c670fafab2cc76dce0d3  ./content/usr/local/share/xbmc/addons/pvr.dvbv
 3566578f1a9ccf325260a44292f456f1  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Galician/strings.po
 053eb9d202a689073bba508388f4c387  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/German/strings.po
 378c4a336828e54f11b5d0acb08420f2  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Greek/strings.po
+dfdbc9d02d09e2c0fd464f1c25ab6f40  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Haitian (Haitian Creole)/strings.po
 2e06886c1123488a2d60424f4f8001e4  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Hebrew/strings.po
+ec747f6d47cf2fa65ddc30901f9aa158  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Hindi (Devanagiri)/strings.po
 624a3917cf6f7b93fec106e617a3f395  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Hungarian/strings.po
 aeef3e991fdd5d32a88301b5828f0d3c  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Icelandic/strings.po
 7fb444f9afa34407804f7969b8a57ab8  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Indonesian/strings.po
@@ -463,12 +508,16 @@ af62aa399d1ebeb52034f5a2255266e9  ./content/usr/local/share/xbmc/addons/pvr.dvbv
 dba5f2364910fb962c1524efaca62867  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Norwegian/strings.po
 d8ab4d623528b884cf936d2e2b6cfbfd  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Persian/strings.po
 20e345ccfcc47950aad7d578e53c682a  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Polish/strings.po
+411e280112f5691aeff8484ae82f786f  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Portuguese (Brazil)/strings.po
 4d9c40be3c83d7b45756145b785a060c  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Portuguese/strings.po
 34266e9993806b6b204d366ab5b20e69  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Romanian/strings.po
 52f723bb082c9e762ccd39db27be0a7d  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Russian/strings.po
+a52e89d041c22eb4230b56d448a87594  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Serbian (Cyrillic)/strings.po
 fef50c3673f52460ec949379f578f54c  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Serbian/strings.po
 f529cc4264bca42537be9abb3f7f8e51  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Slovak/strings.po
 2de7ab973812a930db5235a431cb909d  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Slovenian/strings.po
+d7e93cd67e41df18cbf5e5eb125e8762  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Spanish (Argentina)/strings.po
+5a8cfbb84cfd48bb89dd5b0de03a9081  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Spanish (Mexico)/strings.po
 a4d1eb4bffcd52efed9414762370cdb8  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Spanish/strings.po
 f474187ea28e91517be8b6ae8df6e117  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Swedish/strings.po
 adcb8eb6573989b836c17e61f1591d0e  ./content/usr/local/share/xbmc/addons/pvr.dvbviewer/resources/language/Thai/strings.po
@@ -487,6 +536,8 @@ c0c2e3880e761481d8e3458cf2311b75  ./content/usr/local/share/xbmc/addons/pvr.hts/
 0acca5484d74b75f2de708a2035f0f31  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Bosnian/strings.po
 aeb7c07b84e6c679553965b3bf867b1d  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Bulgarian/strings.po
 a5d481e9f83b3445c61212f14eec818a  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Catalan/strings.po
+8de27ad79038196ace416f1fa693e8f2  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Chinese (Simple)/strings.po
+7a7324dfa02e1c88f0dd3f8660127c65  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Chinese (Traditional)/strings.po
 01aaf15cc0293ecdb27214d54c2c52d7  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Croatian/strings.po
 184e956dc57d305416fc7d981b1d46c6  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Czech/strings.po
 cf82af06425a65e4c110163abd69df05  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Danish/strings.po
@@ -499,7 +550,9 @@ edf00552036b8588af8f3dc0bc40444a  ./content/usr/local/share/xbmc/addons/pvr.hts/
 cc3181284958a2945cad5b3dae381193  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Galician/strings.po
 338863fa9c7edb11658bb7dfe18d3d70  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/German/strings.po
 1a9ebdb27d5c16787b1841aeef43c9a1  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Greek/strings.po
+c8cbe174e05eb1e618f682293b0329de  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Haitian (Haitian Creole)/strings.po
 bb71cfa99934fe729e167dafe1c58384  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Hebrew/strings.po
+b809f0724c212c53cf3c81baf82f0f7e  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Hindi (Devanagiri)/strings.po
 a902cafb6f3e7b5794e317328a854a7c  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Hungarian/strings.po
 6d697f45c20f5cda30e360e97dadaf42  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Icelandic/strings.po
 0fd351d8f64d51c315397b79b3721875  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Indonesian/strings.po
@@ -513,12 +566,16 @@ da5457c270def893977b99bee96f8feb  ./content/usr/local/share/xbmc/addons/pvr.hts/
 1b665d1c6f06cd353d7a9ca3f187d45a  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Norwegian/strings.po
 6163444e110e28edec460e26077b5f79  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Persian/strings.po
 5d5949386f356377c3d0ca90aaca6552  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Polish/strings.po
+a868bf5f19b62aea37cd3e1099b2ffd5  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Portuguese (Brazil)/strings.po
 8f3110e170fa9ae6756ced5321302dfb  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Portuguese/strings.po
 fe8f7e1de62d765ade3919bb5900e369  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Romanian/strings.po
 6ae8111417a011f69fb86997cc09796c  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Russian/strings.po
+b0e1981cf1f5cf1eba389939655cabaf  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Serbian (Cyrillic)/strings.po
 9822620500ea16bb72e35ff4de1b1eaa  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Serbian/strings.po
 9474b7d73500aa5ca0eb86584e79e7c2  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Slovak/strings.po
 ec1dd6685efc0b7549becca42bc6ae9b  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Slovenian/strings.po
+928383b0dad59cc0b2fb7c74a3eaf20b  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Spanish (Argentina)/strings.po
+bfaaac3cb715135f20959c783c66a318  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Spanish (Mexico)/strings.po
 53ffd0e9ee647f9e585234d7f019e9f9  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Spanish/strings.po
 a2e7d6b5ca3d1f14b51ebd0659494cc0  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Swedish/strings.po
 ee193e29a5b0097d3fc5c6502698afbb  ./content/usr/local/share/xbmc/addons/pvr.hts/resources/language/Thai/strings.po
@@ -540,6 +597,8 @@ b1dd07d8de25f0cb1e65f583644eebc7  ./content/usr/local/share/xbmc/addons/pvr.medi
 67919ac9190a2af17559c328a3478fb1  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Bosnian/strings.po
 d72cfb5a54511367be4c23323c976e38  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Bulgarian/strings.po
 d7834bfe56260da12f6fb8a6a651fc12  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Catalan/strings.po
+7cf6d0906b0915b46e7bf9254db59b06  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Chinese (Simple)/strings.po
+f8675e02f0f2edda1073612d836c41b0  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Chinese (Traditional)/strings.po
 eac5b830fefa35bf73f4f0deb55ee32d  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Croatian/strings.po
 5f9060c42cdac4fd38216324bf010f6b  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Czech/strings.po
 b70d2d6cf3c1f883fbd0a5bb2c7c8818  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Danish/strings.po
@@ -552,6 +611,7 @@ aaa466794688d5815dfe78c7327cd823  ./content/usr/local/share/xbmc/addons/pvr.medi
 60e9256f874cb36a13f1c1579002aee9  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/German/strings.po
 1b6f0c994db07b0ccd2f70c3d06e93ba  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Greek/strings.po
 4c44486621bce4c14a2b408f1fb7f5d0  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Hebrew/strings.po
+3ef23d332b4c5391620dd78c5a9162be  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Hindi (Devanagiri)/strings.po
 571fe21bef1d71db8c77fe0e953de871  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Hungarian/strings.po
 d9d8ee9ec5d6f0a19d662a5bbaf209ff  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Icelandic/strings.po
 4bd462df2147ec4cf2737191a9b07e2a  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Italian/strings.po
@@ -562,12 +622,16 @@ e43a3bb2379a607b76c971ec4e6697a9  ./content/usr/local/share/xbmc/addons/pvr.medi
 b29e0795f565d961536712f6f64f093c  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Norwegian/strings.po
 c68fecf6b7cc86201a4a0b49eb613bc3  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Persian/strings.po
 a8314834c183456406fc0968bc3cd7af  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Polish/strings.po
+3b43ebe9211cce9adf13ba2ef526d13f  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Portuguese (Brazil)/strings.po
 de08c2de2ffb5242a50af6c542b1e80f  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Portuguese/strings.po
 73fc1cb7e30a92342bde015d5bb1c870  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Romanian/strings.po
 b1e4e9316e386bf5d1ecee41f91cf71d  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Russian/strings.po
+8e8c0432d1a095b51c932640d8d84f70  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Serbian (Cyrillic)/strings.po
 053f12cd9e14584fa28ad5d7317d7e75  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Serbian/strings.po
 27c4cae83debb7242fe68b5fa60ac807  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Slovak/strings.po
 6930eb8c1e74bcb7fc3a615b38e43b32  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Slovenian/strings.po
+2988e306e49ce3ffbf55be05e75b3f8b  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Spanish (Argentina)/strings.po
+437b8128493763a792920ed8e9f83db5  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Spanish (Mexico)/strings.po
 7868e8c89372d98a6d46e907107c0212  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Spanish/strings.po
 f9de219c929b76b48f8d70d676f64f72  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Swedish/strings.po
 bcd27010c2b257193fbfe25de0e00a4b  ./content/usr/local/share/xbmc/addons/pvr.mediaportal.tvserver/resources/language/Thai/strings.po
@@ -582,6 +646,7 @@ b6f79c51c64b36d471ac4b7bb6256aeb  ./content/usr/local/share/xbmc/addons/pvr.myth
 afd83cc58aadd63efad298081c05cc3f  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Afrikaans/strings.po
 4348a5ce941f0da196401bc9852fcbbd  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Belarusian/strings.po
 bbf6cf5e0c67e2988f73b761d1588da7  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Catalan/strings.po
+c370d7e3f1dc3ea7379df26f592583c4  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Chinese (Simple)/strings.po
 50a06e7684a5c589d5f0ee5e6ae4e9d4  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Czech/strings.po
 eff6e50423ce8357ec195067c3f96a74  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Danish/strings.po
 b3489d60630655abb18efe283beacc62  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Dutch/strings.po
@@ -599,11 +664,14 @@ bfafd31d0d272ba6cd334c55476d91b1  ./content/usr/local/share/xbmc/addons/pvr.myth
 0b790c1c4992f7411c1a8ea5c8d9693b  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Lithuanian/strings.po
 c9f173a2fac0c17cfcebffe1b70f9dc3  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Macedonian/strings.po
 8ea6bb8378c30d1abd9ef8bea8be83fa  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Polish/strings.po
+8b2747b225686bab16eaaa5d31b9e1f1  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Portuguese (Brazil)/strings.po
 3f0fec061769de3e29ad82d932717a32  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Portuguese/strings.po
 a523b0c9a82bd38301e1865282fa9b83  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Romanian/strings.po
 c1004af4c099816c060cacc0bfbfa62e  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Russian/strings.po
 915bbff58338c3f6a70658046935a976  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Slovak/strings.po
 2bb4f4eda051453e794b2118b1a702d9  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Slovenian/strings.po
+7c8a17b6ac6c4f18311a07151bb4ba46  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Spanish (Argentina)/strings.po
+3cb3f5d8a6965e854f8edf324d9d8da6  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Spanish (Mexico)/strings.po
 8bfe48da88722b9071f47258f8b1e7cd  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Spanish/strings.po
 9e08bde0e83e02ae69d015a0652731c8  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/language/Swedish/strings.po
 7fd009e859c1694b00737a45719ccb40  ./content/usr/local/share/xbmc/addons/pvr.mythtv.cmyth/resources/settings.xml
@@ -617,6 +685,8 @@ e9fb8105764094dc3f089f9d33df833a  ./content/usr/local/share/xbmc/addons/pvr.next
 634979aa7c56d0ffe1c06a156bca3178  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Belarusian/strings.po
 9f06492d0f2f343b80ebe9bca662651c  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Bulgarian/strings.po
 5bd092870a87ef95262a256bccc306ba  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Catalan/strings.po
+2a03dbfd0963e90a9d3a5fc9f30ad874  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Chinese (Simple)/strings.po
+0cb44781c6d91d60eef76b00fe7cbb50  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Chinese (Traditional)/strings.po
 707482a2d95b2adf06319827ecec00bc  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Croatian/strings.po
 aac40f9d2e7288349a4b1c61dfad9c86  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Czech/strings.po
 ef7f676bc1987f62c7010a99a074a01b  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Danish/strings.po
@@ -637,11 +707,14 @@ df5cde9344faf7f3e27766053fc18805  ./content/usr/local/share/xbmc/addons/pvr.next
 6deb87217f1ad32853bc369b8e730673  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Macedonian/strings.po
 5a74abf8961859f000d4111b0ce43764  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Norwegian/strings.po
 2e012e9b27f8b3a951e7b3ee83514cab  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Polish/strings.po
+cb234eac51231d1d35b4b5a12edb73e7  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Portuguese (Brazil)/strings.po
 67bb805d6692e6a2506f898ce50ddd29  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Portuguese/strings.po
 55997fe02f14510d9131edd0acc4e562  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Romanian/strings.po
 7dacccf3399956be5f76fc669ea5042d  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Russian/strings.po
 aa1f03dd5479d4fc1fcd20fd03d58584  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Slovak/strings.po
 418f65ab9b209499b4f1cec43ee8b058  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Slovenian/strings.po
+d2951d2b36b986681b41bb2141f36743  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Spanish (Argentina)/strings.po
+250073ee7d77de6a3c1ca4afa60ccfdb  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Spanish (Mexico)/strings.po
 8eeacdc85f346e0d2af94e1cb4a608c3  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Spanish/strings.po
 fe29d5702b84b849095550103a11d148  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/language/Swedish/strings.po
 841ac82237221b549f98ee8efcc6bbab  ./content/usr/local/share/xbmc/addons/pvr.nextpvr/resources/settings.xml
@@ -662,6 +735,8 @@ a8751a61dffc5721b4c330aa6dde48f0  ./content/usr/local/share/xbmc/addons/pvr.vdr.
 b041f3e7208e396085c8a0641054b334  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Bosnian/strings.po
 0a9f3250a552efcf9c6b5ca0c3fe9bf4  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Bulgarian/strings.po
 7863e9f819d4ca894bde3061076d9a1f  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Catalan/strings.po
+deef6fb64fe6a18a44f5f7c16e075eb4  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Chinese (Simple)/strings.po
+2c22c1581c7c2404f96ff1d4c936ec44  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Chinese (Traditional)/strings.po
 fd25ab97596ccefe3a9f131b23381c66  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Croatian/strings.po
 52f89e69717f0f8d5fe54ee5830d93e3  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Czech/strings.po
 889aa1a8120459ac6f4b412ff2070781  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Danish/strings.po
@@ -675,6 +750,7 @@ d273b56df7fe0c99be670e9b894884d9  ./content/usr/local/share/xbmc/addons/pvr.vdr.
 a2ade54ccb139aad1a72c153c239176d  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/German/strings.po
 6baf232de9724e32eb545b169bb2fc58  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Greek/strings.po
 b40489a9534284b3ec0bdef25e3a7896  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Hebrew/strings.po
+d6217fa8e9a38c7ff39dd5f7ccb5944a  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Hindi (Devanagiri)/strings.po
 94cac653f36f9ed15f18b0fcaf05c16e  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Hungarian/strings.po
 3306fc548e27ff8e3f6be990de0a01d8  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Icelandic/strings.po
 687e28e60477f41098044280380f4499  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Indonesian/strings.po
@@ -685,12 +761,16 @@ eb5569e682cf2b84bce07a98cb054a35  ./content/usr/local/share/xbmc/addons/pvr.vdr.
 42263203b8ab6075176176a93867f8dd  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Macedonian/strings.po
 fb916059a85bca01902749a1548e1406  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Norwegian/strings.po
 3b658ab211a793f690e51a59c1228909  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Polish/strings.po
+4b2908e911723274adf63c3b19ea0509  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Portuguese (Brazil)/strings.po
 299d34053dce2dc8fd1064c7581d43fc  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Portuguese/strings.po
 8f394af4d7f1cce1b063b0591cb260a5  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Romanian/strings.po
 c69940f6637b5594e1de488c9363797c  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Russian/strings.po
+8ce8e93416a9c8ecc848e6a81f1f6b24  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Serbian (Cyrillic)/strings.po
 12a37a554166e7a8e0c125ace8035a94  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Serbian/strings.po
 7676130a995f628a60436db380ea2653  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Slovak/strings.po
 9ad7836c9729275d75fb972ee0bcf7ef  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Slovenian/strings.po
+1438ad432e6584c76b5fd319cc2b837a  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Spanish (Argentina)/strings.po
+02d58fbe419456ef15c00b3a845551bc  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Spanish (Mexico)/strings.po
 b0e43aa315342993283cc65f5f8ab93a  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Spanish/strings.po
 87141d8c2102cb3309440675ceb4baa4  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Swedish/strings.po
 eca96e49937bb6f9a6db263525e2859e  ./content/usr/local/share/xbmc/addons/pvr.vdr.vnsi/resources/language/Thai/strings.po
@@ -722,6 +802,8 @@ a2eaf2cda5e2d6d64b0e678fb94d9b71  ./content/usr/local/share/xbmc/addons/pvr.vupl
 b56509a01580f18aa048e08aa7970f69  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Bosnian/strings.po
 efb035f6b9f77b2d11ced1147d9ac275  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Bulgarian/strings.po
 b702f63888905367decb4de9ed2dd5e1  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Catalan/strings.po
+7ea68e2e51114b71f76cb0d57bff520c  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Chinese (Simple)/strings.po
+e212a1e1cc1b860b304743f9ff4fe3f8  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Chinese (Traditional)/strings.po
 d3d2fa2aca2227019c588f0e0659da0c  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Croatian/strings.po
 fcc95f80b20b44ebcfd288bcfa226b68  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Czech/strings.po
 319b8489acbe8dbef036e92cf76b3697  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Danish/strings.po
@@ -734,7 +816,9 @@ d42e76ec629ca8849db11d5069f4f721  ./content/usr/local/share/xbmc/addons/pvr.vupl
 d0981c5a8a2bed0f08190e185bf9cbae  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Galician/strings.po
 7ae620d80b88c35a3a49e3291ccc56b2  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/German/strings.po
 73c96c38d6be281a8668cb0c26e55f5e  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Greek/strings.po
+f05e5b75575a26032724609a6fc27b0d  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Haitian (Haitian Creole)/strings.po
 5d091ba9f8783cd1d2e145264c15ac85  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Hebrew/strings.po
+757b4e5b5bf58ba6e282fab6f0a59680  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Hindi (Devanagiri)/strings.po
 c63001fff49132129599bed96fbed5a1  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Hungarian/strings.po
 c6febb4d1740bc05bffbe4be8fd3abf1  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Icelandic/strings.po
 5d6a7e7b66e0de965557e29968525a27  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Indonesian/strings.po
@@ -747,12 +831,16 @@ c6febb4d1740bc05bffbe4be8fd3abf1  ./content/usr/local/share/xbmc/addons/pvr.vupl
 59d132142c168acd890fc8c8760e7707  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Norwegian/strings.po
 fe6803a1a001c14da0159ed1f003a737  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Persian/strings.po
 a60b16cab4774a81ba5e8928847e5bb9  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Polish/strings.po
+e7891906167a5c1483799821ecb573b8  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Portuguese (Brazil)/strings.po
 ab8e0a5462bf3469efcf929f66eac4fa  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Portuguese/strings.po
 00c399fe0065262d30bac90b9ca86787  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Romanian/strings.po
 d19be1a0815213af73faae43e26ebe5e  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Russian/strings.po
+84f7a2389530f3e5f908804b84f6e076  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Serbian (Cyrillic)/strings.po
 139c14ec78c88110c512fe789bb4426b  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Serbian/strings.po
 73398ef542d9e32de38e95c110bc15d6  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Slovak/strings.po
 ee2aa9d5e33ea52cb76716bcf9ce00e6  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Slovenian/strings.po
+222e61915dd5bffda3c058bc2de20db1  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Spanish (Argentina)/strings.po
+82c9d0ae1a78c2bf982abb24887a3f90  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Spanish (Mexico)/strings.po
 f1a0d892cb7a3c8bd76d6dbbd66dc204  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Spanish/strings.po
 95a8daed0ae1b48a572ea8cf6b2a9886  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Swedish/strings.po
 1608a9c3b7f6ce3198a6bda542cb3711  ./content/usr/local/share/xbmc/addons/pvr.vuplus/resources/language/Thai/strings.po
@@ -790,11 +878,14 @@ c1fec699fe36e166b8d7da8d791fda46  ./content/usr/local/share/xbmc/addons/screensa
 129b8741068cc9070d0d52aff98ea450  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Bulgarian/strings.po
 89c3435741d9c6e78637add0b4079cef  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Burmese/strings.po
 3d4804c1ccf13b3c585f72c2e60b051f  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Catalan/strings.po
+dd3e1d99181f2d61ac233ec3e1e123b2  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Chinese (Simple)/strings.po
+8c0f07abdfe8d8c2e054ecf5446a84e0  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Chinese (Traditional)/strings.po
 954f923033994ce028338438df524a93  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Croatian/strings.po
 2a27c4b60edfb101fa65237f865bf2ad  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Czech/strings.po
 8e8c637692a3124531adc7285d97d151  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Danish/strings.po
 da745125e0a858ad118045a51c7811a7  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Dutch/strings.po
 684915df3800c09431f883815ea49af6  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/English/strings.po
+a251f6097c27eaf9bf129b2123fedfce  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/English (US)/strings.po
 35a63133ee2e854fb3cc051cfbccfd69  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Estonian/strings.po
 81a1f3db6ab7f965b76f81abc18d1e28  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Finnish/strings.po
 5e4fb943309e055160c899c4d3a27c49  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/French/strings.po
@@ -812,13 +903,17 @@ b4f95dbcdd625d25746c2836ae6cbd5a  ./content/usr/local/share/xbmc/addons/screensa
 d59bda29d6bd00c5992c98c8ae1ce575  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Macedonian/strings.po
 658c4b75a9790e34493b86989608db6b  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Norwegian/strings.po
 4ff8e1b783867db9dd9cbb8fe44e1d67  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Polish/strings.po
+1d80ee7e0162b6e5104dcb8541a3971b  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Portuguese (Brazil)/strings.po
 a8995715342e5d52db1ae5d6c6e2cc93  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Portuguese/strings.po
 95c9cba73d21d70c6514c76d5f64875f  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Romanian/strings.po
 ee23757a3c2287e7eaedabc35ba5b1c7  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Russian/strings.po
 420895b76bca1f563ee45b2774b1c517  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Slovak/strings.po
 22273a30470017014d2780be241f7e44  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Slovenian/strings.po
+e2658bfedd622588efe8eaaef7e32e75  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Spanish (Argentina)/strings.po
+2eee260a4e179a7936224f8d01ed4476  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Spanish (Mexico)/strings.po
 9be07fc7872066d77e319efc9e49e59f  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Spanish/strings.po
 f02ee387ee81c48318d4cff2881e9fc2  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Swedish/strings.po
+0ee2b56b83c9f4199526b71086c46c70  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Tamil (India)/strings.po
 fb4d13a6c6317584dc043d0ce6e271b8  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Thai/strings.po
 c35dfef0b6c9698911607457d8652da9  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Turkish/strings.po
 3e893fc9364a1f83723ce84029538618  ./content/usr/local/share/xbmc/addons/screensaver.xbmc.builtin.dim/resources/language/Ukrainian/strings.po
@@ -964,11 +1059,14 @@ ed704af6c2df4f707ecf8fefe90fd00a  ./content/usr/local/share/xbmc/addons/skin.con
 40eb575a62bd3f0e2afb485d6f55c9b7  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Bulgarian/strings.po
 f3534df006c77ef7f32c0d7bf097b68e  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Burmese/strings.po
 1d0907dc53f93667cdb883883d80ea60  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Catalan/strings.po
+dd6abb6bb801d8773596232fc6a7a5b4  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Chinese (Simple)/strings.po
+ee7b8b4788b80f74f8daa2ffc92c1266  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Chinese (Traditional)/strings.po
 ee6fa26656a56e5fb43de3e895dd55b7  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Croatian/strings.po
 77ed2956b7bb27fd3203acddb6616eb5  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Czech/strings.po
 59daf3e91666a9583d8f83a433bd5c7b  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Danish/strings.po
 0057c79d60d8e130f3eb97e094833463  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Dutch/strings.po
 d4560a50747f88ed81ccd51227fb2e3a  ./content/usr/local/share/xbmc/addons/skin.confluence/language/English/strings.po
+01307bf22cc73113af627e08c1bfbf63  ./content/usr/local/share/xbmc/addons/skin.confluence/language/English (US)/strings.po
 080f8c5d894d0a8a77bfae8a6a4ce618  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Esperanto/strings.po
 00ab1271990356eeb711f1ad396b68fa  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Estonian/strings.po
 389bb030030261086faca7db186ec9a7  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Faroese/strings.po
@@ -979,6 +1077,7 @@ c7f3b2f7441f147f98c424af1db51709  ./content/usr/local/share/xbmc/addons/skin.con
 e4cf4b28fa3fbecc431035a1080b4228  ./content/usr/local/share/xbmc/addons/skin.confluence/language/German/strings.po
 71aa696118f2de788808d14e095dfb76  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Greek/strings.po
 7c39d5eac5e314790f192ecf4f626346  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Hebrew/strings.po
+9d2a1c834012528745bdd0633978e46a  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Hindi (Devanagiri)/strings.po
 386db7f594b6ce227f5b03873b78bf23  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Hungarian/strings.po
 d50c116b920d7351dc6f4e2e6c04b0f6  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Icelandic/strings.po
 3f0de831721a11213e5eae4b9211df1f  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Indonesian/strings.po
@@ -992,17 +1091,23 @@ d50c116b920d7351dc6f4e2e6c04b0f6  ./content/usr/local/share/xbmc/addons/skin.con
 3f0a880489504ccaafd712341e0f0908  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Malay/strings.po
 3218342292e457df8d019df55ed7d5a1  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Maltese/strings.po
 77a0f2b2cdf12bdd7013a039f9baaa9f  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Norwegian/strings.po
+07e9f52eb259272ff98dd47c15159092  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Persian (Iran)/strings.po
 e9d049f8f0717ab1f2c24e2bf34f323f  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Persian/strings.po
 a4d94c81b1e3cd20c272ddba14e62f92  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Polish/strings.po
+79ec1d4e9f9d55356c86baba97a11ba6  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Portuguese (Brazil)/strings.po
 342506ef5ec457d217aa4ee927a1fde4  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Portuguese/strings.po
 6c684bfc45e35ee85fde2a945bb8c41b  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Romanian/strings.po
 de9790ad8be2bb2e180bd5ef2b30bba9  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Romansh/strings.po
 42d478154fca3b025212fbf9f433b650  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Russian/strings.po
+d1f2d2265595c908276b4fb9b6af862f  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Serbian (Cyrillic)/strings.po
 520bb1496ca811f7c5681cfab9cd378d  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Serbian/strings.po
 4a600c36e5ef22824caeca023b7ec3f3  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Slovak/strings.po
 9367e09dd3aa897694e416f2dc68e7f2  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Slovenian/strings.po
+c0e6100b9161bad34f21d476a5db9c51  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Spanish (Argentina)/strings.po
+4c469777c1cd2943a0329ff44894e6a4  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Spanish (Mexico)/strings.po
 e64c4083c123c0108f7fd1847158efc8  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Spanish/strings.po
 311008ce9be0c437bfaa7a128c12febb  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Swedish/strings.po
+ea2c6f7b046a368733d39cffbeb2bff2  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Tamil (India)/strings.po
 55cac5529912d8557206b6cc3122a323  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Thai/strings.po
 ce82586e09e43074863e1383886d09fb  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Turkish/strings.po
 5c41cb284602e4251916cb015cb4a1e7  ./content/usr/local/share/xbmc/addons/skin.confluence/language/Ukrainian/strings.po
@@ -1398,11 +1503,14 @@ e4ff08d8173cde9ac5b0ad5c409c3adf  ./content/usr/local/share/xbmc/addons/visualiz
 d50d5007ddb2501b174f8b0726c8e707  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Bulgarian/strings.po
 7858f534a6a47464c86bda97a1afeb7b  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Burmese/strings.po
 0bf21daf3d659925e02fe52591af2d86  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Catalan/strings.po
+2bc21a46ce4af8cfdde0d28bd2809d4e  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Chinese (Simple)/strings.po
+0e88c49c45bea0bbb678186ea7b82168  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Chinese (Traditional)/strings.po
 b3afc57806e375a7a3ce897207235f67  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Croatian/strings.po
 a40a1b1e4a8081958bc49cb502a8ffca  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Czech/strings.po
 975c85864b91cc850c1271e20156483d  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Danish/strings.po
 75217a6fa4fad9de5301bf961dc968da  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Dutch/strings.po
 03553efcf7541b38aec2dddedf13ba68  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/English/strings.po
+7688fe7243a78c378ad62509fadd117c  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/English (US)/strings.po
 224d02ac1c847b51f775f677768f0537  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Esperanto/strings.po
 e4544f81c785102c9451fa9fa6515aa9  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Estonian/strings.po
 45e8937c7f724349512295e5e2718d57  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Faroese/strings.po
@@ -1412,6 +1520,7 @@ e4544f81c785102c9451fa9fa6515aa9  ./content/usr/local/share/xbmc/addons/visualiz
 28515a4958a5c9bb6fc1b1ac6846eb03  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/German/strings.po
 179f59ae497745b998103edae2a87955  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Greek/strings.po
 1b99499f690c8bc0c06d956e8137ea3d  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Hebrew/strings.po
+d997a81d14c8e451cb0f3244ffadb308  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Hindi (Devanagiri)/strings.po
 742ff790cc528cae6bb1ed7291a4a618  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Hungarian/strings.po
 5c46e9e1207a5a9e5f6acb9605bd4b6d  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Icelandic/strings.po
 7cebb2433c34f9d0aef3f79d6f52fb57  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Indonesian/strings.po
@@ -1423,16 +1532,22 @@ e4544f81c785102c9451fa9fa6515aa9  ./content/usr/local/share/xbmc/addons/visualiz
 4e3d655ead013073a0a6105151b01837  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Macedonian/strings.po
 b207fa844a2b5bf5bfc286bc47ea9e3f  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Maltese/strings.po
 e68a94b1575f30a43985eb8bb8508535  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Norwegian/strings.po
+ac1def0b9be52ac36e868e654a4d0bae  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Persian (Iran)/strings.po
 265668dde16728a8530d9a601daa8e63  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Persian/strings.po
 7d1a92a83c1b8e60348efc676c67c588  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Polish/strings.po
+fba35f610d746ac1e7b82e5ecde008e2  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Portuguese (Brazil)/strings.po
 5dac7613466320427ca8061c8cb47b97  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Portuguese/strings.po
 5bc55073c1810d5feaacde423e743bd3  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Romanian/strings.po
 33a139c9a5feb6b65854f14b1290d508  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Russian/strings.po
+4be9c89ed56298c113a65e4cac609100  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Serbian (Cyrillic)/strings.po
 a7ca2f88eb64ec7d29e26b4ec7036195  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Serbian/strings.po
 5588b4928290488f42f19691f82abd60  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Slovak/strings.po
 c32be26b8e3ec428d8d45dd03cfdfdad  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Slovenian/strings.po
+af229042b21fef9c8adf11ea92f5e5d7  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Spanish (Argentina)/strings.po
+14b5f753bdc09b1c9921c684d048ef05  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Spanish (Mexico)/strings.po
 619fda2000df75190b61b08971ea2665  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Spanish/strings.po
 c1db9a0a94ac471e1ee44bcc9a1bc892  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Swedish/strings.po
+2912bd62407446266cdd448019d44029  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Tamil (India)/strings.po
 3c99cc745fa2e77e80923000f1df78cb  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Thai/strings.po
 2050fd81d97cd98ddfc411336faff3f2  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Turkish/strings.po
 274f6e0d986ac6931dd73f460a9ce456  ./content/usr/local/share/xbmc/addons/visualization.dxspectrum/resources/language/Ukrainian/strings.po
@@ -1452,11 +1567,14 @@ db8cc3047f686cea96c7ca48ec6a59cb  ./content/usr/local/share/xbmc/addons/visualiz
 e0f126818140c5455275599d1b5401c0  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Bulgarian/strings.po
 08a7a6deb903c7c65572de9e28cf82d6  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Burmese/strings.po
 0cb990eeb70cfdb97272d6867494f499  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Catalan/strings.po
+1afcd9f23e5ceda567fc84b781ed2d2e  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Chinese (Simple)/strings.po
+59fab5e0db83ae9eaf7ddc36636b4287  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Chinese (Traditional)/strings.po
 a827dba5544c679ec3e9f75888bce587  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Croatian/strings.po
 c6c45511650b3d8061a5c41afb096a96  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Czech/strings.po
 2a427d23608e3f01b8ea87fb87c803f5  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Danish/strings.po
 fae64ed269cf9a08a0ecdbddac97aca1  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Dutch/strings.po
 d671d85b36a5f841e3b9013b36e5416a  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/English/strings.po
+9f3e3319d109590de5b7cea0221082e5  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/English (US)/strings.po
 9376ee199a65837a2cdeb7df3f858aed  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Esperanto/strings.po
 a307479de60782be6051a6c2435a0c0d  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Estonian/strings.po
 405884c907d5bb63422f82e0f36ad669  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Faroese/strings.po
@@ -1466,6 +1584,7 @@ a307479de60782be6051a6c2435a0c0d  ./content/usr/local/share/xbmc/addons/visualiz
 2669b48af9742841296c14aa32f63ec0  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/German/strings.po
 4e69542d67c2e722268381511b07b3a8  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Greek/strings.po
 c19e53c3f0373896d08cf7f69c6a2508  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Hebrew/strings.po
+d7b6ee0e8c6dcc3eaf131ab6662d4e76  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Hindi (Devanagiri)/strings.po
 540e353f0c0cc7471bfec06a97499964  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Hungarian/strings.po
 a5cbe9770de593b3178880bf720fc457  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Icelandic/strings.po
 edab4e97480bd182fc9b1fc91d4ab1d9  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Indonesian/strings.po
@@ -1477,16 +1596,22 @@ b0b1cbd23ea50ca4ec66630068d6c8c4  ./content/usr/local/share/xbmc/addons/visualiz
 06b89d55735c9cda9ab53ffecc8ada5f  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Macedonian/strings.po
 e9877e3697aec4b49a317e78eae36b1a  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Maltese/strings.po
 312d197653fcf98b075e82c3a9cd5ae1  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Norwegian/strings.po
+b0c72fe662d1766c2a3d31a59af82551  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Persian (Iran)/strings.po
 28c12e30394d415896f227cd4d81e0c8  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Persian/strings.po
 2afd9e38437bb618921b562997c24e52  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Polish/strings.po
+76d470a62abff0d39be5ae0225c5ec2c  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Portuguese (Brazil)/strings.po
 6b7e7dd69ab828465754c0a9c412211c  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Portuguese/strings.po
 556cf46d3959b7057e88bdb9c96d54ff  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Romanian/strings.po
 22c3f346f831ec1820ca0a266522cac1  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Russian/strings.po
+b0e9486428c65506c594bbba60d53a7c  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Serbian (Cyrillic)/strings.po
 e97555d04a6ecc0bce23c7200020886c  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Serbian/strings.po
 218c9b212e394d7cb9cd3de67a6aeadf  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Slovak/strings.po
 c91fd0a5154182abefacb36600ede2ce  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Slovenian/strings.po
+f0a9f407d3cf7216d2c45a1cd1261b70  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Spanish (Argentina)/strings.po
+c94fd9893fe684a3ee48b3a6d16d2273  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Spanish (Mexico)/strings.po
 05f43d8a799f2da4812970bc1967885e  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Spanish/strings.po
 f78aeda80b79ceb182af5c0dc203d6f7  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Swedish/strings.po
+66d6924683b34d4a62fc726ea01d777b  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Tamil (India)/strings.po
 e2147707c0e7b22078bc483edad84d7f  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Thai/strings.po
 a60f97053e2eccb140ff7d8046e40d25  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Turkish/strings.po
 64474a3b04986b69b88eab8b1989ae65  ./content/usr/local/share/xbmc/addons/visualization.glspectrum/resources/language/Ukrainian/strings.po
@@ -1506,11 +1631,14 @@ e6c2ee48f583032f53441ce973fccdc4  ./content/usr/local/share/xbmc/addons/visualiz
 737ef31e60beb094b5adde0d66442b68  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Bulgarian/strings.po
 7f38a41cf626fc5a3c67aec3be3d5aed  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Burmese/strings.po
 0c74ee9023507809945d900ae376bd06  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Catalan/strings.po
+b6c3608697d98bf87f765103c7d15c63  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Chinese (Simple)/strings.po
+2e1c0b36b5df34dab793f31cf707cf04  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Chinese (Traditional)/strings.po
 4ff059dcc4d2ddd66c6da3f6dcf61ea4  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Croatian/strings.po
 34b316ebc46b8ac65a2df1df60746a97  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Czech/strings.po
 191eb6a14010889c0f05d52203dba72a  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Danish/strings.po
 07bb196d1e4f140c3b86272024576476  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Dutch/strings.po
 15be9b4c936e7104ed2dc6f874c4625a  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/English/strings.po
+79baba2d3761f438887acbce29ea2f9e  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/English (US)/strings.po
 522058c1f181a3d7d3f724fc381f4479  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Estonian/strings.po
 5ddbd754c8b336ab03928b001b8ff7e5  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Finnish/strings.po
 5fb6f666312efd86032d9acf382dfdab  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/French/strings.po
@@ -1528,13 +1656,17 @@ b9eb5f2e40d1c12bff6545149d1a9f50  ./content/usr/local/share/xbmc/addons/visualiz
 393cd3f99cde9f92a70d9dac5f57cb90  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Macedonian/strings.po
 e32aaf245073a044048900045c0d0e56  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Norwegian/strings.po
 0824359a1055cf2fd49646079b64e061  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Polish/strings.po
+18ddfeae7e69e8bc19b7136360b7aeb7  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Portuguese (Brazil)/strings.po
 f81b89f7ebb3acd3a921ccd06637b858  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Portuguese/strings.po
 248cca491b5804c6dbdb46d6064bbf5d  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Romanian/strings.po
 917fe41165abf27a4f8f418f7069674f  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Russian/strings.po
 7ba84717a2bb9c798edd8963ad5f7e75  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Slovak/strings.po
 ed2e68594a020507348f6ea075fb6d0f  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Slovenian/strings.po
+e5b58e34507afdc4218dd0716b835e1d  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Spanish (Argentina)/strings.po
+6e5b7f007e9dc7c35e6a5a897f7408fb  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Spanish (Mexico)/strings.po
 9a0c1e6db1a0af76781d74e2089a7cba  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Spanish/strings.po
 3609d9a6fd4b033c5d517754d026d6ee  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Swedish/strings.po
+9675935b5ba4c8e98afd226c29dcc6cc  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Tamil (India)/strings.po
 def5cb75ea2b88328c827364f556b3cd  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Ukrainian/strings.po
 471795ada12804a87e77e753ab353c67  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Vietnamese/strings.po
 941c7158c02e460beff278d274a7189e  ./content/usr/local/share/xbmc/addons/visualization.milkdrop/resources/language/Welsh/strings.po
@@ -1551,11 +1683,14 @@ c25272dc90f6d9014b32f9f22cd6c96c  ./content/usr/local/share/xbmc/addons/visualiz
 d2a34bfc03f52f46205725b2aed2b74e  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Bulgarian/strings.po
 7291dc27729e1694e26a21117375b410  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Burmese/strings.po
 5b3b02cb5c055f3a296b66a9e24e6c05  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Catalan/strings.po
+8645a9e73445f70fa91221e4e7f24508  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Chinese (Simple)/strings.po
+80f218d178d0769538813f3126c2f5bc  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Chinese (Traditional)/strings.po
 6a4f97ff13c704339812a05c2673b570  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Croatian/strings.po
 7602f4bc7820f58d5f2b7693ce133f50  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Czech/strings.po
 81071a321df56c104722da73501e8747  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Danish/strings.po
 892b4efc5c6da60cc0b8033562858e13  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Dutch/strings.po
 786291b6d5f2d98da154c4127eca8612  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/English/strings.po
+881a3a0f949588087ef20e528f51a92a  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/English (US)/strings.po
 572ba5c539b509ec1a6c61604f532dfd  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Esperanto/strings.po
 b8588164457656c83a7912cafbe6ae2f  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Estonian/strings.po
 508be3457956a189f8e78f05014cc4ed  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Faroese/strings.po
@@ -1565,6 +1700,7 @@ a76938b5119016139257ba13dbc05ecf  ./content/usr/local/share/xbmc/addons/visualiz
 756364b79c2bb695640251a296b7540b  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/German/strings.po
 b3032297861a164f6be4089f1515f3cd  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Greek/strings.po
 55a53e5f522309e1a53255cd39642081  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Hebrew/strings.po
+e70d19c53636f45290c591af58bb6263  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Hindi (Devanagiri)/strings.po
 229d1a24812089aef92114a3bd8fa029  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Hungarian/strings.po
 09b95332a18ba5955671643bc1e62840  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Icelandic/strings.po
 9dddead5613ee080e883578f196e6197  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Indonesian/strings.po
@@ -1576,15 +1712,21 @@ dc079bbb09bf39bdb6eced17c65e08ab  ./content/usr/local/share/xbmc/addons/visualiz
 3719b030d63c75b4db699fb1620bcf85  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Macedonian/strings.po
 d46b788cce7984cd9edf090eec1a6898  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Maltese/strings.po
 e92168c075f671acf18d2a9b954878d9  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Norwegian/strings.po
+a512a2a72e174725bc7017c1d58afd5d  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Persian (Iran)/strings.po
 0f5bff0f6be5ce0a9319f7fc9f30a02d  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Polish/strings.po
+91a683db3ebb0a84816593a9cdf79f83  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Portuguese (Brazil)/strings.po
 00ddad5314bb21eb4b79ac8ab12f7ff4  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Portuguese/strings.po
 3668fa2ea912721a86e6066aca1a0f4c  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Romanian/strings.po
 13b546450c7d4454a670079aa0224e3c  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Russian/strings.po
+eb7dab77216b935f8927d3bb09eea37f  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Serbian (Cyrillic)/strings.po
 a75992b585bd7240c28d61fc4f724567  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Serbian/strings.po
 efc700b4f84e0aca0a29a118edae088c  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Slovak/strings.po
 aae3eb6efd0ce85ca61f5eaa6206f26e  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Slovenian/strings.po
+71a865badb3c09fed40a024ef0574529  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Spanish (Argentina)/strings.po
+10fe4830d83ba6107690c899aeac7ffe  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Spanish (Mexico)/strings.po
 07a559362ba4dfda641319b431c6598c  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Spanish/strings.po
 952fcdf666d71ac458e3eb1e203c84cb  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Swedish/strings.po
+3559ae5cd0bb5184a92fd39daefe5819  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Tamil (India)/strings.po
 ed39e8285677279d0fe9a56593ae283c  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Thai/strings.po
 8491384f1e915399344f3f77a0b4e4ed  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Turkish/strings.po
 2085c86697c08293a41e0ecd1e598642  ./content/usr/local/share/xbmc/addons/visualization.projectm/resources/language/Ukrainian/strings.po
@@ -1609,11 +1751,14 @@ d4373f7989ad7441244da9c57f933e2f  ./content/usr/local/share/xbmc/addons/weather.
 60a47c22eaa8fb0f79e0ff216a5bba43  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Bosnian/strings.po
 62e23147e90c98acdec83dc41d1dd890  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Bulgarian/strings.po
 c3108a22faf7db5d7e2ea41597d4646b  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Catalan/strings.po
+46e1dd839308595a625f669ff8ad2680  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Chinese (Simple)/strings.po
+9a83a6b40c9e2f64328f58268adf29b1  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Chinese (Traditional)/strings.po
 e0a3156d1c652984e69368b5c8f931bc  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Croatian/strings.po
 f305308c63ddfb2e56526ea2408f9194  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Czech/strings.po
 748d2423f7a387ee8a2be8a267da4549  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Danish/strings.po
 d7841dc82323e720ca86fc36d0b539af  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Dutch/strings.po
 ff82614a3d9f3ff74286887b74cbe313  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/English/strings.po
+6a636261f0b7a75a92afc764a4207bbf  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/English (US)/strings.po
 903de5258ea159d062f14c7efdec2b6e  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Estonian/strings.po
 27d775ed6bad0bd7cb9182ea646a786e  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Finnish/strings.po
 a8e31fd5b821d80f3c22b605179d92a8  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/French/strings.po
@@ -1631,12 +1776,16 @@ ec8fceeaffab0a6cd3b4db5d932cf8b2  ./content/usr/local/share/xbmc/addons/weather.
 553cb5101c26e4f070476727aaf3f654  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Norwegian/strings.po
 71d0f0f0811d7b685be00792b3a9ff65  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Persian/strings.po
 6cbb29ee47c99850280e723891ab5479  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Polish/strings.po
+c12756f3df8debe0e064512180698db9  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Portuguese (Brazil)/strings.po
 119a6690da6f6db0186241f54057d833  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Portuguese/strings.po
 b91ea5acbf3686ab7d7ffb40b2e80bde  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Romanian/strings.po
 bb6d8182b1740af3b8f1bb91f9fb7ce5  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Russian/strings.po
+6ddf6a654081674dc368449fa01db482  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Serbian (Cyrillic)/strings.po
 093d37cbeba8ff5459fae3f48389730d  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Serbian/strings.po
 a8f4ed6dec4a6a4ec68780bdb53307de  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Slovak/strings.po
 92f9a18f140bef8e85371d5e69767ed8  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Slovenian/strings.po
+54507e7468aa4721822140371f670e83  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Spanish (Argentina)/strings.po
+74619371083778fceaa1026dc267001a  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Spanish (Mexico)/strings.po
 c3bca69df9ff4ce3a6a7d0704efe31ba  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Spanish/strings.po
 d5d0067880ef120bd3092f520ec4550a  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Swedish/strings.po
 b3577d04a0173cb9cad3a8c6265d8601  ./content/usr/local/share/xbmc/addons/weather.wunderground/resources/language/Thai/strings.po
@@ -1680,7 +1829,6 @@ cc4b6b4ef8b441ac4b64168725852178  ./content/usr/local/share/xbmc/addons/xbmc.pvr
 1f405e5b38128d3ae3689dd2fb819b19  ./content/usr/local/share/xbmc/addons/xbmc.python/addon.xml
 861b26cd5e77c23f3b94e848bc127651  ./content/usr/local/share/xbmc/addons/xbmc.python/pluginsource.xsd
 d58d892d1013f91b5b12117a5ca481dc  ./content/usr/local/share/xbmc/addons/xbmc.python/script.xsd
-7a43593f7b2a6b6be74fcc0905393cee  ./content/usr/local/share/xbmc/.DS_Store
 4ed34edea301e3a62a9f08cf17c5be8e  ./content/usr/local/share/xbmc/FEH.py
 73cbbe400c778fddf6d05a776a6dcfd9  ./content/usr/local/share/xbmc/language/Afrikaans/langinfo.xml
 f4779de99ea9a72938501c6ccda6bc1d  ./content/usr/local/share/xbmc/language/Afrikaans/strings.po
@@ -1702,6 +1850,10 @@ e2cecfc3539087bf01a0bb7441c6661f  ./content/usr/local/share/xbmc/language/Burmes
 d7bcf85ecb68e50c9f3bcae740cb1296  ./content/usr/local/share/xbmc/language/Burmese/strings.po
 89c38023b5479d86563e377a95d827a3  ./content/usr/local/share/xbmc/language/Catalan/langinfo.xml
 dd82d8d8ced3dec213350c7d19f6c9da  ./content/usr/local/share/xbmc/language/Catalan/strings.po
+2c0ffeef48d27b3bf9cde2cda374a7c7  ./content/usr/local/share/xbmc/language/Chinese (Simple)/langinfo.xml
+e1942c90715f22507a0c740aa492193e  ./content/usr/local/share/xbmc/language/Chinese (Simple)/strings.po
+25505b3d37e12d4b502ce2a6b843e47a  ./content/usr/local/share/xbmc/language/Chinese (Traditional)/langinfo.xml
+0bb7da62ce8fd8a75d94f07a1307e1aa  ./content/usr/local/share/xbmc/language/Chinese (Traditional)/strings.po
 dbf489c0e98505a2c2fc4dd299cd51e2  ./content/usr/local/share/xbmc/language/Croatian/langinfo.xml
 17ce5d67cfbde1284f1baffa6e902bc9  ./content/usr/local/share/xbmc/language/Croatian/strings.po
 b70685e73b3f1239aeab703bfa6fa2e4  ./content/usr/local/share/xbmc/language/Czech/langinfo.xml
@@ -1713,6 +1865,8 @@ eac471976be799e0b2b46a7763811804  ./content/usr/local/share/xbmc/language/Danish
 7a46998262c3f39cbbc7e9d8633c7380  ./content/usr/local/share/xbmc/language/English/langinfo.xml
 1cdc7f279e0857a6ee990190b8849a02  ./content/usr/local/share/xbmc/language/English/strings.po
 189e66a8597517286e4548b7b73a6085  ./content/usr/local/share/xbmc/language/English/strings.po.orig
+1f8b54aebf229df302f9deaa9e76a1dd  ./content/usr/local/share/xbmc/language/English (US)/langinfo.xml
+e5790077be5becb48837a0a8daa7326a  ./content/usr/local/share/xbmc/language/English (US)/strings.po
 67771e36491170ce3c6d6ad49ac841ad  ./content/usr/local/share/xbmc/language/Esperanto/langinfo.xml
 fef693e366fcbd5714482c04d17993b9  ./content/usr/local/share/xbmc/language/Esperanto/strings.po
 a9ddcbc852455fd32801a13a9bfb2ca1  ./content/usr/local/share/xbmc/language/Estonian/langinfo.xml
@@ -1732,6 +1886,8 @@ fe14d7e5263f43fdd2091a5ad641195e  ./content/usr/local/share/xbmc/language/Greek/
 a54c55373cecfeb654008907f1129c4e  ./content/usr/local/share/xbmc/language/Greek/strings.po
 9e2b42f685c82654e1c2270d5f890092  ./content/usr/local/share/xbmc/language/Hebrew/langinfo.xml
 07643838dc98ac6a5b6ec35e027b4c19  ./content/usr/local/share/xbmc/language/Hebrew/strings.po
+0aa90cd0388e7e887592575ad465ad84  ./content/usr/local/share/xbmc/language/Hindi (Devanagiri)/langinfo.xml
+3fdb2a20acaa02149c260789d82d3bcd  ./content/usr/local/share/xbmc/language/Hindi (Devanagiri)/strings.po
 44a9e926356004d63bcac4bc7dbe3865  ./content/usr/local/share/xbmc/language/Hungarian/langinfo.xml
 575e8df41ad81ceb99008aafce92807c  ./content/usr/local/share/xbmc/language/Hungarian/strings.po
 bfd2f2821dc3c734dfe8ab2201f70bee  ./content/usr/local/share/xbmc/language/Icelandic/langinfo.xml
@@ -1756,24 +1912,36 @@ a79f88154f658723a3599eb09bbdec4f  ./content/usr/local/share/xbmc/language/Macedo
 02062eee9c3d38528f10061ae53b69c1  ./content/usr/local/share/xbmc/language/Maltese/strings.po
 8a82f7376176980210b21da5204079f6  ./content/usr/local/share/xbmc/language/Norwegian/langinfo.xml
 ff7fb86a1fdfec27c66fb05c0ffd2a3b  ./content/usr/local/share/xbmc/language/Norwegian/strings.po
+736e3c95ecfd6bb5b541981107f45b36  ./content/usr/local/share/xbmc/language/Persian (Iran)/langinfo.xml
+47bca5810bab8beda0e2eb881477962d  ./content/usr/local/share/xbmc/language/Persian (Iran)/strings.po
 270c518cdbb8bb4cceda45f617b03a9e  ./content/usr/local/share/xbmc/language/Polish/langinfo.xml
 3d185ee26cf85d6c458761c92852c52f  ./content/usr/local/share/xbmc/language/Polish/strings.po
+3ac81858bde4324b051df396b66048dc  ./content/usr/local/share/xbmc/language/Portuguese (Brazil)/langinfo.xml
+a5495a1e17071c9b460a1a010bb7bc37  ./content/usr/local/share/xbmc/language/Portuguese (Brazil)/strings.po
 45d1037f3dc2f42f0a6af0ed1dc03ce1  ./content/usr/local/share/xbmc/language/Portuguese/langinfo.xml
 3cb565881637b296a59ccce0347acf3c  ./content/usr/local/share/xbmc/language/Portuguese/strings.po
 3233b31db5e7ceb87680b4e395b3f28c  ./content/usr/local/share/xbmc/language/Romanian/langinfo.xml
 193e11a34a0a78deb0e706076d26797d  ./content/usr/local/share/xbmc/language/Romanian/strings.po
 2d0efed882b03a80f4810d0b85d9328f  ./content/usr/local/share/xbmc/language/Russian/langinfo.xml
 61710fd4cde41416ac8fa10697508623  ./content/usr/local/share/xbmc/language/Russian/strings.po
+6c51174ad007216f00d035b0577957d4  ./content/usr/local/share/xbmc/language/Serbian (Cyrillic)/langinfo.xml
+722654e5a3a50206693c0da86a9d40a5  ./content/usr/local/share/xbmc/language/Serbian (Cyrillic)/strings.po
 765bb55bf0b08f5c4262e4388a0feafc  ./content/usr/local/share/xbmc/language/Serbian/langinfo.xml
 4566ebba862b10bc373be8c72001f8e3  ./content/usr/local/share/xbmc/language/Serbian/strings.po
 65d8ce44202aed69fe02230b2da15c53  ./content/usr/local/share/xbmc/language/Slovak/langinfo.xml
 61db3acb5950ebea9baa2225d7c9ef2a  ./content/usr/local/share/xbmc/language/Slovak/strings.po
 7e820b9a14f57645b8f228a3c2b15b63  ./content/usr/local/share/xbmc/language/Slovenian/langinfo.xml
 d67be0f82fa7319e5eff4ab8e03ec1e6  ./content/usr/local/share/xbmc/language/Slovenian/strings.po
+456f01e8ee38380eb50579cd9c3f7bf2  ./content/usr/local/share/xbmc/language/Spanish (Argentina)/langinfo.xml
+d1c10c3dee31f219c37eb1cba0cbd724  ./content/usr/local/share/xbmc/language/Spanish (Argentina)/strings.po
 e488c1d5628d05261b152242567cf574  ./content/usr/local/share/xbmc/language/Spanish/langinfo.xml
+5fbab08979cd80cad64b73ed1483024a  ./content/usr/local/share/xbmc/language/Spanish (Mexico)/langinfo.xml
+2b9611fcc0e090581d59ff913bb2636c  ./content/usr/local/share/xbmc/language/Spanish (Mexico)/strings.po
 de705d67b8ef9c4b997057537edcd72d  ./content/usr/local/share/xbmc/language/Spanish/strings.po
 8f27d2219666ebde5321203061f809f1  ./content/usr/local/share/xbmc/language/Swedish/langinfo.xml
 7d62e3dd6de2ec69a91362529a7ae6e4  ./content/usr/local/share/xbmc/language/Swedish/strings.po
+4b13ca82a6d48c3d6899cfb91db4c526  ./content/usr/local/share/xbmc/language/Tamil (India)/langinfo.xml
+55cd7181e38684b58a2af2948778806b  ./content/usr/local/share/xbmc/language/Tamil (India)/strings.po
 eed0f45a3fad38be7b09934704d50d9d  ./content/usr/local/share/xbmc/language/Thai/langinfo.xml
 1c947364c0f2219fc7f8024054165f96  ./content/usr/local/share/xbmc/language/Thai/strings.po
 3b3507ee627dcdf2a61b72b8f5cab51d  ./content/usr/local/share/xbmc/language/Turkish/langinfo.xml
@@ -1796,6 +1964,8 @@ e8bf20bb78379b81b45bdb3c5f8cc075  ./content/usr/local/share/xbmc/media/icon-flat
 0e311067697e50fc13f4039aa23dd5e7  ./content/usr/local/share/xbmc/media/Splash.png
 2339caed9e9722bc51f13911023b687a  ./content/usr/local/share/xbmc/media/weather.zip
 e0a3f57da047d469673883cb7fc0d8a3  ./content/usr/local/share/xbmc/media/xbmc.icns
+12be3833764f37d1ba31350935e3fa2a  ./content/usr/local/share/xbmc/sounds/Bursting Bubbles/nav.wav
+43c5d192a48d9dbaa58e9358d6c70a31  ./content/usr/local/share/xbmc/sounds/Bursting Bubbles/sounds.xml
 63983349db24403f4851d3cfd2ca8673  ./content/usr/local/share/xbmc/system/advancedsettings.xml
 94bc54742dfa3a84fc31c734af865d1a  ./content/usr/local/share/xbmc/system/asound.conf
 7474fbd8f6eeecb4267bea3d32fa16d0  ./content/usr/local/share/xbmc/system/colors.xml
