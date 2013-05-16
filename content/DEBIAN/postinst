@@ -8,7 +8,7 @@ if [[ $1 == "configure" ]]; then
 		insserv -r /etc/init.d/xbmc > /dev/null 2>&1
 		chmod -x /etc/init.d/xbmc > /dev/null 2>&1
 	elif [ -f "/tmp/startxbmc" ]; then
-		/etc/init.d/xbmc start 1>/dev/null 2>/dev/null >/dev/null
+		start xbmc 1>/dev/null 2>/dev/null >/dev/null
 		rm /tmp/startxbmc
 	fi
 
