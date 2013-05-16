@@ -5,7 +5,7 @@ Section: video
 Priority: optional
 Architecture: armhf
 Depends: xbian-update (>=1.0-1)
-Replaces: xbian-package-xbmc
+Replaces: xbian-package-xbmc, xbian-package-xbmc-nightly-frodo
 Installed-Size: 79190
 Maintainer: Koenkk <development@xbian.org>
 Description: XBMC for XBian.
