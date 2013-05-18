@@ -23,6 +23,7 @@
 PATCHES=""
 if [ "$1" = "12" ]; then
 PATCHES="TPNno.patch
+        FixSeekHangAfterEOS.patch
         NetworkCachingRedux12.patch
         EGLRes.patch
         DualAudioOutput12.patch
