@@ -3,10 +3,10 @@ c1e5ee1a92cda633920f870ea24f734f  ./content/etc/init/xbmc-exits.conf
 ffc8d109f6f709832b8425429a4e828b  ./content/etc/init/xbmc-preload.conf
 3d3478b4566cbb98f667b3b0f78e8da4  ./content/etc/init/xbmc.conf
 a2774e71ac770b0b0b570ca38addbefb  ./content/tmp/applied.patch-xbmc.sh
-2bd944f67cea94deccacc02cc9c9a565  ./content/tmp/compile.log
+d4a3fdaa407f437676d9f12141b3155d  ./content/tmp/compile.log
 2e1464165f94c8354138a113453865c9  ./content/tmp/hash.patches
 f22f56c1e2cda4a04eb225b95708de8f  ./content/tmp/hash.pvr
-b21a7bbe0899685f615d6ef5de9217c4  ./content/tmp/hash.xbmc
+bbba112365f46d4156b44efaa7dd8a0a  ./content/tmp/hash.xbmc
 caf1965e1d43adaf3e74c0b4f49a4c50  ./content/tmp/hash.xvdr
 12e07195e1cffa8156936c90ba4dc40a  ./content/usr/local/lib/xbmc/addons/library.xbmc.addon/libXBMC_addon-arm.so
 9a20a48e746a19bcf99677fe3fc49b79  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
@@ -47,7 +47,7 @@ b2840b19dab5cc4c2fd50bcc0f75f1d3  ./content/usr/local/lib/xbmc/system/players/pa
 af6fec759ea7ea5b1704f992986e88ad  ./content/usr/local/lib/xbmc/system/players/paplayer/stsoundlibrary-arm.so
 d0520a4348ace73492540d9859be6555  ./content/usr/local/lib/xbmc/system/players/paplayer/timidity-arm.so
 6ebd38ae1424d79c6b6a5005c7ff3ace  ./content/usr/local/lib/xbmc/system/players/paplayer/vgmstream-arm.so
-ec2ea7f4ffd06df7b5e980affc1924eb  ./content/usr/local/lib/xbmc/xbmc.bin
+e3447d72c04b53da939ea62abaf2e2b2  ./content/usr/local/lib/xbmc/xbmc.bin
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 2c94d8e6edf4570248e67d393c4ec5d3  ./content/usr/local/share/doc/xbmc/README.linux
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
@@ -1941,7 +1941,7 @@ a9710082895919f485085f8e72f0cfb0  ./content/usr/local/share/xbmc/system/settings
 0e69cfc6428c5ed5f4d17085f48fcd95  ./content/usr/local/share/xbmc/system/settings/freebsd.xml
 149ec0604ed0f876095b96cbff1440e0  ./content/usr/local/share/xbmc/system/settings/linux.xml
 98cec2f7744d631673c490745188ab09  ./content/usr/local/share/xbmc/system/settings/rbp.xml
-7e994e0e2bdabf97cb770fcae591e36b  ./content/usr/local/share/xbmc/system/settings/settings.xml
+631ae6f167f1ffc6fd4360b522abfde4  ./content/usr/local/share/xbmc/system/settings/settings.xml
 16151dfac18587634ff1dca558c55974  ./content/usr/local/share/xbmc/system/settings/win32.xml
 4f88fd2cb3ac585e26e2782b28be87b6  ./content/usr/local/share/xbmc/system/shaders/convolution-4x4.glsl
 2a8174e45879a840d1d566b8ad2ef03f  ./content/usr/local/share/xbmc/system/shaders/convolution-4x4_d3d.fx
