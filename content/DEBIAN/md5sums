@@ -3,10 +3,10 @@ c1e5ee1a92cda633920f870ea24f734f  ./content/etc/init/xbmc-exits.conf
 ffc8d109f6f709832b8425429a4e828b  ./content/etc/init/xbmc-preload.conf
 3d3478b4566cbb98f667b3b0f78e8da4  ./content/etc/init/xbmc.conf
 a2774e71ac770b0b0b570ca38addbefb  ./content/tmp/applied.patch-xbmc.sh
-c96b686667cfd5ab209f9bcc2017fc46  ./content/tmp/compile.log
+2bd944f67cea94deccacc02cc9c9a565  ./content/tmp/compile.log
 2e1464165f94c8354138a113453865c9  ./content/tmp/hash.patches
 f22f56c1e2cda4a04eb225b95708de8f  ./content/tmp/hash.pvr
-77c14c1a21004fdeccee0ed85a77cb21  ./content/tmp/hash.xbmc
+b21a7bbe0899685f615d6ef5de9217c4  ./content/tmp/hash.xbmc
 caf1965e1d43adaf3e74c0b4f49a4c50  ./content/tmp/hash.xvdr
 12e07195e1cffa8156936c90ba4dc40a  ./content/usr/local/lib/xbmc/addons/library.xbmc.addon/libXBMC_addon-arm.so
 9a20a48e746a19bcf99677fe3fc49b79  ./content/usr/local/lib/xbmc/addons/library.xbmc.gui/libXBMC_gui-arm.so
@@ -47,7 +47,7 @@ b2840b19dab5cc4c2fd50bcc0f75f1d3  ./content/usr/local/lib/xbmc/system/players/pa
 af6fec759ea7ea5b1704f992986e88ad  ./content/usr/local/lib/xbmc/system/players/paplayer/stsoundlibrary-arm.so
 d0520a4348ace73492540d9859be6555  ./content/usr/local/lib/xbmc/system/players/paplayer/timidity-arm.so
 6ebd38ae1424d79c6b6a5005c7ff3ace  ./content/usr/local/lib/xbmc/system/players/paplayer/vgmstream-arm.so
-a0c39d8f8ab42d0969e295eb0f497be8  ./content/usr/local/lib/xbmc/xbmc.bin
+ec2ea7f4ffd06df7b5e980affc1924eb  ./content/usr/local/lib/xbmc/xbmc.bin
 6eb631b6da7fdb01508a80213ffc35ff  ./content/usr/local/share/doc/xbmc/LICENSE.GPL
 2c94d8e6edf4570248e67d393c4ec5d3  ./content/usr/local/share/doc/xbmc/README.linux
 4cea88e622381d1ad6e43f07c47513b5  ./content/usr/local/share/doc/xbmc/copying.txt
