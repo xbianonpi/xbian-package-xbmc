@@ -7,4 +7,3 @@ Architecture: armhf
 Depends: xbian-package-firmware (>=1.4), libbluetooth3, xbian-package-cec (>= 1.0), upstart
 Maintainer: Koenkk <development@xbian.org>
 Description: XBMC for XBian.
-Installed-Size: 89568
