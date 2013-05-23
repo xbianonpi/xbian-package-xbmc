@@ -15,5 +15,10 @@ elif [ $1 = triggered ]; then
                 [ -e /etc/init/xbmc.conf ] && start xbmc
                 rm /tmp/startxbmc
         fi
+        if [ -f "/tmp/restartxbmc" ]; then
+                [ -e /etc/init.d/xbmc ] && service xbmc restart > /dev/null 2>&1
+                [ -e /etc/init/xbmc.conf ] && reload xbmc
+                rm /tmp/restartxbmc
+        fi
 
 fi
