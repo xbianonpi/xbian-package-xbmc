@@ -35,6 +35,7 @@ PATCHES="TPNno.patch
         WOL12.patch     
         Splash.patch
         XBianConfluence.patch
+        3DFilesAllowLower.patch
         Hotplug.patch
         PowerManager.patch
         MediaLibrary.patch"
@@ -43,6 +44,7 @@ PATCHES="TPNno.patch
         EGLRes.patch
         eGalaxTouchScreen.patch
         XBianSysSum.patch
+        3DFilesAllowLower.patch
         CECKnownCode.patch
         Wiimote.patch
         Splash.patch
