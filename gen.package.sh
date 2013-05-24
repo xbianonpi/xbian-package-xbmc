@@ -13,6 +13,7 @@ rm_size
 printf "Installed-Size: %d\n" $(du -s ./content | awk '{print $1}') >> ./content/DEBIAN/control
 
 cd content
+find ./ -type f -print0 |xargs --null strip 2>/dev/null
 find ./ -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P\0' | sort -z| xargs --null md5sum > DEBIAN/md5sums
 cd ..
 fakeroot dpkg-deb -b ./content "${package}""${version}".deb
