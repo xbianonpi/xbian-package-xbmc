@@ -11,14 +11,9 @@ if [[ $1 == "configure" ]]; then
 elif [ $1 = triggered ]; then
 
         if [ -f "/tmp/startxbmc" ]; then
-                [ -e /etc/init.d/xbmc ] && service xbmc start > /dev/null 2>&1
+                [ -e /etc/init/xbmc.conf ] || service xbmc start > /dev/null 2>&1
                 [ -e /etc/init/xbmc.conf ] && start xbmc
                 rm /tmp/startxbmc
-        fi
-        if [ -f "/tmp/restartxbmc" ]; then
-                [ -e /etc/init.d/xbmc ] && service xbmc restart > /dev/null 2>&1
-                [ -e /etc/init/xbmc.conf ] && reload xbmc
-                rm /tmp/restartxbmc
         fi
 
 fi
