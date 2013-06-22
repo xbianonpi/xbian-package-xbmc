@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Persian (Iran) (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/fa_IR/)\n"
+"Language-Team: Persian (Iran) (http://www.transifex.com/projects/p/xbmc-main/language/fa_IR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,7 +31,7 @@ msgstr "ویدیوها"
 
 msgctxt "#4"
 msgid "TV-Guide"
-msgstr "راهنمای-تلویزیون"
+msgstr "راهنمای تلویزیون"
 
 msgctxt "#5"
 msgid "Settings"
@@ -845,10 +845,6 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "تعداد کانال ها"
 
-msgctxt "#254"
-msgid "- DTS capable receiver"
-msgstr "-گیرنده با قابلیت DTS"
-
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
@@ -985,10 +981,6 @@ msgctxt "#288"
 msgid "Font"
 msgstr "فونت"
 
-msgctxt "#289"
-msgid "- Size"
-msgstr "-اندازه"
-
 msgctxt "#290"
 msgid "Dynamic range compression"
 msgstr "فشرده سازی پویای محدوده"
@@ -1020,22 +1012,6 @@ msgstr "افست صدا"
 msgctxt "#298"
 msgid "Bookmarks"
 msgstr "بوک مارک ها"
-
-msgctxt "#299"
-msgid "- AAC capable receiver"
-msgstr "-گیرنده با قابلیت AAC"
-
-msgctxt "#300"
-msgid "- MP1 capable receiver"
-msgstr "-گیرنده با قابلیت MP1"
-
-msgctxt "#301"
-msgid "- MP2 capable receiver"
-msgstr "-گیرنده با قابلیت MP2"
-
-msgctxt "#302"
-msgid "- MP3 capable receiver"
-msgstr "-گیرنده با قابلیت MP3"
 
 msgctxt "#303"
 msgid "Delay"
@@ -1201,18 +1177,6 @@ msgctxt "#346"
 msgid "Boost volume level on downmix"
 msgstr "تقویت بلندی صدا در داونمیکس"
 
-msgctxt "#347"
-msgid "- DTS-HD capable receiver"
-msgstr "-گیرنده با قابلیت DTS-HD"
-
-msgctxt "#348"
-msgid "- Multichannel LPCM capable receiver"
-msgstr "-گیرنده با قابلیت LPCM چند کاناله"
-
-msgctxt "#349"
-msgid "- TrueHD capable receiver"
-msgstr "-گیرنده با قابلیت TrueHD"
-
 msgctxt "#350"
 msgid "Programs"
 msgstr "برنامه ها"
@@ -1268,10 +1232,6 @@ msgstr "میزان نور محافظ صفحه"
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "چینش با: فایل"
-
-msgctxt "#364"
-msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "-گیرنده با قابلیت دالبی دیجیتال (AC3)"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1584,10 +1544,6 @@ msgstr "دی وی دی"
 msgctxt "#447"
 msgid "Autorun media"
 msgstr "مدیای اجرای خودکار"
-
-msgctxt "#448"
-msgid "LCD"
-msgstr "ال سی دی"
 
 msgctxt "#449"
 msgid "Enabled"
@@ -2357,10 +2313,6 @@ msgctxt "#705"
 msgid "Network"
 msgstr "شبکه"
 
-msgctxt "#706"
-msgid "- Server"
-msgstr "- سرور"
-
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
 msgstr "استفاده از یک پراکسی سرور جهت دسترسی به اینترنت"
@@ -2377,10 +2329,6 @@ msgctxt "#713"
 msgid "HTTP proxy"
 msgstr "HTTP پراکسی"
 
-msgctxt "#715"
-msgid "- Assignment"
-msgstr "- تخصیص"
-
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "خودکار (DHCP)"
@@ -2388,22 +2336,6 @@ msgstr "خودکار (DHCP)"
 msgctxt "#717"
 msgid "Manual (Static)"
 msgstr "Manual (Static)"
-
-msgctxt "#719"
-msgid "- IP address"
-msgstr "- آدرس IP"
-
-msgctxt "#720"
-msgid "- Netmask"
-msgstr "- نت ماسک"
-
-msgctxt "#721"
-msgid "- Default gateway"
-msgstr "- gateway پیش فرض "
-
-msgctxt "#722"
-msgid "- DNS server"
-msgstr "- سرور DNS"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -2429,33 +2361,13 @@ msgctxt "#728"
 msgid "FTP server"
 msgstr "سرور اف تی پی"
 
-msgctxt "#730"
-msgid "- Port"
-msgstr "- پورت"
-
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "ذخیره و به کارگیری"
 
-msgctxt "#733"
-msgid "- Password"
-msgstr "رمز عبور"
-
 msgctxt "#734"
 msgid "No pass"
 msgstr "بدون رمز عبور"
-
-msgctxt "#735"
-msgid "- Character set"
-msgstr "- کارکتر ست"
-
-msgctxt "#736"
-msgid "- Style"
-msgstr "- سبک"
-
-msgctxt "#737"
-msgid "- Colour"
-msgstr "- رنگ"
 
 msgctxt "#738"
 msgid "Normal"
@@ -2585,18 +2497,6 @@ msgctxt "#775"
 msgid "Network interface"
 msgstr "رابط شبکه"
 
-msgctxt "#776"
-msgid "- Wireless network name (ESSID)"
-msgstr "- نام (ESSID) شبکه بی سیم"
-
-msgctxt "#777"
-msgid "- Wireless password"
-msgstr "- رمز عبور شبکه بی سیم"
-
-msgctxt "#778"
-msgid "- Wireless security"
-msgstr "- امنیت وایرلس"
-
 msgctxt "#779"
 msgid "Save and apply network interface settings"
 msgstr "ذخیره و به کارگیری تنظیمات رابط شبکه"
@@ -2696,10 +2596,6 @@ msgstr "افزودن موزیک..."
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "افزودن ویدیو..."
-
-msgctxt "#1000"
-msgid "- Preview"
-msgstr "- پیش نمایش"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2885,10 +2781,6 @@ msgctxt "#1047"
 msgid "Other..."
 msgstr "دیگر..."
 
-msgctxt "#1048"
-msgid "- Username"
-msgstr "- نام کاربری"
-
 msgctxt "#1049"
 msgid "Script settings"
 msgstr "تنظیمات اسکریپت"
@@ -3037,10 +2929,6 @@ msgctxt "#1271"
 msgid "Device name"
 msgstr "نام وسیله"
 
-msgctxt "#1272"
-msgid "- Use password protection"
-msgstr "- استفاده از حفاظت با رمز عبور"
-
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "ایرپلی"
@@ -3180,10 +3068,6 @@ msgstr "اسکریپت باخطا همراه است!: %s"
 msgctxt "#2101"
 msgid "Newer version needed - See log"
 msgstr "نسخه جدید نیاز است - فایل گزارش وقایع  را مشاهده کنید"
-
-msgctxt "#4501"
-msgid "Enable LCD/VFD"
-msgstr "فعال کردن LCD/VFD"
 
 msgctxt "#10000"
 msgid "Home"
@@ -4085,10 +3969,6 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "افزایش بیشتر سرعت فن"
 
-msgctxt "#13303"
-msgid "- Fonts"
-msgstr "- فونت‌ها"
-
 msgctxt "#13304"
 msgid "Enable flipping bi-directional strings"
 msgstr "فعال کردن flipping bi-directional رشته ها"
@@ -4737,33 +4617,13 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "حافظه ی کش ویدیو -  DVD-ROM"
 
-msgctxt "#14027"
-msgid "- Local Network"
-msgstr "- شبکه ی محلی"
-
-msgctxt "#14028"
-msgid "- Internet"
-msgstr "- اینترنت"
-
 msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "حافظه ی کش صدا -  DVD-ROM"
 
-msgctxt "#14031"
-msgid "- Local Network"
-msgstr "- شبکه ی محلی"
-
-msgctxt "#14032"
-msgid "- Internet"
-msgstr "- اینترنت"
-
 msgctxt "#14034"
 msgid "DVD cache - DVD-ROM"
 msgstr "حافظه ی کش دی وی دی  -  DVD-ROM"
-
-msgctxt "#14035"
-msgid "- Local Network"
-msgstr "- شبکه ی محلی"
 
 msgctxt "#14036"
 msgid "Services"
@@ -4913,10 +4773,6 @@ msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "حذف از علاقه مندی ها"
 
-msgctxt "#14078"
-msgid "- Colours"
-msgstr "- رنگ‌ها"
-
 msgctxt "#14079"
 msgid "Timezone country"
 msgstr "کشور منطقه زمانی"
@@ -5049,10 +4905,6 @@ msgctxt "#15109"
 msgid "Skin default"
 msgstr "پیش فرض پوسته"
 
-msgctxt "#15111"
-msgid "- Theme"
-msgstr "- تم"
-
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "تم پیش فرض"
@@ -5061,30 +4913,6 @@ msgctxt "#15200"
 msgid "Last.fm"
 msgstr "Last.fm"
 
-msgctxt "#15201"
-msgid "Submit songs to Last.fm"
-msgstr "ارسال ترانه ها به Last.fm"
-
-msgctxt "#15202"
-msgid "Last.fm username"
-msgstr "نام کاربری Last.fm  "
-
-msgctxt "#15203"
-msgid "Last.fm password"
-msgstr " رمز عبورLast.fm "
-
-msgctxt "#15204"
-msgid "Unable to handshake: sleeping..."
-msgstr "قادر به تست هند شیک نیست: در حال خواب..."
-
-msgctxt "#15205"
-msgid "Please update XBMC"
-msgstr "لطفا XBMC را به روز کنید"
-
-msgctxt "#15206"
-msgid "Bad authorization: Check username and password"
-msgstr "مجوز استفاده نادرست است: لطفا نام کاربری و رمز عبور را کنترل کنید"
-
 msgctxt "#15207"
 msgid "Connected"
 msgstr "متصل شده"
@@ -5092,22 +4920,6 @@ msgstr "متصل شده"
 msgctxt "#15208"
 msgid "Not connected"
 msgstr "متصل نیست"
-
-msgctxt "#15209"
-msgid "Submit interval %i"
-msgstr "دوره ی ارسال %i"
-
-msgctxt "#15210"
-msgid "Cached %i songs"
-msgstr "ذخیره ی موقت %i ترانه"
-
-msgctxt "#15211"
-msgid "Submitting..."
-msgstr "در حال ارسال..."
-
-msgctxt "#15212"
-msgid "Submitting in %i secs"
-msgstr "ارسال در %i ثانیه"
 
 msgctxt "#15213"
 msgid "Play using..."
@@ -5124,218 +4936,6 @@ msgstr "عدم نمایش نام فایل در نمای تصاویر کوچک"
 msgctxt "#15216"
 msgid "Play in party mode"
 msgstr "پخش در حالت پارتی"
-
-msgctxt "#15217"
-msgid "Submit songs to Libre.fm"
-msgstr "ارسال ترانه ها به Libre.fm"
-
-msgctxt "#15218"
-msgid "Libre.fm username"
-msgstr " نام کاربری Libre.fm "
-
-msgctxt "#15219"
-msgid "Libre.fm password"
-msgstr " رمز عبور Libre.fm"
-
-msgctxt "#15220"
-msgid "Libre.fm"
-msgstr "Libre.fm"
-
-msgctxt "#15221"
-msgid "Song submission"
-msgstr "تسلیم آهنگ"
-
-msgctxt "#15250"
-msgid "Submit Last.fm radio to Last.fm"
-msgstr "ارسال رادیوی Last.fm  به Last.fm"
-
-msgctxt "#15251"
-msgid "Connecting to Last.fm..."
-msgstr "اتصال به Last.fm..."
-
-msgctxt "#15252"
-msgid "Selecting station..."
-msgstr "انتخاب ایستگاه ..."
-
-msgctxt "#15253"
-msgid "Search similar artists..."
-msgstr "جستجوی هنرمندان مشابه ..."
-
-msgctxt "#15254"
-msgid "Search similar tags..."
-msgstr "جستجو برچسب های مشابه ..."
-
-msgctxt "#15255"
-msgid "Your profile (%name%)"
-msgstr "پروفایل مشخصات شما (%name%)"
-
-msgctxt "#15256"
-msgid "Overall top tags"
-msgstr " برچسب های همه جا بهترین"
-
-msgctxt "#15257"
-msgid "Top artists for tag %name%"
-msgstr "بهترین هنرمند برای برچسب %name%"
-
-msgctxt "#15258"
-msgid "Top albums for tag %name%"
-msgstr "بهترین آلبوم برای برچسب %name%"
-
-msgctxt "#15259"
-msgid "Top tracks for tag %name%"
-msgstr "بهترین تراک برای برچسب %name%"
-
-msgctxt "#15260"
-msgid "Listen to tag %name% Last.fm radio"
-msgstr "گوش دادن به برچسب رادیوی %name% Last.fm"
-
-msgctxt "#15261"
-msgid "Similar artists as %name%"
-msgstr "هنرمندان مشابه برای %name%"
-
-msgctxt "#15262"
-msgid "Top %name% albums"
-msgstr "بهترین %name% albums"
-
-msgctxt "#15263"
-msgid "Top %name% tracks"
-msgstr "بهترین %name% tracks"
-
-msgctxt "#15264"
-msgid "Top %name% tags"
-msgstr "بهترین %name% tags"
-
-msgctxt "#15265"
-msgid "Biggest fans of %name%"
-msgstr "بزرگترین طرفداران  %name%"
-
-msgctxt "#15266"
-msgid "Listen to %name% fans Last.fm radio"
-msgstr "گوش دادن به %name% fans رادیوی Last.fm"
-
-msgctxt "#15267"
-msgid "Listen to %name% similar artists Last.fm radio"
-msgstr "گوش دادن به %name% similar هنرمندان رادیوی Last.fm"
-
-msgctxt "#15268"
-msgid "Top artists for user %name%"
-msgstr "بهترین هنرمندان برای user %name%"
-
-msgctxt "#15269"
-msgid "Top albums for user %name%"
-msgstr "بهترین آلبوم ها برای کاربر %name%"
-
-msgctxt "#15270"
-msgid "Top tracks for user %name%"
-msgstr "بهترین تراک ها برای کاربر %name%"
-
-msgctxt "#15271"
-msgid "Friends of user %name%"
-msgstr "دوستان کاربر %name%"
-
-msgctxt "#15272"
-msgid "Neighbours of user %name%"
-msgstr "همسایگان کاربر %name%"
-
-msgctxt "#15273"
-msgid "Weekly artist chart for %name%"
-msgstr "نمودار هنرمند هفته برای %name%"
-
-msgctxt "#15274"
-msgid "Weekly album chart for %name%"
-msgstr "نمودار آلبوم هفته برای %name%"
-
-msgctxt "#15275"
-msgid "Weekly track chart for %name%"
-msgstr "نمودار تراک هفته برای %name%"
-
-msgctxt "#15276"
-msgid "Listen to %name%'s neighbours Last.fm radio"
-msgstr "گوش دادن به %name%'s neighbours رادیوی Last.fm"
-
-msgctxt "#15277"
-msgid "Listen to %name%'s personal Last.fm radio"
-msgstr "گوش دادن به %name%'s personal  رادیوی Last.fm"
-
-msgctxt "#15278"
-msgid "Listen to %name%'s mix Last.fm radio"
-msgstr "گوش دادن به %name%'s  میکس  رادیوی Last.fm"
-
-msgctxt "#15279"
-msgid "Retrieving list from Last.fm..."
-msgstr "بازیابی فهرست از Last.fm..."
-
-msgctxt "#15280"
-msgid "Can't retrieve list from Last.fm..."
-msgstr "نمی توان لیست را از Last.fm بازیابی کرد ..."
-
-msgctxt "#15281"
-msgid "Enter an artist name to find related ones"
-msgstr "نام هنرمندی را وارد کنید تا موارد مربوط به آن هنرمند را بیابیم"
-
-msgctxt "#15282"
-msgid "Enter a tag name to find similar ones"
-msgstr "نام برچسبی را وارد کنید تا موارد مشابه آن را بیابیم"
-
-msgctxt "#15283"
-msgid "Tracks recently listened by %name%"
-msgstr "تراک هایی که تازگی توسط %name% گوش داده شده اند "
-
-msgctxt "#15284"
-msgid "Listen to %name%'s recommendations Last.fm radio"
-msgstr "گوش دادن به  %name%'s توصیه شده توسط رادیوی Last.fm"
-
-msgctxt "#15285"
-msgid "Top tags for user %name%"
-msgstr "بهترین برچسب های کاربر  %name%"
-
-msgctxt "#15287"
-msgid "Do you want to add the current track to your loved tracks?"
-msgstr "آیا می خواهید مسیر فعلی را اضافه کنید به آهنگ هایی که دوست دارید ؟"
-
-msgctxt "#15288"
-msgid "Do you want to ban the current track?"
-msgstr "آیا می خواهید تراک فعلی را ممنوع کنید؟"
-
-msgctxt "#15289"
-msgid "Added to your loved tracks: '%s'."
-msgstr "اضافه شد به آهنگ هایی که شما دوست دارید: '%s'."
-
-msgctxt "#15290"
-msgid "Could not add '%s' to your loved tracks."
-msgstr "نمی توان '%s' را به آهنگ هایی که دوست دارید اضافه کرد."
-
-msgctxt "#15291"
-msgid "Banned: '%s'."
-msgstr "ممنوع شد: '%s'."
-
-msgctxt "#15292"
-msgid "Could not ban '%s'."
-msgstr "نمی توان '%s' را ممنوع کرد."
-
-msgctxt "#15293"
-msgid "Tracks recently loved by %name%"
-msgstr "تراک هایی که تازگی دوست داشته شده توسط %name%"
-
-msgctxt "#15294"
-msgid "Tracks recently banned by %name%"
-msgstr "تراک هایی که تازگی ممنوع شده توسط %name%"
-
-msgctxt "#15295"
-msgid "Remove from loved tracks"
-msgstr "حذف از لیست تراک هایی که دوست داشته شده "
-
-msgctxt "#15296"
-msgid "Un-ban"
-msgstr "غیر- ممنوع"
-
-msgctxt "#15297"
-msgid "Do you want to remove this track from your loved tracks?"
-msgstr "آیا می خواهید این تراک را از لیست تراک هایی که دوست دارید حذف کنید؟"
-
-msgctxt "#15298"
-msgid "Do you want to un-ban this track?"
-msgstr "آیا می خواهید این تراک را غیر ممنوع کنید؟"
 
 msgctxt "#15300"
 msgid "Path not found or invalid"
@@ -6061,10 +5661,6 @@ msgctxt "#20108"
 msgid "Root"
 msgstr "ریشه"
 
-msgctxt "#20109"
-msgid "- Zoom"
-msgstr "- زوم"
-
 msgctxt "#20110"
 msgid "UPnP settings"
 msgstr "تنظیمات UPnP "
@@ -6489,17 +6085,9 @@ msgctxt "#20309"
 msgid "Make new folder"
 msgstr "ساخت پوشه جدید"
 
-msgctxt "#20310"
-msgid "Dim LCD on playback"
-msgstr "تیره کردن LCD در هنگام پخش"
-
 msgctxt "#20311"
 msgid "Unknown or onboard (protected)"
 msgstr "نامشخص (محافظت‌شده)"
-
-msgctxt "#20312"
-msgid "Dim LCD on paused"
-msgstr "تیره کردن LCD در هنگام مکث"
 
 msgctxt "#20314"
 msgid "Videos - Library"
@@ -6864,10 +6452,6 @@ msgstr "دسته بندی"
 msgctxt "#21875"
 msgid "Country"
 msgstr "کشور"
-
-msgctxt "#22032"
-msgid "- Colours"
-msgstr "- رنگ‌ها"
 
 msgctxt "#24005"
 msgid "Media sources"

@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Faroese (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/fo/)\n"
+"Language-Team: Faroese (http://www.transifex.com/projects/p/xbmc-main/language/fo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -817,10 +817,6 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "Tal av kanalum"
 
-msgctxt "#254"
-msgid "- DTS capable receiver"
-msgstr "- DTS móttakari"
-
 msgctxt "#256"
 msgid "Fetching CD information"
 msgstr "Heinti upplýsing um fløguna"
@@ -913,10 +909,6 @@ msgctxt "#288"
 msgid "Font"
 msgstr "Skrivttypa"
 
-msgctxt "#289"
-msgid "- Size"
-msgstr "- Stødd"
-
 msgctxt "#291"
 msgid "Video"
 msgstr "Video"
@@ -940,22 +932,6 @@ msgstr "Strika bókamerki"
 msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Bókamerkir"
-
-msgctxt "#299"
-msgid "- AAC capable receiver"
-msgstr "- AAC tøkur móttakari"
-
-msgctxt "#300"
-msgid "- MP1 capable receiver"
-msgstr "- MP1 tøkur móttakari"
-
-msgctxt "#301"
-msgid "- MP2 capable receiver"
-msgstr "- MP2 tøkur móttakari"
-
-msgctxt "#302"
-msgid "- MP3 capable receiver"
-msgstr "- MP3 tøkur móttakari"
 
 msgctxt "#303"
 msgid "Delay"
@@ -1069,14 +1045,6 @@ msgctxt "#345"
 msgid "Year"
 msgstr "Ár"
 
-msgctxt "#347"
-msgid "- DTS-HD capable receiver"
-msgstr "- DTS-HD tøkur móttakari"
-
-msgctxt "#349"
-msgid "- TrueHD capable receiver"
-msgstr "- TrueHD tøkur móttakari"
-
 msgctxt "#350"
 msgid "Programs"
 msgstr "Forrit"
@@ -1108,10 +1076,6 @@ msgstr "Paususkermur"
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "Skipa eftir: Fíl"
-
-msgctxt "#364"
-msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "- Dolby Digital (AC3) tøkur móttakari"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1973,10 +1937,6 @@ msgctxt "#705"
 msgid "Network"
 msgstr "Net"
 
-msgctxt "#706"
-msgid "- Server"
-msgstr "- Ambætari"
-
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
 msgstr "Brúka HTTP proxy ambætara fyri atgongd til Internetið"
@@ -1985,10 +1945,6 @@ msgctxt "#712"
 msgid "Invalid port specified. Value must be between 1 and 65535."
 msgstr "Skeivt portur ásett. Virði má verða millum 1 og 65535."
 
-msgctxt "#715"
-msgid "- Assignment"
-msgstr "- Áseting"
-
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "Automatiskt (DHCP)"
@@ -1996,22 +1952,6 @@ msgstr "Automatiskt (DHCP)"
 msgctxt "#717"
 msgid "Manual (Static)"
 msgstr "Manuelt (Statiskt)"
-
-msgctxt "#719"
-msgid "- IP address"
-msgstr "- IP adressa"
-
-msgctxt "#720"
-msgid "- Netmask"
-msgstr "- Netmaska"
-
-msgctxt "#721"
-msgid "- Default gateway"
-msgstr "- Beinari"
-
-msgctxt "#722"
-msgid "- DNS server"
-msgstr "- DNS ambætari"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -2037,29 +1977,9 @@ msgctxt "#728"
 msgid "FTP server"
 msgstr "FTP ambætari"
 
-msgctxt "#730"
-msgid "- Port"
-msgstr "- Portur"
-
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Goym og áset"
-
-msgctxt "#733"
-msgid "- Password"
-msgstr "- Loyniorð"
-
-msgctxt "#735"
-msgid "- Character set"
-msgstr "- Teknsett"
-
-msgctxt "#736"
-msgid "- Style"
-msgstr "- Stílur"
-
-msgctxt "#737"
-msgid "- Colour"
-msgstr "- Litir"
 
 msgctxt "#738"
 msgid "Normal"
@@ -2185,18 +2105,6 @@ msgctxt "#775"
 msgid "Network interface"
 msgstr "Netkort"
 
-msgctxt "#776"
-msgid "- Wireless network name (ESSID)"
-msgstr "- Tráðleyst net (ESSID)"
-
-msgctxt "#777"
-msgid "- Wireless password"
-msgstr "- Tráðleyst loyniorð"
-
-msgctxt "#778"
-msgid "- Wireless security"
-msgstr "- Tráðleys trygd"
-
 msgctxt "#779"
 msgid "Save and apply network interface settings"
 msgstr "Goym og áset stillingar á netkorti"
@@ -2261,10 +2169,6 @@ msgctxt "#799"
 msgid "Library Update"
 msgstr "Dagføring av savni"
 
-msgctxt "#800"
-msgid "Music library needs to rescan art from tags"
-msgstr "Tónleikasavni má endurlesa myndatilfar við frámerki"
-
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "Ynskir tú at lesa hetta nú?"
@@ -2288,10 +2192,6 @@ msgstr "Innles tónleik..."
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "Innles video..."
-
-msgctxt "#1000"
-msgid "- Preview"
-msgstr "- Frumsýning"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2469,10 +2369,6 @@ msgctxt "#1047"
 msgid "Other..."
 msgstr "Annað..."
 
-msgctxt "#1048"
-msgid "- Username"
-msgstr "- Brúkaranavn"
-
 msgctxt "#1049"
 msgid "Script settings"
 msgstr "Script stillingar"
@@ -2616,10 +2512,6 @@ msgstr "Loyv XBMC at móttaka AirPlay innihald"
 msgctxt "#1271"
 msgid "Device name"
 msgstr "Navn á eind"
-
-msgctxt "#1272"
-msgid "- Use password protection"
-msgstr "- Loyniorð kravt"
 
 msgctxt "#1275"
 msgid "Filter %s"
@@ -2868,10 +2760,6 @@ msgstr "Script brek! : %s"
 msgctxt "#2101"
 msgid "Newer version needed - See log"
 msgstr "Nýggj útgáva neyðug - Sí log"
-
-msgctxt "#4501"
-msgid "Enable LCD/VFD"
-msgstr "Tendra LCD/VFD"
 
 msgctxt "#10000"
 msgid "Home"
@@ -3645,10 +3533,6 @@ msgctxt "#13297"
 msgid "Not connected. Check network settings."
 msgstr "Onki samband. Endurskoða net uppseting."
 
-msgctxt "#13303"
-msgid "- Fonts"
-msgstr "- Skrivtslag"
-
 msgctxt "#13305"
 msgid "Show RSS news feeds"
 msgstr "Vís tíðindi umvegis RSS"
@@ -4081,25 +3965,13 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "Video goymsla - DVD-ROM"
 
-msgctxt "#14027"
-msgid "- Local Network"
-msgstr "- Lokal net"
-
 msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "Ljóð goymsla - DVD-ROM"
 
-msgctxt "#14031"
-msgid "- Local Network"
-msgstr "- Lokal net"
-
 msgctxt "#14034"
 msgid "DVD cache - DVD-ROM"
 msgstr "Fløgu goymsla - DVD-ROM"
-
-msgctxt "#14035"
-msgid "- Local Network"
-msgstr "- Lokal net"
 
 msgctxt "#14036"
 msgid "Services"
@@ -4196,10 +4068,6 @@ msgstr "Leg í snarvegir"
 msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "Strika frá snarvegi"
-
-msgctxt "#14078"
-msgid "- Colours"
-msgstr "- Litir"
 
 msgctxt "#14081"
 msgid "File lists"
@@ -4301,33 +4169,9 @@ msgctxt "#15109"
 msgid "Skin default"
 msgstr "Vanlig útsjónd"
 
-msgctxt "#15111"
-msgid "- Theme"
-msgstr "- Stílur"
-
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "Vanligur stílur"
-
-msgctxt "#15201"
-msgid "Submit songs to Last.fm"
-msgstr "Avrita lag til Last.fm"
-
-msgctxt "#15202"
-msgid "Last.fm username"
-msgstr "Brúkaranavn til Last.fm"
-
-msgctxt "#15203"
-msgid "Last.fm password"
-msgstr "Loyniorð til Last.fm"
-
-msgctxt "#15205"
-msgid "Please update XBMC"
-msgstr "Vinarliga dagfør XBMC"
-
-msgctxt "#15206"
-msgid "Bad authorization: Check username and password"
-msgstr "Brek við góðkenning :Vinarliga eftirhygg brúkaranavn og loyniorð"
 
 msgctxt "#15207"
 msgid "Connected"
@@ -4337,18 +4181,6 @@ msgctxt "#15208"
 msgid "Not connected"
 msgstr "Ikki íbundin"
 
-msgctxt "#15210"
-msgid "Cached %i songs"
-msgstr "Goymdi %i løg"
-
-msgctxt "#15211"
-msgid "Submitting..."
-msgstr "Avriti..."
-
-msgctxt "#15212"
-msgid "Submitting in %i secs"
-msgstr "Avriti um %i sek"
-
 msgctxt "#15213"
 msgid "Play using..."
 msgstr "Spæl við..."
@@ -4356,106 +4188,6 @@ msgstr "Spæl við..."
 msgctxt "#15215"
 msgid "Hide file names in thumbs view"
 msgstr "Goym fílnøvn í myndavísing"
-
-msgctxt "#15217"
-msgid "Submit songs to Libre.fm"
-msgstr "Avrita løg til Libre.fm"
-
-msgctxt "#15218"
-msgid "Libre.fm username"
-msgstr "Brúkaranavn til Libre.fm"
-
-msgctxt "#15219"
-msgid "Libre.fm password"
-msgstr "Loyniorð til Libre.fm"
-
-msgctxt "#15251"
-msgid "Connecting to Last.fm..."
-msgstr "Bindi í Last.fm"
-
-msgctxt "#15252"
-msgid "Selecting station..."
-msgstr "Velji støð..."
-
-msgctxt "#15253"
-msgid "Search similar artists..."
-msgstr "Leita eftir líknandi tónleikarum..."
-
-msgctxt "#15254"
-msgid "Search similar tags..."
-msgstr "Leita eftir líknandi frámerki..."
-
-msgctxt "#15255"
-msgid "Your profile (%name%)"
-msgstr "Tín uppseting (%name%)"
-
-msgctxt "#15256"
-msgid "Overall top tags"
-msgstr "Mest brúktu frámerki"
-
-msgctxt "#15257"
-msgid "Top artists for tag %name%"
-msgstr "Mest brúktu tónleikarar við frámerki %name%"
-
-msgctxt "#15258"
-msgid "Top albums for tag %name%"
-msgstr "Mest brúktu útgávur við frámerki %name%"
-
-msgctxt "#15259"
-msgid "Top tracks for tag %name%"
-msgstr "Mest brúktu løg við frámerki %name%"
-
-msgctxt "#15261"
-msgid "Similar artists as %name%"
-msgstr "Líknandi tónleikarar sum %name%"
-
-msgctxt "#15263"
-msgid "Top %name% tracks"
-msgstr "Top %name% løg"
-
-msgctxt "#15265"
-msgid "Biggest fans of %name%"
-msgstr "Stórstu fjepparar av %name%"
-
-msgctxt "#15266"
-msgid "Listen to %name% fans Last.fm radio"
-msgstr "Lurta eftir %name% fjepparum á Last.fm"
-
-msgctxt "#15268"
-msgid "Top artists for user %name%"
-msgstr "Top tónleikarar hjá %name%"
-
-msgctxt "#15269"
-msgid "Top albums for user %name%"
-msgstr "Top útgávur hjá %name%"
-
-msgctxt "#15270"
-msgid "Top tracks for user %name%"
-msgstr "Top løg hjá %name%"
-
-msgctxt "#15271"
-msgid "Friends of user %name%"
-msgstr "Vinir hjá %name%"
-
-msgctxt "#15272"
-msgid "Neighbours of user %name%"
-msgstr "Grannar hjá %name%"
-
-msgctxt "#15279"
-msgid "Retrieving list from Last.fm..."
-msgstr "Heinti lista frá Last.fm..."
-
-msgctxt "#15280"
-msgid "Can't retrieve list from Last.fm..."
-msgstr "Fekk ikki heinta lista frá Last.fm..."
-
-msgctxt "#15281"
-msgid "Enter an artist name to find related ones"
-msgstr "Skriva tónleikaranavn fyri at finna aðrar líknandi"
-
-msgctxt "#15282"
-msgid "Enter a tag name to find similar ones"
-msgstr "Skriva eitt frámerki fyri at finna líknandi"
 
 msgctxt "#15301"
 msgid "Could not connect to network server"
@@ -4780,10 +4512,6 @@ msgstr "Upplýsing"
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Upptøka av hesi rás er longu byrja"
-
-msgctxt "#19035"
-msgid "This channel cannot be played. Check the log for details."
-msgstr "Henda rás kann ikki spælast. Sí log fyri nærri upplýsing."
 
 msgctxt "#19036"
 msgid "This recording cannot be played. Check the log for details."
@@ -6621,14 +6349,6 @@ msgctxt "#20309"
 msgid "Make new folder"
 msgstr "Stovna nýggja mappu"
 
-msgctxt "#20310"
-msgid "Dim LCD on playback"
-msgstr "Bjartan LCD við spæling"
-
-msgctxt "#20312"
-msgid "Dim LCD on paused"
-msgstr "Bjartan LCD við steðg"
-
 msgctxt "#20314"
 msgid "Videos - Library"
 msgstr "Video - Savn"
@@ -7341,10 +7061,6 @@ msgctxt "#21411"
 msgid "not in the last"
 msgstr "ikki í seinastu"
 
-msgctxt "#21417"
-msgid "- Settings"
-msgstr "- Stillingar"
-
 msgctxt "#21418"
 msgid "Multilingual"
 msgstr "Fleiri mál"
@@ -7456,10 +7172,6 @@ msgstr "Mál á undirteksti"
 msgctxt "#21449"
 msgid "Remote control sends keyboard presses"
 msgstr "Fjarstýring sendur knappaborð presses"
-
-msgctxt "#21450"
-msgid "- Edit"
-msgstr "- Broyt"
 
 msgctxt "#21451"
 msgid "Internet connection required."
@@ -7637,10 +7349,6 @@ msgctxt "#21877"
 msgid "Date created"
 msgstr "Framleiðsludagur"
 
-msgctxt "#21878"
-msgid "Copyright flag"
-msgstr "Tekin til upphavsrættin"
-
 msgctxt "#21879"
 msgid "Country code"
 msgstr "Landakota"
@@ -7812,18 +7520,6 @@ msgstr "Direct3D útgáva:"
 msgctxt "#22030"
 msgid "Font"
 msgstr "Skrivttypa"
-
-msgctxt "#22031"
-msgid "- Size"
-msgstr "- Stødd"
-
-msgctxt "#22032"
-msgid "- Colours"
-msgstr "- Litir"
-
-msgctxt "#22033"
-msgid "- Charset"
-msgstr "- Teknsett"
 
 msgctxt "#22034"
 msgid "Export karaoke titles as HTML"
@@ -8561,10 +8257,6 @@ msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Finni ikki fyrra lut at spæla"
 
-msgctxt "#34300"
-msgid "Failed to start zeroconf"
-msgstr "Eydnaðist ikki at tendra Zeroconf"
-
 msgctxt "#34301"
 msgid "Is Apple's Bonjour Service installed? See log for more info."
 msgstr "Er Apple Bonjour tænasta innløgd? Sí log fyri nærri upplýsing."
@@ -8624,10 +8316,6 @@ msgstr "Brúka ikki serligt knappakort til hesa eind"
 msgctxt "#35100"
 msgid "Enable joystick and gamepad support"
 msgstr "Tendra stýring við joystick ella gamepad"
-
-msgctxt "#35102"
-msgid "Disable joystick when device is present"
-msgstr "Sløkk joystick tá eind er í brúk"
 
 msgctxt "#35500"
 msgid "Location"

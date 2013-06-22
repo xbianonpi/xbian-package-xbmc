@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Albanian (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/sq/)\n"
+"Language-Team: Albanian (http://www.transifex.com/projects/p/xbmc-main/language/sq/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -869,10 +869,6 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "Numri i kanaleve"
 
-msgctxt "#254"
-msgid "- DTS capable receiver"
-msgstr "- Resiver i aftë DTS"
-
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
@@ -1009,10 +1005,6 @@ msgctxt "#288"
 msgid "Font"
 msgstr "Fonti"
 
-msgctxt "#289"
-msgid "- Size"
-msgstr "- Madhësia"
-
 msgctxt "#290"
 msgid "Dynamic range compression"
 msgstr "Presioni i shtrirjes dinamike"
@@ -1044,22 +1036,6 @@ msgstr "Kompensimi Audio"
 msgctxt "#298"
 msgid "Bookmarks"
 msgstr "bookmark-at"
-
-msgctxt "#299"
-msgid "- AAC capable receiver"
-msgstr "- Resiver i aftë AAC"
-
-msgctxt "#300"
-msgid "- MP1 capable receiver"
-msgstr "- Resiver i aftë MP1"
-
-msgctxt "#301"
-msgid "- MP2 capable receiver"
-msgstr "- Resiver i aftë MP2"
-
-msgctxt "#302"
-msgid "- MP3 capable receiver"
-msgstr "- Resiver i aftë MP3"
 
 msgctxt "#303"
 msgid "Delay"
@@ -1225,18 +1201,6 @@ msgctxt "#346"
 msgid "Boost volume level on downmix"
 msgstr "Ngritni nivelin e zërit në rastin downmix"
 
-msgctxt "#347"
-msgid "- DTS-HD capable receiver"
-msgstr "- Resiver i aftë DTS-HD"
-
-msgctxt "#348"
-msgid "- Multichannel LPCM capable receiver"
-msgstr "- Resiver i aftë Multichannel LPCM"
-
-msgctxt "#349"
-msgid "- TrueHD capable receiver"
-msgstr "- Resiver i aftë TrueHD"
-
 msgctxt "#350"
 msgid "Programs"
 msgstr "Programe"
@@ -1292,10 +1256,6 @@ msgstr "Niveli i errësimit të ekran-ruajtësit"
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "Klasifikoni sipas: Skedar"
-
-msgctxt "#364"
-msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "- Resiver i aftë (AC3) Dolby Digital"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1616,10 +1576,6 @@ msgstr "DVD"
 msgctxt "#447"
 msgid "Autorun media"
 msgstr "Auto-riprodhimi i mediave"
-
-msgctxt "#448"
-msgid "LCD"
-msgstr "LCD"
 
 msgctxt "#449"
 msgid "Enabled"
@@ -2401,10 +2357,6 @@ msgctxt "#705"
 msgid "Network"
 msgstr "Rrjeti"
 
-msgctxt "#706"
-msgid "- Server"
-msgstr " - Server"
-
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
 msgstr "- Përdorni një proxy HTTP për lidhjen e internetit"
@@ -2421,10 +2373,6 @@ msgctxt "#713"
 msgid "HTTP proxy"
 msgstr "HTTP proxy"
 
-msgctxt "#715"
-msgid "- Assignment"
-msgstr "- Caktimi"
-
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "Automatik (DHCP)"
@@ -2432,22 +2380,6 @@ msgstr "Automatik (DHCP)"
 msgctxt "#717"
 msgid "Manual (Static)"
 msgstr "Manual (Statik)"
-
-msgctxt "#719"
-msgid "- IP address"
-msgstr "- Adresa IP"
-
-msgctxt "#720"
-msgid "- Netmask"
-msgstr "- Netmaska"
-
-msgctxt "#721"
-msgid "- Default gateway"
-msgstr "- Getway standard"
-
-msgctxt "#722"
-msgid "- DNS server"
-msgstr "- Serveri DNS"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -2473,33 +2405,13 @@ msgctxt "#728"
 msgid "FTP server"
 msgstr "Serveri FTP"
 
-msgctxt "#730"
-msgid "- Port"
-msgstr "- Porti"
-
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Rregjistroni & Përdorni"
 
-msgctxt "#733"
-msgid "- Password"
-msgstr "- Fjalëkalimi-Pasvorti"
-
 msgctxt "#734"
 msgid "No pass"
 msgstr "Asnjë fjalkalim"
-
-msgctxt "#735"
-msgid "- Character set"
-msgstr "- Character set"
-
-msgctxt "#736"
-msgid "- Style"
-msgstr "- Stili"
-
-msgctxt "#737"
-msgid "- Colour"
-msgstr "- Ngjyra"
 
 msgctxt "#738"
 msgid "Normal"
@@ -2629,18 +2541,6 @@ msgctxt "#775"
 msgid "Network interface"
 msgstr "Nënfaqja e rrjetit"
 
-msgctxt "#776"
-msgid "- Wireless network name (ESSID)"
-msgstr "- Emri i rrjetit wireless (ESSID)"
-
-msgctxt "#777"
-msgid "- Wireless password"
-msgstr "- Fjalkalimi i rrjetit wireless"
-
-msgctxt "#778"
-msgid "- Wireless security"
-msgstr "- Siguria e rrjetit wireless"
-
 msgctxt "#779"
 msgid "Save and apply network interface settings"
 msgstr "- Ruani dhe aplikoni cilësimet e ndërfaqes së rrjetit"
@@ -2725,10 +2625,6 @@ msgctxt "#799"
 msgid "Library Update"
 msgstr "Aktualizimi i bibliotekës"
 
-msgctxt "#800"
-msgid "Music library needs to rescan art from tags"
-msgstr "Biblioteka e muzikës duhet të rikërkoje artin nga tag'at"
-
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "Dëshironi të kërkoni tani?"
@@ -2752,10 +2648,6 @@ msgstr "Shtoni Muzikë..."
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "Shtoni Video..."
-
-msgctxt "#1000"
-msgid "- Preview"
-msgstr "- Parashikim"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2941,10 +2833,6 @@ msgctxt "#1047"
 msgid "Other..."
 msgstr "Të tjera..."
 
-msgctxt "#1048"
-msgid "- Username"
-msgstr "- Emri i përdoruesit"
-
 msgctxt "#1049"
 msgid "Script settings"
 msgstr "Cilësimet e skripteve"
@@ -3092,10 +2980,6 @@ msgstr "Lejoni XBMC'në të pranojë përmbajte AirPlay"
 msgctxt "#1271"
 msgid "Device name"
 msgstr "Emri aparatit"
-
-msgctxt "#1272"
-msgid "- Use password protection"
-msgstr "- Përdorni mbrojtjen me fjalkalim"
 
 msgctxt "#1273"
 msgid "AirPlay"
@@ -3348,10 +3232,6 @@ msgstr "Ngeli skripti! : %s"
 msgctxt "#2101"
 msgid "Newer version needed - See log"
 msgstr "Duhet një verzion më i ri - Shikoni log"
-
-msgctxt "#4501"
-msgid "Enable LCD/VFD"
-msgstr "Aktivoni LCD/VFD"
 
 msgctxt "#10000"
 msgid "Home"
@@ -4289,10 +4169,6 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Shkelje e shpejtësisë së ventilatorit"
 
-msgctxt "#13303"
-msgid "- Fonts"
-msgstr "- Fontet"
-
 msgctxt "#13304"
 msgid "Enable flipping bi-directional strings"
 msgstr "Lejoni pasqyrimin bi-direktional të rreshtave"
@@ -4969,33 +4845,13 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "Video cache - DVD-ROM"
 
-msgctxt "#14027"
-msgid "- Local Network"
-msgstr "- Rrjeti lokal"
-
-msgctxt "#14028"
-msgid "- Internet"
-msgstr "- Interneti"
-
 msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "Audio cache - DVD-ROM"
 
-msgctxt "#14031"
-msgid "- Local Network"
-msgstr "- Rrjeti lokal"
-
-msgctxt "#14032"
-msgid "- Internet"
-msgstr "- Interneti"
-
 msgctxt "#14034"
 msgid "DVD cache - DVD-ROM"
 msgstr "DVD cache - DVD-ROM"
-
-msgctxt "#14035"
-msgid "- Local Network"
-msgstr "- Rrjeti lokal"
 
 msgctxt "#14036"
 msgid "Services"
@@ -5145,10 +5001,6 @@ msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "Fshini nga të preferuarat"
 
-msgctxt "#14078"
-msgid "- Colours"
-msgstr "- Ngjyrat"
-
 msgctxt "#14079"
 msgid "Timezone country"
 msgstr "Vendi i zonës së kohës"
@@ -5285,10 +5137,6 @@ msgctxt "#15109"
 msgid "Skin default"
 msgstr " Përzgjedhje e skinit"
 
-msgctxt "#15111"
-msgid "- Theme"
-msgstr "- Tema"
-
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "- Tema kryesore"
@@ -5297,30 +5145,6 @@ msgctxt "#15200"
 msgid "Last.fm"
 msgstr "Last.fm"
 
-msgctxt "#15201"
-msgid "Submit songs to Last.fm"
-msgstr "Rregjistroni këngët te Last.fm"
-
-msgctxt "#15202"
-msgid "Last.fm username"
-msgstr "Emër-përdoruesi Last.fm"
-
-msgctxt "#15203"
-msgid "Last.fm password"
-msgstr "Fjalkalimi Last.fm"
-
-msgctxt "#15204"
-msgid "Unable to handshake: sleeping..."
-msgstr "Nuk mund të lidhet: duke pritur...."
-
-msgctxt "#15205"
-msgid "Please update XBMC"
-msgstr "Të lutem aktualizo XBMC'në"
-
-msgctxt "#15206"
-msgid "Bad authorization: Check username and password"
-msgstr "Autrizimi dështoi: Kontroloni emër-përdoruesin dhe fjalkalimin"
-
 msgctxt "#15207"
 msgid "Connected"
 msgstr "I lidhur"
@@ -5328,22 +5152,6 @@ msgstr "I lidhur"
 msgctxt "#15208"
 msgid "Not connected"
 msgstr "Jo i lidhur"
-
-msgctxt "#15209"
-msgid "Submit interval %i"
-msgstr "Konfirmoni intervalin %i"
-
-msgctxt "#15210"
-msgid "Cached %i songs"
-msgstr "%i Këngë në cache"
-
-msgctxt "#15211"
-msgid "Submitting..."
-msgstr "Duke konfirmuar..."
-
-msgctxt "#15212"
-msgid "Submitting in %i secs"
-msgstr "Duke aplikuar në %i sek"
 
 msgctxt "#15213"
 msgid "Play using..."
@@ -5360,210 +5168,6 @@ msgstr "Fshihni emrat në pamjen e thumbs'ëve"
 msgctxt "#15216"
 msgid "Play in party mode"
 msgstr "Luaj në mënyrën party"
-
-msgctxt "#15217"
-msgid "Submit songs to Libre.fm"
-msgstr "Rregjistroni këngët tek Libre.fm"
-
-msgctxt "#15218"
-msgid "Libre.fm username"
-msgstr "Emër-përdoruesi Libre.fm"
-
-msgctxt "#15219"
-msgid "Libre.fm password"
-msgstr "Fjalkalimi Libre.fm"
-
-msgctxt "#15220"
-msgid "Libre.fm"
-msgstr "Libre.fm"
-
-msgctxt "#15221"
-msgid "Song submission"
-msgstr "Dorëzimi i këngës"
-
-msgctxt "#15250"
-msgid "Submit Last.fm radio to Last.fm"
-msgstr "Regjistroni Last.fm radio tek Last.fm"
-
-msgctxt "#15251"
-msgid "Connecting to Last.fm..."
-msgstr "Duke u lidhur tek Last.fm..."
-
-msgctxt "#15252"
-msgid "Selecting station..."
-msgstr "Duke zgjedhur stacionin..."
-
-msgctxt "#15253"
-msgid "Search similar artists..."
-msgstr "Kërko artistë të afërt..."
-
-msgctxt "#15254"
-msgid "Search similar tags..."
-msgstr "Kërko tags të afërt..."
-
-msgctxt "#15255"
-msgid "Your profile (%name%)"
-msgstr "Profili juaj  (%name%)"
-
-msgctxt "#15256"
-msgid "Overall top tags"
-msgstr "Top tags në përgjithsi"
-
-msgctxt "#15257"
-msgid "Top artists for tag %name%"
-msgstr "Top artistët për tag'in %name%"
-
-msgctxt "#15258"
-msgid "Top albums for tag %name%"
-msgstr "Top albumet për tag'in %name%"
-
-msgctxt "#15259"
-msgid "Top tracks for tag %name%"
-msgstr "Top këngët për tag'in %name%"
-
-msgctxt "#15260"
-msgid "Listen to tag %name% Last.fm radio"
-msgstr "Dëgjo radio me tag'ët %name% Last.fm"
-
-msgctxt "#15261"
-msgid "Similar artists as %name%"
-msgstr "Artistë të afërt si %name%"
-
-msgctxt "#15262"
-msgid "Top %name% albums"
-msgstr "Top %name% albumet "
-
-msgctxt "#15263"
-msgid "Top %name% tracks"
-msgstr "Top këngë %name%"
-
-msgctxt "#15264"
-msgid "Top %name% tags"
-msgstr "Top %name% tags "
-
-msgctxt "#15265"
-msgid "Biggest fans of %name%"
-msgstr "Tifozët më të mëdhej të %name%"
-
-msgctxt "#15268"
-msgid "Top artists for user %name%"
-msgstr "Top artistët për përdoruesin %name%"
-
-msgctxt "#15269"
-msgid "Top albums for user %name%"
-msgstr "Top albumet për përdoruesin %name%"
-
-msgctxt "#15270"
-msgid "Top tracks for user %name%"
-msgstr "Top këngët për përdoruesin %name%"
-
-msgctxt "#15271"
-msgid "Friends of user %name%"
-msgstr "Miq të përdoruesit %name%"
-
-msgctxt "#15272"
-msgid "Neighbours of user %name%"
-msgstr "Fqinjë të përdoruesit %name%"
-
-msgctxt "#15273"
-msgid "Weekly artist chart for %name%"
-msgstr "Tabela javore e artistëve për %name%"
-
-msgctxt "#15274"
-msgid "Weekly album chart for %name%"
-msgstr "Tabela javore e albumeve për %name%"
-
-msgctxt "#15275"
-msgid "Weekly track chart for %name%"
-msgstr "Tabela javore e këngëve për %name%"
-
-msgctxt "#15276"
-msgid "Listen to %name%'s neighbours Last.fm radio"
-msgstr "Dëgjjim nga fqinjët të %name%'it tek Last.fm radi"
-
-msgctxt "#15277"
-msgid "Listen to %name%'s personal Last.fm radio"
-msgstr "Dëgjim  personal i %name%'it tek Last.fm radio"
-
-msgctxt "#15278"
-msgid "Listen to %name%'s mix Last.fm radio"
-msgstr "Dëgjoni mix'in të %name%'it tek Last.fm radio"
-
-msgctxt "#15279"
-msgid "Retrieving list from Last.fm..."
-msgstr "Duke ngarkuar listën nga Last.fm..."
-
-msgctxt "#15280"
-msgid "Can't retrieve list from Last.fm..."
-msgstr "Nuk mund të ngarkohet lista nga Last.fm..."
-
-msgctxt "#15281"
-msgid "Enter an artist name to find related ones"
-msgstr "Shkruani një emër artisti për të gjetur të afërm"
-
-msgctxt "#15282"
-msgid "Enter a tag name to find similar ones"
-msgstr "Shkruani një emër tag për të gjetur të afërm"
-
-msgctxt "#15283"
-msgid "Tracks recently listened by %name%"
-msgstr "Këngë të dëgjuara së fundi nga %name%"
-
-msgctxt "#15284"
-msgid "Listen to %name%'s recommendations Last.fm radio"
-msgstr "Dëgjoni rekomandimet e %name$ tek Last.fm radio"
-
-msgctxt "#15285"
-msgid "Top tags for user %name%"
-msgstr "Top tags për përdoruesin %name%"
-
-msgctxt "#15287"
-msgid "Do you want to add the current track to your loved tracks?"
-msgstr "Dëshironi ta shtoni këtë këngë te këngët tua të preferuara?"
-
-msgctxt "#15288"
-msgid "Do you want to ban the current track?"
-msgstr "Dëshrioni të bllokoni këtë këngë?"
-
-msgctxt "#15289"
-msgid "Added to your loved tracks: '%s'."
-msgstr "U shtua te këngët tua të preferua: '%s'."
-
-msgctxt "#15290"
-msgid "Could not add '%s' to your loved tracks."
-msgstr "Nuk mund të shtohet '%s' te këngët tua të preferuara."
-
-msgctxt "#15291"
-msgid "Banned: '%s'."
-msgstr "U bllokua: '%s'."
-
-msgctxt "#15292"
-msgid "Could not ban '%s'."
-msgstr "Nuk mund të bllokohet '%s'."
-
-msgctxt "#15293"
-msgid "Tracks recently loved by %name%"
-msgstr "Këngë të preferuara së fundi nga %name%"
-
-msgctxt "#15294"
-msgid "Tracks recently banned by %name%"
-msgstr "Këngë të bllokuara së fundi nga %name%"
-
-msgctxt "#15295"
-msgid "Remove from loved tracks"
-msgstr "Fshij nga këngët e preferuara"
-
-msgctxt "#15296"
-msgid "Un-ban"
-msgstr "Fshij bllokimin"
-
-msgctxt "#15297"
-msgid "Do you want to remove this track from your loved tracks?"
-msgstr "Dëshiron të fshihet kjo këngë nga këngët e tua të preferuara?"
-
-msgctxt "#15298"
-msgid "Do you want to un-ban this track?"
-msgstr "Dëshironi të fshihet bllokimi i kësaj kënge?"
 
 msgctxt "#15300"
 msgid "Path not found or invalid"
@@ -6052,10 +5656,6 @@ msgstr "Informacion"
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Tashmë ka filluar regjistrimi në këtë kanal"
-
-msgctxt "#19035"
-msgid "This channel cannot be played. Check the log for details."
-msgstr "Ky kanal nuk mund të transmetohet .Kontrolloni logun për detaje"
 
 msgctxt "#19036"
 msgid "This recording cannot be played. Check the log for details."
@@ -7713,10 +7313,6 @@ msgctxt "#20108"
 msgid "Root"
 msgstr "Root"
 
-msgctxt "#20109"
-msgid "- Zoom"
-msgstr "Bëjeni të perzgjedhur"
-
 msgctxt "#20110"
 msgid "UPnP settings"
 msgstr "Cilësimet UPnP"
@@ -8173,17 +7769,9 @@ msgctxt "#20309"
 msgid "Make new folder"
 msgstr "Krijoni një dosje të re"
 
-msgctxt "#20310"
-msgid "Dim LCD on playback"
-msgstr "Errësoni LCD'NË gjatë dëgjimit"
-
 msgctxt "#20311"
 msgid "Unknown or onboard (protected)"
 msgstr "I panjohur ose onboard (i mbrojtur)"
-
-msgctxt "#20312"
-msgid "Dim LCD on paused"
-msgstr "Errësoni LCD gjat pauzimit"
 
 msgctxt "#20314"
 msgid "Videos - Library"
@@ -9009,10 +8597,6 @@ msgctxt "#21415"
 msgid "Default music video scraper"
 msgstr "Scraper'i kryesor i videove muzikore"
 
-msgctxt "#21417"
-msgid "- Settings"
-msgstr "- Cilësimet"
-
 msgctxt "#21418"
 msgid "Multilingual"
 msgstr "Shumëgjuhësh"
@@ -9140,10 +8724,6 @@ msgstr "Subtitër-gjuha"
 msgctxt "#21449"
 msgid "Remote control sends keyboard presses"
 msgstr "Telekomanda dërgon shtypje të tastierës"
-
-msgctxt "#21450"
-msgid "- Edit"
-msgstr "- Modifikoni"
 
 msgctxt "#21451"
 msgid "Internet connection required."
@@ -9413,10 +8993,6 @@ msgctxt "#21877"
 msgid "Date created"
 msgstr "Data që ëshë krijuar"
 
-msgctxt "#21878"
-msgid "Copyright flag"
-msgstr "Copyright flag"
-
 msgctxt "#21879"
 msgid "Country code"
 msgstr "Kodi i shtetit"
@@ -9513,10 +9089,6 @@ msgctxt "#22001"
 msgid "Hide progress of library updates"
 msgstr "Fshihni progresin e aktualizimit të bibliotekës"
 
-msgctxt "#22002"
-msgid "- DNS suffix"
-msgstr "- Sufiksi DNS"
-
 msgctxt "#22003"
 msgid "%2.3fs"
 msgstr "%2.3fs"
@@ -9608,18 +9180,6 @@ msgstr "Verzioni i Direct3D"
 msgctxt "#22030"
 msgid "Font"
 msgstr "Fonti"
-
-msgctxt "#22031"
-msgid "- Size"
-msgstr "- Madhësia"
-
-msgctxt "#22032"
-msgid "- Colours"
-msgstr "- Ngjyrat"
-
-msgctxt "#22033"
-msgid "- Charset"
-msgstr "- Charset"
 
 msgctxt "#22034"
 msgid "Export karaoke titles as HTML"
@@ -10481,10 +10041,6 @@ msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "Nuk mund të gjendet artikulli i kaluar për të riprodhuar"
 
-msgctxt "#34300"
-msgid "Failed to start zeroconf"
-msgstr "Dështoi fillimi tek zeroconf'i"
-
 msgctxt "#34301"
 msgid "Is Apple's Bonjour Service installed? See log for more info."
 msgstr "Është instaluar Servisi Bonjour nga Apple? Shikoje log'un për më shumë informacione. "
@@ -10568,10 +10124,6 @@ msgstr "Mos përdorni keymap të personalizuar për këtë aparat"
 msgctxt "#35100"
 msgid "Enable joystick and gamepad support"
 msgstr "Aktivoni përkrahësin për joystick'a dhe gamepad'a"
-
-msgctxt "#35102"
-msgid "Disable joystick when device is present"
-msgstr "Deaktivoni joystick'un gjersa një aparat është i pranishëm"
 
 msgctxt "#35500"
 msgid "Location"

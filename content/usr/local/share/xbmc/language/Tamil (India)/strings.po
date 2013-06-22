@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Tamil (India) (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/ta_IN/)\n"
+"Language-Team: Tamil (India) (http://www.transifex.com/projects/p/xbmc-main/language/ta_IN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -869,10 +869,6 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "தடங்களின் எண்ணிக்கை"
 
-msgctxt "#254"
-msgid "- DTS capable receiver"
-msgstr "- DTS ஆற்றல் பெறுநர்"
-
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
@@ -1009,10 +1005,6 @@ msgctxt "#288"
 msgid "Font"
 msgstr "எழுத்துரு"
 
-msgctxt "#289"
-msgid "- Size"
-msgstr "- அளவு"
-
 msgctxt "#290"
 msgid "Dynamic range compression"
 msgstr "இயங்குநிலை கோண சுருக்கம்"
@@ -1044,22 +1036,6 @@ msgstr "கேட்பொலி எதிரீடு"
 msgctxt "#298"
 msgid "Bookmarks"
 msgstr "அடையாளக்குறிகள்"
-
-msgctxt "#299"
-msgid "- AAC capable receiver"
-msgstr "- AAC ஆற்றல் பெறுனர்"
-
-msgctxt "#300"
-msgid "- MP1 capable receiver"
-msgstr "- MP1 ஆற்றல் பெறுனர்"
-
-msgctxt "#301"
-msgid "- MP2 capable receiver"
-msgstr "- MP2 ஆற்றல் பெறுனர்"
-
-msgctxt "#302"
-msgid "- MP3 capable receiver"
-msgstr "- MP3 ஆற்றல் பெறுனர்"
 
 msgctxt "#303"
 msgid "Delay"
@@ -1225,18 +1201,6 @@ msgctxt "#346"
 msgid "Boost volume level on downmix"
 msgstr "Downmix மீது ஒலியளவு அதிகரிக்கவும்"
 
-msgctxt "#347"
-msgid "- DTS-HD capable receiver"
-msgstr "- DTS-HD ஆற்றல் பெறுநர்"
-
-msgctxt "#348"
-msgid "- Multichannel LPCM capable receiver"
-msgstr "- Multichannel LPCM ஆற்றல் பெறுனர்"
-
-msgctxt "#349"
-msgid "- TrueHD capable receiver"
-msgstr "- TrueHD ஆற்றல் பெறுநர்"
-
 msgctxt "#350"
 msgid "Programs"
 msgstr "நிரல்கள்"
@@ -1292,10 +1256,6 @@ msgstr "திரைக்காப்பு மங்கு நிலை"
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "வரிசைபடுத்து : கொப்புபடி"
-
-msgctxt "#364"
-msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "- Dolby Digital (AC3) ஆற்றல் பெறுனர்"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1616,10 +1576,6 @@ msgstr "DVD"
 msgctxt "#447"
 msgid "Autorun media"
 msgstr "ஊடகத்தை தானியக்கு"
-
-msgctxt "#448"
-msgid "LCD"
-msgstr "LCD"
 
 msgctxt "#449"
 msgid "Enabled"
@@ -2401,10 +2357,6 @@ msgctxt "#705"
 msgid "Network"
 msgstr "பிணையம்"
 
-msgctxt "#706"
-msgid "- Server"
-msgstr "- சேவையகம்"
-
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
 msgstr "இணையத்தை அணுக ஒரு HTTP சேவையகத்தை பயன்படுத்தவும்"
@@ -2421,10 +2373,6 @@ msgctxt "#713"
 msgid "HTTP proxy"
 msgstr "HTTP பதிலாள்"
 
-msgctxt "#715"
-msgid "- Assignment"
-msgstr "- நிர்ணயம்"
-
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "தானியக்க (DHCP)"
@@ -2432,22 +2380,6 @@ msgstr "தானியக்க (DHCP)"
 msgctxt "#717"
 msgid "Manual (Static)"
 msgstr "கைமுறை (நிலையான)"
-
-msgctxt "#719"
-msgid "- IP address"
-msgstr "- IP முகவரி"
-
-msgctxt "#720"
-msgid "- Netmask"
-msgstr "- நெட்மாஸ்க்கு"
-
-msgctxt "#721"
-msgid "- Default gateway"
-msgstr "- முன்னிருப்பு நுழைவாயில்"
-
-msgctxt "#722"
-msgid "- DNS server"
-msgstr "- DNS சேவையகம்"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -2473,33 +2405,13 @@ msgctxt "#728"
 msgid "FTP server"
 msgstr "FTP சேவையகம்"
 
-msgctxt "#730"
-msgid "- Port"
-msgstr " - துறை"
-
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "சேமி & பயன்படுத்து"
 
-msgctxt "#733"
-msgid "- Password"
-msgstr "- கடவுச்சொல் "
-
 msgctxt "#734"
 msgid "No pass"
 msgstr "அனுமதி இல்லை"
-
-msgctxt "#735"
-msgid "- Character set"
-msgstr "- எழுத்துக்கணம்"
-
-msgctxt "#736"
-msgid "- Style"
-msgstr " - பாணி"
-
-msgctxt "#737"
-msgid "- Colour"
-msgstr "- வண்ணம்"
 
 msgctxt "#738"
 msgid "Normal"
@@ -2629,18 +2541,6 @@ msgctxt "#775"
 msgid "Network interface"
 msgstr "பிணைய இடைமுகம் அமைப்புகளை சேமித்து மற்றும் பயன்படுத்தவும்"
 
-msgctxt "#776"
-msgid "- Wireless network name (ESSID)"
-msgstr "ஒலிபரப்பு முறை பிணைய பெயர் (ESSID)"
-
-msgctxt "#777"
-msgid "- Wireless password"
-msgstr "- வடமின்மை கடவுச்சொல் "
-
-msgctxt "#778"
-msgid "- Wireless security"
-msgstr "வடமின்மை பாதுகாப்பு"
-
 msgctxt "#779"
 msgid "Save and apply network interface settings"
 msgstr "பிணைய இடைமுகம் அமைப்புகளை சேமித்து மற்றும் பயன்படுத்தவும்"
@@ -2725,10 +2625,6 @@ msgctxt "#799"
 msgid "Library Update"
 msgstr "நூலக புதுப்பி"
 
-msgctxt "#800"
-msgid "Music library needs to rescan art from tags"
-msgstr "குறிப்புகளில் இருந்து படம் எடுக்க இசை நூலகம் மறுபடி ஸ்கேன் செய்யவேண்டும்"
-
 msgctxt "#801"
 msgid "Would you like to scan now?"
 msgstr "தற்போது ஸ்கேன் செய்ய வேண்டுமா?"
@@ -2752,10 +2648,6 @@ msgstr "இசை சேர்க்க..."
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "நிகழ்படம் சேர்க்க..."
-
-msgctxt "#1000"
-msgid "- Preview"
-msgstr "- முன்னோட்டம்"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2941,10 +2833,6 @@ msgctxt "#1047"
 msgid "Other..."
 msgstr "மற்றவை..."
 
-msgctxt "#1048"
-msgid "- Username"
-msgstr "- பயனர்பெயர்"
-
 msgctxt "#1049"
 msgid "Script settings"
 msgstr "வாய்ப்பாடு அமைப்புக்கள்"
@@ -3092,10 +2980,6 @@ msgstr "ஏர்பிளே உள்ளடக்கத்தை பெற XBM
 msgctxt "#1271"
 msgid "Device name"
 msgstr "சாதனம் பெயர்"
-
-msgctxt "#1272"
-msgid "- Use password protection"
-msgstr "- கடவுச்சொல் பாதுகாப்பு பயன்படுத்தவும்"
 
 msgctxt "#1273"
 msgid "AirPlay"
@@ -3352,10 +3236,6 @@ msgstr "ஸ்கிரிப்ட் தோல்வியுற்றது! 
 msgctxt "#2101"
 msgid "Newer version needed - See log"
 msgstr "புதிய பதிப்பு தேவை - பதிவு காண்க"
-
-msgctxt "#4501"
-msgid "Enable LCD/VFD"
-msgstr "LCD/VFD செயல்படுத்து"
 
 msgctxt "#10000"
 msgid "Home"
@@ -4293,10 +4173,6 @@ msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "விசிறி வேகம் மேலாணை"
 
-msgctxt "#13303"
-msgid "- Fonts"
-msgstr "- எழுத்துருகள்"
-
 msgctxt "#13304"
 msgid "Enable flipping bi-directional strings"
 msgstr "இரு திசை சரங்களை சுண்டுதலை செயல்படுத்து"
@@ -4973,33 +4849,13 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "வீடியோ தேக்ககம் - DVD-ROM"
 
-msgctxt "#14027"
-msgid "- Local Network"
-msgstr " - குறும்பரப்புப் பிணையம்"
-
-msgctxt "#14028"
-msgid "- Internet"
-msgstr " - இணையம்"
-
 msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "ஆடியோ தேக்ககம் - DVD-ROM"
 
-msgctxt "#14031"
-msgid "- Local Network"
-msgstr " - குறும்பரப்புப் பிணையம்"
-
-msgctxt "#14032"
-msgid "- Internet"
-msgstr " - இணையம்"
-
 msgctxt "#14034"
 msgid "DVD cache - DVD-ROM"
 msgstr "DVD தேக்ககம் - DVD-ROM"
-
-msgctxt "#14035"
-msgid "- Local Network"
-msgstr " - குறும்பரப்புப் பிணையம்"
 
 msgctxt "#14036"
 msgid "Services"
@@ -5149,10 +5005,6 @@ msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "பிடித்த காட்சிகளிலிருந்து நீக்கு"
 
-msgctxt "#14078"
-msgid "- Colours"
-msgstr "- வண்ணங்கள்"
-
 msgctxt "#14079"
 msgid "Timezone country"
 msgstr "நேரமண்டல நாடு"
@@ -5289,10 +5141,6 @@ msgctxt "#15109"
 msgid "Skin default"
 msgstr "இயல்புநிலை அலங்கார அமைப்பு"
 
-msgctxt "#15111"
-msgid "- Theme"
-msgstr "- தீம்"
-
 msgctxt "#15112"
 msgid "Default theme"
 msgstr "இயல்புநிலை தீம்"
@@ -5301,30 +5149,6 @@ msgctxt "#15200"
 msgid "Last.fm"
 msgstr "Last.fm"
 
-msgctxt "#15201"
-msgid "Submit songs to Last.fm"
-msgstr "Last.fm கிற்கு இந்த பாடல்களை சமர்பி"
-
-msgctxt "#15202"
-msgid "Last.fm username"
-msgstr "Last.fm பயனர்பெயர்"
-
-msgctxt "#15203"
-msgid "Last.fm password"
-msgstr "Last.fm கடவுச்சொல்"
-
-msgctxt "#15204"
-msgid "Unable to handshake: sleeping..."
-msgstr "தகவல் தொடர்பு செய்ய இயலவில்லை: தூங்குகிறது..."
-
-msgctxt "#15205"
-msgid "Please update XBMC"
-msgstr "தயவு செய்து XBMC மேம்படுத்தல் செய்யவும்"
-
-msgctxt "#15206"
-msgid "Bad authorization: Check username and password"
-msgstr "மோசமான அங்கீகாரம்: பயனர்பெயர் மற்றும் கடவுச்சொல்லை சரிபார்க்கவும்"
-
 msgctxt "#15207"
 msgid "Connected"
 msgstr "இணைக்கப்பட்டது"
@@ -5332,22 +5156,6 @@ msgstr "இணைக்கப்பட்டது"
 msgctxt "#15208"
 msgid "Not connected"
 msgstr "இணைக்கப்படவில்லை"
-
-msgctxt "#15209"
-msgid "Submit interval %i"
-msgstr "சமர்பித்தல் இடைவெளி %i"
-
-msgctxt "#15210"
-msgid "Cached %i songs"
-msgstr "%i பாடல்கள் தேக்ககம் செய்யப்பட்டுள்ளது"
-
-msgctxt "#15211"
-msgid "Submitting..."
-msgstr "சமர்பித்து கொண்டிருக்கிறது..."
-
-msgctxt "#15212"
-msgid "Submitting in %i secs"
-msgstr "%i நொடிகளில் சமர்பித்தல் தொடங்கும்"
 
 msgctxt "#15213"
 msgid "Play using..."
@@ -5364,218 +5172,6 @@ msgstr "சிறுபட பார்வையில் கோப்பு 
 msgctxt "#15216"
 msgid "Play in party mode"
 msgstr "கொண்டாட்ட முறையில் வாசி"
-
-msgctxt "#15217"
-msgid "Submit songs to Libre.fm"
-msgstr "Libre.fm கிற்கு இந்த பாடல்களை சமர்பி"
-
-msgctxt "#15218"
-msgid "Libre.fm username"
-msgstr "Libre.fm பயனர்பெயர்"
-
-msgctxt "#15219"
-msgid "Libre.fm password"
-msgstr "Libre.fm கடவுச்சொல்"
-
-msgctxt "#15220"
-msgid "Libre.fm"
-msgstr "Libre.fm"
-
-msgctxt "#15221"
-msgid "Song submission"
-msgstr "பாடல் சமர்பித்தல்"
-
-msgctxt "#15250"
-msgid "Submit Last.fm radio to Last.fm"
-msgstr "Last.fm ரேடியோவை Last.fm கிற்கு சமர்ப்பி"
-
-msgctxt "#15251"
-msgid "Connecting to Last.fm..."
-msgstr "Last.fm கிற்கு இணைக்கபடுகிறது..."
-
-msgctxt "#15252"
-msgid "Selecting station..."
-msgstr "நிலையம் தேர்வு செய்க..."
-
-msgctxt "#15253"
-msgid "Search similar artists..."
-msgstr "ஒரேமதிறியான கலைஞர்கள் தேடல்..."
-
-msgctxt "#15254"
-msgid "Search similar tags..."
-msgstr "ஒரேமதிறியான குறிச்சொற்கள் தேடல்..."
-
-msgctxt "#15255"
-msgid "Your profile (%name%)"
-msgstr "உங்கள் சுயவிவரம் (%name%)"
-
-msgctxt "#15256"
-msgid "Overall top tags"
-msgstr "ஒட்டுமொத்த உச்சி குறிச்சொற்கள்"
-
-msgctxt "#15257"
-msgid "Top artists for tag %name%"
-msgstr "%name% குறிச்சொல்லிற்கான உச்சி கலைஞர்கள்"
-
-msgctxt "#15258"
-msgid "Top albums for tag %name%"
-msgstr "%name% குறிச்சொல்லிற்கான உச்சி ஆல்பங்கள்"
-
-msgctxt "#15259"
-msgid "Top tracks for tag %name%"
-msgstr "%name% குறிச்சொல்லிற்கான உச்சி பாடல்கள்"
-
-msgctxt "#15260"
-msgid "Listen to tag %name% Last.fm radio"
-msgstr "Last.fm ரேடியோவின் %name% Last குறிச்சொல்லின் ஒலிப்பேழையை கேள்"
-
-msgctxt "#15261"
-msgid "Similar artists as %name%"
-msgstr "%name% போன்ற ஒரேமதிறியான கலைஞர்கள்"
-
-msgctxt "#15262"
-msgid "Top %name% albums"
-msgstr "உச்சி %name% albums"
-
-msgctxt "#15263"
-msgid "Top %name% tracks"
-msgstr "உச்சி %name% tracks"
-
-msgctxt "#15264"
-msgid "Top %name% tags"
-msgstr "உச்சி %name% tags"
-
-msgctxt "#15265"
-msgid "Biggest fans of %name%"
-msgstr "%name% உடைய மிகப்பெரிய ரசிகர்கள்"
-
-msgctxt "#15266"
-msgid "Listen to %name% fans Last.fm radio"
-msgstr "%name% fans Last.fm ரேடியோவின் விசிறிகள் ஒலிப்பேழையை கேள்"
-
-msgctxt "#15267"
-msgid "Listen to %name% similar artists Last.fm radio"
-msgstr "%name% similar போன்ற கலைங்கர்களின் ஒலிப்பேழையை Last.fm ரேடியோவில் கேட்கவும்"
-
-msgctxt "#15268"
-msgid "Top artists for user %name%"
-msgstr "%name% பயனரின் உச்சி கலைஞர்கள்"
-
-msgctxt "#15269"
-msgid "Top albums for user %name%"
-msgstr "%name% பயனரின் உச்சி ஆல்பங்கள்"
-
-msgctxt "#15270"
-msgid "Top tracks for user %name%"
-msgstr "%name% பயனரின் உச்சி பாடல்கள்"
-
-msgctxt "#15271"
-msgid "Friends of user %name%"
-msgstr "%name% பயனரின் நண்பர்கள்"
-
-msgctxt "#15272"
-msgid "Neighbours of user %name%"
-msgstr "%name% பயனரின் அண்டையர்கள்"
-
-msgctxt "#15273"
-msgid "Weekly artist chart for %name%"
-msgstr "%name% உடைய வாராந்திர கலைஞர் வரைபடம்"
-
-msgctxt "#15274"
-msgid "Weekly album chart for %name%"
-msgstr "%name% உடைய வாராந்திர ஆல்பம் வரைபடம்"
-
-msgctxt "#15275"
-msgid "Weekly track chart for %name%"
-msgstr "%name% உடைய வாராந்திர பாடல் வரைபடம்"
-
-msgctxt "#15276"
-msgid "Listen to %name%'s neighbours Last.fm radio"
-msgstr "%name%'s உடைய அண்டையரின் Last.fm ரேடியோவின் ஒலிபேழையை கேட்கவும்"
-
-msgctxt "#15277"
-msgid "Listen to %name%'s personal Last.fm radio"
-msgstr "%name%'s உடைய தனிப்பட்ட Last.fm ரேடியோவின் ஒலிபேழையை கேட்கவும்"
-
-msgctxt "#15278"
-msgid "Listen to %name%'s mix Last.fm radio"
-msgstr "%name%'s உடைய கலந்த Last.fm ரேடியோவின் ஒலிபேழையை கேட்கவும்"
-
-msgctxt "#15279"
-msgid "Retrieving list from Last.fm..."
-msgstr "Last.fm. இருந்து பட்டியலை எடுக்கிறது..."
-
-msgctxt "#15280"
-msgid "Can't retrieve list from Last.fm..."
-msgstr "Last.fm. இருந்து பட்டியலை எடுக்க முடியவில்லை..."
-
-msgctxt "#15281"
-msgid "Enter an artist name to find related ones"
-msgstr "கலைஞர் தொடர்பானவற்றை கண்டுபிடிக்க பெயரை உள்ளிடவும்"
-
-msgctxt "#15282"
-msgid "Enter a tag name to find similar ones"
-msgstr "ஒத்த குறிச்சொல் கண்டுபிடிக்க குறிச்சொல் பெயரை உள்ளிடவும்"
-
-msgctxt "#15283"
-msgid "Tracks recently listened by %name%"
-msgstr "சமிபத்தில் கேட்கப்பட்ட பாடல்கள், இவருடைய %name%"
-
-msgctxt "#15284"
-msgid "Listen to %name%'s recommendations Last.fm radio"
-msgstr "Last.fm வானொலியின் %name%'s பரிந்துரைகளை கேட்கவும்"
-
-msgctxt "#15285"
-msgid "Top tags for user %name%"
-msgstr "%name% பயனர் உடைய உச்சி குறிச்சொற்கள்"
-
-msgctxt "#15287"
-msgid "Do you want to add the current track to your loved tracks?"
-msgstr "தற்போதைய பாடலை நீங்கள் நேசிக்கும் பாடல் பட்டியலில் சேர்க்க வேண்டுமா?"
-
-msgctxt "#15288"
-msgid "Do you want to ban the current track?"
-msgstr "தற்போதைய பாடல் தடை செய்ய வேண்டுமா?"
-
-msgctxt "#15289"
-msgid "Added to your loved tracks: '%s'."
-msgstr "உங்கள் நேசித்த பாடல் பட்டியலில் சேர்க்கப்பட்டது: '%s'."
-
-msgctxt "#15290"
-msgid "Could not add '%s' to your loved tracks."
-msgstr "உங்கள் நேசித்த பாடல் பட்டியலில் '%s' சேர்க்கப்பட இயலவில்லை."
-
-msgctxt "#15291"
-msgid "Banned: '%s'."
-msgstr "தடைசெய்யப்பட்டது: '%s'."
-
-msgctxt "#15292"
-msgid "Could not ban '%s'."
-msgstr "தடைசெய்யப்பட இயலவில்லை '%s'."
-
-msgctxt "#15293"
-msgid "Tracks recently loved by %name%"
-msgstr "%name% இவரால் சமீபத்தில் விரும்ப்பட்ட பாடல்கள் "
-
-msgctxt "#15294"
-msgid "Tracks recently banned by %name%"
-msgstr "%name% இவரால் சமீபத்தில் தடைசெய்யப்பட்ட பாடல்கள் "
-
-msgctxt "#15295"
-msgid "Remove from loved tracks"
-msgstr "நேசித்த பாடல் பட்டியலில் இருந்து நீக்கு"
-
-msgctxt "#15296"
-msgid "Un-ban"
-msgstr "தடையை நீக்கு"
-
-msgctxt "#15297"
-msgid "Do you want to remove this track from your loved tracks?"
-msgstr "உங்கள் நேசித்த பாடல் பட்டியலில் இருந்து இந்த பாடலை நீக்க வேண்டுமா?"
-
-msgctxt "#15298"
-msgid "Do you want to un-ban this track?"
-msgstr "இந்த பாடலுக்கு தடையை நீக்கவேண்டுமா?"
 
 msgctxt "#15300"
 msgid "Path not found or invalid"
@@ -6064,10 +5660,6 @@ msgstr "தகவல்"
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "இந்த சேனலில் பதிவு செய்தலை ஏற்கனவே தொடங்கிவிட்டது"
-
-msgctxt "#19035"
-msgid "This channel cannot be played. Check the log for details."
-msgstr "சேனல் வாசிக்க இயலாது. விவரங்களுக்கு லாகு கோப்பினை பார்க்கவும்."
 
 msgctxt "#19036"
 msgid "This recording cannot be played. Check the log for details."
@@ -7725,10 +7317,6 @@ msgctxt "#20108"
 msgid "Root"
 msgstr "ஆணிவேர்"
 
-msgctxt "#20109"
-msgid "- Zoom"
-msgstr "- பெரிதாக்கு"
-
 msgctxt "#20110"
 msgid "UPnP settings"
 msgstr "UPnP அமைப்புக்கள்"
@@ -8185,17 +7773,9 @@ msgctxt "#20309"
 msgid "Make new folder"
 msgstr "புதிய கோப்புறை செய்க"
 
-msgctxt "#20310"
-msgid "Dim LCD on playback"
-msgstr "பின்னணி வாசிக்கும்போது எல்சிடி யை மங்க செய்க"
-
 msgctxt "#20311"
 msgid "Unknown or onboard (protected)"
 msgstr "தெரியாத அல்லது உள்ளது (பாதுக்கக்கபட்டுள்ளது)"
-
-msgctxt "#20312"
-msgid "Dim LCD on paused"
-msgstr "இடைநிறுத்தம் போது எல்சிடி யை மங்க செய்க"
 
 msgctxt "#20314"
 msgid "Videos - Library"
@@ -9021,10 +8601,6 @@ msgctxt "#21415"
 msgid "Default music video scraper"
 msgstr "முன்னிருப்பு இசை வீடியோ சீவுளி"
 
-msgctxt "#21417"
-msgid "- Settings"
-msgstr "- அமைப்புக்கள்"
-
 msgctxt "#21418"
 msgid "Multilingual"
 msgstr "பன்மொழி"
@@ -9152,10 +8728,6 @@ msgstr "துணைத்தலைப்பு மொழி"
 msgctxt "#21449"
 msgid "Remote control sends keyboard presses"
 msgstr "தொலைநிலை கட்டுப்பாடு விசைப்பலகை அச்சகங்கள் அனுப்புகிறது"
-
-msgctxt "#21450"
-msgid "- Edit"
-msgstr "- திருத்து"
 
 msgctxt "#21451"
 msgid "Internet connection required."
@@ -9425,10 +8997,6 @@ msgctxt "#21877"
 msgid "Date created"
 msgstr "உருவாக்கப்பட்ட தேதி"
 
-msgctxt "#21878"
-msgid "Copyright flag"
-msgstr "பதிப்புரிமை கொடி"
-
 msgctxt "#21879"
 msgid "Country code"
 msgstr "நாட்டின் குறியீடு"
@@ -9525,10 +9093,6 @@ msgctxt "#22001"
 msgid "Hide progress of library updates"
 msgstr "நூலகம் மேம்படுத்தலின் முன்னேற்றத்தை மறைக்கவும்"
 
-msgctxt "#22002"
-msgid "- DNS suffix"
-msgstr "- DNS பின்னொட்டு"
-
 msgctxt "#22003"
 msgid "%2.3fs"
 msgstr "%2.3fs"
@@ -9620,18 +9184,6 @@ msgstr "டைரக்ட்3டி பதிப்பு:"
 msgctxt "#22030"
 msgid "Font"
 msgstr "எழுத்துரு"
-
-msgctxt "#22031"
-msgid "- Size"
-msgstr "- அளவு"
-
-msgctxt "#22032"
-msgid "- Colours"
-msgstr "- வண்ணங்கள்"
-
-msgctxt "#22033"
-msgid "- Charset"
-msgstr "- சார் தொகுப்பு"
 
 msgctxt "#22034"
 msgid "Export karaoke titles as HTML"
@@ -10493,10 +10045,6 @@ msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "வாசிப்பதற்கு முந்தைய உருப்படியை கண்டுபிடிக்க முடியவில்லை"
 
-msgctxt "#34300"
-msgid "Failed to start zeroconf"
-msgstr "zeroconf தொடங்குவதில் தோல்வி"
-
 msgctxt "#34301"
 msgid "Is Apple's Bonjour Service installed? See log for more info."
 msgstr "ஆப்பிள் போஞ்சூர் சேவை நிறுவப்பட்டுள்ளதா? லாகு கோப்பினை பார்க்கவும்"
@@ -10580,10 +10128,6 @@ msgstr "இந்த சாதனத்திற்கு தனிப்பய�
 msgctxt "#35100"
 msgid "Enable joystick and gamepad support"
 msgstr "ஜாய்ஸ்டிக் மற்றும் விளையாட்டுப்பலக ஆதரவை இயக்குவும்"
-
-msgctxt "#35102"
-msgid "Disable joystick when device is present"
-msgstr "சாதனம் இல்லாதபோது ஜாய்ஸ்டிக்கை முடக்கவும்"
 
 msgctxt "#35500"
 msgid "Location"

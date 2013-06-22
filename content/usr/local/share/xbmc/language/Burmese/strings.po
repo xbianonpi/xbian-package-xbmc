@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Burmese (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/my/)\n"
+"Language-Team: Burmese (http://www.transifex.com/projects/p/xbmc-main/language/my/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -621,10 +621,6 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "ချယ်နယ်များအရေအတွက်"
 
-msgctxt "#254"
-msgid "- DTS capable receiver"
-msgstr "- DTS capable receiver"
-
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
@@ -721,10 +717,6 @@ msgctxt "#288"
 msgid "Font"
 msgstr "စာလုံးပုံစံ"
 
-msgctxt "#289"
-msgid "- Size"
-msgstr "- အရွယ်အစား"
-
 msgctxt "#291"
 msgid "Video"
 msgstr "ဗွီဒီယို"
@@ -752,22 +744,6 @@ msgstr "Audio offset"
 msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Bookmarks"
-
-msgctxt "#299"
-msgid "- AAC capable receiver"
-msgstr "- AAC capable receiver"
-
-msgctxt "#300"
-msgid "- MP1 capable receiver"
-msgstr "- MP1 capable receiver"
-
-msgctxt "#301"
-msgid "- MP2 capable receiver"
-msgstr "- MP2 capable receiver"
-
-msgctxt "#302"
-msgid "- MP3 capable receiver"
-msgstr "- MP3 capable receiver"
 
 msgctxt "#303"
 msgid "Delay"
@@ -901,18 +877,6 @@ msgctxt "#345"
 msgid "Year"
 msgstr "နှစ်"
 
-msgctxt "#347"
-msgid "- DTS-HD capable receiver"
-msgstr "- DTS-HD capable receiver"
-
-msgctxt "#348"
-msgid "- Multichannel LPCM capable receiver"
-msgstr "- Multichannel LPCM capable receiver"
-
-msgctxt "#349"
-msgid "- TrueHD capable receiver"
-msgstr "- TrueHD capable receiver"
-
 msgctxt "#350"
 msgid "Programs"
 msgstr "ပရိုဂရမ်များ"
@@ -956,10 +920,6 @@ msgstr "Screensaver မှေးမှိန်စေနိုင်သော �
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "စီရန် - ဖိုင်အရ"
-
-msgctxt "#364"
-msgid "- Dolby Digital (AC3) capable receiver"
-msgstr "- Dolby Digital (AC3) capable receiver"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -1228,10 +1188,6 @@ msgstr "အသံ"
 msgctxt "#446"
 msgid "DVD"
 msgstr "ဒီဗွီဒီ"
-
-msgctxt "#448"
-msgid "LCD"
-msgstr "LCD"
 
 msgctxt "#449"
 msgid "Enabled"
@@ -1729,10 +1685,6 @@ msgctxt "#705"
 msgid "Network"
 msgstr "ကွန်ရက်"
 
-msgctxt "#706"
-msgid "- Server"
-msgstr "- ဆာဗာ"
-
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
 msgstr "အင်တာနက်ကိုသုံးရန်အတွက် HTTP proxy server တစ်ခုကိုသုံးပါ။"
@@ -1749,10 +1701,6 @@ msgctxt "#713"
 msgid "HTTP proxy"
 msgstr "HTTP proxy"
 
-msgctxt "#715"
-msgid "- Assignment"
-msgstr "- Assignment"
-
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "အလိုအလျောက် (DHCP)"
@@ -1760,22 +1708,6 @@ msgstr "အလိုအလျောက် (DHCP)"
 msgctxt "#717"
 msgid "Manual (Static)"
 msgstr "Manual (Static)"
-
-msgctxt "#719"
-msgid "- IP address"
-msgstr "- IP address"
-
-msgctxt "#720"
-msgid "- Netmask"
-msgstr "- Netmask"
-
-msgctxt "#721"
-msgid "- Default gateway"
-msgstr "- Default gateway"
-
-msgctxt "#722"
-msgid "- DNS server"
-msgstr "- DNS server"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -1797,29 +1729,9 @@ msgctxt "#728"
 msgid "FTP server"
 msgstr "FTP server"
 
-msgctxt "#730"
-msgid "- Port"
-msgstr "- Port"
-
 msgctxt "#732"
 msgid "Save & apply"
 msgstr "Save & apply"
-
-msgctxt "#733"
-msgid "- Password"
-msgstr "- စကားဝှက်"
-
-msgctxt "#735"
-msgid "- Character set"
-msgstr "- Character set"
-
-msgctxt "#736"
-msgid "- Style"
-msgstr "- စတိုင်"
-
-msgctxt "#737"
-msgid "- Colour"
-msgstr "- အရောင်"
 
 msgctxt "#738"
 msgid "Normal"
@@ -1909,14 +1821,6 @@ msgctxt "#775"
 msgid "Network interface"
 msgstr "Network interface"
 
-msgctxt "#777"
-msgid "- Wireless password"
-msgstr "- Wireless စကားဝှက်"
-
-msgctxt "#778"
-msgid "- Wireless security"
-msgstr "- Wireless လုံခြုံရေး"
-
 msgctxt "#781"
 msgid "WEP"
 msgstr "WEP"
@@ -1968,10 +1872,6 @@ msgstr "ဂီတများပေါင်းထည့်မည်"
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "ရုပ်ရှင်များပေါင်းထည့်မည်"
-
-msgctxt "#1000"
-msgid "- Preview"
-msgstr "- ကြိုတင်ကြည့်ရှု့"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2096,10 +1996,6 @@ msgstr "Access points"
 msgctxt "#1047"
 msgid "Other..."
 msgstr "တခြား"
-
-msgctxt "#1048"
-msgid "- Username"
-msgstr "-သုံးစွဲသူအမည်"
 
 msgctxt "#1049"
 msgid "Script settings"
@@ -2236,10 +2132,6 @@ msgstr "Zeroconf"
 msgctxt "#1271"
 msgid "Device name"
 msgstr "ကိရိယာအမည်"
-
-msgctxt "#1272"
-msgid "- Use password protection"
-msgstr "-စကားဝှက်ကာကွယ်ရေးကိုသုံးမည်"
 
 msgctxt "#1273"
 msgid "AirPlay"
@@ -2581,6 +2473,10 @@ msgctxt "#12900"
 msgid "Screensaver"
 msgstr "Screensaver"
 
+msgctxt "#13000"
+msgid "System"
+msgstr "စနစ်"
+
 msgctxt "#13002"
 msgid "Video only"
 msgstr "ဗွီဒီယိုသာလျှင်"
@@ -2820,10 +2716,6 @@ msgstr "ပန်ကာအမြန်နှုန်း"
 msgctxt "#13301"
 msgid "Auto temperature control"
 msgstr "အလိုအလျောက် အပူချိန်ထိန်း"
-
-msgctxt "#13303"
-msgid "- Fonts"
-msgstr "- စာလုံးပုံစံ"
 
 msgctxt "#13305"
 msgid "Show RSS news feeds"
@@ -3097,18 +2989,6 @@ msgctxt "#14024"
 msgid "Enter the nearest large town"
 msgstr "အနီးဆုံးကျယ်သည့်မြို့ထဲသို့ဝင်မည်"
 
-msgctxt "#14027"
-msgid "- Local Network"
-msgstr "- Local Network"
-
-msgctxt "#14028"
-msgid "- Internet"
-msgstr "- Internet"
-
-msgctxt "#14032"
-msgid "- Internet"
-msgstr "- အင်တာနက်"
-
 msgctxt "#14036"
 msgid "Services"
 msgstr "ဆားဗစ်များ"
@@ -3208,10 +3088,6 @@ msgstr "အကြိုက်ဆုံးထဲသို့ထည့်မည်
 msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "အကြိုက်ဆုံးထဲမှဖြုတ်မည်"
-
-msgctxt "#14078"
-msgid "- Colours"
-msgstr "- Colours"
 
 msgctxt "#14079"
 msgid "Timezone country"
@@ -3313,26 +3189,6 @@ msgctxt "#15200"
 msgid "Last.fm"
 msgstr "Last.fm"
 
-msgctxt "#15201"
-msgid "Submit songs to Last.fm"
-msgstr "Last.fm သို့သီချင်းများသွင်းမည်"
-
-msgctxt "#15202"
-msgid "Last.fm username"
-msgstr "Last.fm သုံးစွဲသူအမည်"
-
-msgctxt "#15203"
-msgid "Last.fm password"
-msgstr "Last.fm စကားဝှက်"
-
-msgctxt "#15205"
-msgid "Please update XBMC"
-msgstr "ကျေးဇူးပြု၍ XBMC ကို update ပြုလုပ်ပါ။"
-
-msgctxt "#15206"
-msgid "Bad authorization: Check username and password"
-msgstr "ခွင့်ပြုချက်မအောင်မြင်ပါ။ - သု့းစွဲသူအမည်နှင့်စကားဝှက်ကိုစစ်ကြည့်ပါ။"
-
 msgctxt "#15207"
 msgid "Connected"
 msgstr "ချိတ်ဆက်ပြီးသွားပါပြီ။"
@@ -3341,61 +3197,9 @@ msgctxt "#15208"
 msgid "Not connected"
 msgstr "မချိတ်ဆက်မိပါ။"
 
-msgctxt "#15211"
-msgid "Submitting..."
-msgstr "ထည့်သွင်းနေပါသည်။"
-
 msgctxt "#15213"
 msgid "Play using..."
 msgstr "သုံးပြီးဖွင့်မည့်"
-
-msgctxt "#15217"
-msgid "Submit songs to Libre.fm"
-msgstr "Submit songs to Libre.fm"
-
-msgctxt "#15218"
-msgid "Libre.fm username"
-msgstr "Libre.fm အသုံးပြုသူအမည်"
-
-msgctxt "#15219"
-msgid "Libre.fm password"
-msgstr "Libre.fm password"
-
-msgctxt "#15220"
-msgid "Libre.fm"
-msgstr "Libre.fm"
-
-msgctxt "#15221"
-msgid "Song submission"
-msgstr "သီချင်းထည့်သွင်းခြင်း"
-
-msgctxt "#15251"
-msgid "Connecting to Last.fm..."
-msgstr "Last.fm သို့ချိတ်ဆက်နေသည်"
-
-msgctxt "#15255"
-msgid "Your profile (%name%)"
-msgstr "သင်၏ profile (%name%)"
-
-msgctxt "#15288"
-msgid "Do you want to ban the current track?"
-msgstr "ယခုအပုဒ်ကို ပယ်သည့်စာရင်းထဲ"
-
-msgctxt "#15291"
-msgid "Banned: '%s'."
-msgstr "တားမြစ်ထားသော - '%s'"
-
-msgctxt "#15292"
-msgid "Could not ban '%s'."
-msgstr "မတားမြစ်နိုင်ပါ'%s'"
-
-msgctxt "#15296"
-msgid "Un-ban"
-msgstr "မတားမြစ်တော့ပါ"
-
-msgctxt "#15298"
-msgid "Do you want to un-ban this track?"
-msgstr "ဒီအပုဒ်ကို မတားမြစ်တော့မှာသေချာပြီလား"
 
 msgctxt "#15302"
 msgid "No servers found"
@@ -3468,6 +3272,10 @@ msgstr "Bob"
 msgctxt "#16025"
 msgid "Enter the artist name"
 msgstr "အနုပညာရှင်အမည်ကိုရိုက်ထည့်ပါ"
+
+msgctxt "#16026"
+msgid "Playback failed"
+msgstr "Playback မအောင်မြင်ပါ"
 
 msgctxt "#16028"
 msgid "Enter value"
@@ -4773,10 +4581,6 @@ msgctxt "#21413"
 msgid "Default movie scraper"
 msgstr "Default movie scraper"
 
-msgctxt "#21417"
-msgid "- Settings"
-msgstr "- Settings"
-
 msgctxt "#21418"
 msgid "Multilingual"
 msgstr "ဘာသာစကားအမြောက်အမြား"
@@ -4808,10 +4612,6 @@ msgstr "Audio ဘာသာစကား"
 msgctxt "#21448"
 msgid "Subtitle language"
 msgstr "စာတန်းထိုးရန်ဘာသာစကား"
-
-msgctxt "#21450"
-msgid "- Edit"
-msgstr "- Edit"
 
 msgctxt "#21451"
 msgid "Internet connection required."
@@ -4977,10 +4777,6 @@ msgctxt "#21897"
 msgid "Died"
 msgstr "သေဆုံးခြင်း"
 
-msgctxt "#22002"
-msgid "- DNS suffix"
-msgstr "- DNS suffix"
-
 msgctxt "#22003"
 msgid "%2.3fs"
 msgstr "%2.3fs"
@@ -5024,18 +4820,6 @@ msgstr "အုပ်စုအရ"
 msgctxt "#22030"
 msgid "Font"
 msgstr "စာလုံးပုံစံ"
-
-msgctxt "#22031"
-msgid "- Size"
-msgstr "- Size"
-
-msgctxt "#22032"
-msgid "- Colours"
-msgstr "- အရောင်များ"
-
-msgctxt "#22033"
-msgid "- Charset"
-msgstr "- Charset"
 
 msgctxt "#22040"
 msgid "white/green"
@@ -5576,10 +5360,6 @@ msgstr "ဖွင့်ရန်အတွက်နောက်အမျိုး
 msgctxt "#34202"
 msgid "Can't find a previous item to play"
 msgstr "ဖွင့်ရန်အတွက် အရှေ့ကအမျိုးအစားကို မရှာတွေ့ပါ"
-
-msgctxt "#34300"
-msgid "Failed to start zeroconf"
-msgstr "zeroconf ကိုမစနိုင်ပါ"
 
 msgctxt "#34403"
 msgid "Check your audiosettings"
