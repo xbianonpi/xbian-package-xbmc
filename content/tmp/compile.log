@@ -4787,9 +4787,1486 @@ AR      lib/UnrarXLib/UnrarXLib.a
 CPP     xbmc/cores/omxplayer/OMXPlayer.o
 cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
 cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
-OMXPlayer.cpp: In member function 'virtual void COMXPlayer::Process()':
-OMXPlayer.cpp:1335:10: error: 'm_player_audio' was not declared in this scope
-/opt/xbmc/xbmc/guilib/GraphicContext.h: At global scope:
-/opt/xbmc/xbmc/guilib/GraphicContext.h:251:150: warning: 'g_graphicsContext' defined but not used [-Wunused-variable]
-make[1]: *** [OMXPlayer.o] Error 1
-make: *** [xbmc/cores/omxplayer/omxplayer.a] Error 2
+CPP     xbmc/cores/omxplayer/OMXAudio.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/cores/omxplayer/OMXVideo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/cores/omxplayer/OMXAudioCodecOMX.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/cores/omxplayer/OMXPlayerAudio.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/cores/omxplayer/OMXPlayerVideo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/cores/omxplayer/OMXImage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/cores/omxplayer/omxplayer.a
+CPP     xbmc/linux/ConvUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/DBusUtil.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/DBusMessage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/DBusReserve.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/HALManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/LinuxResourceCounter.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/LinuxTimezone.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/PosixMountProvider.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/XFileUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/XHandle.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/XMemUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/XTimeUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/RBP.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/OMXClock.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/linux/OMXCore.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/linux/linux.a
+CPP     xbmc/network/cddb.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/DNSNameCache.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/EventClient.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/EventPacket.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/EventServer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/GUIDialogAccessPoints.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/GUIDialogNetworkSetup.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/Network.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/NetworkServices.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/Socket.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/TCPServer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/UdpClient.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/WakeOnAccess.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/WebServer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/ZeroconfBrowser.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/Zeroconf.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/network/AirPlayServer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/network/network.a
+CPP     xbmc/video/windows/GUIWindowFullScreen.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/windows/GUIWindowVideoBase.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/windows/GUIWindowVideoNav.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/windows/GUIWindowVideoPlaylist.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/video/windows/videowindows.a
+CPP     xbmc/utils/AlarmClock.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/AliasShortcutUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Archive.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/AsyncFileCopy.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/AutoPtrHandle.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Base64.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/BitstreamConverter.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/BitstreamStats.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/BooleanLogic.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/CharsetConverter.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CharsetConverter.cpp: In function 'void logicalToVisualBiDi(const CStdStringA&, CStdStringA&, FriBidiCharSet, FriBidiCharType, bool*)':
+CharsetConverter.cpp:312:11: warning: unused variable 'len2' [-Wunused-variable]
+CPP     xbmc/utils/CPUInfo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Crc32.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/CryptThreading.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/DatabaseUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/EndianSwap.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/EdenVideoArtUpdater.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Environment.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Fanart.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/FileOperationJob.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/FileUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/fft.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/GLUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/GroupUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/HTMLTable.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/HTMLUtil.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/HttpHeader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/HttpParser.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/HttpResponse.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/InfoLoader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/JobManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/JSONVariantParser.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/JSONVariantWriter.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/LabelFormatter.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/LangCodeExpander.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/LegacyPathTranslation.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/log.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/md5.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Mime.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Observer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/PerformanceSample.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/PerformanceStats.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/POUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/RecentlyAddedJob.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/RegExp.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/RingBuffer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/RssManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/RssReader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/ScraperParser.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/ScraperUrl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Screenshot.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/SeekHandler.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/SortUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Splash.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Stopwatch.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/StreamDetails.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/StreamUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/StringUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/SystemInfo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/TextSearch.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/TimeSmoother.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/TimeUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/TuxBoxUtil.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/URIUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/UrlOptions.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Variant.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Vector.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/Weather.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/XBMCTinyXML.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/XMLUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/utils/AMLUtils.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CC      xbmc/utils/fastmemcpy.o
+CC      xbmc/utils/fstrcmp.o
+CC      xbmc/utils/fastmemcpy-arm.o
+AR      xbmc/utils/utils.a
+CPP     xbmc/settings/AdvancedSettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/DisplaySettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/ISetting.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/MediaSettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/MediaSourceSettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/Setting.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingAddon.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingCategoryAccess.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingConditions.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingDependency.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingPath.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingSection.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/Settings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingsManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingUpdate.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SettingVisibility.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/SkinSettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/settings/VideoSettings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/settings/settings.a
+CPP     xbmc/video/Bookmark.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/FFmpegVideoDecoder.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/GUIViewStateVideo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/PlayerController.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/Teletext.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoDatabase.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoDbUrl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoInfoDownloader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoInfoScanner.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoInfoTag.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoReferenceClock.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/video/VideoThumbLoader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/video/video.a
+CPP     xbmc/pvr/addons/PVRClient.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/addons/PVRClients.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/pvr/addons/pvraddons.a
+CPP     xbmc/pvr/windows/GUIViewStatePVR.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVR.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRChannels.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRCommon.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRGuide.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRRecordings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRSearch.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/pvr/windows/GUIWindowPVRTimers.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/pvr/windows/pvrwindows.a
+CPP     xbmc/guilib/AnimatedGif.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/DDSImage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/DirectXGraphics.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/DirtyRegionSolvers.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/DirtyRegionTracker.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/cximage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/FrameBufferObject.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GraphicContext.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIAction.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIAudioManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIBaseContainer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIBorderedImage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIButtonControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUICheckMarkControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIColorManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIControlFactory.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIControlGroup.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIControlGroupList.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIControlProfiler.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIDialog.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIEditControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFadeLabelControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFixedListContainer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFont.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFontManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFontTTF.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIImage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIIncludes.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIInfoTypes.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIKeyboardFactory.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUILabel.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUILabelControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIListContainer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIListGroup.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIListItem.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIListItemLayout.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIListLabel.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIMessage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIMoverControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIMultiImage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIMultiSelectText.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIPanelContainer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIProgressControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIRadioButtonControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIResizeControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIRenderingControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIRSSControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIScrollBarControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUISelectButtonControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUISettingsSliderControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUISliderControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUISpinControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUISpinControlEx.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIStaticItem.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUITextBox.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUITextLayout.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUITexture.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIToggleButtonControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIVideoControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIVisualisationControl.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIWindow.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+GUIWindow.cpp: In member function 'virtual void CGUIWindow::AllocResources(bool)':
+GUIWindow.cpp:736:11: warning: variable 'slend' set but not used [-Wunused-but-set-variable]
+CPP     xbmc/guilib/GUIWindowManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIWrappingListContainer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/imagefactory.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/IWindowManagerCallback.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/JpegIO.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/Key.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/LocalizeStrings.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/Shader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/Texture.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/TextureBundleXPR.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/TextureBundleXBT.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/TextureBundle.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/TextureManager.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/VisibleEffect.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/XBTF.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/XBTFReader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/TextureGL.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIFontTTFGL.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUITextureGLES.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/MatrixGLES.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/guilib/GUIShader.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/guilib/guilib.a
+CPP     xbmc/threads/Atomics.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/Event.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/LockFree.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/Thread.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/Timer.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/SystemClock.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/threads/platform/Implementation.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/threads/threads.a
+CPP     xbmc/commons/Exception.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     xbmc/commons/ilog.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      xbmc/commons/commons.a
+LD      xbmc.bin
+make -C tools/TexturePacker/
+make[1]: Entering directory `/opt/xbmc/tools/TexturePacker'
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -I. -I/opt/xbmc/lib -I/opt/xbmc/xbmc -I/opt/xbmc/xbmc/linux -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -DTARGET_POSIX -DUSE_LZO_PACKING -DTARGET_POSIX -DTARGET_LINUX -D_LINUX -D_ARMEL -DTARGET_RASPBERRY_PI -D_FILE_DEFINED -D__STDC_CONSTANT_MACROS -DBIN_INSTALL_PATH="\"/usr/local/lib/xbmc\"" -DINSTALL_PATH="\"/usr/local/share/xbmc\"" -D'GIT_REV="20130627-64a0e61"' -DHAVE_CONFIG_H  -I/opt/xbmc/lib -I/opt/xbmc/xbmc -I/opt/xbmc -I/usr/include/dbus-1.0 -I/usr/include/freetype2 -I/usr/include/fribidi -I/usr/include/libpng12 -I/usr/include/mysql -I/usr/lib/arm-linux-gnueabihf/dbus-1.0/include -I/usr/local/include -I/usr/local/include/libcec -I/usr/local/include/taglib -I/opt/xbmc/lib/ffmpeg -I/opt/xbmc/xbmc/linux -I/opt/xbmc/xbmc/cores/dvdplayer -I/opt/xbmc/xbmc/cores/AudioEngine -I/opt/xbmc/xbmc/cores/AudioEngine/Utils md5.cpp SDL_anigif.cpp XBTFWriter.cpp XBMCTex.cpp /opt/xbmc/xbmc/guilib/XBTF.cpp -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -L/opt/xbmc/lib/libsquish -lsquish -lSDL_image -lSDL -llzo2 -o TexturePacker
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+make[1]: Leaving directory `/opt/xbmc/tools/TexturePacker'
+make -C addons/skin.confluence/media
+make[1]: Entering directory `/opt/xbmc/addons/skin.confluence/media'
+make -C /opt/xbmc/tools/TexturePacker
+make[2]: Entering directory `/opt/xbmc/tools/TexturePacker'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/opt/xbmc/tools/TexturePacker'
+/opt/xbmc/tools/TexturePacker/TexturePacker -input . -output Textures.xbt
+DefaultRecentlyAddedEpisodes.png              ARGB   (256,256 @ 262144 bytes)
+VolumeIcon.png                                ARGB   (48,48 @ 9216 bytes)
+DialogBack2.png                               DXT5   (256,256 @ 65536 bytes)
+HomeSeperator.png                             DXT5   (1,64 @ 256 bytes)
+RecentAddedBack.png                           DXT5   (256,256 @ 65536 bytes)
+button-focus.png                              ARGB   (256,64 @ 65536 bytes)
+KeyboardCornerBottom.png                      ARGB   (81,58 @ 18792 bytes)
+OSDSeekForward.png                            ARGB   (26,57 @ 5928 bytes)
+OSDPresetSettingsFO.png                       ARGB   (48,48 @ 9216 bytes)
+DefaultAddonArtistInfo.png                    ARGB   (256,256 @ 262144 bytes)
+icon_system.png                               ARGB   (64,64 @ 16384 bytes)
+StackFO.png                                   ARGB   (32,32 @ 4096 bytes)
+DefaultAddonSubtitles.png                     ARGB   (256,256 @ 262144 bytes)
+arrow-big-right.png                           ARGB   (64,64 @ 16384 bytes)
+xbmc-logo.png                                 ARGB   (256,128 @ 131072 bytes)
+OSDBookmarksNF.png                            DXT5   (48,48 @ 2304 bytes)
+ContentPanelMirror.png                        DXT5   (1024,64 @ 65536 bytes)
+OSDChannelListFO.png                          ARGB   (48,48 @ 9216 bytes)
+DefaultAlbumCover.png                         ARGB * (256,256 @ 262144 bytes)
+DefaultAddonVisualization.png                 ARGB   (256,256 @ 262144 bytes)
+DefaultAudio.png                              ARGB   (256,256 @ 262144 bytes)
+DefaultMovies.png                             ARGB   (256,256 @ 262144 bytes)
+DialogContextBottom.png                       ARGB   (256,20 @ 20480 bytes)
+DialogContextTop.png                          ARGB   (256,20 @ 20480 bytes)
+diffuse_mirror3.png                           DXT5   (256,256 @ 65536 bytes)
+PVR-HasTimer.png                              DXT3   (32,32 @ 1024 bytes)
+ScrollBarH_bar_focus.png                      ARGB   (32,24 @ 3072 bytes)
+GlassTitleBar.png                             DXT5   (512,43 @ 22528 bytes)
+OSDRandomOnNF.png                             ARGB   (48,48 @ 9216 bytes)
+OSDRepeatOneFO.png                            ARGB   (48,48 @ 9216 bytes)
+SubMenuBack-MiddleNF.png                      ARGB   (256,64 @ 65536 bytes)
+DefaultAddonVideo.png                         ARGB   (256,256 @ 262144 bytes)
+OSDTeleTextNF.png                             ARGB   (48,48 @ 9216 bytes)
+OSDLyricsFO.png                               ARGB   (48,48 @ 9216 bytes)
+OSD4x.png                                     ARGB   (64,64 @ 16384 bytes)
+DialogContextMiddle.png                       DXT5   (256,216 @ 55296 bytes)
+DefaultMusicYears.png                         ARGB   (256,256 @ 262144 bytes)
+separator_vertical.png                        DXT5   (4,512 @ 2048 bytes)
+DefaultAddonProgram.png                       ARGB   (256,256 @ 262144 bytes)
+KeyboardKeyNF.png                             DXT5   (159,58 @ 9600 bytes)
+radiobutton-nofocus.png                       ARGB   (48,48 @ 9216 bytes)
+SideFade.png                                  DXT5   (128,16 @ 2048 bytes)
+MenuItemNF.png                                DXT5   (512,32 @ 16384 bytes)
+OSDRandomOffFO.png                            ARGB   (48,48 @ 9216 bytes)
+OSDProgressMidLight.png                       ARGB   (20,16 @ 1280 bytes)
+OSDPlay.png                                   ARGB   (64,64 @ 16384 bytes)
+OSDPreNF.png                                  ARGB   (48,48 @ 9216 bytes)
+HomeSubFO.png                                 ARGB * (256,64 @ 65536 bytes)
+OSDProgressBack.png                           ARGB   (20,16 @ 1280 bytes)
+icon-rss.png                                  ARGB   (32,32 @ 4096 bytes)
+DefaultMusicGenres.png                        ARGB   (256,256 @ 262144 bytes)
+epg-genres/16.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/240.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/176.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/192.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/96.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/144.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/160.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/224.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/80.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/128.png                            DXT5   (32,32 @ 1024 bytes)
+epg-genres/64.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/32.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/208.png                            ARGB   (32,32 @ 4096 bytes)
+epg-genres/112.png                            DXT5   (32,32 @ 1024 bytes)
+epg-genres/48.png                             ARGB   (32,32 @ 4096 bytes)
+epg-genres/0.png                              ARGB   (32,32 @ 4096 bytes)
+DefaultAddonWeather.png                       ARGB   (256,256 @ 262144 bytes)
+OSDNextTrackFO.png                            ARGB   (48,48 @ 9216 bytes)
+DefaultAddonTvInfo.png                        ARGB   (256,256 @ 262144 bytes)
+OSDPlaylistNF.png                             ARGB   (48,48 @ 9216 bytes)
+DefaultAddonSkin.png                          ARGB   (256,256 @ 262144 bytes)
+OSD8x.png                                     ARGB   (64,64 @ 16384 bytes)
+SubMenuBack-Footer.png                        ARGB   (256,64 @ 65536 bytes)
+separator2.png                                DXT5   (770,5 @ 6176 bytes)
+OSDPauseNF.png                                DXT5   (48,48 @ 2304 bytes)
+DefaultAddonPVRClient.png                     ARGB   (256,256 @ 262144 bytes)
+pointer-focus-click.png                       ARGB   (30,30 @ 3600 bytes)
+ScrollBarNib.png                              DXT1   (64,64 @ 2048 bytes)
+osd_slider_bg.png                             DXT5   (167,17 @ 3360 bytes)
+hint-overlay.png                              DXT5   (128,512 @ 65536 bytes)
+DefaultAddonRepository.png                    ARGB   (256,256 @ 262144 bytes)
+HomeSubEnd.png                                DXT5   (64,64 @ 4096 bytes)
+icon_music.png                                ARGB   (64,64 @ 16384 bytes)
+OSDepgNF.png                                  DXT5   (48,48 @ 2304 bytes)
+OverlayLocked.png                             ARGB   (55,52 @ 11440 bytes)
+KeyboardKey.png                               ARGB   (159,58 @ 36888 bytes)
+OSDDvdFO.png                                  ARGB   (48,48 @ 9216 bytes)
+OSDChannelListNF.png                          ARGB   (48,48 @ 9216 bytes)
+DefaultFolder.png                             ARGB   (256,256 @ 262144 bytes)
+icon_favourites.png                           ARGB   (64,64 @ 16384 bytes)
+icon-video.png                                ARGB   (64,64 @ 16384 bytes)
+pointer-nofocus.png                           ARGB   (30,30 @ 3600 bytes)
+DefaultRecentlyAddedMusicVideos.png           ARGB   (256,256 @ 262144 bytes)
+DefaultPlaylist.png                           ARGB   (256,256 @ 262144 bytes)
+icon_video.png                                ARGB   (64,64 @ 16384 bytes)
+icon_search.png                               ARGB   (32,32 @ 4096 bytes)
+icon_home.png                                 ARGB   (64,64 @ 16384 bytes)
+DefaultAddonService.png                       ARGB   (256,256 @ 262144 bytes)
+DefaultFolderBack.png                         ARGB * (256,256 @ 262144 bytes)
+GoFullscreen.png                              ARGB   (32,32 @ 4096 bytes)
+OSD32x.png                                    ARGB   (64,64 @ 16384 bytes)
+floor.png                                     ARGB   (16,128 @ 8192 bytes)
+KeyboardCornerTopNF.png                       DXT5   (81,58 @ 5040 bytes)
+floor_button.png                              ARGB   (64,64 @ 16384 bytes)
+DefaultNetwork.png                            ARGB   (256,256 @ 262144 bytes)
+scroll-up-2.png                               ARGB   (64,64 @ 16384 bytes)
+gradient.png                                  DXT5   (512,16 @ 8192 bytes)
+busy.png                                      DXT3   (64,64 @ 4096 bytes)
+DefaultActor.png                              ARGB   (256,256 @ 262144 bytes)
+OSDVideoFO.png                                ARGB   (48,48 @ 9216 bytes)
+HomeSubNF.png                                 DXT5   (128,64 @ 8192 bytes)
+osd_slider_nibNF.png                          DXT5   (5,20 @ 160 bytes)
+HasSub.png                                    ARGB   (42,128 @ 21504 bytes)
+OSDProgressMid.png                            ARGB   (20,16 @ 1280 bytes)
+OSDForwardFO.png                              ARGB   (48,48 @ 9216 bytes)
+DefaultVideoPlugins.png                       ARGB   (256,256 @ 262144 bytes)
+folder-focus.png                              ARGB   (128,128 @ 65536 bytes)
+OSDChannelDownFO.png                          ARGB   (48,48 @ 9216 bytes)
+DefaultCDDA.png                               ARGB   (256,256 @ 262144 bytes)
+DefaultAddon.png                              ARGB   (256,256 @ 262144 bytes)
+scroll-down-focus.png                         ARGB   (48,48 @ 9216 bytes)
+KeyboardCornerTop.png                         ARGB   (81,58 @ 18792 bytes)
+OSDRecordOnNF.png                             ARGB   (48,49 @ 9408 bytes)
+CalibratePixelRatio.png                       DXT5   (128,128 @ 16384 bytes)
+DefaultHardDisk.png                           ARGB   (256,256 @ 262144 bytes)
+ScrollBarH.png                                ARGB   (32,24 @ 3072 bytes)
+OSDChannelUPFO.png                            ARGB   (48,48 @ 9216 bytes)
+pointer-focus-drag.png                        ARGB   (30,30 @ 3600 bytes)
+scroll-left.png                               DXT5   (48,48 @ 2304 bytes)
+CenterRating/rating1.png                      DXT3   (128,32 @ 4096 bytes)
+CenterRating/rating4.png                      ARGB   (128,32 @ 16384 bytes)
+CenterRating/rating0.png                      DXT1   (128,32 @ 2048 bytes)
+CenterRating/rating2.png                      ARGB   (128,32 @ 16384 bytes)
+CenterRating/rating5.png                      ARGB   (128,32 @ 16384 bytes)
+CenterRating/rating3.png                      ARGB   (128,32 @ 16384 bytes)
+scroll-right.png                              DXT5   (48,48 @ 2304 bytes)
+DefaultAddonLyrics.png                        ARGB   (256,256 @ 262144 bytes)
+MenuItemFO.png                                ARGB   (512,32 @ 65536 bytes)
+DefaultIconError.png                          ARGB   (64,64 @ 16384 bytes)
+diffuse_mirror2.png                           DXT5   (256,256 @ 65536 bytes)
+DefaultMusicPlaylists.png                     ARGB   (256,256 @ 262144 bytes)
+InfoMessagePanel.png                          ARGB   (249,61 @ 60756 bytes)
+DefaultAddonMusic.png                         ARGB   (256,256 @ 262144 bytes)
+OSDNextTrackNF.png                            ARGB   (48,48 @ 9216 bytes)
+HomeBladeSub.png                              DXT5   (256,720 @ 184320 bytes)
+unknown-user.png                              ARGB   (256,256 @ 262144 bytes)
+icon-weather.png                              ARGB   (64,64 @ 16384 bytes)
+OSDChannelDownNF.png                          ARGB   (48,48 @ 9216 bytes)
+scroll-up.png                                 DXT5   (48,48 @ 2304 bytes)
+OSDPrevTrackNF.png                            ARGB   (48,48 @ 9216 bytes)
+OSDRandomOffNF.png                            ARGB   (48,48 @ 9216 bytes)
+DefaultIconWarning.png                        ARGB   (64,64 @ 16384 bytes)
+scroll-up-focus.png                           ARGB   (48,48 @ 9216 bytes)
+floor_buttonFO.png                            ARGB   (64,64 @ 16384 bytes)
+OverlayWatching.png                           ARGB   (32,32 @ 4096 bytes)
+icon_volume.png                               ARGB   (48,48 @ 9216 bytes)
+OSDStopFO.png                                 ARGB   (48,48 @ 9216 bytes)
+ScrollBarV_bar_focus.png                      ARGB   (24,32 @ 3072 bytes)
+DefaultMusicAlbums.png                        ARGB   (256,256 @ 262144 bytes)
+OSDForwardNF.png                              DXT5   (48,48 @ 2304 bytes)
+icon_pictures.png                             ARGB   (64,64 @ 16384 bytes)
+OSDRepeatOneNF.png                            ARGB   (48,48 @ 9216 bytes)
+OSDRepeatFO.png                               ARGB   (48,48 @ 9216 bytes)
+pointer-focus.png                             ARGB   (30,30 @ 3600 bytes)
+OSDAudioNF.png                                ARGB   (48,48 @ 9216 bytes)
+KeyboardCornerBottomNF.png                    DXT5   (81,58 @ 5040 bytes)
+OSDChannelUPNF.png                            ARGB   (48,48 @ 9216 bytes)
+DefaultMusicPlugins.png                       ARGB   (256,256 @ 262144 bytes)
+DefaultInProgressShows.png                    ARGB   (256,256 @ 262144 bytes)
+OSDPlayNF.png                                 DXT5   (48,48 @ 2304 bytes)
+OSDRepeatAllNF.png                            ARGB   (48,48 @ 9216 bytes)
+defaultDVDFull.png                            ARGB   (256,256 @ 262144 bytes)
+HomeBack.png                                  ARGB   (16,64 @ 4096 bytes)
+OverlayWatched.png                            ARGB   (32,32 @ 4096 bytes)
+DefaultDVDRom.png                             ARGB   (256,256 @ 262144 bytes)
+OSDSubtitlesFO.png                            ARGB   (48,48 @ 9216 bytes)
+OSDPrevTrackFO.png                            ARGB   (48,48 @ 9216 bytes)
+ShutdownButtonFocus.png                       ARGB   (256,64 @ 65536 bytes)
+ContentPanel.png                              DXT5   (1024,720 @ 737280 bytes)
+OSDRandomOnFO.png                             ARGB   (48,48 @ 9216 bytes)
+dialogheader.png                              DXT5   (512,32 @ 16384 bytes)
+DefaultAddonWebSkin.png                       ARGB   (256,256 @ 262144 bytes)
+Fanart_Fallback_Music_Small.jpg               ARGB * (455,256 @ 465920 bytes)
+separator.png                                 DXT5   (512,4 @ 2048 bytes)
+black-back.png                                DXT5   (64,64 @ 4096 bytes)
+OSDPauseFO.png                                ARGB   (48,48 @ 9216 bytes)
+ThumbShadow.png                               ARGB   (64,64 @ 16384 bytes)
+StackNF.png                                   ARGB   (32,32 @ 4096 bytes)
+ThumbBorder.png                               DXT5   (32,32 @ 1024 bytes)
+OverlayRAR.png                                ARGB   (55,52 @ 11440 bytes)
+scroll-up-focus-2.png                         ARGB   (64,64 @ 16384 bytes)
+DefaultMusicTop100.png                        ARGB   (256,256 @ 262144 bytes)
+DefaultAddonAlbumInfo.png                     ARGB   (256,256 @ 262144 bytes)
+OSDRewindFO.png                               ARGB   (48,48 @ 9216 bytes)
+Fanart_Diffuse.png                            DXT5   (8,512 @ 4096 bytes)
+button-nofocus.png                            DXT5   (128,64 @ 8192 bytes)
+DefaultPicture.png                            ARGB   (256,256 @ 262144 bytes)
+DefaultMusicSongs.png                         ARGB   (256,256 @ 262144 bytes)
+DefaultMusicRecentlyAdded.png                 ARGB   (256,256 @ 262144 bytes)
+OSD16x.png                                    ARGB   (64,64 @ 16384 bytes)
+OSDPreFO.png                                  ARGB   (48,48 @ 9216 bytes)
+OSDPlaylistFO.png                             ARGB   (48,48 @ 9216 bytes)
+OSDRepeatNF.png                               ARGB   (48,48 @ 9216 bytes)
+OSDTeleTextFO.png                             ARGB   (48,48 @ 9216 bytes)
+OSDepgFO.png                                  ARGB   (48,48 @ 9216 bytes)
+arrow-big-left.png                            ARGB   (64,64 @ 16384 bytes)
+DefaultIconInfo.png                           ARGB   (64,64 @ 16384 bytes)
+LeftRating/rating1.png                        ARGB   (128,32 @ 16384 bytes)
+LeftRating/rating4.png                        ARGB   (128,32 @ 16384 bytes)
+LeftRating/rating0.png                        DXT5   (128,32 @ 4096 bytes)
+LeftRating/rating2.png                        ARGB   (128,32 @ 16384 bytes)
+LeftRating/rating5.png                        ARGB   (128,32 @ 16384 bytes)
+LeftRating/rating3.png                        ARGB   (128,32 @ 16384 bytes)
+OSDVizFO.png                                  ARGB   (48,48 @ 9216 bytes)
+PVR-IsRecording.png                           ARGB   (48,32 @ 6144 bytes)
+DefaultAddonPicture.png                       ARGB   (256,256 @ 262144 bytes)
+button-focus2.png                             ARGB   (512,32 @ 65536 bytes)
+seekslider2.png                               DXT1   (512,16 @ 4096 bytes)
+OSDRecordOffNF.png                            DXT5   (48,48 @ 2304 bytes)
+OSDVizNF.png                                  DXT5   (48,48 @ 2304 bytes)
+ScrollBarV_bar.png                            ARGB   (24,32 @ 3072 bytes)
+OSDPlayFO.png                                 ARGB   (48,48 @ 9216 bytes)
+icon_player.png                               ARGB   (64,64 @ 16384 bytes)
+DefaultRecentlyAddedMovies.png                ARGB   (256,256 @ 262144 bytes)
+DefaultFile.png                               ARGB   (128,128 @ 65536 bytes)
+OSDPause.png                                  ARGB   (64,64 @ 16384 bytes)
+black-back2.png                               ARGB   (512,64 @ 131072 bytes)
+DialogBack.png                                DXT5   (256,256 @ 65536 bytes)
+scroll-down-focus-2.png                       ARGB   (64,64 @ 16384 bytes)
+osd_slider_nib.png                            ARGB * (5,20 @ 400 bytes)
+MediaBladeSub.png                             DXT5   (256,720 @ 184320 bytes)
+KeyboardEditArea.png                          ARGB   (64,64 @ 16384 bytes)
+OSDRewindNF.png                               ARGB   (48,48 @ 9216 bytes)
+icon_back.png                                 ARGB   (64,64 @ 16384 bytes)
+scroll-down-2.png                             ARGB   (64,64 @ 16384 bytes)
+OSDRepeatAllFO.png                            ARGB   (48,48 @ 9216 bytes)
+DefaultMusicArtists.png                       ARGB   (256,256 @ 262144 bytes)
+DefaultDVDEmpty.png                           ARGB   (256,256 @ 262144 bytes)
+OSDSubtitlesNF.png                            ARGB   (48,48 @ 9216 bytes)
+osd_slider_bg_2.png                           DXT5   (350,16 @ 5632 bytes)
+CalibrateSubtitles.png                        DXT5   (256,85 @ 22528 bytes)
+SubMenuBack-MiddleFO.png                      ARGB   (256,64 @ 65536 bytes)
+OSDVideoNF.png                                ARGB   (48,48 @ 9216 bytes)
+DefaultAddonScreensaver.png                   ARGB   (256,256 @ 262144 bytes)
+DialogCloseButton.png                         ARGB   (64,32 @ 8192 bytes)
+DefaultMusicRecentlyPlayed.png                ARGB   (256,256 @ 262144 bytes)
+Confluence_Logo.png                           ARGB   (256,64 @ 65536 bytes)
+CalibrateTopLeft.png                          DXT1   (64,64 @ 2048 bytes)
+OverlayDialogBackground.png                   ARGB   (512,128 @ 262144 bytes)
+DefaultProgram.png                            ARGB   (256,256 @ 262144 bytes)
+MediaItemDetailBG.png                         ARGB   (256,32 @ 32768 bytes)
+OSDBookmarksFO.png                            ARGB   (48,48 @ 9216 bytes)
+icon_weather.png                              ARGB   (64,64 @ 16384 bytes)
+OSDDvdNF.png                                  ARGB   (48,48 @ 9216 bytes)
+scroll-down.png                               DXT5   (48,48 @ 2304 bytes)
+DialogCloseButton-focus.png                   ARGB   (64,32 @ 8192 bytes)
+HomeNowPlayingBack.png                        DXT5   (8,256 @ 2048 bytes)
+DefaultAddonMovieInfo.png                     ARGB   (256,256 @ 262144 bytes)
+ScrollBarV.png                                ARGB   (24,32 @ 3072 bytes)
+DefaultAddonNone.png                          ARGB   (128,128 @ 65536 bytes)
+DefaultVideoCover.png                         ARGB * (256,256 @ 262144 bytes)
+HomeOverlay1.png                              DXT5   (1024,8 @ 8192 bytes)
+DefaultArtist.png                             ARGB   (256,256 @ 262144 bytes)
+OSDPresetSettingsNF.png                       ARGB   (48,48 @ 9216 bytes)
+DefaultAddonMusicVideoInfo.png                ARGB   (256,256 @ 262144 bytes)
+OSDSeekFrame.png                              ARGB   (128,80 @ 40960 bytes)
+icon_addons.png                               ARGB   (64,64 @ 16384 bytes)
+OSDStopNF.png                                 DXT5   (48,48 @ 2304 bytes)
+scroll-right-focus.png                        ARGB   (48,48 @ 9216 bytes)
+flagging/audio/dtshd_hra.png                  ARGB   (100,48 @ 19200 bytes)
+flagging/audio/truehd.png                     ARGB   (100,48 @ 19200 bytes)
+flagging/audio/aac.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/vorbis.png                     ARGB   (100,48 @ 19200 bytes)
+flagging/audio/ape.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/10.png                         ARGB   (64,48 @ 12288 bytes)
+flagging/audio/mp2.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/8.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/cdda.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/2.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/mp1.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/5.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/mp3.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/dca.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/wav.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/dtshd_ma.png                   ARGB   (100,48 @ 19200 bytes)
+flagging/audio/3.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/wavpack.png                    ARGB   (100,48 @ 19200 bytes)
+flagging/audio/ac3.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/4.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/aiff.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/1.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/avc.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/dts.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/ogg.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/pcm_bluray.png                 ARGB   (100,48 @ 19200 bytes)
+flagging/audio/aifc.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/aif.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/6.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/wmapro.png                     ARGB   (100,48 @ 19200 bytes)
+flagging/audio/wmav2.png                      ARGB   (100,48 @ 19200 bytes)
+flagging/audio/wma.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/audio/flac.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/alac.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/7.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/audio/eac3.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/audio/0.png                          ARGB   (64,48 @ 12288 bytes)
+flagging/ratings/mpaa_nc17.png                ARGB   (100,48 @ 19200 bytes)
+flagging/ratings/mpaa_pg13.png                ARGB   (100,48 @ 19200 bytes)
+flagging/ratings/mpaa_notrated.png            ARGB   (100,48 @ 19200 bytes)
+flagging/ratings/mpaa_restricted.png          ARGB   (100,48 @ 19200 bytes)
+flagging/ratings/mpaa_pg.png                  ARGB   (100,48 @ 19200 bytes)
+flagging/ratings/mpaa_general.png             ARGB   (100,48 @ 19200 bytes)
+flagging/lists/540.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/lists/480.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/lists/1080.png                       ARGB   (64,48 @ 12288 bytes)
+flagging/lists/576.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/lists/720.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/video/540.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/video/mpeg2video.png                 ARGB   (100,48 @ 19200 bytes)
+flagging/video/xvid.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/h264.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/avc1.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/flv.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/video/bluray.png                     ARGB   (100,48 @ 19200 bytes)
+flagging/video/hdmv.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/hddvd.png                      ARGB   (100,48 @ 19200 bytes)
+flagging/video/mpeg1video.png                 ARGB   (100,48 @ 19200 bytes)
+flagging/video/divx.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/wvc1.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/480.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/video/1080.png                       ARGB   (64,48 @ 12288 bytes)
+flagging/video/576.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/video/vp8.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/video/dvd.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/video/720.png                        ARGB   (64,48 @ 12288 bytes)
+flagging/video/vhs.png                        ARGB   (100,48 @ 19200 bytes)
+flagging/video/vc-1.png                       ARGB   (100,48 @ 19200 bytes)
+flagging/video/tv.png                         ARGB   (100,48 @ 19200 bytes)
+flagging/blank.png                            ARGB   (100,48 @ 19200 bytes)
+flagging/aspectratio/1.78.png                 ARGB   (64,48 @ 12288 bytes)
+flagging/aspectratio/1.85.png                 ARGB   (64,48 @ 12288 bytes)
+flagging/aspectratio/1.66.png                 ARGB   (64,48 @ 12288 bytes)
+flagging/aspectratio/2.35.png                 ARGB   (64,48 @ 12288 bytes)
+flagging/aspectratio/2.20.png                 ARGB   (64,48 @ 12288 bytes)
+flagging/aspectratio/1.33.png                 ARGB   (64,48 @ 12288 bytes)
+OSDAudioFO.png                                ARGB   (48,48 @ 9216 bytes)
+ShutdownButtonNoFocus.png                     DXT5   (256,64 @ 16384 bytes)
+SubMenuBack-Header.png                        ARGB   (256,32 @ 32768 bytes)
+OSDRecordOnFO.png                             ARGB   (48,48 @ 9216 bytes)
+scroll-left-focus.png                         ARGB   (48,48 @ 9216 bytes)
+CalibrateBottomRight.png                      DXT5   (64,64 @ 4096 bytes)
+OSDSeekRewind.png                             ARGB   (26,57 @ 5928 bytes)
+Fanart_Fallback_Small.jpg                     ARGB * (455,256 @ 465920 bytes)
+radiobutton-focus.png                         ARGB   (48,48 @ 9216 bytes)
+OSDRecordOffFO.png                            ARGB   (48,48 @ 9216 bytes)
+OSDLyricsNF.png                               ARGB   (48,48 @ 9216 bytes)
+DefaultMusicCompilations.png                  ARGB   (256,256 @ 262144 bytes)
+DefaultVideoPlaylists.png                     ARGB   (256,256 @ 262144 bytes)
+GlassOverlay.png                              DXT5   (256,246 @ 63488 bytes)
+ScrollBarH_bar.png                            ARGB   (32,24 @ 3072 bytes)
+DefaultAddSource.png                          ARGB   (256,256 @ 262144 bytes)
+icon-mute.png                                 ARGB   (64,64 @ 16384 bytes)
+ThumbBG.png                                   DXT5   (4,4 @ 16 bytes)
+seekslider.png                                DXT1   (245,12 @ 1488 bytes)
+DefaultMusicVideos.png                        ARGB   (256,256 @ 262144 bytes)
+icon_power.png                                ARGB   (64,64 @ 16384 bytes)
+OSD2x.png                                     ARGB   (64,64 @ 16384 bytes)
+DefaultTVShows.png                            ARGB   (256,256 @ 262144 bytes)
+DefaultVideo.png                              ARGB   (256,256 @ 262144 bytes)
+make[1]: Leaving directory `/opt/xbmc/addons/skin.confluence/media'
+# xbmc-xrandr.c gets picked up by the default make rules
+excluding xbmc-xrandr
+make -C lib/libhdhomerun
+make[1]: Entering directory `/opt/xbmc/lib/libhdhomerun'
+CC      lib/libhdhomerun/hdhomerun_pkt.o
+CC      lib/libhdhomerun/hdhomerun_debug.o
+CC      lib/libhdhomerun/hdhomerun_discover.o
+CC      lib/libhdhomerun/hdhomerun_channels.o
+CC      lib/libhdhomerun/hdhomerun_channelscan.o
+CC      lib/libhdhomerun/hdhomerun_control.o
+CC      lib/libhdhomerun/hdhomerun_video.o
+CC      lib/libhdhomerun/hdhomerun_device.o
+/usr/bin/ccache arm-linux-gnueabihf-gcc -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -Wall -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wpointer-arith -fPIC -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed hdhomerun_pkt.o hdhomerun_debug.o hdhomerun_discover.o hdhomerun_channels.o hdhomerun_channelscan.o hdhomerun_control.o hdhomerun_video.o hdhomerun_device.o      -shared -o ../../system/hdhomerun-arm.so -Wl,--unresolved-symbols=ignore-all -lm \
+		`cat /opt/xbmc/xbmc/cores/DllLoader/exports/wrapper.def` \
+		/opt/xbmc/xbmc/cores/DllLoader/exports/wrapper.o
+make[1]: Leaving directory `/opt/xbmc/lib/libhdhomerun'
+make -C lib/cximage-6.0
+make[1]: Entering directory `/opt/xbmc/lib/cximage-6.0'
+make -C CxImage ARCH=arm
+make[2]: Entering directory `/opt/xbmc/lib/cximage-6.0/CxImage'
+CPP     lib/cximage-6.0/CxImage/DllInterface.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximadsp.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximadsp.cpp: In member function 'int CxImage::gen_convolve_matrix(float, float**)':
+ximadsp.cpp:2095:6: warning: variable 'matrix_midpoint' set but not used [-Wunused-but-set-variable]
+ximadsp.cpp: In member function 'void CxImage::blur_line(float*, float*, int, BYTE*, BYTE*, int, long int)':
+ximadsp.cpp:2207:9: warning: variable 'cmatrix_p' set but not used [-Wunused-but-set-variable]
+ximadsp.cpp: In member function 'bool CxImage::Lut(BYTE*)':
+ximadsp.cpp:2775:26: warning: operation on 'iSrc' may be undefined [-Wsequence-point]
+ximadsp.cpp: In member function 'int CxImage::OptimalThreshold(long int, RECT*, CxImage*)':
+ximadsp.cpp:3315:9: warning: statement has no effect [-Wunused-value]
+ximadsp.cpp:3328:9: warning: statement has no effect [-Wunused-value]
+ximadsp.cpp: In member function 'void CxImage::blur_text(BYTE, BYTE, BYTE, CxImage*, CxImage*, BYTE)':
+ximadsp.cpp:2307:6: warning: 'itTmp.CImageIterator::IterImage' may be used uninitialized in this function [-Wuninitialized]
+CPP     lib/cximage-6.0/CxImage/ximage.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximaico.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximajas.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximalpha.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximapal.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximaraw.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximatga.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximatga.cpp: In member function 'bool CxImageTGA::Encode(CxFile*)':
+ximatga.cpp:175:69: warning: 'iter.CImageIterator::IterImage' may be used uninitialized in this function [-Wuninitialized]
+CPP     lib/cximage-6.0/CxImage/ximatran.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximawnd.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/tif_xfile.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+In file included from tif_xfile.cpp:10:0:
+ximage.h:56:0: warning: "_XOPEN_SOURCE" redefined [enabled by default]
+/usr/include/features.h:165:0: note: this is the location of the previous definition
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximaenc.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximaenc.cpp: In member function 'bool CxImage::Load(const char*, DWORD, int&, int&)':
+ximaenc.cpp:512:6: warning: unused variable 'iWidthSave' [-Wunused-variable]
+ximaenc.cpp:513:6: warning: unused variable 'iHeightSave' [-Wunused-variable]
+ximaenc.cpp: In member function 'bool CxImage::CheckFormat(BYTE*, DWORD, DWORD)':
+ximaenc.cpp:1122:30: warning: NULL used in arithmetic [-Wpointer-arith]
+CPP     lib/cximage-6.0/CxImage/ximagif.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximagif.cpp: In member function 'bool CxImageGIF::Decode(CxFile*)':
+ximagif.cpp:174:13: warning: variable 'has_white' set but not used [-Wunused-but-set-variable]
+CPP     lib/cximage-6.0/CxImage/ximainfo.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximajbg.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximalyr.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximapcx.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximasel.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximath.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximawbmp.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/xmemfile.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximabmp.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximabmp.cpp: In member function 'bool CxImageBMP::Decode(CxFile*)':
+ximabmp.cpp:343:55: warning: 'iter.CImageIterator::IterImage' may be used uninitialized in this function [-Wuninitialized]
+ximabmp.cpp:258:29: warning: 'iter.CImageIterator::IterImage' may be used uninitialized in this function [-Wuninitialized]
+CPP     lib/cximage-6.0/CxImage/ximaexif.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximaexif.cpp: In member function 'void CxImageJPG::CxExifInfo::process_SOFn(const BYTE*, int)':
+ximaexif.cpp:768:9: warning: variable 'data_precision' set but not used [-Wunused-but-set-variable]
+CPP     lib/cximage-6.0/CxImage/ximahist.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximaint.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximaint.cpp: In member function 'RGBQUAD CxImage::GetPixelColorInterpolated(float, float, CxImage::InterpolationMethod, CxImage::OverflowMethod, RGBQUAD*)':
+ximaint.cpp:309:14: warning: enumeration value 'IM_NEAREST_NEIGHBOUR' not handled in switch [-Wswitch]
+ximaint.cpp:309:14: warning: enumeration value 'IM_BILINEAR' not handled in switch [-Wswitch]
+ximaint.cpp:309:14: warning: enumeration value 'IM_LANCZOS' not handled in switch [-Wswitch]
+CPP     lib/cximage-6.0/CxImage/ximajpg.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+ximajpg.cpp: In member function 'bool CxImageJPG::Decode(CxFile*, int&, int&)':
+ximajpg.cpp:384:8: warning: unused variable 'bFinished' [-Wunused-variable]
+CPP     lib/cximage-6.0/CxImage/ximamng.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximapng.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximaska.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximatif.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/cximage-6.0/CxImage/ximawmf.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+AR      lib/cximage-6.0/CxImage/cximage.a
+make[2]: Leaving directory `/opt/xbmc/lib/cximage-6.0/CxImage'
+make -C raw
+make[2]: Entering directory `/opt/xbmc/lib/cximage-6.0/raw'
+CC      lib/cximage-6.0/raw/libdcr.o
+libdcr.c: In function 'dcr_parse_phase_one':
+libdcr.c:5676:25: warning: variable 'type' set but not used [-Wunused-but-set-variable]
+libdcr.c: In function 'dcr_parse_kodak_ifd':
+libdcr.c:4833:32: warning: 'mul[2]' may be used uninitialized in this function [-Wuninitialized]
+libdcr.c:4833:32: warning: 'mul[1]' may be used uninitialized in this function [-Wuninitialized]
+libdcr.c:4833:32: warning: 'mul[0]' may be used uninitialized in this function [-Wuninitialized]
+libdcr.c: In function 'dcr_parse_phase_one':
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:5698:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c: In function 'dcr_adobe_coeff':
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+libdcr.c:6440:16: warning: array subscript is above array bounds [-Warray-bounds]
+AR      lib/cximage-6.0/raw/raw.a
+make[2]: Leaving directory `/opt/xbmc/lib/cximage-6.0/raw'
+make -C jbig
+make[2]: Entering directory `/opt/xbmc/lib/cximage-6.0/jbig'
+CC      lib/cximage-6.0/jbig/jbig.o
+jbig.c: In function 'jbg_dec_merge_planes':
+jbig.c:3042:7: warning: variable 'bpp' set but not used [-Wunused-but-set-variable]
+CC      lib/cximage-6.0/jbig/jbig_tab.o
+AR      lib/cximage-6.0/jbig/jbig.a
+make[2]: Leaving directory `/opt/xbmc/lib/cximage-6.0/jbig'
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -o ../../system/ImageLib-arm.so -Wl,--whole-archive CxImage/cximage.a raw/raw.a jbig/jbig.a \
+		-Wl,--no-whole-archive -lpng -ljasper -ljpeg -ltiff -lz -Wl,--unresolved-symbols=ignore-all
+make[1]: Leaving directory `/opt/xbmc/lib/cximage-6.0'
+make -C lib/libexif
+make[1]: Entering directory `/opt/xbmc/lib/libexif'
+CPP     lib/libexif/libexif.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/libexif/ExifParse.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/libexif/IptcParse.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+CPP     lib/libexif/JpegParse.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -D_LINUX -D_DLL -fPIC -O2 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -o /opt/xbmc/system/libexif-arm.so libexif.o ExifParse.o IptcParse.o JpegParse.o      -Wl,--unresolved-symbols=ignore-all \
+		`cat /opt/xbmc/xbmc/cores/DllLoader/exports/wrapper.def` /opt/xbmc/xbmc/cores/DllLoader/exports/wrapper.o
+make[1]: Leaving directory `/opt/xbmc/lib/libexif'
+make -C lib/cpluff/libcpluff
+make[1]: Entering directory `/opt/xbmc/lib/cpluff/libcpluff'
+Making all in docsrc
+make[2]: Entering directory `/opt/xbmc/lib/cpluff/libcpluff/docsrc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/opt/xbmc/lib/cpluff/libcpluff/docsrc'
+make[2]: Entering directory `/opt/xbmc/lib/cpluff/libcpluff'
+  CC     psymbol.lo
+  CC     pscan.lo
+  CC     ploader.lo
+ploader.c: In function 'descriptor_errorf':
+ploader.c:161:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'XML_Size' [-Wformat]
+ploader.c:161:3: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat]
+ploader.c:168:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'XML_Size' [-Wformat]
+ploader.c:168:3: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat]
+ploader.c: In function 'resource_error':
+ploader.c:188:3: warning: format '%d' expects argument of type 'int', but argument 5 has type 'XML_Size' [-Wformat]
+ploader.c:188:3: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat]
+ploader.c: In function 'cp_load_plugin_descriptor':
+ploader.c:1084:5: warning: format '%d' expects argument of type 'int', but argument 5 has type 'XML_Size' [-Wformat]
+ploader.c:1084:5: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat]
+ploader.c: In function 'cp_load_plugin_descriptor_from_memory':
+ploader.c:1270:6: warning: format '%d' expects argument of type 'int', but argument 5 has type 'XML_Size' [-Wformat]
+ploader.c:1270:6: warning: format '%d' expects argument of type 'int', but argument 6 has type 'long unsigned int' [-Wformat]
+  CC     pinfo.lo
+  CC     pcontrol.lo
+  CC     serial.lo
+  CC     logging.lo
+  CC     context.lo
+  CC     cpluff.lo
+  CC     util.lo
+  CC     list.lo
+  CC     hash.lo
+  CC     thread_posix.lo
+thread_posix.c: In function 'cpi_create_mutex':
+thread_posix.c:79:7: warning: variable 'ec' set but not used [-Wunused-but-set-variable]
+thread_posix.c:85:7: warning: variable 'ec' set but not used [-Wunused-but-set-variable]
+thread_posix.c: In function 'cpi_destroy_mutex':
+thread_posix.c:97:6: warning: variable 'ec' set but not used [-Wunused-but-set-variable]
+  CCLD   libcpluff.la
+make[2]: Leaving directory `/opt/xbmc/lib/cpluff/libcpluff'
+make[1]: Leaving directory `/opt/xbmc/lib/cpluff/libcpluff'
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -o system/libcpluff-arm.so -Wl,--whole-archive lib/cpluff/libcpluff/.libs/libcpluff.a \
+		-Wl,--no-whole-archive  \
+		`cat xbmc/cores/DllLoader/exports/wrapper.def` xbmc/cores/DllLoader/exports/wrapper.o -lexpat
+make -C lib/cmyth
+make[1]: Entering directory `/opt/xbmc/lib/cmyth'
+make -C libcmyth
+make[2]: Entering directory `/opt/xbmc/lib/cmyth/libcmyth'
+CC      lib/cmyth/libcmyth/bookmark.o
+CC      lib/cmyth/libcmyth/commbreak.o
+CC      lib/cmyth/libcmyth/connection.o
+CC      lib/cmyth/libcmyth/event.o
+CC      lib/cmyth/libcmyth/file.o
+CC      lib/cmyth/libcmyth/freespace.o
+CC      lib/cmyth/libcmyth/keyframe.o
+CC      lib/cmyth/libcmyth/livetv.o
+livetv.c: In function 'cmyth_livetv_seek':
+livetv.c:871:6: warning: 'cur' may be used uninitialized in this function [-Wuninitialized]
+livetv.c:806:6: note: 'cur' was declared here
+livetv.c:869:6: warning: 'fp' may be used uninitialized in this function [-Wuninitialized]
+livetv.c:805:15: note: 'fp' was declared here
+CC      lib/cmyth/libcmyth/mysql_query.o
+CC      lib/cmyth/libcmyth/mythtv_mysql.o
+mythtv_mysql.c: In function 'cmyth_mysql_testdb_connection':
+mythtv_mysql.c:1026:6: warning: variable 'new_conn' set but not used [-Wunused-but-set-variable]
+mythtv_mysql.c: In function 'cmyth_mysql_get_chanlist':
+mythtv_mysql.c:1212:6: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+CC      lib/cmyth/libcmyth/posmap.o
+CC      lib/cmyth/libcmyth/proginfo.o
+CC      lib/cmyth/libcmyth/proglist.o
+CC      lib/cmyth/libcmyth/rec_num.o
+CC      lib/cmyth/libcmyth/recorder.o
+CC      lib/cmyth/libcmyth/ringbuf.o
+CC      lib/cmyth/libcmyth/socket.o
+CC      lib/cmyth/libcmyth/timestamp.o
+CC      lib/cmyth/libcmyth/debug.o
+CC      lib/cmyth/libcmyth/utf8tolatin1.o
+AR      lib/cmyth/libcmyth/libcmyth.a
+make[2]: Leaving directory `/opt/xbmc/lib/cmyth/libcmyth'
+make -C librefmem
+make[2]: Entering directory `/opt/xbmc/lib/cmyth/librefmem'
+CC      lib/cmyth/librefmem/alloc.o
+In file included from alloc.c:48:0:
+../include/refmem/atomic.h:75:4: warning: #warning unknown architecture, atomic increment is not... [-Wcpp]
+CC      lib/cmyth/librefmem/debug_refmem.o
+AR      lib/cmyth/librefmem/librefmem.a
+make[2]: Leaving directory `/opt/xbmc/lib/cmyth/librefmem'
+/usr/bin/ccache arm-linux-gnueabihf-gcc -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -fpic -o /opt/xbmc/system/libcmyth-arm.so -Wl,--whole-archive \
+	libcmyth/libcmyth.a librefmem/librefmem.a -Wl,--no-whole-archive -L/usr/lib/arm-linux-gnueabihf -lmysqlclient -lpthread -lz -lm -lrt -ldl
+make[1]: Leaving directory `/opt/xbmc/lib/cmyth'
+make -C xbmc/visualizations/OpenGLSpectrum
+make[1]: Entering directory `/opt/xbmc/xbmc/visualizations/OpenGLSpectrum'
+CPP     xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -fPIC -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -lGLESv2 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -o /opt/xbmc/addons/visualization.glspectrum/opengl_spectrum.vis opengl_spectrum.o /opt/xbmc/xbmc/visualizations/EGLHelpers/eglhelpers.a     
+make[1]: Leaving directory `/opt/xbmc/xbmc/visualizations/OpenGLSpectrum'
+make -C xbmc/visualizations/WaveForm
+make[1]: Entering directory `/opt/xbmc/xbmc/visualizations/WaveForm'
+CPP     xbmc/visualizations/WaveForm/Main_gles.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -fPIC -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -lGLESv2 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -o /opt/xbmc/addons/visualization.waveform/Waveform.vis Main_gles.o /opt/xbmc/xbmc/visualizations/EGLHelpers/eglhelpers.a     
+make[1]: Leaving directory `/opt/xbmc/xbmc/visualizations/WaveForm'
+make -C lib/addons/library.xbmc.addon
+make[1]: Entering directory `/opt/xbmc/lib/addons/library.xbmc.addon'
+CPP     lib/addons/library.xbmc.addon/libXBMC_addon.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+libXBMC_addon.cpp: In function 'char* XBMC_get_localized_string(void*, void*, int)':
+libXBMC_addon.cpp:106:12: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+libXBMC_addon.cpp: In function 'char* XBMC_get_dvd_menu_language(void*, void*)':
+libXBMC_addon.cpp:114:12: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -g -o ../../../addons/library.xbmc.addon/libXBMC_addon-arm.so libXBMC_addon.o     
+make[1]: Leaving directory `/opt/xbmc/lib/addons/library.xbmc.addon'
+make -C lib/addons/library.xbmc.gui
+make[1]: Entering directory `/opt/xbmc/lib/addons/library.xbmc.gui'
+CPP     lib/addons/library.xbmc.gui/libXBMC_gui.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -g -o ../../../addons/library.xbmc.gui/libXBMC_gui-arm.so libXBMC_gui.o     
+make[1]: Leaving directory `/opt/xbmc/lib/addons/library.xbmc.gui'
+make -C lib/addons/library.xbmc.pvr
+make[1]: Entering directory `/opt/xbmc/lib/addons/library.xbmc.pvr'
+CPP     lib/addons/library.xbmc.pvr/libXBMC_pvr.o
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option '-fgnu89-inline' is valid for C/ObjC but not for C++ [enabled by default]
+/usr/bin/ccache arm-linux-gnueabihf-g++ -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mcpu=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wall -pipe -fomit-frame-pointer -O3 -fexcess-precision=fast -ffast-math -fgnu89-inline -Wno-psabi -Wa,-mno-warn-deprecated -I/usr/include/interface/vcos/pthreads/ -I/usr/include/interface/vmcs_host/linux -fPIC -DPIC -D_REENTRANT -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -DNDEBUG=1 -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -march=armv6zk -mtune=arm1176jzf-s -s -Wl,--as-needed -shared -g -o ../../../addons/library.xbmc.pvr/libXBMC_pvr-arm.so libXBMC_pvr.o     
+make[1]: Leaving directory `/opt/xbmc/lib/addons/library.xbmc.pvr'
+-----------------------
+XBMC built successfully
+-----------------------
