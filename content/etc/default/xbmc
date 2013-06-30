@@ -1,0 +1,4 @@
+# put name of all processes which xbmc should wait for before xbmc itself will be started
+# e.g. WAITFOR="mysqld process1 process2"
+
+WAITFOR=""
