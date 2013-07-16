@@ -1,9 +1,9 @@
 Origin: XBian
 Package: xbian-package-xbmc
-Version: 2.3-0.4
+Version: 2.3-0.5
 Section: video
 Priority: optional
 Architecture: armhf
-Depends: xbian-package-libtag (>=1.0-1), xbian-package-libshairport (>=1.0-1), xbian-package-firmware (>=1.4), libbluetooth3, xbian-package-cec (>= 1.0), upstart, libmad0, libtiff4, libcurl3-gnutls
+Depends: xbian-package-libtag (>=1.0-1), xbian-package-libshairport (>=1.0-1), libbluetooth3, xbian-package-cec (>= 1.0), libmad0, libtiff4, libcurl3-gnutls
 Maintainer: Koenkk <development@xbian.org>
 Description: XBMC for XBian.
