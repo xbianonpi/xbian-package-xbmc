@@ -8,6 +8,8 @@ rm_size() {
 package=$(cat ./content/DEBIAN/control | grep Package | awk '{print $2}')
 version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
 
+for f in $(ls ./content/etc/default/*); do cp $f $f.default; done
+
 # calculate size dynamically. remove first any entry, then add the actual 
 rm_size
 printf "Installed-Size: %d\n" $(du -s ./content | awk '{print $1}') >> ./content/DEBIAN/control
@@ -20,3 +22,4 @@ fakeroot dpkg-deb -b ./content "${package}""${version}".deb
 
 # remove the size again, because on different filesystems du will return different size
 rm_size
+rm -f ./content/etc/default/*.default
