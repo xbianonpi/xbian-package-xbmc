@@ -1,6 +1,6 @@
 Origin: XBian
 Package: xbian-package-xbmc
-Version: 2.3-0.7
+Version: 2.3-0.8
 Section: video
 Priority: optional
 Architecture: armhf
