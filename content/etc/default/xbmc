@@ -5,13 +5,13 @@ WAITFOR=""
 
 # niceness levels at XBMC playing content and while in screensaver mode
 
-PPLAYER='-5'
+PPLAYER='-3'
 PSAVER='7'
 
 # turn screen off on xbmc entering screensaver (after 'AFTER' minutes)
 
 SCREENOFF=yes
-AFTER=0
+AFTER=3
 
 # dynamic priority handling of xbmc.bin process
 
