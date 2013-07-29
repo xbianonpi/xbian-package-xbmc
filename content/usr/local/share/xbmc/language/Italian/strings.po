@@ -573,6 +573,10 @@ msgctxt "#167"
 msgid "Cancel file operations"
 msgstr "Annulla operazioni sui file"
 
+msgctxt "#168"
+msgid "%s- %s"
+msgstr "%s- %s"
+
 msgctxt "#169"
 msgid "Resolution"
 msgstr "Risoluzione"
@@ -869,6 +873,10 @@ msgctxt "#253"
 msgid "Number of channels"
 msgstr "Numero di canali"
 
+msgctxt "#254"
+msgid "DTS capable receiver"
+msgstr "Ricevitore compatibile DTS"
+
 msgctxt "#255"
 msgid "CDDB"
 msgstr "CDDB"
@@ -1041,6 +1049,22 @@ msgctxt "#298"
 msgid "Bookmarks"
 msgstr "Segnalibri"
 
+msgctxt "#299"
+msgid "AAC capable receiver"
+msgstr "Ricevitore compatibile AAC"
+
+msgctxt "#300"
+msgid "MP1 capable receiver"
+msgstr "Ricevitore compatibile MP1"
+
+msgctxt "#301"
+msgid "MP2 capable receiver"
+msgstr "Ricevitore compatibile MP2"
+
+msgctxt "#302"
+msgid "MP3 capable receiver"
+msgstr "Ricevitore compatibile MP3"
+
 msgctxt "#303"
 msgid "Delay"
 msgstr "Ritardo"
@@ -1205,6 +1229,18 @@ msgctxt "#346"
 msgid "Boost volume level on downmix"
 msgstr "Aumenta il livello del volume nella conversione"
 
+msgctxt "#347"
+msgid "DTS-HD capable receiver"
+msgstr "Ricevitore compatibile DTS-HD"
+
+msgctxt "#348"
+msgid "Multichannel LPCM capable receiver"
+msgstr "Ricevitore compatibile LPCM multicanale"
+
+msgctxt "#349"
+msgid "TrueHD capable receiver"
+msgstr "Ricevitore compatibile TrueHD"
+
 msgctxt "#350"
 msgid "Programs"
 msgstr "Programmi"
@@ -1260,6 +1296,10 @@ msgstr "Livello di oscuramento salvaschermo"
 msgctxt "#363"
 msgid "Sort by: File"
 msgstr "Ordina per: File"
+
+msgctxt "#364"
+msgid "Dolby Digital (AC3) capable receiver"
+msgstr "Ricevitore compatibile Dolby Digital (AC3)"
 
 msgctxt "#365"
 msgid "Sort by: Name"
@@ -2045,6 +2085,10 @@ msgctxt "#576"
 msgid "Times played"
 msgstr "Numero di riproduzioni"
 
+msgctxt "#577"
+msgid "Date Taken"
+msgstr "Aggiunto in data"
+
 msgctxt "#580"
 msgid "Sort direction"
 msgstr "Direzione ordinamento"
@@ -2345,6 +2389,10 @@ msgctxt "#665"
 msgid "Compression level"
 msgstr "Livello Compressione"
 
+msgctxt "#666"
+msgid "Verbose logging..."
+msgstr "Logging verboso..."
+
 msgctxt "#700"
 msgid "Cleaning up library"
 msgstr "Pulisci l'archivio"
@@ -2360,6 +2408,10 @@ msgstr "Questo percorso è già stato esaminato in precedenza."
 msgctxt "#705"
 msgid "Network"
 msgstr "Rete"
+
+msgctxt "#706"
+msgid "Server"
+msgstr "Server"
 
 msgctxt "#708"
 msgid "Use an HTTP proxy server to access the internet"
@@ -2377,6 +2429,10 @@ msgctxt "#713"
 msgid "HTTP proxy"
 msgstr "HTTP proxy"
 
+msgctxt "#715"
+msgid "Assignment"
+msgstr "Assegnamento"
+
 msgctxt "#716"
 msgid "Automatic (DHCP)"
 msgstr "Automatico (DHCP)"
@@ -2388,6 +2444,18 @@ msgstr "Manuale (Static)"
 msgctxt "#719"
 msgid "IP address"
 msgstr "Indirizzo IP"
+
+msgctxt "#720"
+msgid "Netmask"
+msgstr "Netmask"
+
+msgctxt "#721"
+msgid "Default gateway"
+msgstr "Gateway predefinito"
+
+msgctxt "#722"
+msgid "DNS server"
+msgstr "Server DNS"
 
 msgctxt "#723"
 msgid "Save & restart"
@@ -2432,6 +2500,14 @@ msgstr "Nessuna password"
 msgctxt "#735"
 msgid "Character set"
 msgstr "Set di caratteri"
+
+msgctxt "#736"
+msgid "Style"
+msgstr "Stile"
+
+msgctxt "#737"
+msgid "Colour"
+msgstr "Colore"
 
 msgctxt "#738"
 msgid "Normal"
@@ -2565,6 +2641,14 @@ msgctxt "#776"
 msgid "Wireless network name (ESSID)"
 msgstr "Nome della rete wireless (ESSID)"
 
+msgctxt "#777"
+msgid "Wireless password"
+msgstr "Password wireless"
+
+msgctxt "#778"
+msgid "Wireless security"
+msgstr "Sicurezza wireless"
+
 msgctxt "#779"
 msgid "Save and apply network interface settings"
 msgstr "Salva ed applica le impostazioni della rete"
@@ -2665,6 +2749,10 @@ msgctxt "#852"
 msgid "Valid port range is 1024-65535"
 msgstr "Il numero di porta deve essere compreso tra 1024-65535"
 
+msgctxt "#997"
+msgid "Add Pictures..."
+msgstr "Aggiungi immagini..."
+
 msgctxt "#998"
 msgid "Add Music..."
 msgstr "Aggiungi Musica..."
@@ -2672,6 +2760,10 @@ msgstr "Aggiungi Musica..."
 msgctxt "#999"
 msgid "Add Videos..."
 msgstr "Aggiungi Video..."
+
+msgctxt "#1000"
+msgid "Preview"
+msgstr "Anteprima"
 
 msgctxt "#1001"
 msgid "Unable to connect"
@@ -2873,6 +2965,30 @@ msgctxt "#1051"
 msgid "Enter web address"
 msgstr "Inserisci l'indirizzo web"
 
+msgctxt "#1180"
+msgid "Proxy type"
+msgstr "Tipo proxy"
+
+msgctxt "#1181"
+msgid "HTTP"
+msgstr "HTTP"
+
+msgctxt "#1182"
+msgid "SOCKS4"
+msgstr "SOCK4"
+
+msgctxt "#1183"
+msgid "SOCKS4A"
+msgstr "SOCKS4A"
+
+msgctxt "#1184"
+msgid "SOCKS5"
+msgstr "SOCKS5"
+
+msgctxt "#1185"
+msgid "SOCKS5 with remote dns resolving"
+msgstr "SOCKS5 con risoluzione dns remota"
+
 msgctxt "#1200"
 msgid "SMB client"
 msgstr "client SMB"
@@ -3009,9 +3125,17 @@ msgctxt "#1271"
 msgid "Device name"
 msgstr "Nome periferica"
 
+msgctxt "#1272"
+msgid "Use password protection"
+msgstr "Usa protezione password"
+
 msgctxt "#1273"
 msgid "AirPlay"
 msgstr "AirPlay"
+
+msgctxt "#1274"
+msgid "AirTunes"
+msgstr "AirTunes"
 
 msgctxt "#1275"
 msgid "Filter %s"
@@ -3369,9 +3493,45 @@ msgctxt "#10034"
 msgid "Settings - Profiles"
 msgstr "Impostazioni - Profili"
 
+msgctxt "#10035"
+msgid "Reset"
+msgstr "Reset"
+
+msgctxt "#10036"
+msgid "Level: Basic"
+msgstr "Livello: Base"
+
+msgctxt "#10037"
+msgid "Level: Standard"
+msgstr "Livello: Standard"
+
+msgctxt "#10038"
+msgid "Level: Advanced"
+msgstr "Livello: Avanzato"
+
+msgctxt "#10039"
+msgid "Level: Expert"
+msgstr "Livello: Esperto"
+
 msgctxt "#10040"
 msgid "Addon browser"
 msgstr "Esplora addon"
+
+msgctxt "#10041"
+msgid "Reset settings"
+msgstr "Ripristino impostazioni"
+
+msgctxt "#10042"
+msgid "Are you sure you want to reset the settings in this category?"
+msgstr "Sai sicuro di voler resettare le impostazioni in questa categoria"
+
+msgctxt "#10043"
+msgid "Help"
+msgstr "Aiut"
+
+msgctxt "#10044"
+msgid "No help available"
+msgstr "Nessun aiuto disponibile"
 
 msgctxt "#10100"
 msgid "Yes/No dialog"
@@ -3381,17 +3541,57 @@ msgctxt "#10101"
 msgid "Progress dialog"
 msgstr "Casella di Progresso"
 
+msgctxt "#10126"
+msgid "File browser"
+msgstr "File browser"
+
+msgctxt "#10128"
+msgid "Network setup"
+msgstr "Impostazioni Rete"
+
+msgctxt "#10129"
+msgid "Media source"
+msgstr "Sorgente media"
+
+msgctxt "#10130"
+msgid "Profile settings"
+msgstr "Impostazioni profilo"
+
 msgctxt "#10131"
 msgid "Lock settings"
 msgstr "Blocca impostazioni"
+
+msgctxt "#10132"
+msgid "Content settings"
+msgstr "Impostazioni contenuto"
 
 msgctxt "#10134"
 msgid "Favourites"
 msgstr "Preferiti"
 
+msgctxt "#10135"
+msgid "Songs/Info"
+msgstr "Canzoni/Info"
+
+msgctxt "#10136"
+msgid "Smart playlist editor"
+msgstr "Modifica smart playlist"
+
+msgctxt "#10137"
+msgid "Smart playlist rule editor"
+msgstr "Modifica le regole per la playlist intelligente"
+
+msgctxt "#10139"
+msgid "Pictures/Info"
+msgstr "Immagini/Info"
+
 msgctxt "#10140"
 msgid "Add-on settings"
 msgstr "Impostazioni Add-on"
+
+msgctxt "#10146"
+msgid "Add-ons/Info"
+msgstr "Add-ons/Info"
 
 msgctxt "#10210"
 msgid "Looking for subtitles..."
@@ -3893,6 +4093,50 @@ msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr "Joystick disinserito"
 
+msgctxt "#13026"
+msgid "Try to wake remote servers on access"
+msgstr "Prova ad avviare i server remoti  all'accesso"
+
+msgctxt "#13027"
+msgid "Wake on Lan (%s)"
+msgstr "Wake on Lan (%s)"
+
+msgctxt "#13028"
+msgid "Waiting for network to connect..."
+msgstr "Aspettando che la rete sia connessa...."
+
+msgctxt "#13029"
+msgid "Failed to execute Wake on Lan!"
+msgstr "Errore nell'esecuzione Sveglia con Lan"
+
+msgctxt "#13030"
+msgid "Waiting for server to wake up..."
+msgstr "Aspettando che il server si accenda..."
+
+msgctxt "#13031"
+msgid "Extended wait for server to wake up..."
+msgstr "Tempo extra di attesa per l'accensione del server"
+
+msgctxt "#13032"
+msgid "Waiting for services to launch..."
+msgstr "Aspettando che i servizi vengano avviati..."
+
+msgctxt "#13033"
+msgid "MAC Discovery"
+msgstr "MAC Discovery"
+
+msgctxt "#13034"
+msgid "Updated for %s"
+msgstr "Aggiornato per %s"
+
+msgctxt "#13035"
+msgid "Found for %s"
+msgstr "Trovato per %s"
+
+msgctxt "#13036"
+msgid "Failed for %s"
+msgstr "Fallito per %s"
+
 msgctxt "#13050"
 msgid "Running low on battery"
 msgstr "Batteria scarica"
@@ -4212,6 +4456,10 @@ msgstr "Controllo automatico temperatura"
 msgctxt "#13302"
 msgid "Fan speed override"
 msgstr "Controllo velocità ventola"
+
+msgctxt "#13303"
+msgid "Fonts"
+msgstr "Caratteri"
 
 msgctxt "#13304"
 msgid "Enable flipping bi-directional strings"
@@ -4737,6 +4985,10 @@ msgctxt "#13515"
 msgid "No art"
 msgstr "Nessuna immagine"
 
+msgctxt "#13516"
+msgid "Add art"
+msgstr "Aggiungi immagine"
+
 msgctxt "#13550"
 msgid "Pause during refresh rate change"
 msgstr "Pausa durante il cambio di frequenza"
@@ -4889,6 +5141,10 @@ msgctxt "#14026"
 msgid "Video cache - DVD-ROM"
 msgstr "cache Video - DVD-ROM"
 
+msgctxt "#14027"
+msgid "Local Network"
+msgstr "Rete locale"
+
 msgctxt "#14028"
 msgid "Internet"
 msgstr "Internet"
@@ -4897,6 +5153,10 @@ msgctxt "#14030"
 msgid "Audio cache - DVD-ROM"
 msgstr "cache Audio - DVD-ROM"
 
+msgctxt "#14031"
+msgid "Local Network"
+msgstr "Rete locale"
+
 msgctxt "#14032"
 msgid "Internet"
 msgstr "Internet"
@@ -4904,6 +5164,10 @@ msgstr "Internet"
 msgctxt "#14034"
 msgid "DVD cache - DVD-ROM"
 msgstr "cache DVD - DVD-ROM"
+
+msgctxt "#14035"
+msgid "Local Network"
+msgstr "Rete locale"
 
 msgctxt "#14036"
 msgid "Services"
@@ -5053,6 +5317,10 @@ msgctxt "#14077"
 msgid "Remove from favourites"
 msgstr "Rimuovi dai preferiti"
 
+msgctxt "#14078"
+msgid "Colours"
+msgstr "Color"
+
 msgctxt "#14079"
 msgid "Timezone country"
 msgstr "Paese del fuso orario"
@@ -5188,6 +5456,10 @@ msgstr "Suoni di navigazione"
 msgctxt "#15109"
 msgid "Skin default"
 msgstr "Default della skin"
+
+msgctxt "#15111"
+msgid "Theme"
+msgstr "Tema"
 
 msgctxt "#15112"
 msgid "Default theme"
@@ -5708,6 +5980,10 @@ msgstr "Informazioni"
 msgctxt "#19034"
 msgid "Already started recording on this channel"
 msgstr "Hai già cominciato a registrare su questo canale"
+
+msgctxt "#19035"
+msgid "%s could not be played. Check the log for details."
+msgstr "%s non può essere riprodotto. Controlla il log per i dettagli."
 
 msgctxt "#19036"
 msgid "This recording cannot be played. Check the log for details."
@@ -8177,6 +8453,10 @@ msgctxt "#20403"
 msgid "Set actor thumb"
 msgstr "Imposta icona attore"
 
+msgctxt "#20404"
+msgid "Remove bookmark"
+msgstr "Rimuovi segnalibro"
+
 msgctxt "#20405"
 msgid "Remove episode bookmark"
 msgstr "Rimuovi segnalibro episodio"
@@ -8228,6 +8508,10 @@ msgstr "Prima visione"
 msgctxt "#20417"
 msgid "Writer"
 msgstr "Scrittore"
+
+msgctxt "#20418"
+msgid "Writers"
+msgstr "Scrittori"
 
 msgctxt "#20419"
 msgid "Replace file names with library titles"
@@ -8404,6 +8688,22 @@ msgstr "Un tag con il nome '%s' esiste di già."
 msgctxt "#20464"
 msgid "Select %s"
 msgstr "Seleziona %s"
+
+msgctxt "#20465"
+msgid "Manage movie set"
+msgstr "Modifica set filmato"
+
+msgctxt "#20466"
+msgid "Select movie set"
+msgstr "Seleziona set filmato"
+
+msgctxt "#20467"
+msgid "No set (Remove from %s)"
+msgstr "Nessun' set trovato (Rimuovi da %s)"
+
+msgctxt "#20468"
+msgid "Add movie to a new set"
+msgstr "Aggiungi filmato al nuovo set"
 
 msgctxt "#21330"
 msgid "Show hidden files and directories"
@@ -8985,6 +9285,10 @@ msgctxt "#21843"
 msgid "Orientation"
 msgstr "Orientamento"
 
+msgctxt "#21858"
+msgid "Image type"
+msgstr "TIpo immagine"
+
 msgctxt "#21860"
 msgid "Supplemental categories"
 msgstr "Categorie supplementari"
@@ -9153,6 +9457,10 @@ msgctxt "#22001"
 msgid "Hide progress of library updates"
 msgstr "Nascondi avanzamento aggiornamento archivio"
 
+msgctxt "#22002"
+msgid "DNS suffix"
+msgstr "Suffisso DNS"
+
 msgctxt "#22003"
 msgid "%2.3fs"
 msgstr "%2.3fs"
@@ -9248,6 +9556,14 @@ msgstr "Carattere"
 msgctxt "#22031"
 msgid "Size"
 msgstr "Dimensione"
+
+msgctxt "#22032"
+msgid "Colours"
+msgstr "Color"
+
+msgctxt "#22033"
+msgid "Charset"
+msgstr "Set caratteri"
 
 msgctxt "#22034"
 msgid "Export karaoke titles as HTML"
@@ -9997,6 +10313,10 @@ msgctxt "#33083"
 msgid "Enable custom script button"
 msgstr "Abilita il pulsante per lo script personalizzato"
 
+msgctxt "#33084"
+msgid "Auto login"
+msgstr "Login automatico"
+
 msgctxt "#33100"
 msgid "Failed to start"
 msgstr "Avvio fallito"
@@ -10364,3 +10684,515 @@ msgstr "Versione dell'interfaccia libCEC non supportata. %x o più bassa della v
 msgctxt "#36041"
 msgid "* Item folder"
 msgstr "* Cartella oggetti"
+
+msgctxt "#36102"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36112"
+msgid "Edit the RSS feeds."
+msgstr "Abilita feed RSS."
+
+msgctxt "#36113"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36117"
+msgid "Select country location."
+msgstr "Seleziona paese."
+
+msgctxt "#36121"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36128"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36135"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36136"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36137"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36138"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36139"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36140"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36142"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36151"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36156"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36157"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36158"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36159"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36160"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36161"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36162"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36163"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36168"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36169"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36173"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36176"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36178"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36181"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36182"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36183"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36184"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36185"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36186"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36187"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36188"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36189"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36190"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36193"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36197"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36201"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36202"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36210"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36211"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36212"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36213"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36214"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36215"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36216"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36217"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36218"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36226"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36230"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36232"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36233"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36240"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36247"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36251"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36252"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36253"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36254"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36264"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36277"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36278"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36279"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36280"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36282"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36292"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36294"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36299"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36300"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36301"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36302"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36303"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36304"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36305"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36310"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36311"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36315"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36316"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36319"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36320"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36322"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36325"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36327"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36335"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36336"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36337"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36339"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36340"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36341"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36342"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36343"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36344"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36345"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36346"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36347"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36348"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36349"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36351"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36352"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36353"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36359"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36360"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36374"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36375"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36379"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36388"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36392"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36399"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36400"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36401"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36402"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36403"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36404"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36405"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36406"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36407"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36408"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36409"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36410"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36411"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36412"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36413"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36414"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36415"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36417"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36418"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
+
+msgctxt "#36420"
+msgid "No info available yet."
+msgstr "Nessuna informazione disponibile."
