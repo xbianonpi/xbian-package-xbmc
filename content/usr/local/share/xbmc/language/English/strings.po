@@ -894,7 +894,9 @@ msgctxt "#245"
 msgid "Sizing: (%i,%i)->(%i,%i) (Zoom x%2.2f) AR:%2.2f:1 (Pixels: %2.2f:1) (VShift: %2.2f)"
 msgstr ""
 
-#empty string with id 246
+msgctxt "#246"
+msgid "Monitor"
+msgstr ""
 
 msgctxt "#247"
 msgid "Scripts"
@@ -4282,51 +4284,7 @@ msgctxt "#13025"
 msgid "Joystick unplugged"
 msgstr ""
 
-msgctxt "#13026"
-msgid "Try to wake remote servers on access"
-msgstr ""
-
-msgctxt "#13027"
-msgid "Wake on Lan (%s)"
-msgstr ""
-
-msgctxt "#13028"
-msgid "Waiting for network to connect..."
-msgstr ""
-
-msgctxt "#13029"
-msgid "Failed to execute Wake on Lan!"
-msgstr ""
-
-msgctxt "#13030"
-msgid "Waiting for server to wake up..."
-msgstr ""
-
-msgctxt "#13031"
-msgid "Extended wait for server to wake up..."
-msgstr ""
-
-msgctxt "#13032"
-msgid "Waiting for services to launch..."
-msgstr ""
-
-msgctxt "#13033"
-msgid "MAC Discovery"
-msgstr ""
-
-msgctxt "#13034"
-msgid "Updated for %s"
-msgstr ""
-
-msgctxt "#13035"
-msgid "Found for %s"
-msgstr ""
-
-msgctxt "#13036"
-msgid "Failed for %s"
-msgstr ""
-
-#empty strings from id 13037 to 13049
+#empty strings from id 13026 to 13049
 
 msgctxt "#13050"
 msgid "Running low on battery"
@@ -4412,11 +4370,7 @@ msgctxt "#13121"
 msgid "VDPAU HQ Upscaling level"
 msgstr ""
 
-msgctxt "#13122"
-msgid "VDPAU Studio level color conversion"
-msgstr ""
-
-#empty strings from id 13123 to 13129
+#empty strings from id 13122 to 13129
 
 msgctxt "#13130"
 msgid "Blank other displays"
@@ -5157,7 +5111,19 @@ msgctxt "#13434"
 msgid "Play only this"
 msgstr ""
 
-#empty strings from id 13435 to 13499
+msgctxt "#13435"
+msgid "Allow Vdpau OpenGL interop"
+msgstr ""
+
+msgctxt "#13436"
+msgid "Prefer VDPAU Video Mixer"
+msgstr ""
+
+msgctxt "#13437"
+msgid "Allow hardware acceleration (XVBA)"
+msgstr ""
+
+#empty strings from id 13438 to 13499
 
 msgctxt "#13500"
 msgid "A/V sync method"
@@ -6376,10 +6342,14 @@ msgid "Software Blend"
 msgstr ""
 
 msgctxt "#16325"
-msgid "Auto - ION Optimized"
+msgid "VDPAU - Bob"
 msgstr ""
 
-#empty strings from id 16326 to 16399
+msgctxt "#16326"
+msgid "XVBA"
+msgstr ""
+
+#empty strings from id 16327 to 16399
 
 msgctxt "#16400"
 msgid "Post-processing"

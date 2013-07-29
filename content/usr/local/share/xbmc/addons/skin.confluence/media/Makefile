@@ -1,5 +1,5 @@
 TARGET=Textures.xbt
-XBMCTEX=/opt/xbmcfrodo/tools/TexturePacker/TexturePacker
+XBMCTEX=/opt/xbmc-Frodo/tools/TexturePacker/TexturePacker
 
 IMAGES := $(shell find . -name "*jpg")
 IMAGES += $(shell find . -name "*png")
@@ -17,7 +17,7 @@ else
 
 endif
 $(XBMCTEX): force
-	$(MAKE) -C /opt/xbmcfrodo/tools/TexturePacker
+	$(MAKE) -C /opt/xbmc-Frodo/tools/TexturePacker
 
 clean:
 	rm -f $(TARGET)
