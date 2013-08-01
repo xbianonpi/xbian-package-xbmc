@@ -12,7 +12,7 @@ elif [ $1 = triggered ]; then
 
         if [ -f "/tmp/startxbmc" ]; then
                 [ -e /etc/init/xbmc.conf ] || service xbmc start > /dev/null 2>&1
-                [ -e /etc/init/xbmc.conf ] && start xbmc
+                [ -e /etc/init/xbmc.conf ] && start -n xbmc
                 rm /tmp/startxbmc
         fi
 
