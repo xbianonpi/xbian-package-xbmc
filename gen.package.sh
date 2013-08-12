@@ -5,6 +5,13 @@ rm_size() {
 	mv ./content/DEBIAN/control.new ./content/DEBIAN/control
 }
 
+str='strip'
+
+if [ "$(uname -m)" != 'armv6l' ]; then
+    arm-linux-gnueabihf-strip > /dev/null 2>&1
+    [ $? -eq '127' ] && { echo "please install binutils-arm-linux-gnueabihf"; str=''; true; } || str='arm-linux-gnueabihf-strip'
+fi
+
 package=$(cat ./content/DEBIAN/control | grep Package | awk '{print $2}')
 version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
 
@@ -15,7 +22,7 @@ rm_size
 printf "Installed-Size: %d\n" $(du -s ./content | awk '{print $1}') >> ./content/DEBIAN/control
 
 cd content
-find ./ -type f -print0 |xargs --null strip 2>/dev/null
+[ -z "$str" ] || find ./ -type f -print0 |xargs --null $str 2>/dev/null
 find ./ -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P\0' | sort -z| xargs --null md5sum > DEBIAN/md5sums
 cd ..
 fakeroot dpkg-deb -b ./content "${package}""${version}".deb
