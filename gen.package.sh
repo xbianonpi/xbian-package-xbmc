@@ -19,10 +19,10 @@ version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
 
 # calculate size dynamically. remove first any entry, then add the actual 
 rm_size
-printf "Installed-Size: %d\n" $(du -s ./content | awk '{print $1}') >> ./content/DEBIAN/control
 
 cd content
 [ -z "$str" ] || find ./ -type f -print0 |xargs --null $str 2>/dev/null
+printf "Installed-Size: %d\n" $(du -s ./ | awk '{print $1}') >> ./DEBIAN/control
 find ./ -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P\0' | sort -z| xargs --null md5sum > DEBIAN/md5sums
 cd ..
 fakeroot dpkg-deb -b ./content "${package}""${version}".deb
