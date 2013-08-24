@@ -2,6 +2,27 @@
 
 if [[ $1 == "configure" ]]; then
 	
+	checkdb() {
+	    cd /home/xbian/.xbmc/userdata/Database
+	    for f in $(ls); do
+		diff -q /home/xbian/.xbmc/userdata/Database/$f /home/xbian/.xbmc/userdata/Database.old/$f
+		[ "$?" -eq 0 ] || return 1
+	    done
+	    return 0
+	}
+
+	# set noCoW flag for database files
+	mv /home/xbian/.xbmc/userdata/Database /home/xbian/.xbmc/userdata/Database.old
+	mkdir /home/xbian/.xbmc/userdata/Database
+	chattr +C /home/xbian/.xbmc/userdata/Database
+	cp -r /home/xbian/.xbmc/userdata/Database.old/* /home/xbian/.xbmc/userdata/Database
+	if checkdb; then
+	    rm -fr /home/xbian/.xbmc/userdata/Database.old
+	else
+	    rm -fr /home/xbian/.xbmc/userdata/Database
+	    mv /home/xbian/.xbmc/userdata/Database.old /home/xbian/.xbmc/userdata/Database
+	fi
+
 	initctl reload-configuration
 	insserv -r /etc/init.d/xbmc > /dev/null 2>&1
 	chmod -x /etc/init.d/xbmc > /dev/null 2>&1

@@ -3,8 +3,8 @@
 if [ $1 == "install" -o $1 == "upgrade" ]; then
 
         if pgrep xbmc.bin > /dev/null; then
-                [ -e /etc/init/xbmc.conf ] && stop -n xbmc
-                [ -e /etc/init/xbmc.conf ] || service xbmc stop
+                [ -e /etc/init/xbmc.conf ] && stop -q xbmc
+                [ -e /etc/init/xbmc.conf ] || service xbmc stop > /dev/null
                 touch /tmp/startxbmc
         fi
 
