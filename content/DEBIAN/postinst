@@ -18,6 +18,7 @@ if [[ $1 == "configure" ]]; then
 	cp -r /home/xbian/.xbmc/userdata/Database.old/* /home/xbian/.xbmc/userdata/Database
 	if checkdb; then
 	    rm -fr /home/xbian/.xbmc/userdata/Database.old
+	    chown -Rc xbian:xbian /home/xbian/.xbmc/userdata/Database > /dev/null
 	else
 	    rm -fr /home/xbian/.xbmc/userdata/Database
 	    mv /home/xbian/.xbmc/userdata/Database.old /home/xbian/.xbmc/userdata/Database
