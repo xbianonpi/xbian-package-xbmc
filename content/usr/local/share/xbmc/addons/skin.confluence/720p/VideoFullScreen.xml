@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
- <onunload condition="!Player.Paused">PlayerControl(Play)</onunload>
- <defaultcontrol>-</defaultcontrol>
+	<onunload condition="!Player.Paused">PlayerControl(Play)</onunload>
+	<defaultcontrol>-</defaultcontrol>
 	<controls>
 		<!-- media infos -->
 		<control type="group" id="1">
