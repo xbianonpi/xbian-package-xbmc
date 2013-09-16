@@ -10,7 +10,7 @@ all: $(TARGET)
 .PHONY: force
 
 $(TARGET): $(XBMCTEX) $(IMAGES)
-ifeq (,1)
+ifeq (arm,arm)
 	$(XBMCTEX) -use_none -input . -output $(TARGET)
 else
 	$(XBMCTEX) -input . -output $(TARGET)
