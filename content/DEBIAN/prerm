@@ -2,7 +2,7 @@
 
 if [ $1 == "remove" ]; then
 	
-	/etc/init.d/xbmc stop 1>/dev/null 2>/dev/null >/dev/null
+	stop -q xbmc 1>/dev/null 2>/dev/null >/dev/null
 	
 	if [ -f /etc/init.d/xbmc ]; then
 		rm /etc/init.d/xbmc;
