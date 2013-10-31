@@ -22,13 +22,13 @@ version=$(cat ./content/DEBIAN/control | grep Version | awk '{print $2}')
 rm_size
 
 cd content
-rm -fr ./tmp/*
+[ -d ./tmp ] && mv ./tmp ..
 find ./ -type f -print0 | xargs -0 -L1 printf "%s\n" | while read f; do [ -z "$str" ] || $str $strargs "$f" 2>/dev/null; s=$(stat -c %s "$f"); tot=$((tot + (s/1024)+1)); echo $tot > ../size.txt; done
 printf "Installed-Size: %u\n" $(cat ../size.txt) >> ./DEBIAN/control
 find ./ -type f ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' ! -regex '.*?DEBIAN.*' -printf '%P\0' | sort -z| xargs --null md5sum > DEBIAN/md5sums
 cd ..
 fakeroot dpkg-deb -b ./content "${package}""${version}".deb
-
+[ -d ./tmp ] && mv ./tmp ./content
 # remove the size again, because on different filesystems du will return different size
 rm_size
 #rm -f ./content/etc/default/*.default

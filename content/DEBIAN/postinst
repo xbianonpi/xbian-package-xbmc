@@ -8,27 +8,31 @@ cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 #!/bin/bash
 
 checkdb() {
-    cd /home/xbian/.xbmc/userdata/Database
+    cd "$1"
     for f in $(ls); do
-	diff -q /home/xbian/.xbmc/userdata/Database/$f /home/xbian/.xbmc/userdata/Database.old/$f
+	diff -q "$1/$f" "$1.old/$f"
 	[ "$?" -eq 0 ] || return 1
     done
     return 0
 }
 
 # set noCoW flag for database files
-mv /home/xbian/.xbmc/userdata/Database /home/xbian/.xbmc/userdata/Database.old
-mkdir /home/xbian/.xbmc/userdata/Database
-chattr +C /home/xbian/.xbmc/userdata/Database
-cp -r /home/xbian/.xbmc/userdata/Database.old/* /home/xbian/.xbmc/userdata/Database
-if checkdb; then
-    rm -fr /home/xbian/.xbmc/userdata/Database.old
-    chown -Rc xbian:xbian /home/xbian/.xbmc/userdata/Database > /dev/null
-else
-    rm -fr /home/xbian/.xbmc/userdata/Database
-    mv /home/xbian/.xbmc/userdata/Database.old /home/xbian/.xbmc/userdata/Database
-    exit 1
-fi
+for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
+
+    mv "$d" "$d.old"
+    mkdir "$d"
+    chattr +C "$d"
+    cp -r $d.old/* "$d"
+    if checkdb "$d"; then
+        rm -fr "$d".old
+        chown -Rc xbian:xbian "$d" > /dev/null
+    else
+        rm -fr "$d"
+        mv "$d".old "$d"
+        exit 1
+    fi
+
+done
 
 exit 0
 
