@@ -1,0 +1,11 @@
+--- addons/skin.confluence/720p/SettingsSystemInfo.xml
++++ addons/skin.confluence/720p/SettingsSystemInfo.xml
+@@ -276,7 +276,7 @@
+ 				<control type="label" id="52">
+ 					<description>XBMC BUILD Version</description>
+ 					<posx>750</posx>
+-					<posy>400</posy>
++					<posy>450</posy>
+ 					<width>730</width>
+ 					<label>144</label>
+ 					<align>right</align>
