@@ -285,7 +285,7 @@
 					<shadowcolor>black</shadowcolor>
 					<font>font13_title</font>
 				</control>
-				<!--control type="label">
+				<control type="label">
 					<description>CPU Text</description>
 					<right>420</right>
 					<top>450</top>
@@ -305,7 +305,7 @@
 					<width>320</width>
 					<height>16</height>
 					<info>System.CPUUsage</info>
-				</control-->
+				</control>
 				<control type="label">
 					<description>Memory Text</description>
 					<right>420</right>
