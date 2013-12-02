@@ -1,6 +1,6 @@
 Origin: XBian
 Package: xbian-package-xbmc-gotham-nightly
-Version: 2.9-10.15
+Version: 2.9-10.17
 Section: video
 Priority: optional
 Architecture: armhf
