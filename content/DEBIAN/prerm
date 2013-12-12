@@ -2,6 +2,9 @@
 
 if [ $1 == "remove" ]; then
 	
-	stop -q xbmc 1>/dev/null 2>/dev/null >/dev/null
+	stop -q xbmc 1>/dev/null 2>/dev/null >/dev/null || :
 	
 fi
+
+
+exit 0
