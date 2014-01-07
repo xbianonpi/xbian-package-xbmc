@@ -173,20 +173,19 @@
 			<control type="image">
 				<left>268</left>
 				<top>10</top>
-				<width>804</width>
-				<height>100</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>GlassTitleBar.png</texture>
+				<width>790</width>
+				<height>52</height>
+				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label" id="40">
 				<description>header label</description>
 				<left>300</left>
 				<top>20</top>
-				<width>740</width>
+				<width>726</width>
 				<height>30</height>
 				<font>font16</font>
 				<label>-</label>
-				<align>left</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -276,7 +275,7 @@
 				</control>
 				<control type="label" id="52">
 					<description>XBMC BUILD Version</description>
-					<right>750</right>
+					<left>20</left>
 					<top>400</top>
 					<width>730</width>
 					<label>144</label>
@@ -287,7 +286,7 @@
 				</control>
 				<control type="label">
 					<description>CPU Text</description>
-					<right>420</right>
+					<left>70</left>
 					<top>450</top>
 					<width>350</width>
 					<height>25</height>
@@ -308,7 +307,7 @@
 				</control>
 				<control type="label">
 					<description>Memory Text</description>
-					<right>420</right>
+					<left>70</left>
 					<top>480</top>
 					<width>350</width>
 					<height>25</height>
