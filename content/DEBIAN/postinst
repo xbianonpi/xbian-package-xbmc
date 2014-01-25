@@ -47,7 +47,7 @@ EOF
 
 	dpkg-trigger --no-await trigger-xbian-package-xbmc
 
-        pgrep xbmc.bin >/dev/null && { touch /var/run/reboot-required; exit 0; }
+        pgrep xbmc.bin >/dev/null && { echo "xbian-package-xbmc" >>  /var/run/reboot-required; exit 0; }
         
         /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh && rm -f /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 
