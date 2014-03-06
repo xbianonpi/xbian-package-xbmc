@@ -617,10 +617,6 @@ msgctxt "#304"
 msgid "Language"
 msgstr "Dil"
 
-msgctxt "#309"
-msgid "User Interface language"
-msgstr "İnterfeysin dili"
-
 msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=avto)"
@@ -1789,10 +1785,6 @@ msgctxt "#20342"
 msgid "Movies"
 msgstr "Filmlər"
 
-msgctxt "#21366"
-msgid "Subtitle folder"
-msgstr "Subtitrlərin qovluqu"
-
 msgctxt "#21375"
 msgid "Normal"
 msgstr "Normal"
@@ -1844,6 +1836,10 @@ msgstr "Subtitrlər"
 msgctxt "#24027"
 msgid "Weather"
 msgstr "Hava durumu"
+
+msgctxt "#34100"
+msgid "Number of channels"
+msgstr "Kanalların sayısı"
 
 msgctxt "#35502"
 msgid "Name"

@@ -929,10 +929,6 @@ msgctxt "#305"
 msgid "Enabled"
 msgstr "ተችሏል "
 
-msgctxt "#309"
-msgid "User Interface language"
-msgstr "የ ተጠቃሚ ገጽታ ቋንቋ "
-
 msgctxt "#312"
 msgid "(0=auto)"
 msgstr "(0=auto)"
@@ -3358,8 +3354,8 @@ msgid "Scan for new content"
 msgstr "አዲስ ይዞታዎች ማሰሻ "
 
 msgctxt "#13350"
-msgid "Now playing..."
-msgstr "አሁን የሚጫወተው "
+msgid "Current playlist"
+msgstr "አሁን የሚጫወተው ዝርዝር"
 
 msgctxt "#13351"
 msgid "Album information"
@@ -3485,6 +3481,10 @@ msgctxt "#13422"
 msgid "Start slideshow here"
 msgstr "ተንሸራታች ማሳያ ከዚህ ማስጀመሪያ"
 
+msgctxt "#13455"
+msgid "Software"
+msgstr "ሶፍትዌር "
+
 msgctxt "#13501"
 msgid "Audio clock"
 msgstr "የ ድምፅ ሰአት"
@@ -3556,14 +3556,6 @@ msgstr "መጻህፍት ቤት "
 msgctxt "#14023"
 msgid "No TV"
 msgstr "ቲቪ የለም"
-
-msgctxt "#14028"
-msgid "Internet"
-msgstr "ኢንተርኔት "
-
-msgctxt "#14032"
-msgid "Internet"
-msgstr "ኢንተርኔት "
 
 msgctxt "#14036"
 msgid "Services"
@@ -4617,10 +4609,6 @@ msgctxt "#20314"
 msgid "Videos - Library"
 msgstr "የ ቪዲዮ - መጻሕፍት ቤት"
 
-msgctxt "#20327"
-msgid "to it's default values."
-msgstr "ወደ ነባር ዋጋቸው"
-
 msgctxt "#20328"
 msgid "Browse for destination"
 msgstr "መድረሻውን መቃኛ"
@@ -4788,10 +4776,6 @@ msgstr "ሙቪ ማሰናጃ"
 msgctxt "#21336"
 msgid "Connecting to: %s"
 msgstr "በ መገናኘት ላይ: %s"
-
-msgctxt "#21366"
-msgid "Subtitle folder"
-msgstr "የ ንዑስ አርእስት ፎልደር"
 
 msgctxt "#21371"
 msgid "Thumbnail"
@@ -5226,6 +5210,10 @@ msgid "Enable"
 msgstr "ማስቻያ "
 
 msgctxt "#24023"
+msgid "Disabled"
+msgstr "ተሰናክሏል "
+
+msgctxt "#24024"
 msgid "Add-on disabled"
 msgstr "ተጨ-ማሪ ተሰናክሏል "
 
@@ -5478,8 +5466,8 @@ msgid "Flac"
 msgstr "Flac"
 
 msgctxt "#34100"
-msgid "Speaker Configuration"
-msgstr "ስፒከር ማዋቀሪያ "
+msgid "Number of channels"
+msgstr "የጣቢያዎች ቁጥር "
 
 msgctxt "#34101"
 msgid "2.0"

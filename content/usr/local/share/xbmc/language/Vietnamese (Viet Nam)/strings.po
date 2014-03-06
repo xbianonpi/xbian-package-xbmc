@@ -933,6 +933,10 @@ msgctxt "#13280"
 msgid "Video"
 msgstr "Video"
 
+msgctxt "#13350"
+msgid "Current playlist"
+msgstr "Danh sách hiện tại"
+
 msgctxt "#13351"
 msgid "Album information"
 msgstr "Thông tin bộ sưu tập"
@@ -1068,6 +1072,10 @@ msgstr "Hình nền"
 msgctxt "#33081"
 msgid "This file is stacked, select the part you want to play from."
 msgstr "Tập tin này bị lỗi, hãy chọn một phần khác để phát."
+
+msgctxt "#34100"
+msgid "Number of channels"
+msgstr "Số kênh"
 
 msgctxt "#35000"
 msgid "Peripherals"
