@@ -1,6 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: NextPVR PVR Client
 # Addon id: pvr.nextpvr
+# Addon version: 1.6.3
 # Addon Provider: Graeme Blackley
 msgid ""
 msgstr ""
@@ -31,7 +32,3 @@ msgstr "ማሻሻያ ወደ '%s' ወይንም ከፍተኛ!"
 msgctxt "#30052"
 msgid "Connection failed. Incorrect PIN?"
 msgstr "ግንኙነቱ አልተሳካም የተሳሳተ PIN?"
-
-msgctxt "#30135"
-msgid "Default"
-msgstr "ነባር "

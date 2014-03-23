@@ -1,0 +1,54 @@
+<window>
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="200">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<posx>1056</posx>
+			<posy>625</posy>
+			<control type="image">
+				<description>background image</description>
+				<posx>-19</posx>
+				<posy>-10</posy>
+				<width>234</width>
+				<height>100</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<aspectratio>keep</aspectratio>
+				<texture >busybg.png</texture> <!-- border="20" -->
+			</control>
+			<control type="image">
+				<description>Busy animation</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>39</width>
+				<height>39</height>
+				<texture>busy.png</texture>
+				<aspectratio>keep</aspectratio>
+				<animation effect="rotate" start="0" end="360" center="36,36" time="1200" loop="true" condition="true">conditional</animation>
+			</control>
+			<control type="label">
+				<description>Busy label</description>
+				<posx>80</posx>
+				<posy>20</posy>
+				<width>120</width>
+				<height>32</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[31004]</label>
+				<font>font12</font>
+			</control>
+			<control type="progress" id="10">
+				<description>Progressbar</description>
+				<posx>20</posx>
+				<posy>53</posy>
+				<width>160</width>
+				<height>8</height>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,6 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: VU+ / Enigma2 Client
 # Addon id: pvr.vuplus
+# Addon version: 1.6.6
 # Addon Provider: Joerg Dembski
 msgid ""
 msgstr ""
@@ -34,7 +35,7 @@ msgstr "Geslo"
 
 msgctxt "#30007"
 msgid "Response timeout in seconds"
-msgstr "Čas preteka odgovora v sekundah"
+msgstr "Najdaljši čas odgovora v sekundah"
 
 msgctxt "#30008"
 msgid "Icon Path"
@@ -107,10 +108,6 @@ msgstr "Prenesi le eno skupino"
 msgctxt "#30026"
 msgid "TV-Bouquet"
 msgstr "Skupina programov"
-
-msgctxt "#30027"
-msgid "Fetch picons from webinterface"
-msgstr "Prenesi ikone s spletnega vmesnika"
 
 msgctxt "#30500"
 msgid "Disconnected from '%s'"

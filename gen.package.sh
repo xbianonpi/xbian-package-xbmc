@@ -7,7 +7,7 @@ rm_size() {
 }
 
 str='strip'
-strargs='--strip-unneeded'
+strargs=''
 tot=0
 
 if [ "$(uname -m)" != 'armv6l' ]; then

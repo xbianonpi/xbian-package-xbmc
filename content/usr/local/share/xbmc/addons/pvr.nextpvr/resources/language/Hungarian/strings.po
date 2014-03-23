@@ -1,6 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: NextPVR PVR Client
 # Addon id: pvr.nextpvr
+# Addon version: 1.6.3
 # Addon Provider: Graeme Blackley
 msgid ""
 msgstr ""
@@ -55,11 +56,3 @@ msgstr "A kapcsolódás sikertelen. Helyes PIN kódot adott meg?"
 msgctxt "#30053"
 msgid "Tuner no longer available"
 msgstr "A vevőkártya már nem elérhető"
-
-msgctxt "#30130"
-msgid "Keep"
-msgstr "Megtart"
-
-msgctxt "#30135"
-msgid "Default"
-msgstr "Alapérték"

@@ -1,6 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: VU+ / Enigma2 Client
 # Addon id: pvr.vuplus
+# Addon version: 1.6.6
 # Addon Provider: Joerg Dembski
 msgid ""
 msgstr ""
@@ -18,7 +19,7 @@ msgstr ""
 
 msgctxt "#30000"
 msgid "VU+ hostname or IP address"
-msgstr "VU+ Hostname oder IP-Adresse"
+msgstr "VU+ IP"
 
 msgctxt "#30002"
 msgid "Streaming Port"
@@ -38,19 +39,19 @@ msgstr "Antwort-Timeout in Sekunden"
 
 msgctxt "#30008"
 msgid "Icon Path"
-msgstr "Icon-Pfad"
+msgstr "Picon-Pfad"
 
 msgctxt "#30010"
 msgid "Update Interval in minutes"
-msgstr "Aktualisierungsintervall in Minuten"
+msgstr "Aktualisierungsintervall (in Minuten)"
 
 msgctxt "#30011"
 msgid "Automatic Timerlist Cleanup"
-msgstr "Entferne abgeschlossene Timer automatisch"
+msgstr "Entferne abgeschlossene Timer"
 
 msgctxt "#30012"
 msgid "Webinterface Port"
-msgstr "Weboberfläche Port"
+msgstr "Webinterface Port"
 
 msgctxt "#30013"
 msgid "Zap before channelswitch (i.e. for Single Tuner boxes)"
@@ -70,11 +71,11 @@ msgstr "Überprüfe auf Kanalaktualisierungen"
 
 msgctxt "#30017"
 msgid "Use only the DVB boxes' current recording path"
-msgstr "Nur den aktuellen Box-Aufnahmenpfad nutzen"
+msgstr "Aktuellen Box-Aufnahmenpfad nutzen"
 
 msgctxt "#30018"
 msgid "General"
-msgstr "Allgemein"
+msgstr "Allgemeines"
 
 msgctxt "#30019"
 msgid "Channels"
@@ -82,7 +83,7 @@ msgstr "Sender"
 
 msgctxt "#30020"
 msgid "Advanced"
-msgstr "Erweitert"
+msgstr "Fortgeschritten"
 
 msgctxt "#30021"
 msgid "HTTP"
@@ -102,7 +103,7 @@ msgstr "Sende DeepStandby-Befehl"
 
 msgctxt "#30025"
 msgid "Fetch only one TV bouquet"
-msgstr "Lade nur ein TV-Bouquet"
+msgstr "Nur ein TV-Bouquet"
 
 msgctxt "#30026"
 msgid "TV-Bouquet"
@@ -110,11 +111,14 @@ msgstr "TV-Bouquet"
 
 msgctxt "#30027"
 msgid "Fetch picons from webinterface"
-msgstr "Lade Picons aus der Weboberfläche"
+msgstr "Lade Picons vom Web-Interface"
+
+#empty strings from id 30028 to 30499
+#notifications
 
 msgctxt "#30500"
 msgid "Disconnected from '%s'"
-msgstr "Verbindung zu '%s' unterbrochen"
+msgstr "Verbindung '%s' unterbrochen"
 
 msgctxt "#30501"
 msgid "Reconnected to '%s'"

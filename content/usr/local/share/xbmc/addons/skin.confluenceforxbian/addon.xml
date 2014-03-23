@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.confluenceforxbian"
+  version="1.0.2"
+  name="Confluence for xbian"
+  provider-name="xbianonpi (Credits to Jezz_X, Team XBMC, MYETRO)">
+  <requires>
+    <import addon="xbmc.gui" version="4.0.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="textures.xbt"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="de">Confluence für xbian, ein Skin angepasst für xbian</summary>
+    <summary lang="en">Confluence for xbian, a skin customized for xbian</summary>
+    <summary lang="nl">Confluence voor xbian, een skin geoptimaliseert voor xbian</summary>
+    <description lang="de">Confluence für xbian basiert auf Confluence von Jezz_X und wurde speziell für die Raspberry Distribution xbian angepasst. Neben optischen Erweiterungen soll der Skin möglichst performant sein.</description>
+    <description lang="en">Confluence for xbian is based on Jezz_X' Confluence and has been customized with the Raspberry distribution xbian. Besides optical enhancements the skin comes with great performance.</description>
+    <description lang="nl">Confluence voor xbian is gebaseerd op Jezz_X' Confluence. Aangepast voor xbian voor optimale snelheid. Extra instellingen zijn toegevoegd. Weer widgets, systeem info en meer!</description>
+    <disclaimer lang="de">Das ist der Standard-Skin, nicht deinstallieren!</disclaimer>
+    <disclaimer lang="en">This is you default skin, do not uninstall!</disclaimer>
+    <disclaimer lang="nl">Dit is de standaard skin, niet verwijderen!</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
