@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <!-- Connection -->
+    <category label="30050">
+        <setting id="host" type="text" label="30000" default="127.0.0.1" />
+        <setting id="timeout" type="enum" label="30004" values="0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15" default="3"/>
+        <setting id="compression" type="enum" label="30001" lvalues="30053|30059|30060|30061" default="2" />
+        <setting id="priority" type="enum" label="30002" values="0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|99|100" default="10"/>
+        <setting id="handlemessages" type="bool" label="30005" default="true" />
+        <setting id="piconpath" type="folder" label="30077" default="" />
+        <setting id="clientname" type="text" label="30087" default="XBMC Mediacenter" />
+    </category>
+
+    <!-- VDR -->
+    <category label="30051">
+        <setting id="autochannelgroups" type="bool" label="30046" default="false" />
+        <setting id="audiotype" type="enum" label="30049" values="NONE|MP2|AC3|EAC3|AAC|LATM" default="1" />
+        <setting id="updatechannels" type="enum" label="30052" lvalues="30053|30054|30055|30056|30057|30058" default="3" />
+        <setting id="iframe" type="bool" label="30086" default="false" />
+    </category>
+
+    <!-- ChannelFilter -->
+    <category label="30067">
+        <setting id="ftachannels" type="bool" label="30068" default="true" />
+        <setting id="nativelangonly" type="bool" label="30069" default="false" />
+        <setting id="encryptedchannels" type="bool" label="30071" default="true" />
+        <setting id="caids" type="text" label="30070" default="" />
+    </category>
+
+    <!-- Time Shifting -->
+    <category label="30078">
+        <setting id="tsmethod" type="enum" label="30081" lvalues="30082|30083|30084" default="0" />
+        <setting id="tsbuffersize" type="number" label="30079" default="200" />
+        <setting id="tsbuffersizehdd" type="number" label="30085" default="1024" />
+        <setting id="tsfolder" type="folder" label="30080" default="" />
+    </category>
+</settings>
