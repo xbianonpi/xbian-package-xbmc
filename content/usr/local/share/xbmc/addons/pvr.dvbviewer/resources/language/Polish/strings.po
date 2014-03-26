@@ -1,16 +1,15 @@
 # XBMC Media Center language file
 # Addon Name: DVBViewer Client
 # Addon id: pvr.dvbviewer
-# Addon version: 1.6.5
-# Addon Provider: jdembski, A600
+# Addon Provider: jdembski, A600, Manuel Mausz, Portisch
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/pl/)\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/xbmc-main/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,40 +18,56 @@ msgstr ""
 
 msgctxt "#30000"
 msgid "DVBViewer Recording Service IP Address"
-msgstr "Adres IP usługi nagrywania DVBViewer"
+msgstr "Adres IP usługi DVBViewer Recording Service"
 
 msgctxt "#30001"
 msgid "Webinterface Port"
 msgstr "Port interfejsu webowego"
 
 msgctxt "#30002"
-msgid "Streaming Port"
-msgstr "Port strumieniowania"
+msgid "Username"
+msgstr "Nazwa użytkownika"
 
 msgctxt "#30003"
-msgid "Recordings Port"
-msgstr "Port nagrywania"
-
-msgctxt "#30004"
-msgid "Username"
-msgstr "Użytkownik"
-
-msgctxt "#30005"
 msgid "Password"
 msgstr "Hasło"
 
-msgctxt "#30006"
-msgid "Load channels from favourites.xml instead of from channels.dat"
-msgstr "Załaduj kanały z favourites.xml zamiast z channels.dat"
+msgctxt "#30010"
+msgid "Use favourites instead of channel list"
+msgstr "Używaj ulubionych zamiast listy kanałów"
 
-msgctxt "#30007"
+msgctxt "#30011"
+msgid "Use local favourites file"
+msgstr "Używaj lokalnego pliku ulubionych"
+
+msgctxt "#30012"
 msgid "Select the favourites.xml file"
 msgstr "Wybierz plik favourites.xml"
 
+msgctxt "#30020"
+msgid "Enable Timeshift"
+msgstr "Włącz funkcję przesunięcia czasowego"
+
+msgctxt "#30021"
+msgid "Timeshift buffer path"
+msgstr "Ścieżka do pliku bufora przesunięcia czasowego"
+
+msgctxt "#30030"
+msgid "Use RTSP streaming for live TV"
+msgstr "Używaj RTSP do strumieniowania telewizji"
+
+msgctxt "#30100"
+msgid "General"
+msgstr "Ogólne"
+
+msgctxt "#30101"
+msgid "Advanced"
+msgstr "Zaawansowane"
+
 msgctxt "#30500"
 msgid "Can't connect to the Recording Service"
-msgstr "Nie można połączyć się z usługą nagrywania"
+msgstr "Problem z połączeniem z usługą Recording Service"
 
 msgctxt "#30501"
-msgid "Recording Service version 1.%d or higher required"
-msgstr "Usługa nagrywania potrzebna w wersji 1.%d lub wyższej"
+msgid "Recording Service version %s or higher required"
+msgstr "Usługa Recording Service wymagana w wersji %s lub nowszej"
