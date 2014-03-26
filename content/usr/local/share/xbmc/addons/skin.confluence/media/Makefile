@@ -1,5 +1,5 @@
 TARGET=Textures.xbt
-XBMCTEX=/mnt/src/git-mk01/xbmc-rpi/tools/TexturePacker/TexturePacker
+XBMCTEX=/opt/xbmc-Gotham/tools/TexturePacker/TexturePacker
 
 IMAGES := $(shell find . -name "*jpg")
 IMAGES += $(shell find . -name "*png")
@@ -17,7 +17,7 @@ else
 
 endif
 $(XBMCTEX): force
-	$(MAKE) -C /mnt/src/git-mk01/xbmc-rpi/tools/TexturePacker
+	$(MAKE) -C /opt/xbmc-Gotham/tools/TexturePacker
 
 clean:
 	rm -f $(TARGET)
