@@ -22,6 +22,8 @@ checkdb() {
 # set noCoW flag for database files
 for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
 
+    [ -e "$d.old" ] && rm -fr "$d.old"
+    [ -e "$d.old" ] && exit 1
     mv "$d" "$d.old"
     mkdir "$d"
     chattr +C "$d"
