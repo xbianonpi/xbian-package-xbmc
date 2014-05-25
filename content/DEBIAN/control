@@ -1,11 +1,11 @@
 Origin: XBian
 Package: xbian-package-xbmc
-Version: 3.0.0
+Version: 3.1.0-2
 Section: video
 Priority: optional
 Architecture: armhf
-Depends: libvorbisenc2, xbian-package-firmware (>=1.4.14-0), libxslt1.1, xbian-package-xbmc-scripts, xbian-package-libtag (>=1.0-1), libbluetooth3, xbian-package-cec (>= 1.0), libmad0, libtiff4, libcurl3-gnutls, libafpclient0, python, python-sqlite, libmysqlclient18, libtinyxml2.6.2, libyajl2, liblzo2-2, libpython2.7, libpcrecpp0, libcdio13, libsamplerate0, libsmbclient, libssh-4, libavahi-client3, libmicrohttpd10, libpng12-0, fontconfig-config, libaacs0, libass4, libbluray1, libenca0, libfontconfig1, libjasper1, ttf-dejavu-core, libhal1, libhal-storage1, xbian-package-shairplay
+Depends: libnfs1, libvorbisenc2, xbian-package-firmware (>=1.4.14-0), libxslt1.1, xbian-package-xbmc-scripts, xbian-package-libtag (>=1.0-1), libbluetooth3, xbian-package-cec (>= 1.0), libmad0, libtiff4, libcurl3-gnutls, libafpclient0, python, python-sqlite, libmysqlclient18, libtinyxml2.6.2, libyajl2, liblzo2-2, libpython2.7, libpcrecpp0, libcdio13, libsamplerate0, libsmbclient, libssh-4, libavahi-client3, libmicrohttpd10, libpng12-0, fontconfig-config, libaacs0, libass4, libbluray1, libenca0, libfontconfig1, libjasper1, ttf-dejavu-core, libhal1, libhal-storage1, xbian-package-shairplay
 Replaces: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
 Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
 Maintainer: Koenkk <development@xbian.org>
-Description: XBMC (13.0 Gotham)
+Description: XBMC (13.1 Beta2 Gotham)

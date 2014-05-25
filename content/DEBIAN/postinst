@@ -24,7 +24,7 @@ for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
 
     [ -e "$d.old" ] && rm -fr "$d.old"
     [ -e "$d.old" ] && exit 1
-    mv "$d" "$d.old"
+    mv -T "$d" "$d.old"
     mkdir "$d"
     chattr +C "$d"
     cp -r $d.old/* "$d"
@@ -33,7 +33,7 @@ for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
         chown -Rc xbian:xbian "$d" > /dev/null
     else
         rm -fr "$d"
-        mv "$d".old "$d"
+        mv -T "$d".old "$d"
         exit 1
     fi
 
