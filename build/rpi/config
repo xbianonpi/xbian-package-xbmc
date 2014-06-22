@@ -1,0 +1,6 @@
+config_source_configure=./configure --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --disable-debug --enable-libbluray --disable-crystalhd --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp  --disable-pulse --disable-alsa --disable-projectm --with-platform=raspberry-pi --enable-libcec --enable-player=omxplayer
+config_build_env=schroot -c armhfwheezy -p --
+config_source_branch=Gotham
+config_deb_version=13.2
+config_source_addr=https://github.com/xbmc/xbmc.git
+

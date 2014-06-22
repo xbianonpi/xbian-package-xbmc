@@ -1,0 +1,11 @@
+config_source_type=git
+config_source_type_extra=--single-branch --depth 1
+config_source_keep=yes
+config_source_reset=yes
+config_source_refresh=yes
+config_source_prepare=./bootstrap
+config_build_make=make
+config_build_targets=
+config_install_targets=install
+config_deb_contentclean=yes
+

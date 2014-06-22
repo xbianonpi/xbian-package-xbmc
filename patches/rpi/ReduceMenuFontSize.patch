@@ -1,0 +1,21 @@
+--- a/addons/skin.confluence/720p/Font.xml
++++ b/addons/skin.confluence/720p/Font.xml
+@@ -82,8 +82,9 @@
+ 
+ 	 	<font>
+ 			<name>font_MainMenu</name>
+-			<filename>DejaVuSans-Bold-Caps.ttf</filename>
+-			<size>35</size>
++			<filename>Roboto-Bold.ttf</filename>
++			<style>uppercase</style>
++			<size>40</size>
+ 		</font>
+ 	 	<font>
+ 			<name>WeatherTemp</name>
+@@ -287,4 +288,4 @@
+ 			<style>bold</style>
+ 		</font>
+ 	</fontset>
+-</fonts>
++</fonts>
+\ No newline at end of file

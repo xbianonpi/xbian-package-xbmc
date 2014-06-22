@@ -1,0 +1,120 @@
+--- a/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
++++ b/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
+@@ -169,6 +169,9 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
+     {
+       ActivateSource();
+     }
++    // if we disable render on TV power on/off events, we have to enable it again screensaver off
++    // to get screen updates for VNC sessions
++    g_application.SetCecStandby(false);
+   }
+   else if (flag == GUI && !strcmp(sender, "xbmc") && !strcmp(message, "OnScreensaverActivated") && m_bIsReady)
+   {
+@@ -179,6 +182,8 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
+       if (m_cecAdapter->IsLibCECActiveSource())
+         StandbyDevices();
+     }
++    if (!m_cecAdapter->IsLibCECActiveSource() || m_configuration.bPowerOffScreensaver == 1 && m_bStandbyPending)
++      g_application.SetCecStandby(true);
+   }
+   else if (flag == System && !strcmp(sender, "xbmc") && !strcmp(message, "OnSleep"))
+   {
+@@ -631,6 +636,15 @@ int CPeripheralCecAdapter::CecCommand(void *cbParam, const cec_command command)
+         else if (adapter->m_configuration.bShutdownOnStandby == 1)
+           CApplicationMessenger::Get().Shutdown();
+       }
++      if (command.initiator == CECDEVICE_TV)
++      {
++        g_application.SetCecStandby(true);
++      }
++      break;
++    case CEC_OPCODE_MENU_REQUEST:
++      {
++        CecSourceActivated(cbParam, (cec_logical_address)0xf, 1);
++      }
+       break;
+     case CEC_OPCODE_SET_MENU_LANGUAGE:
+       if (adapter->m_configuration.bUseTVMenuLanguage == 1 && command.initiator == CECDEVICE_TV && command.parameters.size == 3)
+@@ -1128,7 +1142,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
+ 
+   // wake up the screensaver, so the user doesn't switch to a black screen
+   if (activated == 1)
++  {
++    g_application.SetCecStandby(false);
+     g_application.WakeUpScreenSaverAndDPMS();
++  }
++  else
++  {
++    g_application.SetCecStandby(true);
++  }
+ 
+   if (adapter->GetSettingBool("pause_playback_on_deactivate"))
+   {
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -405,6 +405,7 @@ CApplication::CApplication(void)
+   m_skinReloading = false;
+   m_skinReverting = false;
+   m_loggingIn = false;
++  m_cecStandby = false;
+ 
+ #ifdef HAS_GLX
+   XInitThreads();
+@@ -467,7 +468,10 @@ bool CApplication::OnEvent(XBMC_Event& newEvent)
+   {
+     case XBMC_QUIT:
+       if (!g_application.m_bStop)
++      {
++        g_application.SetCecStandby(false);
+         CApplicationMessenger::Get().Quit();
++      }
+       break;
+     case XBMC_KEYDOWN:
+       g_application.OnKey(g_Keyboard.ProcessKeyDown(newEvent.key.keysym));
+@@ -2186,12 +2190,27 @@ float CApplication::GetDimScreenSaverLevel() const
+   return 100.0f;
+ }
+ 
++void CApplication::SetCecStandby(bool status)
++{
++  if (status == m_cecStandby)
++    return;
++
++  CLog::Log(LOGDEBUG, "%s is %x", __FUNCTION__, (int)status);
++
++  m_cecStandby = status;
++}
++
+ void CApplication::Render()
+ {
+   // do not render if we are stopped or in background
+   if (m_bStop)
+     return;
+ 
++  if (m_cecStandby) {
++    Sleep(500);
++    return;
++  }
++
+   MEASURE_FUNCTION;
+ 
+   int vsync_mode = CSettings::Get().GetInt("videoscreen.vsync");
+--- a/xbmc/Application.h
++++ b/xbmc/Application.h
+@@ -349,6 +349,8 @@ public:
+   ReplayGainSettings& GetReplayGainSettings() { return m_replayGainSettings; }
+ 
+   void SetLoggingIn(bool loggingIn) { m_loggingIn = loggingIn; }
++  void SetCecStandby(bool status);
++  bool GetCecStandby() { return m_cecStandby; }
+ 
+ protected:
+   virtual bool OnSettingsSaving() const;
+@@ -367,6 +369,7 @@ protected:
+   bool m_skinReverting;
+ 
+   bool m_loggingIn;
++  bool m_cecStandby;
+ 
+ #if defined(TARGET_DARWIN_IOS)
+   friend class CWinEventsIOS;

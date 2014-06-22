@@ -1,0 +1,24 @@
+--- a/xbmc/threads/platform/pthreads/ThreadImpl.cpp
++++ b/xbmc/threads/platform/pthreads/ThreadImpl.cpp
+@@ -144,6 +144,9 @@ bool CThread::SetPriority(const int iPriority)
+ {
+   bool bReturn = false;
+ 
++// MK
++  return true;
++
+   // wait until thread is running, it needs to get its lwp id
+   m_StartEvent.Wait();
+   
+--- a/xbmc/threads/platform/win/ThreadImpl.cpp
++++ b/xbmc/threads/platform/win/ThreadImpl.cpp
+@@ -107,6 +107,9 @@ bool CThread::SetPriority(const int iPriority)
+ {
+   bool bReturn = false;
+ 
++// MK
++  return true;
++
+   CSingleLock lock(m_CriticalSection);
+   if (m_ThreadOpaque.handle)
+   {

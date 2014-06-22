@@ -1,0 +1,25 @@
+diff --git a/configure.in b/configure.in
+index a195d00..1ae23e2 100644
+--- a/configure.in
++++ b/configure.in
+@@ -746,9 +746,8 @@ case $use_platform in
+      ARCH="arm"
+      AC_DEFINE(HAS_EGLGLES, [1], [Define if supporting EGL based GLES Framebuffer])
+      USE_OMXLIB=1; AC_DEFINE([HAVE_OMXLIB],[1],["Define to 1 if OMX libs is enabled"])
+-     CFLAGS="$CFLAGS"
+-     CXXFLAGS="$CXXFLAGS"
+      ffmpeg_target_os=linux
++     use_static_ffmpeg=no
+      ;;
+ esac
+ 
+@@ -849,6 +848,9 @@ if test "$host_vendor" = "apple" ; then
+ elif test "$target_platform" = "target_raspberry_pi"; then
+   ARCH="arm"
+   use_arch="arm"
++  CFLAGS="$CFLAGS -pipe -O3 -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
++  CXXFLAGS="$CXXFLAGS -pipe -O3 -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
++  FFMPEG_EXTRACFLAGS="$FFMPEG_EXTRACFLAGS -pipe -O3 -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
+ elif test "$use_arch" = "arm"; then
+   CFLAGS="$CFLAGS -mno-apcs-stack-check"
+   CXXFLAGS="$CXXFLAGS -mno-apcs-stack-check"

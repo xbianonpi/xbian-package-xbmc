@@ -1,0 +1,111 @@
+ xbmc/interfaces/legacy/Monitor.h    |   20 ++++++++++++++++++++
+ xbmc/interfaces/python/XBPython.cpp |   30 ++++++++++++++++++++++++++++++
+ xbmc/interfaces/python/XBPython.h   |    2 ++
+ 3 files changed, 52 insertions(+)
+
+diff --git a/xbmc/interfaces/legacy/Monitor.h b/xbmc/interfaces/legacy/Monitor.h
+index 55953cb..e1efccb 100644
+--- a/xbmc/interfaces/legacy/Monitor.h
++++ b/xbmc/interfaces/legacy/Monitor.h
+@@ -44,6 +44,8 @@ namespace XBMCAddon
+       inline void    OnScreensaverDeactivated() { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor>(this,&Monitor::onScreensaverDeactivated)); }
+       inline void    OnDatabaseUpdated(const String &database) { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor,const String>(this,&Monitor::onDatabaseUpdated,database)); }
+       inline void    OnDatabaseScanStarted(const String &database) { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor,const String>(this,&Monitor::onDatabaseScanStarted,database)); }
++      inline void    OnCleanStarted(const String &database) { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor,const String>(this,&Monitor::onCleanStarted,database)); }
++      inline void    OnCleanFinished(const String &database) { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor,const String>(this,&Monitor::onCleanFinished,database)); }
+       inline void    OnAbortRequested() { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor>(this,&Monitor::onAbortRequested)); }
+       inline void    OnNotification(const String &sender, const String &method, const String &data) { XBMC_TRACE; invokeCallback(new CallbackFunction<Monitor,const String,const String,const String>(this,&Monitor::onNotification,sender,method,data)); }
+ 
+@@ -90,6 +92,24 @@ namespace XBMCAddon
+       virtual void    onDatabaseScanStarted(const String database) { XBMC_TRACE; }
+       
+       /**
++       * onCleanStarted(database) -- onCleanStarted method.\n
++       * \n
++       * database : video/music as string\n
++       * \n
++       * Will be called when database clean starts and return video or music to indicated which DB is been cleaned\n
++       */
++      virtual void    onCleanStarted(const String database) { XBMC_TRACE; }
++
++      /**
++       * onCleanFinished(database) -- onCleanFinished method.\n
++       * \n
++       * database : video/music as string\n
++       * \n
++       * Will be called when database clean ends and return video or music to indicate which DB has been cleaned\n
++       */
++      virtual void    onCleanFinished(const String database) { XBMC_TRACE; }
++
++      /**
+        * onAbortRequested() -- onAbortRequested method.\n
+        * \n
+        * Will be called when XBMC requests Abort\n
+diff --git a/xbmc/interfaces/python/XBPython.cpp b/xbmc/interfaces/python/XBPython.cpp
+index 01a129e..556c6c8 100644
+--- a/xbmc/interfaces/python/XBPython.cpp
++++ b/xbmc/interfaces/python/XBPython.cpp
+@@ -94,6 +94,10 @@ void XBPython::Announce(AnnouncementFlag flag, const char *sender, const char *m
+      OnDatabaseUpdated("video");
+    else if (strcmp(message, "OnScanStarted") == 0)
+      OnDatabaseScanStarted("video");
++   else if (strcmp(message, "OnCleanStarted") == 0)
++     OnCleanStarted("video");
++   else if (strcmp(message, "OnCleanFinished") == 0)
++     OnCleanFinished("video");
+   }
+   else if (flag & AudioLibrary)
+   {
+@@ -101,6 +105,10 @@ void XBPython::Announce(AnnouncementFlag flag, const char *sender, const char *m
+      OnDatabaseUpdated("music");
+    else if (strcmp(message, "OnScanStarted") == 0)
+      OnDatabaseScanStarted("music");
++   else if (strcmp(message, "OnCleanStarted") == 0)
++     OnCleanStarted("music");
++   else if (strcmp(message, "OnCleanFinished") == 0)
++     OnCleanFinished("music");
+   }
+   else if (flag & GUI)
+   {
+@@ -324,6 +332,28 @@ void XBPython::OnDatabaseScanStarted(const std::string &database)
+   }
+ }
+ 
++void XBPython::OnCleanStarted(const std::string &database)
++{
++  XBMC_TRACE;
++  LOCK_AND_COPY(std::vector<XBMCAddon::xbmc::Monitor*>,tmp,m_vecMonitorCallbackList);
++  for (MonitorCallbackList::iterator it = tmp.begin(); (it != tmp.end()); ++it)
++  {
++    if (CHECK_FOR_ENTRY(m_vecMonitorCallbackList,(*it)))
++      (*it)->OnCleanStarted(database);
++  }
++}
++
++void XBPython::OnCleanFinished(const std::string &database)
++{
++  XBMC_TRACE;
++  LOCK_AND_COPY(std::vector<XBMCAddon::xbmc::Monitor*>,tmp,m_vecMonitorCallbackList);
++  for (MonitorCallbackList::iterator it = tmp.begin(); (it != tmp.end()); ++it)
++  {
++    if (CHECK_FOR_ENTRY(m_vecMonitorCallbackList,(*it)))
++      (*it)->OnCleanFinished(database);
++  }
++}
++
+ void XBPython::OnAbortRequested(const CStdString &ID)
+ {
+   XBMC_TRACE;
+diff --git a/xbmc/interfaces/python/XBPython.h b/xbmc/interfaces/python/XBPython.h
+index fb73951..236be86 100644
+--- a/xbmc/interfaces/python/XBPython.h
++++ b/xbmc/interfaces/python/XBPython.h
+@@ -85,6 +85,8 @@ public:
+   void OnScreensaverDeactivated();
+   void OnDatabaseUpdated(const std::string &database);
+   void OnDatabaseScanStarted(const std::string &database);
++  void OnCleanStarted(const std::string &database);
++  void OnCleanFinished(const std::string &database);
+   void OnAbortRequested(const CStdString &ID="");
+   void OnNotification(const std::string &sender, const std::string &method, const std::string &data);
+ 
