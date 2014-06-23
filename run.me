@@ -1,3 +1,4 @@
 #!/bin/sh
 
-sh ../build.package $@
+[ -e "build.log" ] && mv build.log build.log.old
+sh ../build.package $@ 2>&1 | tee build.log
