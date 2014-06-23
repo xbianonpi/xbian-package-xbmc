@@ -1,5 +1,5 @@
 Origin: XBian
-Package: xbian-package-xbmc
+Package: __PKGNAME__
 Version: __VERSION__
 Section: video
 Priority: optional
@@ -8,4 +8,4 @@ Depends: libssl1.0.0, libudev0, libgcrypt11, libjpeg8, libgnutls26, libnfs1, lib
 Replaces: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
 Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
 Maintainer: Koenkk <development@xbian.org>
-Description: XBMC (13.2 Alpha2 Gotham for RPI)
+Description: XBMC (__ARCHBRANCH__)

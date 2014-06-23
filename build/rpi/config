@@ -2,5 +2,6 @@ config_source_configure=./configure --enable-gles --disable-sdl --disable-x11 --
 config_build_env=schroot -c armhfwheezy -p --
 config_source_branch=Gotham
 config_deb_version=13.2
+config_deb_pkgname=xbian-package-xbmc
 config_source_addr=https://github.com/xbmc/xbmc.git
 
