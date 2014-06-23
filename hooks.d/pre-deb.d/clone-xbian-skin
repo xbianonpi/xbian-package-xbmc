@@ -1,0 +1,3 @@
+
+git clone https://github.com/xbianonpi/xbian-package-xbmc-skin ./usr/local/share/xbmc/addons/skin.confluenceforxbian
+
