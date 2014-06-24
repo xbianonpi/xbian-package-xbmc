@@ -21,6 +21,7 @@
 ##
 ##
 
+[ -z "XBIANROOT" ] && XBIANROOT='..'
 
 [ -e "build.log" ] && mv build.log build.log.old
-sh ../build.img $@ 2>&1 | tee build.log
+sh $XBIANROOT/build.package $@ 2>&1 | tee build.log
