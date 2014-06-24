@@ -1,0 +1,4 @@
+
+[ $config_platform_branch = rpi-nightly ] || return
+
+make -C tools/depends/native/JsonSchemaBuilder
