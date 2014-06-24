@@ -1,2 +1,8 @@
 .DS_Store
 md5sums
+content/*
+build/*/working/*
+build.*
+*.deb
+._*
+src_repo_hash_HEAD
