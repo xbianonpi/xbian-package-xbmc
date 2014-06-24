@@ -1,3 +1,5 @@
 
+[ -d ./usr/local/share/xbmc/addons/skin.confluenceforxbian ] && return
+
 git clone -b master --depth 1 https://github.com/xbianonpi/xbian-package-xbmc-skin ./usr/local/share/xbmc/addons/skin.confluenceforxbian
 rm -fr ./usr/local/share/xbmc/addons/skin.confluenceforxbian/.git
