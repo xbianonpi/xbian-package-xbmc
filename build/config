@@ -8,4 +8,4 @@ config_build_make=make
 config_build_targets=
 config_install_targets=install
 config_deb_contentclean=yes
-
+config_wrapper=build.package
