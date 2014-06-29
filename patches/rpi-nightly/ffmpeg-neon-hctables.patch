@@ -5,10 +5,10 @@
        FFMPEG_OPTS="${FFMPEG_OPTS} --disable-optimizations"
      fi
 +    FFMPEG_OPTS="${FFMPEG_OPTS} --"
-+    if test "$use_neon" != "yes"; then
++    if test "$use_neon" = "no"; then
 +      FFMPEG_OPTS="${FFMPEG_OPTS} --disable-neon"
 +    fi
-+    if test "$use_neon" != "yes"; then
++    if test "$use_hardcoded_tables" = "yes"; then
 +      FFMPEG_OPTS="${FFMPEG_OPTS} --enable-hardcoded-tables"
 +    fi
  
