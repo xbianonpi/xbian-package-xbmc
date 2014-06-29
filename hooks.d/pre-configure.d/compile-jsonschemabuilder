@@ -1,4 +1,5 @@
 
-[ $config_platform_branch = rpi-nightly ] || return
+[ $config_platform_branch != rpi-nightly ] && return
 
+[ -e tools/depends/native/JsonSchemaBuilder/native ] && rm -fr tools/depends/native/JsonSchemaBuilder/native
 make -C tools/depends/native/JsonSchemaBuilder
