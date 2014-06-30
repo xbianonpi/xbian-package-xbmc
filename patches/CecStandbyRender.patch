@@ -52,15 +52,15 @@
    {
 --- a/xbmc/Application.cpp
 +++ b/xbmc/Application.cpp
-@@ -405,6 +405,7 @@ CApplication::CApplication(void)
-   m_skinReloading = false;
+@@ -406,6 +406,7 @@ CApplication::CApplication(void)
+   m_ePlayState = PLAY_STATE_NONE;
    m_skinReverting = false;
    m_loggingIn = false;
 +  m_cecStandby = false;
  
  #ifdef HAS_GLX
    XInitThreads();
-@@ -467,7 +468,10 @@ bool CApplication::OnEvent(XBMC_Event& newEvent)
+@@ -468,7 +469,10 @@ bool CApplication::OnEvent(XBMC_Event& newEvent)
    {
      case XBMC_QUIT:
        if (!g_application.m_bStop)
@@ -71,7 +71,7 @@
        break;
      case XBMC_KEYDOWN:
        g_application.OnKey(g_Keyboard.ProcessKeyDown(newEvent.key.keysym));
-@@ -2186,12 +2190,27 @@ float CApplication::GetDimScreenSaverLevel() const
+@@ -2174,12 +2178,27 @@ float CApplication::GetDimScreenSaverLevel() const
    return 100.0f;
  }
  
@@ -91,14 +91,32 @@
    if (m_bStop)
      return;
  
-+  if (m_cecStandby) {
++/*  if (m_cecStandby) {
 +    Sleep(500);
 +    return;
-+  }
++  }*/
 +
    MEASURE_FUNCTION;
  
    int vsync_mode = CSettings::Get().GetInt("videoscreen.vsync");
+@@ -2190,7 +2209,7 @@ void CApplication::Render()
+ 
+   {
+     // Less fps in DPMS
+-    bool lowfps = m_dpmsIsActive || g_Windowing.EnableFrameLimiter();
++    bool lowfps = m_dpmsIsActive || g_Windowing.EnableFrameLimiter() || m_cecStandby;
+     // Whether externalplayer is playing and we're unfocused
+     bool extPlayerActive = m_pPlayer->GetCurrentPlayer() == EPC_EXTPLAYER && m_pPlayer->IsPlaying() && !m_AppFocused;
+ 
+@@ -2218,6 +2237,8 @@ void CApplication::Render()
+           ResetScreenSaver();  // Prevent screensaver dimming the screen
+           singleFrameTime = 1000;  // 1 fps, high wakeup latency but v.low CPU usage
+         }
++        else if (m_cecStandby)
++          singleFrameTime = 500;
+         else if (lowfps)
+           singleFrameTime = 200;  // 5 fps, <=200 ms latency to wake up
+       }
 --- a/xbmc/Application.h
 +++ b/xbmc/Application.h
 @@ -349,6 +349,8 @@ public:
