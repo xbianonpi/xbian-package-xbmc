@@ -16,7 +16,7 @@ index a195d00..cf963f5 100644
       ffmpeg_target_os=linux
       ;;
 +  cubox-i)
-+     use_static_ffmpeg=no
++     use_static_ffmpeg=yes
 +     use_joystick=no
 +     use_sdl=no
 +     use_hardcoded_tables="yes"

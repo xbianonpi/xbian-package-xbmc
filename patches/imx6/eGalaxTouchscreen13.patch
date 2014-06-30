@@ -1,0 +1,223 @@
+--- a/xbmc/input/linux/LinuxInputDevices.cpp	2013-05-03 08:57:41.000000000 +0300
++++ b/xbmc/input/linux/LinuxInputDevices.cpp	2013-07-09 21:36:10.000000000 +0300
+@@ -317,8 +317,51 @@
+ 
+ static char remoteStatus = 0xFF; // paired, battery OK
+ 
++/* [AI]: calibration values */
++int calib_x_d = 1280;
++float calib_x_fact = -1.0f;
++int calib_y_d = 720;
++float calib_y_fact = -1.0f;
++int swap_axes = 0;
++unsigned int click_confines = 7;        ///< number of pixels that the pointer may move while the button is down to trigger a click
++FILE *c_fp;
++/* [AI]: calibration values */
++
+ CLinuxInputDevice::CLinuxInputDevice(const std::string fileName, int index)
+ {
++  /* [AI]: read calibration values from file */
++  /* open the file */
++  c_fp = fopen("/usr/share/eGalaxCalibration/touchscreen_axes_calib", "r");
++  if (c_fp == NULL)
++  {
++      printf("error reading file\n");
++  }
++  else
++  {
++    fscanf(c_fp, "calib_x_d=%d;calib_x_fact=%f;calib_y_d=%d;calib_y_fact=%f;swap_axes=%d;click_confines=%d\n",
++        &calib_x_d,
++        &calib_x_fact,
++        &calib_y_d,
++        &calib_y_fact,
++        &swap_axes,
++        &click_confines
++    );
++    printf("File touchscreen_axes_calib successfully read:\n");
++
++    /* close the file */
++    fclose(c_fp);
++  }
++
++  printf("  calib_x_d=%d;\n  calib_x_fact=%f;\n  calib_y_d=%d;\n  calib_y_fact=%f;\n  swap_axes=:%d;\n  click_confines=%d;",
++      calib_x_d,
++      calib_x_fact,
++      calib_y_d,
++      calib_y_fact,
++      swap_axes,
++      click_confines
++  );
++  /* [AI]: read calibration values from file */
++
+   m_fd = -1;
+   m_vt_fd = -1;
+   m_hasLeds = false;
+@@ -502,6 +545,16 @@
+ {
+   int code = levt.code;
+ 
++#define AI_VALUE_PRESS    (1)
++#define AI_VALUE_RELEASE  (0)
++  /* [AI]: only for touchscreens, when PRESS action occurs */
++  if(levt.code == BTN_TOUCH && levt.value == AI_VALUE_PRESS)
++  {
++    //CLog::Log(LOGWARNING, "[AI]: CLinuxInputDevice::KeyEvent: Hack coordinates \n");
++    m_mouseX = g_graphicsContext.GetWidth() + 2;
++    m_mouseY = g_graphicsContext.GetHeight() + 2;
++  }
++    
+   /* map touchscreen and smartpad events to button mouse */
+   if (code == BTN_TOUCH || code == BTN_TOOL_FINGER)
+     code = BTN_MOUSE;
+@@ -645,11 +698,19 @@
+   switch (levt.code)
+   {
+   case ABS_X:
+-    m_mouseX = levt.value;
++    //m_mouseX = levt.value;
++    if(swap_axes)
++      m_mouseY = g_graphicsContext.GetHeight() - (int)(((float)levt.value) * (calib_y_fact)) - calib_y_d;
++    else
++      m_mouseX = g_graphicsContext.GetWidth() - (int)(((float)levt.value) * (calib_x_fact)) - calib_x_d;
+     break;
+ 
+   case ABS_Y:
+-    m_mouseY = levt.value;
++    //m_mouseY = levt.value;
++    if(swap_axes)
++      m_mouseX = g_graphicsContext.GetWidth() - (int)(((float)levt.value) * (calib_x_fact)) - calib_x_d;
++    else
++      m_mouseY = g_graphicsContext.GetHeight() - (int)(((float)levt.value) * (calib_y_fact)) - calib_y_d;
+     break;
+   
+   case ABS_MISC:
+--- a/xbmc/input/MouseStat.cpp	
++++ b/xbmc/input/MouseStat.cpp
+@@ -20,10 +20,15 @@
+ 
+ #include "MouseStat.h"
+ #include "guilib/Key.h"
++#include "guilib/GraphicContext.h"
+ #include "settings/lib/Setting.h"
+ #include "utils/TimeUtils.h"
+ #include "windowing/WindowingFactory.h"
+ 
++/* [AI]: moved here from class */
++static unsigned int ai_screen_width = 1280, ai_screen_height = 720;
++extern unsigned int click_confines;
++
+ CMouseStat::CMouseStat()
+ {
+   m_pointerState = MOUSE_STATE_NORMAL;
+@@ -49,33 +54,70 @@
+ }
+ 
+ void CMouseStat::Initialize()
+-{
++{  
+   // Set the default resolution (PAL)
+   SetResolution(720, 576, 1, 1);
+ }
+ 
+ void CMouseStat::HandleEvent(XBMC_Event& newEvent)
+ {
++  int dx = 0;
++  int dy = 0;
++  int ignore_action = 0;
++
++  ai_screen_width = g_graphicsContext.GetWidth();
++  ai_screen_height = g_graphicsContext.GetHeight();
++  
++  /* [AI]: step 1: ignore button press, but keep state */
++  if(newEvent.motion.x > ai_screen_width || newEvent.motion.y > ai_screen_height)
++  {
++    //CLog::Log(LOGWARNING, "[AI] step 1: m_mouseState(%d,%d) newEvnt.motion(%d,%d)\n",
++    //  m_mouseState.x, m_mouseState.y, newEvent.motion.x, newEvent.motion.y
++    //);
++    ignore_action = 1;
++    newEvent.button.button = XBMC_BUTTON_LEFT;
++    newEvent.button.type = XBMC_MOUSEBUTTONDOWN;
++  }
++
+   // Save the mouse position and the size of the last move
+-  int dx, dy;
+-  if (newEvent.type == XBMC_MOUSEMOTION)
++
++  /* [AI]: step 2: ignore only first x movement after press */
++  if(newEvent.motion.x < ai_screen_width && newEvent.motion.y > ai_screen_height)
+   {
++    //CLog::Log(LOGWARNING, "[AI] step 2: m_mouseState(%d,%d) newEvnt.motion(%d,%d)\n",
++    //  m_mouseState.x, m_mouseState.y, newEvent.motion.x, newEvent.motion.y
++    //);
++    m_mouseState.x = newEvent.motion.x;
+     dx = newEvent.motion.x - m_mouseState.x;
+-    dy = newEvent.motion.y - m_mouseState.y;
++    m_mouseState.dx = dx;
++    m_mouseState.x  = std::max(0, std::min(m_maxX, m_mouseState.x + dx));
+   }
+-  else if (newEvent.type == XBMC_MOUSEBUTTONDOWN || newEvent.type == XBMC_MOUSEBUTTONUP)
++
++  /* [AI]: step 3: ignore only first y movement after press */
++  if(newEvent.motion.x > ai_screen_width && newEvent.motion.y < ai_screen_height)
+   {
+-    dx = newEvent.button.x - m_mouseState.x;
+-    dy = newEvent.button.y - m_mouseState.y;
++    //CLog::Log(LOGWARNING, "[AI] step 3: m_mouseState(%d,%d) newEvnt.motion(%d,%d)\n",
++    //  m_mouseState.x, m_mouseState.y, newEvent.motion.x, newEvent.motion.y
++    //);
++    m_mouseState.y = newEvent.motion.y;
++    dy = newEvent.motion.y - m_mouseState.y;
++    m_mouseState.dy = dy;
++    m_mouseState.y  = std::max(0, std::min(m_maxY, m_mouseState.y + dy));
+   }
+-  else
++
++  /* [AI]: update both from now on */
++  if(newEvent.motion.x < ai_screen_width && newEvent.motion.y < ai_screen_height)
+   {
+-    return;
++    //CLog::Log(LOGWARNING, "[AI] normal: m_mouseState(%d,%d) newEvnt.motion(%d,%d)\n",
++    //  m_mouseState.x, m_mouseState.y, newEvent.motion.x, newEvent.motion.y
++    //);
++    dx = newEvent.motion.x - m_mouseState.x;
++    m_mouseState.dx = dx;
++    m_mouseState.x  = std::max(0, std::min(m_maxX, m_mouseState.x + dx));
++    dy = newEvent.motion.y - m_mouseState.y;
++    m_mouseState.dy = dy;
++    m_mouseState.y  = std::max(0, std::min(m_maxY, m_mouseState.y + dy));
+   }
+-  m_mouseState.dx = dx;
+-  m_mouseState.dy = dy;
+-  m_mouseState.x  = std::max(0, std::min(m_maxX, m_mouseState.x + dx));
+-  m_mouseState.y  = std::max(0, std::min(m_maxY, m_mouseState.y + dy));
+ 
+   // Fill in the public members
+   if (newEvent.button.type == XBMC_MOUSEBUTTONDOWN)
+@@ -112,7 +154,15 @@
+ 
+     // CButtonState::Update does the hard work of checking the button state
+     // and spotting drags, doubleclicks etc
+-    CButtonState::BUTTON_ACTION action = m_buttonState[i].Update(now, m_mouseState.x, m_mouseState.y, m_mouseState.button[i]);
++    CButtonState::BUTTON_ACTION action = CButtonState::MB_NONE;
++
++    if(!ignore_action)
++      action = m_buttonState[i].Update(now, m_mouseState.x, m_mouseState.y, m_mouseState.button[i]);
++
++    //CLog::Log(LOGWARNING, "[AI]: |   (%d)dx,dy:(%d,%d),newEvent.motion:(%d,%d)\n",
++    //  i, dx, dy, newEvent.motion.x, newEvent.motion.y);
++    //CLog::Log(LOGWARNING, "[AI]: |   (%d)m_mouseState(%d,%d),m_mouseState.button[i]:%d,action:%d",
++    //  i, m_mouseState.x, m_mouseState.y, m_mouseState.button[i], action);
+     switch (action)
+     {
+     case CButtonState::MB_SHORT_CLICK:
+--- a/xbmc/input/MouseStat.h	2013-05-03 08:57:41.000000000 +0300
++++ b/xbmc/input/MouseStat.h	2013-07-09 21:31:55.000000000 +0300
+@@ -123,7 +123,7 @@
+      */
+     BUTTON_ACTION Update(unsigned int time, int x, int y, bool down);
+   private:
+-    static const unsigned int click_confines = 5;        ///< number of pixels that the pointer may move while the button is down to trigger a click
++    //static const unsigned int click_confines = 7;        ///< number of pixels that the pointer may move while the button is down to trigger a click
+     static const unsigned int short_click_time = 1000;   ///< time for mouse down/up to trigger a short click rather than a long click
+     static const unsigned int double_click_time = 500;   ///< time for mouse down following a short click to trigger a double click
+ 
