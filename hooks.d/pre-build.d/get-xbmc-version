@@ -3,4 +3,4 @@ TAG=$(grep VERSION_TAG xbmc/GUIInfoManager.h | awk '{print $3}' | tr -d '"')
 MAJOR=$(grep VERSION_MAJOR xbmc/GUIInfoManager.h | awk '{print $3}' | tr -d '"')
 MINOR=$(grep VERSION_MINOR xbmc/GUIInfoManager.h | awk '{print $3}' | tr -d '"')
 
-sed -i "s%config_deb_version=.*%config_deb_version=$MAJOR.$MINOR$TAG%"  ../config
+sed -i "s%config_deb_version=.*%config_deb_version=$MAJOR.$MINOR$TAG%"  ../config_pkgver

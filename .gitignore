@@ -6,3 +6,4 @@ build.*
 *.deb
 ._*
 src_repo_hash_HEAD
+config_pkgver
