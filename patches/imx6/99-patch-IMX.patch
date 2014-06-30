@@ -380,3 +380,16 @@ index df7b3b7..f7d5a47 100644
  
    EGLNativeDisplayType m_display;
    EGLNativeWindowType  m_window;
+--- a/xbmc/xbmc.cpp
++++ b/xbmc/xbmc.cpp
+@@ -74,10 +74,6 @@
+     return status;
+   }
+     
+-  if (!showXBMCSplash) {
+-    system("/usr/bin/splash --force --black");
+-  }
+-
+   try
+   {
+     status = g_application.Run();
