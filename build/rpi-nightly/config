@@ -4,4 +4,4 @@ config_source_branch=master
 config_deb_version=14.0
 config_source_addr=https://github.com/xbmc/xbmc.git
 config_deb_pkgname=xbian-package-xbmc-nightly
-config_deb_ctrlextra=Provides: xbian-package-xbmc\\nConflicts: xbian-package-xbmc
+config_deb_ctrlextra=Provides: xbian-package-xbmc\\nConflicts: xbian-package-xbmc, xbian-package-xbmc-alsa
