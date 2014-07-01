@@ -225,16 +225,6 @@ index b48a4fc..3270bc9 100644
  
    void **hints;
  
-@@ -771,8 +774,8 @@ void CAESinkALSA::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
-        * found by the enumeration process. Skip them as well ("hw", "dmix",
-        * "plughw", "dsnoop"). */
- 
-+      /* For wandboard all devices are prefixed by sysdefault so do not ignore them */
-       else if (baseName != "default"
--            && baseName != "sysdefault"
-             && baseName != "surround40"
-             && baseName != "surround41"
-             && baseName != "surround50"
 @@ -881,6 +884,22 @@ void CAESinkALSA::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
  
  AEDeviceType CAESinkALSA::AEDeviceTypeFromName(const std::string &name)

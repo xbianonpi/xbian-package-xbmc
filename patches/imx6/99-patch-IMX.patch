@@ -1,5 +1,5 @@
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-index 3dc64a3..de00d0b 100644
+index 3dc64a3..bdc3eb2 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 @@ -18,6 +18,8 @@
@@ -161,7 +161,7 @@ index 3dc64a3..de00d0b 100644
    return true;
  }
  
-@@ -176,34 +182,52 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
+@@ -176,34 +182,53 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
  {
    std::string mode;
    get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
@@ -188,6 +188,7 @@ index 3dc64a3..de00d0b 100644
      return false;
 +  }
  
++  eglWaitGL();
 +  ShowWindow(false);
    DestroyNativeWindow();
    DestroyNativeDisplay();
@@ -223,7 +224,7 @@ index 3dc64a3..de00d0b 100644
  bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
  {
    if (m_readonly)
-@@ -211,17 +235,21 @@ bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutio
+@@ -211,17 +236,21 @@ bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutio
  
    std::string valstr;
    get_sysfs_str("/sys/class/graphics/fb0/modes", valstr);
@@ -247,39 +248,25 @@ index 3dc64a3..de00d0b 100644
    }
    return resolutions.size() > 0;
  }
-@@ -233,48 +261,66 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
+@@ -233,48 +262,57 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
  
  bool CEGLNativeTypeIMX::ShowWindow(bool show)
  {
--  // Force vsync by default
--  eglSwapInterval(g_Windowing.GetEGLDisplay(), 1);
--  EGLint result = eglGetError();
--  if(result != EGL_SUCCESS)
--    CLog::Log(LOGERROR, "EGL error in %s: %x",__FUNCTION__, result);
 +  if (m_show == show || g_application.GetCecStandby() )
 +    return true;
- 
--  return false;
++
 +  m_show = show;
 +
 +  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, show?"show":"hide");
 +  set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
 +
-+//  RESOLUTION_INFO r;
-+//  GetNativeResolution(&r);
-+//  g_Windowing.ResetRenderSystem(r.iScreenWidth, r.iScreenHeight, true, r.fRefreshRate);
-+
-+//  if (!show)
-+//  {
-+//    g_Windowing.SetVSync(show);
-+//    eglWaitGL();
-+    // Force vsync by default
-+    eglSwapInterval(g_Windowing.GetEGLDisplay(), 1);
-+    EGLint result = eglGetError();
-+    if(result != EGL_SUCCESS)
-+      CLog::Log(LOGERROR, "EGL error in %s: %x",__FUNCTION__, result);
-+//  }
-+
+   // Force vsync by default
+   eglSwapInterval(g_Windowing.GetEGLDisplay(), 1);
+   EGLint result = eglGetError();
+   if(result != EGL_SUCCESS)
+     CLog::Log(LOGERROR, "EGL error in %s: %x",__FUNCTION__, result);
+ 
+-  return false;
 +  return true;
  }
  
@@ -339,28 +326,19 @@ index 3dc64a3..de00d0b 100644
  
  bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res) const
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.h b/xbmc/windowing/egl/EGLNativeTypeIMX.h
-index df7b3b7..f7d5a47 100644
+index df7b3b7..23cdcd9 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.h
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.h
-@@ -19,6 +19,8 @@
-  *  <http://www.gnu.org/licenses/>.
-  *
-  */
-+#include "rendering/gles/RenderSystemGLES.h"
-+
- #include <linux/fb.h>
- #include "EGLNativeType.h"
- #include "EGL/eglvivante.h"
-@@ -32,7 +34,7 @@ public:
+@@ -32,7 +32,7 @@ public:
    virtual bool  CheckCompatibility();
    virtual void  Initialize();
    virtual void  Destroy();
 -  virtual int   GetQuirks() { return EGL_QUIRK_NONE; }
-+  virtual int   GetQuirks() { return /*EGL_QUIRK_NONE; */ EGL_QUIRK_DESTROY_NATIVE_WINDOW_WITH_SURFACE | EGL_QUIRK_KEEP_CONTEXT; }
++  virtual int   GetQuirks() { return EGL_QUIRK_KEEP_CONTEXT; }
  
    virtual bool  CreateNativeDisplay();
    virtual bool  CreateNativeWindow();
-@@ -47,13 +49,16 @@ public:
+@@ -47,13 +47,16 @@ public:
    virtual bool  ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions);
    virtual bool  GetPreferredResolution(RESOLUTION_INFO *res) const;
  
@@ -380,16 +358,3 @@ index df7b3b7..f7d5a47 100644
  
    EGLNativeDisplayType m_display;
    EGLNativeWindowType  m_window;
---- a/xbmc/xbmc.cpp
-+++ b/xbmc/xbmc.cpp
-@@ -74,10 +74,6 @@
-     return status;
-   }
-     
--  if (!showXBMCSplash) {
--    system("/usr/bin/splash --force --black");
--  }
--
-   try
-   {
-     status = g_application.Run();
