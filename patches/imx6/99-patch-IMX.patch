@@ -173,7 +173,7 @@ index 3dc64a3..bdc3eb2 100644
  bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
  {
 -  if (m_readonly)
-+  if (m_readonly || g_application.GetCecStandby())
++  if (m_readonly /*|| g_application.GetCecStandby()*/)
      return false;
  
 -  std::string mode;
@@ -252,7 +252,7 @@ index 3dc64a3..bdc3eb2 100644
  
  bool CEGLNativeTypeIMX::ShowWindow(bool show)
  {
-+  if (m_show == show || g_application.GetCecStandby() )
++  if (m_show == show /*|| g_application.GetCecStandby()*/ )
 +    return true;
 +
 +  m_show = show;
