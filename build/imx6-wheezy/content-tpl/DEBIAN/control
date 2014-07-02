@@ -1,0 +1,12 @@
+Origin: XBian
+Package: __PKGNAME__
+Version: __VERSION__
+Section: xbmc
+Priority: optional
+Architecture: armhf
+__PKGDEPS__
+Replaces: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+__CTRLEXTRA__
+Maintainer: Koenkk <development@xbian.org>
+Description: XBMC (__ARCHBRANCH__)
