@@ -14,7 +14,7 @@
        if (m_cecAdapter->IsLibCECActiveSource())
          StandbyDevices();
      }
-+    if (!m_cecAdapter->IsLibCECActiveSource() || m_configuration.bPowerOffScreensaver == 1 && m_bStandbyPending)
++    if (!m_cecAdapter->IsLibCECActiveSource() && m_configuration.bPowerOffScreensaver == 1)
 +      g_application.SetCecStandby(true);
    }
    else if (flag == System && !strcmp(sender, "xbmc") && !strcmp(message, "OnSleep"))
