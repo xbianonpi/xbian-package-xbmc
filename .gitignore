@@ -7,3 +7,4 @@ build.*
 ._*
 src_repo_hash_HEAD
 config_pkgver
+config_aptdir
