@@ -1,0 +1,2 @@
+CFLAGS=-O3 -pipe -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9  -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations 
+CXXFLAGS=-O3 -pipe -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9  -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations 
