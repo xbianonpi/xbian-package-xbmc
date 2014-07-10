@@ -188,7 +188,7 @@ index 3dc64a3..bdc3eb2 100644
      return false;
 +  }
  
-+  eglWaitGL();
++  //eglWaitGL();
 +  ShowWindow(false);
    DestroyNativeWindow();
    DestroyNativeDisplay();
@@ -320,7 +320,7 @@ index 3dc64a3..bdc3eb2 100644
 +  val += '\n';
 +  write(fd, val.c_str(), val.size());
 +  close(fd);
-+
++  Sleep(300);
 +  return true;
  }
  
