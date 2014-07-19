@@ -1,4 +1,4 @@
-From 2cc969f3d8c11018cc9e3eef9cb386f3cd57e8e6 Mon Sep 17 00:00:00 2001
+From 67a002d7795dcea56c0655db96186026be9565a3 Mon Sep 17 00:00:00 2001
 From: anaconda <anaconda@menakite.eu>
 Date: Mon, 9 Jun 2014 21:48:16 +0200
 Subject: [PATCH] [python] Monitor: add onCleanStarted/onCleanFinished
@@ -75,7 +75,7 @@ index 31866c8..bc14101 100644
     PyModule_AddStringConstant(module, (char*)"__platform__", (char*)"ALL");
  
 diff --git a/xbmc/interfaces/python/XBPython.cpp b/xbmc/interfaces/python/XBPython.cpp
-index 0d6dabc..84dcfa5 100644
+index 099c042..cba242d 100644
 --- a/xbmc/interfaces/python/XBPython.cpp
 +++ b/xbmc/interfaces/python/XBPython.cpp
 @@ -94,6 +94,10 @@ void XBPython::Announce(AnnouncementFlag flag, const char *sender, const char *m
@@ -126,11 +126,11 @@ index 0d6dabc..84dcfa5 100644
 +  }
 +}
 +
- void XBPython::OnAbortRequested(const CStdString &ID)
+ void XBPython::OnAbortRequested(const std::string &ID)
  {
    XBMC_TRACE;
 diff --git a/xbmc/interfaces/python/XBPython.h b/xbmc/interfaces/python/XBPython.h
-index 0cf550e..18a53f4 100644
+index 6450152..8195233 100644
 --- a/xbmc/interfaces/python/XBPython.h
 +++ b/xbmc/interfaces/python/XBPython.h
 @@ -87,6 +87,8 @@ class XBPython :
@@ -139,7 +139,7 @@ index 0cf550e..18a53f4 100644
    void OnScanFinished(const std::string &library);
 +  void OnCleanStarted(const std::string &library);
 +  void OnCleanFinished(const std::string &library);
-   void OnAbortRequested(const CStdString &ID="");
+   void OnAbortRequested(const std::string &ID="");
    void OnNotification(const std::string &sender, const std::string &method, const std::string &data);
  
 -- 
