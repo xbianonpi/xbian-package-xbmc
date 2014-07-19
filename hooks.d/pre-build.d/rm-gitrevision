@@ -1,0 +1,2 @@
+
+rm -f xbmc/GitRevision.{P,o}

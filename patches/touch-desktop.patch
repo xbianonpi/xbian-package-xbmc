@@ -1,0 +1,11 @@
+--- WinSystem.cpp.orig	2014-07-19 03:48:21.000000000 +0200
++++ WinSystem.cpp	2014-07-19 03:48:28.363286923 +0200
+@@ -130,7 +130,7 @@
+   float refreshrate = resInfo.fRefreshRate;
+ 
+   // don't touch RES_DESKTOP
+-  for (unsigned int idx = 1; idx < resolutions.size(); idx++)
++  for (unsigned int idx = 0; idx < resolutions.size(); idx++)
+     if (   resolutions[idx].width == width
+         && resolutions[idx].height == height
+         &&(resolutions[idx].flags & D3DPRESENTFLAG_MODEMASK) == flags)

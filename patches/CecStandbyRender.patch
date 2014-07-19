@@ -14,12 +14,12 @@
        if (m_cecAdapter->IsLibCECActiveSource())
          StandbyDevices();
      }
-+    if (!m_cecAdapter->IsLibCECActiveSource() && m_configuration.bPowerOffScreensaver == 1)
++    if (!g_application.m_pPlayer->IsPlaying() && !m_cecAdapter->IsLibCECActiveSource() && m_configuration.bPowerOffScreensaver == 1)
 +      g_application.SetCecStandby(true);
    }
    else if (flag == System && !strcmp(sender, "xbmc") && !strcmp(message, "OnSleep"))
    {
-@@ -631,6 +636,15 @@ int CPeripheralCecAdapter::CecCommand(void *cbParam, const cec_command command)
+@@ -631,6 +636,10 @@ int CPeripheralCecAdapter::CecCommand(void *cbParam, const cec_command command)
          else if (adapter->m_configuration.bShutdownOnStandby == 1)
            CApplicationMessenger::Get().Shutdown();
        }
@@ -27,15 +27,10 @@
 +      {
 +        g_application.SetCecStandby(true);
 +      }
-+      break;
-+    case CEC_OPCODE_MENU_REQUEST:
-+      {
-+        CecSourceActivated(cbParam, (cec_logical_address)0xf, 1);
-+      }
        break;
      case CEC_OPCODE_SET_MENU_LANGUAGE:
        if (adapter->m_configuration.bUseTVMenuLanguage == 1 && command.initiator == CECDEVICE_TV && command.parameters.size == 3)
-@@ -1128,7 +1142,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
+@@ -1128,7 +1137,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
  
    // wake up the screensaver, so the user doesn't switch to a black screen
    if (activated == 1)
