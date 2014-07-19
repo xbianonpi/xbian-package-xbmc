@@ -1,5 +1,5 @@
---- a/tools/EventClients/Clients/WiiRemote/Makefile 	
-+++ b/tools/EventClients/Clients/WiiRemote/Makefile 	
+--- a/tools/EventClients/Clients/WiiRemote/Makefile
++++ b/tools/EventClients/Clients/WiiRemote/Makefile
 @@ -7,7 +7,7 @@
  
  all:
