@@ -1,0 +1,27 @@
+From c62f5a5bf26a1b8c64f5eb6b950cb766d0819e35 Mon Sep 17 00:00:00 2001
+From: popcornmix <popcornmix@gmail.com>
+Date: Sat, 22 Mar 2014 16:40:01 +0000
+Subject: [PATCH] Enable PYTHONOPTIMIZE for Pi
+
+---
+ xbmc/interfaces/python/XBPython.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/xbmc/interfaces/python/XBPython.cpp b/xbmc/interfaces/python/XBPython.cpp
+index cba242d..35a4509 100644
+--- a/xbmc/interfaces/python/XBPython.cpp
++++ b/xbmc/interfaces/python/XBPython.cpp
+@@ -492,6 +492,10 @@ bool XBPython::InitializeEngine()
+       }
+ #endif
+ 
++// Lets enable for Pi
++#if defined(TARGET_RASPBERRY_PI)
++   setenv("PYTHONOPTIMIZE", "1", 1);
++#endif
+ 
+ // Darwin packs .pyo files, we need PYTHONOPTIMIZE on in order to load them.
+ #if defined(TARGET_DARWIN)
+-- 
+2.0.3
+
