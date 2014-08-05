@@ -1,3 +1,5 @@
+diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
+index 3dc64a3..c878d1c 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 @@ -18,6 +18,8 @@
@@ -9,23 +11,24 @@
  #include <linux/mxcfb.h>
  #include "system.h"
  #include <EGL/egl.h>
-@@ -34,9 +36,15 @@
+@@ -34,10 +36,15 @@
  #include "windowing/WindowingFactory.h"
  #include "cores/AudioEngine/AEFactory.h"
  #include <fstream>
 +#include "settings/Settings.h"
 +
 +#include "stdlib.h"
-+
-+#include <linux/vt.h>
  
  CEGLNativeTypeIMX::CEGLNativeTypeIMX()
-   : m_display(NULL)
-+  , m_show(false)
+-  : m_display(NULL)
++  : m_aResume(false)
    , m_window(NULL)
++  , m_display(NULL)
++  , m_show(true)
  {
  }
-@@ -55,40 +63,28 @@
+ 
+@@ -55,40 +62,25 @@ void CEGLNativeTypeIMX::Initialize()
  {
    int fd;
  
@@ -35,37 +38,37 @@
 -    CLog::Log(LOGERROR, "%s - Error while opening /dev/fb0.\n", __FUNCTION__);
 -    return;
 -  }
-+  system("/usr/bin/splash --force -b");
- 
+-
 -  // Unblank the fb
 -  if (ioctl(fd, FBIOBLANK, 0) < 0)
 -  {
 -    CLog::Log(LOGERROR, "%s - Error while unblanking fb0.\n", __FUNCTION__);
 -  }
-+  // Force double-buffering
-+  CEnvironment::setenv("FB_MULTI_BUFFER", "2", 0);
- 
+-
 -  close(fd);
++  system("/usr/bin/splash --force -b");
 +  CLog::Log(LOGDEBUG, "%s\n", __FUNCTION__);
  
-+  m_readonly = true;
++  CSettings::Get().SetInt("audiooutput.streamsilence", -1);
++  CSettings::Get().SetInt("videoplayer.pauseafterrefreshchange", 20);
++  m_readOnly = true;
    // Check if we can change the framebuffer resolution
 -  fd = open("/sys/class/graphics/fb0/mode", O_RDWR);
 -  if (fd >= 0)
+-  {
+-    CLog::Log(LOGNOTICE, "%s - graphics sysfs is writable", __FUNCTION__);
+-    m_readonly = false;
+-  }
+-  else
 +  if ((fd = open("/sys/class/graphics/fb0/mode", O_RDWR)) >= 0)
    {
--    CLog::Log(LOGNOTICE, "%s - graphics sysfs is writable", __FUNCTION__);
-     m_readonly = false;
-+    close(fd);
-   }
--  else
--  {
 -    CLog::Log(LOGNOTICE, "%s - graphics sysfs is read-only", __FUNCTION__);
 -    m_readonly = true;
--  }
++    m_readOnly = false;
++    close(fd);
+   }
 -  close(fd);
  
-+  m_init = true;
    return;
  }
  
@@ -75,7 +78,7 @@
    struct fb_fix_screeninfo fixed_info;
    void *fb_buffer;
    int fd;
-@@ -114,44 +110,50 @@
+@@ -114,44 +106,49 @@ void CEGLNativeTypeIMX::Destroy()
    }
  
    close(fd);
@@ -85,41 +88,40 @@
  
  bool CEGLNativeTypeIMX::CreateNativeDisplay()
  {
--  // Force double-buffering
--  CEnvironment::setenv("FB_MULTI_BUFFER", "2", 0);
 +  if (m_display)
 +    return true;
- 
-   // EGL will be rendered on fb0
--  m_display = fbGetDisplayByIndex(0);
-+  if (!(m_display = fbGetDisplayByIndex(0)))
-+    return false;
 +
-   m_nativeDisplay = &m_display;
-   return true;
++  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
++
+   // Force double-buffering
+   CEnvironment::setenv("FB_MULTI_BUFFER", "2", 0);
+-
+   // EGL will be rendered on fb0
+   m_display = fbGetDisplayByIndex(0);
+-  m_nativeDisplay = &m_display;
+-  return true;
++
++  return (m_nativeDisplay = &m_display);
  }
  
  bool CEGLNativeTypeIMX::CreateNativeWindow()
  {
--  m_window = fbCreateWindow(m_display, 0, 0, 0, 0);
-+  RESOLUTION_INFO r;
++  if (m_window)
++    return true;
 +
-+  GetNativeResolution(&r);
-+  if (!(m_window = fbCreateWindow(m_display, 0, 0, 0, 0)))
-+    return false;
++  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
 +
-   m_nativeWindow = &m_window;
-+
-   return true;
+   m_window = fbCreateWindow(m_display, 0, 0, 0, 0);
+-  m_nativeWindow = &m_window;
+-  return true;
++  return (m_nativeWindow = &m_window);
  }
  
  bool CEGLNativeTypeIMX::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) const
  {
 -  if (!nativeDisplay)
 -    return false;
--  if (!m_nativeDisplay)
-+
-+  if (!(m_nativeDisplay && m_display))
+   if (!m_nativeDisplay)
      return false;
 +
    *nativeDisplay = (XBNativeDisplayType*)m_nativeDisplay;
@@ -131,71 +133,77 @@
 -  if (!nativeWindow)
 -    return false;
 -  if (!m_nativeWindow || !m_window)
-+  if (!(m_nativeWindow && m_window))
++  if (!m_nativeWindow)
      return false;
 +
    *nativeWindow = (XBNativeWindowType*)m_nativeWindow;
    return true;
  }
-@@ -160,7 +162,9 @@
+@@ -160,7 +157,12 @@ bool CEGLNativeTypeIMX::DestroyNativeDisplay()
  {
    if (m_display)
      fbDestroyDisplay(m_display);
 -  m_display =  NULL;
++  else
++    return false;
++
++  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
 +
 +  m_display = NULL;
-+  m_nativeDisplay = NULL;
    return true;
  }
  
-@@ -168,7 +172,9 @@
+@@ -168,7 +170,13 @@ bool CEGLNativeTypeIMX::DestroyNativeWindow()
  {
    if (m_window)
      fbDestroyWindow(m_window);
 -  m_window =  NULL;
++  else
++    return false;
++
++  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
 +
 +  m_window = NULL;
 +  m_nativeWindow = NULL;
    return true;
  }
  
-@@ -176,34 +182,51 @@
+@@ -176,52 +184,72 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
  {
    std::string mode;
    get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
 +
-+  CLog::Log(LOGDEBUG,": %s - %s", __FUNCTION__, mode.c_str());
    return ModeToResolution(mode, res);
  }
  
  bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
  {
 -  if (m_readonly)
-+  if (m_readonly /*|| g_application.GetCecStandby()*/)
++  if (m_readOnly)
      return false;
  
 -  std::string mode;
 -  get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
 -  if (res.strId == mode)
+-    return false;
 +  RESOLUTION_INFO c;
-+
 +  GetNativeResolution(&c);
 +  if (res.strMode == c.strMode)
-+  {
-+    CLog::Log(LOGDEBUG,": %s - res are the same %s", __FUNCTION__, res.strId.c_str());
-     return false;
-+  }
++    return true;
  
+-  DestroyNativeWindow();
++  Sleep(150);
 +  ShowWindow(false);
-   DestroyNativeWindow();
++  g_Windowing.DestroyWindow();
    DestroyNativeDisplay();
  
 -  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId);
 +  CLog::Log(LOGDEBUG,": %s - changing resolution to %s", __FUNCTION__, res.strId.c_str());
 +  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId.c_str());
++  Sleep(300);
  
    CreateNativeDisplay();
- 
+-
 -  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
 -
 -  // Reset AE
@@ -204,7 +212,7 @@
    return true;
  }
  
-+bool CEGLNativeTypeIMX::FindMatchingResolution(const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions)
++bool CEGLNativeTypeIMX::FindMatchingResolution(const RESOLUTION_INFO &act, const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions)
 +{
 +  for (int i = 0; i < (int)resolutions.size(); i++)
 +  {
@@ -220,9 +228,13 @@
 +
  bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
  {
-   if (m_readonly)
-@@ -211,17 +234,21 @@
+-  if (m_readonly)
++  if (m_readOnly)
+     return false;
  
++  RESOLUTION_INFO act;
++  GetNativeResolution(&act);
++
    std::string valstr;
    get_sysfs_str("/sys/class/graphics/fb0/modes", valstr);
 +
@@ -240,12 +252,12 @@
 +
      if(ModeToResolution(probe_str[i], &res))
 -      resolutions.push_back(res);
-+      if(!FindMatchingResolution(res, resolutions))
++      if(!FindMatchingResolution(act, res, resolutions))
 +         resolutions.push_back(res);
    }
    return resolutions.size() > 0;
  }
-@@ -233,48 +260,54 @@
+@@ -233,48 +261,67 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
  
  bool CEGLNativeTypeIMX::ShowWindow(bool show)
  {
@@ -258,14 +270,26 @@
 +    return true;
  
 -  return false;
++  CLog::Log(LOGDEBUG, ": %s %s", __FUNCTION__, show?"show":"hide");
++
++  if (!show && !CAEFactory::IsSuspended())
++  {
++    m_aResume = true;
++    CAEFactory::Suspend();
++    while (!CAEFactory::IsSuspended())
++      Sleep(10);
++  }
++
++  set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
 +  m_show = show;
 +
-+  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, show?"show":"hide");
-+  set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
-+
-+  if (show)
-+    CAEFactory::DeviceChange();
-+
++  if (show && m_aResume)
++  {
++    CAEFactory::Resume();
++    while (CAEFactory::IsSuspended())
++      Sleep(10);
++    m_aResume = false;
++  }
 +  return true;
  }
  
@@ -319,13 +343,14 @@
 +  val += '\n';
 +  write(fd, val.c_str(), val.size());
 +  close(fd);
-+  Sleep(300);
++
++  Sleep(100);
 +  return true;
  }
  
  bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res) const
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.h b/xbmc/windowing/egl/EGLNativeTypeIMX.h
-index df7b3b7..23cdcd9 100644
+index df7b3b7..a348c6f 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.h
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.h
 @@ -32,7 +32,7 @@ public:
@@ -333,11 +358,11 @@ index df7b3b7..23cdcd9 100644
    virtual void  Initialize();
    virtual void  Destroy();
 -  virtual int   GetQuirks() { return EGL_QUIRK_NONE; }
-+  virtual int   GetQuirks() { return EGL_QUIRK_KEEP_CONTEXT; }
++  virtual int   GetQuirks() { return EGL_QUIRK_DESTROY_NATIVE_WINDOW_WITH_SURFACE | EGL_QUIRK_KEEP_CONTEXT; }
  
    virtual bool  CreateNativeDisplay();
    virtual bool  CreateNativeWindow();
-@@ -47,13 +47,16 @@ public:
+@@ -47,14 +47,17 @@ public:
    virtual bool  ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions);
    virtual bool  GetPreferredResolution(RESOLUTION_INFO *res) const;
  
@@ -345,15 +370,19 @@ index df7b3b7..23cdcd9 100644
 +  virtual bool  ShowWindow(bool show = true);
  
  protected:
-   bool m_readonly;
+-  bool m_readonly;
 -  int get_sysfs_str(std::string path, std::string& valstr) const;
 -  int set_sysfs_str(std::string path, std::string val) const;
-+  bool m_init;
++  bool m_aResume;
++  bool m_readOnly;
 +  bool m_show;
 +  bool get_sysfs_str(std::string path, std::string& valstr) const;
 +  bool set_sysfs_str(std::string path, std::string val) const;
    bool ModeToResolution(std::string mode, RESOLUTION_INFO *res) const;
-+  bool FindMatchingResolution(const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions);
++  bool FindMatchingResolution(const RESOLUTION_INFO &act, const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions);
  
-   EGLNativeDisplayType m_display;
-   EGLNativeWindowType  m_window;
+-  EGLNativeDisplayType m_display;
+-  EGLNativeWindowType  m_window;
++  EGLNativeDisplayType  m_display;
++  EGLNativeWindowType   m_window;
+ };

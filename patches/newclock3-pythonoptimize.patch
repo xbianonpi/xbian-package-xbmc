@@ -16,7 +16,7 @@ index cba242d..35a4509 100644
  #endif
  
 +// Lets enable for Pi
-+#if defined(TARGET_RASPBERRY_PI)
++#if defined(TARGET_RASPBERRY_PI) || defined(HAS_IMXVPU)
 +   setenv("PYTHONOPTIMIZE", "1", 1);
 +#endif
  

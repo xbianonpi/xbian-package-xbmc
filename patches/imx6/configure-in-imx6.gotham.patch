@@ -20,9 +20,9 @@ index a195d00..cf963f5 100644
 +     use_joystick=no
 +     use_sdl=no
 +     use_hardcoded_tables="yes"
-+     CFLAGS="$CFLAGS -pipe -O3 -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
-+     CXXFLAGS="$CXXFLAGS -pipe -O3 -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
-+     FFMPEG_EXTRACFLAGS="$FFMPEG_EXTRACFLAGS -pipe -O3 -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
++     CFLAGS="$CFLAGS  -pipe -O3 -funroll-loops -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
++     CXXFLAGS="$CXXFLAGS  -pipe -O3 -funroll-loops -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
++     FFMPEG_EXTRACFLAGS="$FFMPEG_EXTRACFLAGS  -pipe -O3 -funroll-loops -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations "
 +     use_cpu=cortex-a9
 +     ;;
  esac

@@ -1,8 +1,6 @@
-diff --git a/pvr-addons/configure.ac b/pvr-addons/configure.ac
-index f34b6f6..5be8c92 100644
 --- a/pvr-addons/configure.ac
 +++ b/pvr-addons/configure.ac
-@@ -111,12 +111,6 @@ case "${host}" in
+@@ -124,12 +124,6 @@
  esac
  
  ### External libraries checks
@@ -12,10 +10,10 @@ index f34b6f6..5be8c92 100644
 -fi
 -echo "GL: $have_gl"
 -
- AC_CHECK_LIB([GLESv2],[main],have_gles2=yes, have_gles2=no)
+ AC_CHECK_LIB([GLESv2],[main],[AC_CHECK_HEADER([GLES2/gl2.h], have_gles2=yes, have_gles2=no, )], have_gles2=no)
  if test "$have_gles2" = "yes"; then
    AC_DEFINE([HAVE_GLES2],[1],["Define to 1 if we have gles2"])
-@@ -124,8 +118,18 @@ if test "$have_gles2" = "yes"; then
+@@ -137,8 +131,18 @@
  else
    AM_CONDITIONAL(HAVE_GLES2, false)
  fi

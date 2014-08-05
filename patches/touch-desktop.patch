@@ -1,5 +1,5 @@
---- WinSystem.cpp.orig	2014-07-19 03:48:21.000000000 +0200
-+++ WinSystem.cpp	2014-07-19 03:48:28.363286923 +0200
+--- a/xbmc/windowing/WinSystem.cpp
++++ b/xbmc/windowing/WinSystem.cpp
 @@ -130,7 +130,7 @@
    float refreshrate = resInfo.fRefreshRate;
  

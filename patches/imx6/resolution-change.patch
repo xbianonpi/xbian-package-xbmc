@@ -1,0 +1,82 @@
+commit 5e1284136211e73df6468842e6130cce2ef94e23
+Author: Matus Kral <matuskral@me.com>
+Date:   Wed Jul 30 00:35:47 2014 +0200
+
+    resolution changing on play
+    control parameter advancedsettings.xml:
+
+  <video>
+    <adjustdisplayrestomatchvideo>true</adjustdisplayrestomatchvideo>
+  </video>
+
+diff --git a/xbmc/cores/VideoRenderers/BaseRenderer.cpp b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
+index 970b822..5e16841 100644
+--- a/xbmc/cores/VideoRenderers/BaseRenderer.cpp
++++ b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
+@@ -221,12 +225,31 @@ void CBaseRenderer::FindResolutionFromFpsMatch(float fps, float& weight)
+ 
+ RESOLUTION CBaseRenderer::FindClosestResolution(float fps, float multiplier, RESOLUTION current, float& weight)
+ {
+-  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(current);
++  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(g_advancedSettings.m_adjustResolutionVideoMatch ? (RESOLUTION)CSettings::Get().GetInt("videoscreen.resolution") : current);
+ 
+   float fRefreshRate = fps;
+ 
+   float last_diff = fRefreshRate;
+ 
++  // CHANGERESOLUTION
++  if (g_advancedSettings.m_adjustResolutionVideoMatch)
++  {
++    for (size_t i = (int)RES_DESKTOP; i < CDisplaySettings::Get().ResolutionInfoSize(); i++)
++    {
++      const RESOLUTION_INFO info = g_graphicsContext.GetResInfo((RESOLUTION)i);
++
++      if (info.iScreenWidth  > curr.iScreenWidth || info.iScreenWidth < m_sourceWidth
++      ||  info.iScreenHeight > curr.iScreenHeight || info.iScreenHeight < m_sourceHeight
++      ||  info.iScreen       != curr.iScreen
++      || (info.dwFlags & D3DPRESENTFLAG_MODEMASK) != (curr.dwFlags & D3DPRESENTFLAG_MODEMASK)
++      ||  MathUtils::truncate_int((float)info.iScreenWidth/info.iScreenHeight * 100) != MathUtils::truncate_int((float)curr.iScreenWidth/curr.iScreenHeight * 100))
++        continue;
++
++      current = (RESOLUTION)i;
++      curr    = info;
++    }
++  }
++
+   // Find closest refresh rate
+   for (size_t i = (int)RES_DESKTOP; i < CDisplaySettings::Get().ResolutionInfoSize(); i++)
+   {
+diff --git a/xbmc/settings/AdvancedSettings.cpp b/xbmc/settings/AdvancedSettings.cpp
+index eff43dd..c719b10 100644
+--- a/xbmc/settings/AdvancedSettings.cpp
++++ b/xbmc/settings/AdvancedSettings.cpp
+@@ -135,6 +135,8 @@ void CAdvancedSettings::Initialize()
+   m_audioPlayCountMinimumPercent = 90.0f;
+   m_audioHost = "default";
+ 
++  m_adjustResolutionVideoMatch = true;
++
+   m_videoSubsDelayRange = 10;
+   m_videoAudioDelayRange = 10;
+   m_videoSmallStepBackSeconds = 7;
+@@ -554,6 +556,7 @@ void CAdvancedSettings::ParseSettingsFile(const CStdString &file)
+     XMLUtils::GetString(pElement, "defaultplayer", m_videoDefaultPlayer);
+     XMLUtils::GetString(pElement, "defaultdvdplayer", m_videoDefaultDVDPlayer);
+     XMLUtils::GetBoolean(pElement, "fullscreenonmoviestart", m_fullScreenOnMovieStart);
++    XMLUtils::GetBoolean(pElement, "adjustdisplayrestomatchvideo", m_adjustResolutionVideoMatch);
+     // 101 on purpose - can be used to never automark as watched
+     XMLUtils::GetFloat(pElement, "playcountminimumpercent", m_videoPlayCountMinimumPercent, 0.0f, 101.0f);
+     XMLUtils::GetInt(pElement, "ignoresecondsatstart", m_videoIgnoreSecondsAtStart, 0, 900);
+diff --git a/xbmc/settings/AdvancedSettings.h b/xbmc/settings/AdvancedSettings.h
+index 3995f35..0f88418 100644
+--- a/xbmc/settings/AdvancedSettings.h
++++ b/xbmc/settings/AdvancedSettings.h
+@@ -144,6 +144,8 @@ class CAdvancedSettings : public ISettingCallback, public ISettingsHandler
+     bool  m_omxHWAudioDecode;
+     bool  m_omxDecodeStartWithValidFrame;
+ 
++    bool  m_adjustResolutionVideoMatch;
++
+     float m_videoSubsDelayRange;
+     float m_videoAudioDelayRange;
+     int m_videoSmallStepBackSeconds;

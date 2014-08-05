@@ -1,2 +1,2 @@
 
-rm -f xbmc/GitRevision.{P,o}
+rm -f xbmc/GitRevision.o xbmc/GitRevision.P

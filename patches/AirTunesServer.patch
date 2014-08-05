@@ -1,0 +1,18 @@
+diff --git a/xbmc/network/AirTunesServer.cpp b/xbmc/network/AirTunesServer.cpp
+index 1ba4136..167faf3 100644
+--- a/xbmc/network/AirTunesServer.cpp
++++ b/xbmc/network/AirTunesServer.cpp
+@@ -265,8 +265,11 @@ void  CAirTunesServer::AudioOutputFunctions::audio_process(void *cls, void *sess
+ 
+ void  CAirTunesServer::AudioOutputFunctions::audio_flush(void *cls, void *session)
+ {
+-  XFILE::CPipeFile *pipe=(XFILE::CPipeFile *)cls;
+-  pipe->Flush();
++  if (g_application.m_pPlayer && g_application.m_pPlayer->IsPlaying())
++  {
++    XFILE::CPipeFile *pipe=(XFILE::CPipeFile *)cls;
++    pipe->Flush();
++  }
+ }
+ 
+ void  CAirTunesServer::AudioOutputFunctions::audio_destroy(void *cls, void *session)

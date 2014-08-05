@@ -6,13 +6,13 @@
  
 -  std::vector<CStdString> probe_str;
 -  StringUtils::SplitString(valstr, "\n", probe_str);
-+  vector<string> probe_str = StringUtils::Split(valstr, "\n");
++  std::vector<string> probe_str = StringUtils::Split(valstr, "\n");
    std::sort(probe_str.begin(), probe_str.end());
  
    resolutions.clear();
    RESOLUTION_INFO res;
 -  for (size_t i = 0; i < probe_str.size(); i++)
-+  for (vector<string>::const_iterator i = probe_str.begin(); i != probe_str.end(); ++i)
++  for (std::vector<string>::const_iterator i = probe_str.begin(); i != probe_str.end(); ++i)
    {
 -    if(!StringUtils::StartsWith(probe_str[i], "S:") && !StringUtils::StartsWith(probe_str[i], "U:"))
 +    if(!StringUtils::StartsWith(*i, "S:") && !StringUtils::StartsWith(*i, "U:"))
@@ -20,6 +20,6 @@
  
 -    if(ModeToResolution(probe_str[i], &res))
 +    if(ModeToResolution(*i, &res))
-       if(!FindMatchingResolution(res, resolutions))
+       if(!FindMatchingResolution(act, res, resolutions))
           resolutions.push_back(res);
    }
