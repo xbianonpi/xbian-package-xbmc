@@ -1,0 +1,13 @@
+--- a/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-06-05 14:48:24.000000000 +0300
++++ b/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-06-05 22:03:47.521228220 +0300
+@@ -210,7 +210,9 @@
+   float g = GET_G(color) / 255.0f;
+   float b = GET_B(color) / 255.0f;
+   float a = GET_A(color) / 255.0f;
+-
++  
++  a = 0.0f;
++	
+   glClearColor(r, g, b, a);
+ 
+   GLbitfield flags = GL_COLOR_BUFFER_BIT;

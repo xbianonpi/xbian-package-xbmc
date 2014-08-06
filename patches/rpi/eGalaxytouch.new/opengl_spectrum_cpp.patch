@@ -1,0 +1,20 @@
+--- a/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-06-05 14:48:24.000000000 +0300
++++ b/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-06-05 22:04:16.960222721 +0300
+@@ -347,7 +347,7 @@
+   glDepthFunc(GL_LESS);
+   glPolygonMode(GL_FRONT, GL_FILL);
+   //glPolygonMode(GL_BACK, GL_FILL);
+-  x_angle += x_speed;
++  /*x_angle += x_speed;
+   if(x_angle >= 360.0)
+     x_angle -= 360.0;
+ 
+@@ -357,7 +357,7 @@
+ 
+   z_angle += z_speed;
+   if(z_angle >= 360.0)
+-    z_angle -= 360.0;
++    z_angle -= 360.0;*/
+ 
+   draw_bars();
+   glPopMatrix();
