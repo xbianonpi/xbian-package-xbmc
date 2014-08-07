@@ -157,7 +157,7 @@ index 3dc64a3..7ad21d3 100644
 +  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
 +
 +  m_display = NULL;
-+  m_nativeDisplay = NULL;
++
    return true;
  }
  
@@ -178,7 +178,7 @@ index 3dc64a3..7ad21d3 100644
 +  }
 +
 +  m_window = NULL;
-+  m_nativeWindow = NULL;
++
    return true;
  }
  
@@ -201,14 +201,15 @@ index 3dc64a3..7ad21d3 100644
  
 -  DestroyNativeWindow();
 +  ShowWindow(false);
-+  g_Windowing.DestroyWindow();
++
    DestroyNativeDisplay();
  
 -  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId);
 +  CLog::Log(LOGDEBUG,": %s - changing resolution to %s", __FUNCTION__, res.strId.c_str());
 +  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId.c_str());
  
-   CreateNativeDisplay();
+-  CreateNativeDisplay();
++  CreateNativeDisplay(); CreateNativeWindow();
 -
 -  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
 -
@@ -455,3 +456,20 @@ index 970b822..5e16841 100644
  }
  
  bool CBaseRenderer::FindResolutionFromOverride(float fps, float& weight, bool fallback)
+diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemEGL.cpp
+index dfc4672..d507f2f 100644
+--- a/xbmc/windowing/egl/WinSystemEGL.cpp
++++ b/xbmc/windowing/egl/WinSystemEGL.cpp
+@@ -158,6 +159,12 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
+       return false;
+     }
+ 
++    if (!m_egl->DestroyDisplay(m_display) || !m_egl->InitDisplay(&m_display))
++    {
++      CLog::Log(LOGERROR, "%s: Could not create display (REINIT)",__FUNCTION__);
++      return false;
++    }
++
+     if (!m_egl->CreateSurface(m_display, m_config, &m_surface))
+     {
+       CLog::Log(LOGERROR, "%s: Could not create surface",__FUNCTION__);
