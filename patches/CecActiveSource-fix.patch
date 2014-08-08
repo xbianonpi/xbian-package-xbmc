@@ -4,6 +4,8 @@ Date:   Wed Aug 04 00:35:47 2014 +0200
 
   this fixes race condition upon CEC init making XBMC become active source not successfully
 
+--- a/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
++++ b/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
 @@ -332,8 +337,6 @@ bool CPeripheralCecAdapter::OpenConnection(void)
        if (!bConnectionFailedDisplayed)
          CGUIDialogKaiToast::QueueNotification(CGUIDialogKaiToast::Error, g_localizeStrings.Get(36000), g_localizeStrings.Get(36012));
@@ -78,9 +80,9 @@ Date:   Wed Aug 04 00:35:47 2014 +0200
 +
 +    // wait until we get active source
 +    bool bContinue(false);
-+    cec_logical_addresses myself = m_adapter->m_cecAdapter->GetLogicalAddresses();
++
 +    while (!m_adapter->m_cecAdapter->IsLibCECActiveSource() && 
-+           !m_adapter->m_cecAdapter->IsActiveSource(myself.primary) && bContinue)
++           bContinue)
 +      bContinue = !m_event.WaitMSec(1000);
 +  }
  
