@@ -88,3 +88,14 @@ Date:   Wed Aug 04 00:35:47 2014 +0200
  
    // and let the gui know that we're done
    CGUIDialogKaiToast::QueueNotification(CGUIDialogKaiToast::Info, g_localizeStrings.Get(36000), strNotification);
+--- a/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
++++ b/xbmc/peripherals/devices/PeripheralCecAdapter.cpp
+@@ -387,7 +387,7 @@
+       ProcessStandbyDevices();
+ 
+     if (!m_bStop)
+-      Sleep(5);
++      Sleep(50);
+   }
+ 
+   m_queryThread->StopThread(true);

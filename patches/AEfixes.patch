@@ -1,0 +1,65 @@
+diff --git b/xbmc/cores/AudioEngine/AESinkFactory.cpp a/xbmc/cores/AudioEngine/AESinkFactory.cpp
+index f145852..3fc8cb5 100644
+--- b/xbmc/cores/AudioEngine/AESinkFactory.cpp
++++ a/xbmc/cores/AudioEngine/AESinkFactory.cpp
+@@ -132,7 +132,7 @@ IAESink *CAESinkFactory::TrySink(std::string &driver, std::string &device, AEAud
+       CLog::Log(LOGERROR, "Sink %s:%s returned invalid sample rate", driver.c_str(), device.c_str());
+     else if (format.m_channelLayout.Count() == 0)
+       CLog::Log(LOGERROR, "Sink %s:%s returned invalid channel layout", driver.c_str(), device.c_str());
+-    else if (format.m_frames < 256)
++    else if (format.m_frames < 96)
+       CLog::Log(LOGERROR, "Sink %s:%s returned invalid buffer size: %d", driver.c_str(), device.c_str(), format.m_frames);
+     else
+       return sink;
+diff --git b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
+index a3beda3..811f596 100644
+--- b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
++++ a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAE.cpp
+@@ -1235,7 +1235,10 @@ CActiveAEStream* CActiveAE::CreateStream(MsgStreamNew *streamMsg)
+   stream->m_started = false;
+ 
+   if (streamMsg->options & AESTREAM_PAUSED)
++  {
+     stream->m_paused = true;
++    stream->m_streamIsBuffering = true;
++  }
+ 
+   if (streamMsg->options & AESTREAM_FORCE_RESAMPLE)
+     stream->m_forceResampler = true;
+@@ -1362,6 +1365,7 @@ void CActiveAE::DiscardSound(CActiveAESound *sound)
+     if ((*it) == sound)
+     {
+       m_sounds.erase(it);
++      delete sound;
+       return;
+     }
+   }
+@@ -1747,7 +1751,14 @@ bool CActiveAE::RunStages()
+             if ((*it)->m_fadingSamples == -1)
+             {
+               (*it)->m_fadingSamples = m_internalFormat.m_sampleRate * (float)(*it)->m_fadingTime / 1000.0f;
+-              (*it)->m_volume = (*it)->m_fadingBase;
++              if ((*it)->m_fadingSamples > 0)
++                (*it)->m_volume = (*it)->m_fadingBase;
++              else
++              {
++                (*it)->m_volume = (*it)->m_fadingTarget;
++                CSingleLock lock((*it)->m_streamLock);
++                (*it)->m_streamFading = false;
++              }
+             }
+             if ((*it)->m_fadingSamples > 0)
+             {
+diff --git b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
+index 0287e73..f8f514d 100644
+--- b/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
++++ a/xbmc/cores/AudioEngine/Engines/ActiveAE/ActiveAEStream.cpp
+@@ -50,7 +50,7 @@ CActiveAEStream::CActiveAEStream(AEAudioFormat *format)
+   m_streamDrained = false;
+   m_streamFading = false;
+   m_streamFreeBuffers = 0;
+-  m_streamIsBuffering = true;
++  m_streamIsBuffering = false;
+   m_streamSlave = NULL;
+   m_convertFn = NULL;
+   m_leftoverBuffer = new uint8_t[m_format.m_frameSize];
