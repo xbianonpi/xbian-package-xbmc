@@ -16,11 +16,12 @@ Date:   Wed Jul 30 00:35:47 2014 +0200
    }
    else if (flag == GUI && !strcmp(sender, "xbmc") && !strcmp(message, "OnScreensaverActivated") && m_bIsReady)
    {
-@@ -179,6 +182,8 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
+@@ -179,6 +182,9 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
        if (m_cecAdapter->IsLibCECActiveSource())
          StandbyDevices();
      }
-+    if (!g_application.m_pPlayer->IsPlaying() && !m_cecAdapter->IsLibCECActiveSource() && m_configuration.bPowerOffScreensaver == 1)
++    if (!g_application.m_pPlayer->IsPlaying() && (m_cecAdapter->GetDevicePowerStatus(CECDEVICE_TV) == CEC_POWER_STATUS_STANDBY
++        || !m_cecAdapter->IsLibCECActiveSource()) && m_configuration.bPowerOffScreensaver == 1)
 +      g_application.SetCecStandby(true);
    }
    else if (flag == System && !strcmp(sender, "xbmc") && !strcmp(message, "OnSleep"))
