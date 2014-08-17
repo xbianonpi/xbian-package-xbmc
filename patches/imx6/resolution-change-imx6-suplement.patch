@@ -15,7 +15,7 @@ Date:   Wed Jul 30 00:35:47 2014 +0200
    std::string fromMode = StringUtils::Mid(mode, 2);
    StringUtils::Trim(fromMode);
  
-+  if (StringUtils::StartWith("U:"))
++  if (StringUtils::StartsWith(mode, "U:"))
 +    res->dwFlags = D3DPRESENTFLAG_WIDESCREEN;
 +
    CRegExp split(true);

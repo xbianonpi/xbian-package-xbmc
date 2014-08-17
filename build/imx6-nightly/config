@@ -1,4 +1,4 @@
-config_source_configure=./configure --with-ffmpeg --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-sdl --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --disable-hal --with-platform=cubox-i
+config_source_configure=./configure --with-ffmpeg --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-sdl --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --with-platform=cubox-i
 config_build_env=schroot -c armhfjessie -p --
 config_source_branch=master
 config_source_addr=git://github.com/xbmc/xbmc.git

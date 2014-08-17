@@ -33,7 +33,7 @@ index 3dc64a3..7ad21d3 100644
  {
  }
  
-@@ -55,40 +62,26 @@ void CEGLNativeTypeIMX::Initialize()
+@@ -55,40 +62,26 @@
  {
    int fd;
  
@@ -51,10 +51,11 @@ index 3dc64a3..7ad21d3 100644
 -  }
 -
 -  close(fd);
+-
 +  system("/usr/bin/splash --force -b");
 +  CLog::Log(LOGDEBUG, "%s\n", __FUNCTION__);
 +  set_sysfs_str("/sys/class/graphics/fb0/blank", "0");
- 
++
 +  CSettings::Get().SetInt("audiooutput.streamsilence", -1);
 +  CSettings::Get().SetInt("videoplayer.pauseafterrefreshchange", 0);
 +  m_readOnly = true;
@@ -84,7 +85,7 @@ index 3dc64a3..7ad21d3 100644
    struct fb_fix_screeninfo fixed_info;
    void *fb_buffer;
    int fd;
-@@ -114,44 +107,52 @@ void CEGLNativeTypeIMX::Destroy()
+@@ -114,44 +107,52 @@
    }
  
    close(fd);
@@ -104,17 +105,15 @@ index 3dc64a3..7ad21d3 100644
 -
    // EGL will be rendered on fb0
 -  m_display = fbGetDisplayByIndex(0);
--  m_nativeDisplay = &m_display;
 +  if (!(m_display = fbGetDisplayByIndex(0)))
 +    return false;
-+  m_nativeDisplay = &m_display;
+   m_nativeDisplay = &m_display;
    return true;
  }
  
  bool CEGLNativeTypeIMX::CreateNativeWindow()
  {
 -  m_window = fbCreateWindow(m_display, 0, 0, 0, 0);
--  m_nativeWindow = &m_window;
 +  if (m_window)
 +    return true;
 +
@@ -122,7 +121,7 @@ index 3dc64a3..7ad21d3 100644
 +
 +  if (!(m_window = fbCreateWindow(m_display, 0, 0, 0, 0)))
 +    return false;
-+  m_nativeWindow = &m_window;
+   m_nativeWindow = &m_window;
    return true;
  }
  
@@ -148,7 +147,7 @@ index 3dc64a3..7ad21d3 100644
    *nativeWindow = (XBNativeWindowType*)m_nativeWindow;
    return true;
  }
-@@ -160,7 +161,11 @@ bool CEGLNativeTypeIMX::DestroyNativeDisplay()
+@@ -160,7 +161,11 @@
  {
    if (m_display)
      fbDestroyDisplay(m_display);
@@ -161,7 +160,7 @@ index 3dc64a3..7ad21d3 100644
    return true;
  }
  
-@@ -168,7 +173,19 @@ bool CEGLNativeTypeIMX::DestroyNativeWindow()
+@@ -168,7 +173,11 @@
  {
    if (m_window)
      fbDestroyWindow(m_window);
@@ -169,20 +168,12 @@ index 3dc64a3..7ad21d3 100644
 +
 +  CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
 +
-+  if (!CAEFactory::IsSuspended() && !m_aResume)
-+  {
-+    m_aResume = true;
-+    CAEFactory::Suspend();
-+    while (!CAEFactory::IsSuspended())
-+      Sleep(10);
-+  }
-+
 +  m_window = NULL;
 +
    return true;
  }
  
-@@ -181,47 +198,64 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
+@@ -181,47 +190,64 @@
  
  bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
  {
@@ -194,28 +185,28 @@ index 3dc64a3..7ad21d3 100644
 -  get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
 -  if (res.strId == mode)
 -    return false;
+-
+-  DestroyNativeWindow();
+-  DestroyNativeDisplay();
 +  RESOLUTION_INFO c;
 +  GetNativeResolution(&c);
 +  if (res.strMode == c.strMode)
 +    return true;
  
--  DestroyNativeWindow();
-+  ShowWindow(false);
-+
-   DestroyNativeDisplay();
- 
 -  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId);
++  ShowWindow(false);
+ 
+-  CreateNativeDisplay();
+-
+-  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
++  DestroyNativeDisplay();
+ 
+-  // Reset AE
+-  CAEFactory::DeviceChange();
 +  CLog::Log(LOGDEBUG,": %s - changing resolution to %s", __FUNCTION__, res.strId.c_str());
 +  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId.c_str());
  
--  CreateNativeDisplay();
 +  CreateNativeDisplay(); CreateNativeWindow();
--
--  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
--
--  // Reset AE
--  CAEFactory::DeviceChange();
--
    return true;
  }
  
@@ -264,7 +255,7 @@ index 3dc64a3..7ad21d3 100644
    }
    return resolutions.size() > 0;
  }
-@@ -233,48 +267,58 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
+@@ -233,48 +259,66 @@
  
  bool CEGLNativeTypeIMX::ShowWindow(bool show)
  {
@@ -277,6 +268,14 @@ index 3dc64a3..7ad21d3 100644
 +    return true;
  
 -  return false;
++  if (!CAEFactory::IsSuspended() && !m_aResume)
++  {
++    m_aResume = true;
++    CAEFactory::Suspend();
++    while (!CAEFactory::IsSuspended())
++      Sleep(10);
++  }
++
 +  CLog::Log(LOGDEBUG, ": %s %s", __FUNCTION__, show?"show":"hide");
 +
 +  set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
@@ -460,10 +459,15 @@ diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemE
 index dfc4672..d507f2f 100644
 --- a/xbmc/windowing/egl/WinSystemEGL.cpp
 +++ b/xbmc/windowing/egl/WinSystemEGL.cpp
-@@ -158,6 +159,12 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
+@@ -159,6 +159,17 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
        return false;
      }
  
++    if (m_display == EGL_NO_DISPLAY || !m_egl->DestroyDisplay(m_display) || !(m_display = EGL_NO_DISPLAY))
++    {
++      CLog::Log(LOGERROR, "%s: Could not destroy display (REINIT)",__FUNCTION__);
++      return false;
++    }
 +    if (!m_egl->DestroyDisplay(m_display) || !m_egl->InitDisplay(&m_display))
 +    {
 +      CLog::Log(LOGERROR, "%s: Could not create display (REINIT)",__FUNCTION__);
@@ -473,49 +477,3 @@ index dfc4672..d507f2f 100644
      if (!m_egl->CreateSurface(m_display, m_config, &m_surface))
      {
        CLog::Log(LOGERROR, "%s: Could not create surface",__FUNCTION__);
-diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-index 3dc64a3..7ad21d3 100644
---- a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-+++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-@@ -175,14 +175,6 @@
- 
-   CLog::Log(LOGDEBUG,": %s", __FUNCTION__);
- 
--  if (!CAEFactory::IsSuspended() && !m_aResume)
--  {
--    m_aResume = true;
--    CAEFactory::Suspend();
--    while (!CAEFactory::IsSuspended())
--      Sleep(10);
--  }
--
-   m_window = NULL;
- 
-   return true;
-@@ -269,6 +261,14 @@
-   if (m_show == show)
-     return true;
- 
-+  if (!CAEFactory::IsSuspended() && !m_aResume)
-+  {
-+    m_aResume = true;
-+    CAEFactory::Suspend();
-+    while (!CAEFactory::IsSuspended())
-+      Sleep(10);
-+  }
-+
-   CLog::Log(LOGDEBUG, ": %s %s", __FUNCTION__, show?"show":"hide");
- 
-   set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
-diff --git a/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp b/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
-index 3270bc9..060a4db 100644
---- a/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
-+++ b/xbmc/cores/AudioEngine/Sinks/AESinkALSA.cpp
-@@ -776,6 +776,7 @@ void CAESinkALSA::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
- 
-       /* For wandboard all devices are prefixed by sysdefault so do not ignore them */
-       else if (baseName != "default"
-+            && baseName != "sysdefault"
-             && baseName != "surround40"
-             && baseName != "surround41"
-             && baseName != "surround50"

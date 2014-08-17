@@ -1,7 +1,6 @@
 
 if test -d pvr-addons; then
     cd pvr-addons
-    git reset --hard
     git pull origin master
 else
     git clone -b master --single-branch --depth 1 https://github.com/opdenkamp/xbmc-pvr-addons.git pvr-addons
