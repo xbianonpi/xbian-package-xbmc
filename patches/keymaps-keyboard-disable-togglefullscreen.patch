@@ -1,0 +1,26 @@
+From f859069c790e3b34647e27ee55ff473960947184 Mon Sep 17 00:00:00 2001
+From: Matus Kral <matuskral@me.com>
+Date: Wed, 2 Jul 2014 23:57:23 +0200
+Subject: [PATCH] [keymaps] keyboard: disable backslash (ToggleFullScreen).
+
+Signed-off-by: Roberto Leandrini <rob@menakite.eu>
+---
+ system/keymaps/keyboard.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/system/keymaps/keyboard.xml b/system/keymaps/keyboard.xml
+index 057c172..c9d7ee9 100644
+--- a/system/keymaps/keyboard.xml
++++ b/system/keymaps/keyboard.xml
+@@ -93,7 +93,7 @@
+       <numpadseven>Number7</numpadseven>
+       <numpadeight>Number8</numpadeight>
+       <numpadnine>Number9</numpadnine>
+-      <backslash>ToggleFullScreen</backslash>
++      <!--backslash>ToggleFullScreen</backslash-->
+       <home>FirstPage</home>
+       <end>LastPage</end>
+       <power>ActivateWindow(shutdownmenu)</power>
+-- 
+2.0.1
+

@@ -1,0 +1,37 @@
+From f5df11c1affdbb77ed8dca72198a36f2ffff5a68 Mon Sep 17 00:00:00 2001
+From: Matus Kral <matuskral@me.com>
+Date: Sun, 22 Jun 2014 03:24:14 +0200
+Subject: [PATCH] [threads] pthreads: disable SetPriority.
+
+On XBian we dynamically renice the xbmc.bin process.
+
+Signed-off-by: Roberto Leandrini <rob@menakite.eu>
+---
+ xbmc/threads/platform/pthreads/ThreadImpl.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/xbmc/threads/platform/pthreads/ThreadImpl.cpp b/xbmc/threads/platform/pthreads/ThreadImpl.cpp
+index 70b6ac0..6730523 100644
+--- a/xbmc/threads/platform/pthreads/ThreadImpl.cpp
++++ b/xbmc/threads/platform/pthreads/ThreadImpl.cpp
+@@ -142,6 +142,9 @@ int CThread::GetNormalPriority(void)
+ 
+ bool CThread::SetPriority(const int iPriority)
+ {
++#if 1
++  bool bReturn = true;
++#else
+   bool bReturn = false;
+ 
+   // wait until thread is running, it needs to get its lwp id
+@@ -193,6 +196,7 @@ bool CThread::SetPriority(const int iPriority)
+       if (logger) logger->Log(LOGERROR, "%s: error %s", __FUNCTION__, strerror(errno));
+   }
+ #endif
++#endif
+ 
+   return bReturn;
+ }
+-- 
+2.0.1
+

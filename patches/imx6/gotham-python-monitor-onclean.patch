@@ -1,6 +1,14 @@
- xbmc/interfaces/legacy/Monitor.h    |   20 ++++++++++++++++++++
- xbmc/interfaces/python/XBPython.cpp |   30 ++++++++++++++++++++++++++++++
- xbmc/interfaces/python/XBPython.h   |    2 ++
+From 2159e5da31232c9511f38683cdf159e78efb7893 Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Mon, 9 Jun 2014 21:48:16 +0200
+Subject: [PATCH] [python] Monitor: add onCleanStarted/onCleanFinished
+ callbacks.
+
+Backports XBMC pull request 4877 to Gotham.  XBian only.
+---
+ xbmc/interfaces/legacy/Monitor.h    | 20 ++++++++++++++++++++
+ xbmc/interfaces/python/XBPython.cpp | 30 ++++++++++++++++++++++++++++++
+ xbmc/interfaces/python/XBPython.h   |  2 ++
  3 files changed, 52 insertions(+)
 
 diff --git a/xbmc/interfaces/legacy/Monitor.h b/xbmc/interfaces/legacy/Monitor.h
@@ -109,3 +117,6 @@ index fb73951..236be86 100644
    void OnAbortRequested(const CStdString &ID="");
    void OnNotification(const std::string &sender, const std::string &method, const std::string &data);
  
+-- 
+2.0.1
+

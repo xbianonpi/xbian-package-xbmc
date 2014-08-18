@@ -1,8 +1,16 @@
- xbmc/windows/GUIWindowSystemInfo.cpp |    2 ++
+From 34fa18437fb8dc0183a2c77e04371489d1344a2c Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Mon, 18 Aug 2014 03:30:09 +0200
+Subject: [PATCH] Remove battery level indication from SystemInfo window.
+
+Lighter version of patches/rpi/XBianSysSum13.patch as Helix already exposes the
+OS version.
+---
+ xbmc/windows/GUIWindowSystemInfo.cpp | 2 ++
  1 file changed, 2 insertions(+)
 
 diff --git a/xbmc/windows/GUIWindowSystemInfo.cpp b/xbmc/windows/GUIWindowSystemInfo.cpp
-index 60aa49d..295dedb 100644
+index 03a23e3..703674a 100644
 --- a/xbmc/windows/GUIWindowSystemInfo.cpp
 +++ b/xbmc/windows/GUIWindowSystemInfo.cpp
 @@ -101,7 +101,9 @@ void CGUIWindowSystemInfo::FrameMove()
@@ -15,3 +23,6 @@ index 60aa49d..295dedb 100644
    }
    else if (m_section == CONTROL_BT_STORAGE)
    {
+-- 
+2.0.1
+
