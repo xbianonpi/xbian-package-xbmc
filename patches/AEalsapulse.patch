@@ -26,8 +26,10 @@ index e493123..f49853f 100644
    }
    #endif
  
-diff --git a/xbmc/cores/AudioEngine/Sinks/AESinkDARWINOSX.cpp b/xbmc/cores/AudioEngine/Sinks/AESinkDARWINOSX.cpp
+diff --git a/xbmc/cores/AudioEngine/Sinks/AESinkPULSE.cpp b/xbmc/cores/AudioEngine/Sinks/AESinkPULSE.cpp
 index 4923614..53e62bd 100644
+--- a/xbmc/cores/AudioEngine/Sinks/AESinkPULSE.cpp
++++ b/xbmc/cores/AudioEngine/Sinks/AESinkPULSE.cpp
 @@ -431,6 +431,13 @@ static void SinkInfoRequestCallback(pa_context *c, const pa_sink_info *i, int eo
        device.m_deviceType = AE_DEVTYPE_IEC958;
      else
