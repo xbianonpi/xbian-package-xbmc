@@ -11,4 +11,6 @@ else
     MINOR=$(grep VERSION_MINOR $VERFILE | awk '{print $3}' | tr -d '"')
 fi
 
+[ -n "$TAG" ] || TAG='-RLS'
+
 sed -i "s%config_deb_version=.*%config_deb_version=$MAJOR.$MINOR$TAG%"  ../config_pkgver
