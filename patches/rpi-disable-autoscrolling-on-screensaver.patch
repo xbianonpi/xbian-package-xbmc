@@ -1,0 +1,42 @@
+From dfb26b5e4e8105fbe14115a8a44b1e1e3792c086 Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Thu, 11 Sep 2014 19:37:57 +0200
+Subject: [PATCH] [rbp] Disable textbox autoscrolling while on screensaver.
+
+If the screensaver gets activated while in a view with autoscrolling textboxes,
+CPU usage can go as high as 80-85%, the temperature reaches ~71 C (from ~61).
+(This also causes CPUFreq governors such as "conservative" or "ondemand" to always
+run at the maximum frequency.)
+---
+ xbmc/guilib/GUITextBox.cpp | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/xbmc/guilib/GUITextBox.cpp b/xbmc/guilib/GUITextBox.cpp
+index 7415bdc..4ceae17 100644
+--- a/xbmc/guilib/GUITextBox.cpp
++++ b/xbmc/guilib/GUITextBox.cpp
+@@ -23,6 +23,9 @@
+ #include "utils/XBMCTinyXML.h"
+ #include "utils/MathUtils.h"
+ #include "utils/StringUtils.h"
++#ifdef TARGET_RASPBERRY_PI
++#include "Application.h"
++#endif
+ 
+ using namespace std;
+ 
+@@ -132,7 +135,11 @@ void CGUITextBox::Process(unsigned int currentTime, CDirtyRegionList &dirtyregio
+   // update our auto-scrolling as necessary
+   if (m_autoScrollTime && m_lines.size() > m_itemsPerPage)
+   {
++#ifdef TARGET_RASPBERRY_PI
++    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
++#else
+     if (!m_autoScrollCondition || m_autoScrollCondition->Get())
++#endif
+     {
+       if (m_lastRenderTime)
+         m_autoScrollDelayTime += currentTime - m_lastRenderTime;
+-- 
+2.0.1
+
