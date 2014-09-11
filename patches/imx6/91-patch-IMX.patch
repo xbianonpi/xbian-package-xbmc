@@ -173,7 +173,7 @@ index 3dc64a3..7ad21d3 100644
    return true;
  }
  
-@@ -181,47 +190,64 @@
+@@ -181,47 +190,66 @@
  
  bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
  {
@@ -199,6 +199,8 @@ index 3dc64a3..7ad21d3 100644
 -  CreateNativeDisplay();
 -
 -  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
++  if (m_window)
++    DestroyNativeWindow();
 +  DestroyNativeDisplay();
  
 -  // Reset AE
@@ -459,15 +461,10 @@ diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemE
 index dfc4672..d507f2f 100644
 --- a/xbmc/windowing/egl/WinSystemEGL.cpp
 +++ b/xbmc/windowing/egl/WinSystemEGL.cpp
-@@ -159,6 +159,17 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
+@@ -159,6 +159,12 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
        return false;
      }
  
-+    if (m_display == EGL_NO_DISPLAY || !m_egl->DestroyDisplay(m_display) || !(m_display = EGL_NO_DISPLAY))
-+    {
-+      CLog::Log(LOGERROR, "%s: Could not destroy display (REINIT)",__FUNCTION__);
-+      return false;
-+    }
 +    if (!m_egl->DestroyDisplay(m_display) || !m_egl->InitDisplay(&m_display))
 +    {
 +      CLog::Log(LOGERROR, "%s: Could not create display (REINIT)",__FUNCTION__);

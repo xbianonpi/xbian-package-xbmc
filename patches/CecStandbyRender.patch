@@ -16,17 +16,19 @@ Date:   Wed Jul 30 00:35:47 2014 +0200
    }
    else if (flag == GUI && !strcmp(sender, "xbmc") && !strcmp(message, "OnScreensaverActivated") && m_bIsReady)
    {
-@@ -179,6 +182,9 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
-       if (m_cecAdapter->IsLibCECActiveSource())
+@@ -176,8 +179,10 @@ void CPeripheralCecAdapter::Announce(AnnouncementFlag flag, const char *sender,
+     if ((!g_application.m_pPlayer->IsPlaying() && !g_application.m_pPlayer->IsPaused()) && m_configuration.bPowerOffScreensaver == 1)
+     {
+       // only power off when we're the active source
+-      if (m_cecAdapter->IsLibCECActiveSource())
++      if (m_cecAdapter->IsLibCECActiveSource()) {
          StandbyDevices();
++        g_application.SetCecStandby(true);
++      }
      }
-+    if (!g_application.m_pPlayer->IsPlaying() && (m_cecAdapter->GetDevicePowerStatus(CECDEVICE_TV) == CEC_POWER_STATUS_STANDBY
-+        || !m_cecAdapter->IsLibCECActiveSource()) && m_configuration.bPowerOffScreensaver == 1)
-+      g_application.SetCecStandby(true);
    }
    else if (flag == System && !strcmp(sender, "xbmc") && !strcmp(message, "OnSleep"))
-   {
-@@ -631,6 +636,10 @@ int CPeripheralCecAdapter::CecCommand(void *cbParam, const cec_command command)
+@@ -631,6 +634,10 @@ int CPeripheralCecAdapter::CecCommand(void *cbParam, const cec_command command)
          else if (adapter->m_configuration.bShutdownOnStandby == 1)
            CApplicationMessenger::Get().Shutdown();
        }
@@ -37,7 +39,7 @@ Date:   Wed Jul 30 00:35:47 2014 +0200
        break;
      case CEC_OPCODE_SET_MENU_LANGUAGE:
        if (adapter->m_configuration.bUseTVMenuLanguage == 1 && command.initiator == CECDEVICE_TV && command.parameters.size == 3)
-@@ -1128,7 +1137,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
+@@ -1128,7 +1135,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
  
    // wake up the screensaver, so the user doesn't switch to a black screen
    if (activated == 1)

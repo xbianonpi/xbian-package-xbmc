@@ -1,16 +1,14 @@
 
 if [ -e version.txt ]; then
     VERFILE=version.txt
-    TAG="-$(grep VERSION_TAG $VERFILE | awk '{print $2}')"
+    TAG="~$(grep VERSION_TAG $VERFILE | awk '{print $2}')"
     MAJOR=$(grep VERSION_MAJOR $VERFILE | awk '{print $2}')
     MINOR=$(grep VERSION_MINOR $VERFILE | awk '{print $2}')
 else
     VERFILE=xbmc/GUIInfoManager.h
-    TAG=$(grep VERSION_TAG $VERFILE | awk '{print $3}' | tr -d '"-')
+    TAG=$(grep VERSION_TAG $VERFILE | awk '{print $3}' | tr -d '"' | tr '-' '~')
     MAJOR=$(grep VERSION_MAJOR $VERFILE | awk '{print $3}' | tr -d '"')
     MINOR=$(grep VERSION_MINOR $VERFILE | awk '{print $3}' | tr -d '"')
 fi
-
-[ -n "$TAG" ] && TAG="~$TAG"
 
 sed -i "s%config_deb_version=.*%config_deb_version=$MAJOR.$MINOR$TAG%"  ../config_pkgver
