@@ -1,7 +1,7 @@
 From 26aacd5a811ac6be8ec613890dbf1175c7c64f27 Mon Sep 17 00:00:00 2001
 From: anaconda <anaconda@menakite.eu>
 Date: Thu, 11 Sep 2014 21:30:43 +0200
-Subject: [PATCH] Disable textbox autoscrolling while on screensaver.
+Subject: [PATCH 1/2] Disable textbox autoscrolling while on screensaver.
 
 ---
  xbmc/guilib/GUITextBox.cpp | 3 ++-
@@ -25,6 +25,61 @@ index b7ef051..ba68fad 100644
    {
 -    if (!m_autoScrollCondition || m_autoScrollCondition->Get())
 +    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
+     {
+       if (m_lastRenderTime)
+         m_autoScrollDelayTime += currentTime - m_lastRenderTime;
+
+From 94ef7a7413590c9bedda85df88dc4c35da4c2a51 Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Sat, 13 Sep 2014 19:49:01 +0200
+Subject: [PATCH 2/2] SQUASH: only if dim or black
+
+---
+ xbmc/Application.cpp       | 7 +++++++
+ xbmc/Application.h         | 2 ++
+ xbmc/guilib/GUITextBox.cpp | 4 +++-
+ 3 files changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index 94ee013..43ae306 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -5857,3 +5857,10 @@ void CApplication::CloseNetworkShares()
+   CSFTPSessionManager::DisconnectAllSessions();
+ #endif
+ }
++
++std::string CApplication::GetScreenSaverId()
++{
++  if (m_screenSaver)
++    return m_screenSaver->ID();
++  return "";
++}
+diff --git a/xbmc/Application.h b/xbmc/Application.h
+index b788471..ed19b79 100644
+--- a/xbmc/Application.h
++++ b/xbmc/Application.h
+@@ -356,6 +356,8 @@ class CApplication : public CXBApplicationEx, public IPlayerCallback, public IMs
+ 
+   void SetLoggingIn(bool loggingIn) { m_loggingIn = loggingIn; }
+ 
++  std::string GetScreenSaverId();
++
+ protected:
+   virtual bool OnSettingsSaving() const;
+ 
+diff --git a/xbmc/guilib/GUITextBox.cpp b/xbmc/guilib/GUITextBox.cpp
+index ba68fad..e149418 100644
+--- a/xbmc/guilib/GUITextBox.cpp
++++ b/xbmc/guilib/GUITextBox.cpp
+@@ -133,7 +133,9 @@ void CGUITextBox::Process(unsigned int currentTime, CDirtyRegionList &dirtyregio
+   // update our auto-scrolling as necessary
+   if (m_autoScrollTime && m_lines.size() > m_itemsPerPage)
+   {
+-    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
++    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !(g_application.IsInScreenSaver() &&
++         (g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.black" ||
++          g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.dim")))
      {
        if (m_lastRenderTime)
          m_autoScrollDelayTime += currentTime - m_lastRenderTime;
