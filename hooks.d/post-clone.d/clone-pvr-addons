@@ -1,8 +1,15 @@
+case $config_source_branch in
+  Gotham|gotham_rbp_backports)
+    PVR_BRANCH="gotham"
+    ;;
+  master)
+    PVR_BRANCH="master"
+    ;;
+esac
 
 if test -d pvr-addons; then
     cd pvr-addons
-    git pull origin master
+    git pull origin $PVR_BRANCH
 else
-    git clone -b master --single-branch --depth 1 https://github.com/opdenkamp/xbmc-pvr-addons.git pvr-addons
+    git clone -b $PVR_BRANCH --single-branch --depth 1 https://github.com/opdenkamp/xbmc-pvr-addons.git pvr-addons
 fi
-
