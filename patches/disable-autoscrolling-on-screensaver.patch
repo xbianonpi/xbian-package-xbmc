@@ -79,7 +79,7 @@ index ba68fad..e149418 100644
 -    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
 +    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !(g_application.IsInScreenSaver() &&
 +         (g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.black" ||
-+          g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.dim")))
++          g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.dim")) && !g_application.GetCecStandby())
      {
        if (m_lastRenderTime)
          m_autoScrollDelayTime += currentTime - m_lastRenderTime;

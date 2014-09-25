@@ -12,4 +12,5 @@ if test -d pvr-addons; then
     git pull origin $PVR_BRANCH
 else
     git clone -b $PVR_BRANCH --single-branch --depth 1 https://github.com/opdenkamp/xbmc-pvr-addons.git pvr-addons
+    ( cd pvr-addons; ./bootstrap; )
 fi
