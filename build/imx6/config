@@ -1,4 +1,4 @@
-config_source_configure=./debootstrap && ./configure --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-sdl --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --disable-hal --with-platform=cubox-i
+config_source_configure=./debootstrap && autoreconf -f -i -Wall,no-obsolete && ./configure --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-sdl --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --disable-hal --with-platform=cubox-i
 config_build_env=schroot -c armhfjessie -p --
 config_source_branch=Gotham
 config_deb_pkgname=xbian-package-xbmc-6q
