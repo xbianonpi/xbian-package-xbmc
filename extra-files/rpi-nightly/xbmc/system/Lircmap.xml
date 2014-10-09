@@ -102,6 +102,9 @@
 		<menu>KEY_DVD</menu>
 		<clear>KEY_CLEAR</clear>
 		<enter>KEY_ENTER</enter>
+		<guide>KEY_GUIDE</guide>
+		<title>KEY_CONTEXT_MENU</title>
+		<recordedtv>KEY_PVR</recordedtv>
 	</remote>
 	
 	<remote device="XboxDVDDongle">
