@@ -1,0 +1,27 @@
+From c01b823eaea4b47fd2fe874a860f220651e0933d Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Fri, 24 Oct 2014 04:12:39 +0200
+Subject: [PATCH] mediamanager: ignore btrfs-auto-snapshot snapshot directory
+ (/tmp/btrfs-snap).
+
+---
+ xbmc/storage/MediaManager.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/xbmc/storage/MediaManager.cpp b/xbmc/storage/MediaManager.cpp
+index 139a398..c95fb9f 100644
+--- a/xbmc/storage/MediaManager.cpp
++++ b/xbmc/storage/MediaManager.cpp
+@@ -678,6 +678,9 @@ std::vector<std::string> CMediaManager::GetDiskUsage()
+ void CMediaManager::OnStorageAdded(const std::string &label, const std::string &path)
+ {
+ #ifdef HAS_DVD_DRIVE
++  if (path == "/tmp/btrfs-snap")
++    return;
++
+   if (CSettings::Get().GetInt("audiocds.autoaction") != AUTOCD_NONE || CSettings::Get().GetBool("dvds.autorun"))
+     if (CSettings::Get().GetInt("audiocds.autoaction") == AUTOCD_RIP)
+       CJobManager::GetInstance().AddJob(new CAutorunMediaJob(label, path), this, CJob::PRIORITY_LOW);
+-- 
+2.0.1
+
