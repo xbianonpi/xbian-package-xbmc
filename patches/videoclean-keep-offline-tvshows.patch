@@ -1,0 +1,44 @@
+From 5755573981ca706a82a7ecbbdf5de112a570377a Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Fri, 17 Oct 2014 17:07:16 +0200
+Subject: [PATCH] Respect parent path decision when cleaning paths.
+
+When cleaning the video library and a source containing TV shows was unavailable,
+choosing to keep it only kept the source root, while subdirectories were
+removed.
+The result was that TV shows "disappeared".
+
+This is fixed by checking if there's a decision for the parent path when
+cleaning the path table.
+---
+ xbmc/video/VideoDatabase.cpp | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/xbmc/video/VideoDatabase.cpp b/xbmc/video/VideoDatabase.cpp
+index 056e9eb..e07a374 100644
+--- a/xbmc/video/VideoDatabase.cpp
++++ b/xbmc/video/VideoDatabase.cpp
+@@ -8090,7 +8090,7 @@ void CVideoDatabase::CleanDatabase(CGUIDialogProgressBarHandle* handle, const se
+     }
+ 
+     CLog::Log(LOGDEBUG, "%s: Cleaning paths that don't exist and have content set...", __FUNCTION__);
+-    sql = "SELECT path.idPath, path.strPath FROM path "
++    sql = "SELECT path.idPath, path.strPath, path.idParentPath FROM path "
+             "WHERE NOT ((strContent IS NULL OR strContent = '') "
+                    "AND (strSettings IS NULL OR strSettings = '') "
+                    "AND (strHash IS NULL OR strHash = '') "
+@@ -8100,8 +8100,12 @@ void CVideoDatabase::CleanDatabase(CGUIDialogProgressBarHandle* handle, const se
+     while (!m_pDS->eof())
+     {
+       std::map<int, bool>::const_iterator pathsDeleteDecision = pathsDeleteDecisions.find(m_pDS->fv(0).get_asInt());
+-      if ((pathsDeleteDecision != pathsDeleteDecisions.end() && pathsDeleteDecision->second) ||
+-          (pathsDeleteDecision == pathsDeleteDecisions.end() && !CDirectory::Exists(m_pDS->fv(1).get_asString(), false)))
++      // Check if we have a decision for the parent path
++      std::map<int, bool>::const_iterator pathsDeleteDecisionByParent = pathsDeleteDecisions.find(m_pDS->fv(2).get_asInt());
++      if (((pathsDeleteDecision != pathsDeleteDecisions.end() && pathsDeleteDecision->second) ||
++           (pathsDeleteDecision == pathsDeleteDecisions.end() && !CDirectory::Exists(m_pDS->fv(1).get_asString(), false))) &&
++          ((pathsDeleteDecisionByParent != pathsDeleteDecisions.end() && pathsDeleteDecisionByParent->second) ||
++           (pathsDeleteDecisionByParent == pathsDeleteDecisions.end())))
+         strIds += m_pDS->fv(0).get_asString() + ",";
+ 
+       m_pDS->next();
