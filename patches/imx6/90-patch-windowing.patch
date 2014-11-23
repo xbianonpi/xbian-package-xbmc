@@ -1,9 +1,9 @@
-diff --git b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
+diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 new file mode 100644
-index 0000000..3dc64a3
+index 0000000..04cadc8
 --- /dev/null
-+++ a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-@@ -0,0 +1,321 @@
++++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
+@@ -0,0 +1,336 @@
 +/*
 + *      Copyright (C) 2011-2013 Team XBMC
 + *      http://www.xbmc.org
@@ -24,7 +24,6 @@ index 0000000..3dc64a3
 + *
 + */
 +
-+#include <linux/mxcfb.h>
 +#include "system.h"
 +#include <EGL/egl.h>
 +
@@ -129,17 +128,25 @@ index 0000000..3dc64a3
 +  // Force double-buffering
 +  CEnvironment::setenv("FB_MULTI_BUFFER", "2", 0);
 +
++#ifdef HAS_IMXVPU
 +  // EGL will be rendered on fb0
 +  m_display = fbGetDisplayByIndex(0);
 +  m_nativeDisplay = &m_display;
 +  return true;
++#else
++  return false;
++#endif
 +}
 +
 +bool CEGLNativeTypeIMX::CreateNativeWindow()
 +{
++#ifdef HAS_IMXVPU
 +  m_window = fbCreateWindow(m_display, 0, 0, 0, 0);
 +  m_nativeWindow = &m_window;
 +  return true;
++#else
++  return false;
++#endif
 +}
 +
 +bool CEGLNativeTypeIMX::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) const
@@ -164,18 +171,26 @@ index 0000000..3dc64a3
 +
 +bool CEGLNativeTypeIMX::DestroyNativeDisplay()
 +{
++#ifdef HAS_IMXVPU
 +  if (m_display)
 +    fbDestroyDisplay(m_display);
 +  m_display =  NULL;
 +  return true;
++#else
++  return false;
++#endif
 +}
 +
 +bool CEGLNativeTypeIMX::DestroyNativeWindow()
 +{
++#ifdef HAS_IMXVPU
 +  if (m_window)
 +    fbDestroyWindow(m_window);
 +  m_window =  NULL;
 +  return true;
++#else
++  return false;
++#endif
 +}
 +
 +bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
@@ -217,8 +232,8 @@ index 0000000..3dc64a3
 +
 +  std::string valstr;
 +  get_sysfs_str("/sys/class/graphics/fb0/modes", valstr);
-+  std::vector<CStdString> probe_str;
-+  StringUtils::SplitString(valstr, "\n", probe_str);
++  std::vector<std::string> probe_str;
++  probe_str = StringUtils::Split(valstr, "\n");
 +
 +  resolutions.clear();
 +  RESOLUTION_INFO res;
@@ -325,12 +340,12 @@ index 0000000..3dc64a3
 +  return res->iWidth > 0 && res->iHeight> 0;
 +}
 +
-diff --git b/xbmc/windowing/egl/EGLNativeTypeIMX.h a/xbmc/windowing/egl/EGLNativeTypeIMX.h
+diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.h b/xbmc/windowing/egl/EGLNativeTypeIMX.h
 new file mode 100644
-index 0000000..df7b3b7
+index 0000000..c95dcfb
 --- /dev/null
-+++ a/xbmc/windowing/egl/EGLNativeTypeIMX.h
-@@ -0,0 +1,60 @@
++++ b/xbmc/windowing/egl/EGLNativeTypeIMX.h
+@@ -0,0 +1,59 @@
 +#pragma once
 +
 +/*
@@ -354,7 +369,6 @@ index 0000000..df7b3b7
 + */
 +#include <linux/fb.h>
 +#include "EGLNativeType.h"
-+#include "EGL/eglvivante.h"
 +
 +class CEGLNativeTypeIMX : public CEGLNativeType
 +{
@@ -391,55 +405,38 @@ index 0000000..df7b3b7
 +  EGLNativeDisplayType m_display;
 +  EGLNativeWindowType  m_window;
 +};
-diff --git b/xbmc/windowing/egl/EGLWrapper.cpp a/xbmc/windowing/egl/EGLWrapper.cpp
-index 045cdfc..4d74be5 100644
---- b/xbmc/windowing/egl/EGLWrapper.cpp
-+++ a/xbmc/windowing/egl/EGLWrapper.cpp
-@@ -17,16 +17,17 @@
-  *  <http://www.gnu.org/licenses/>.
-  *
-  */
--
- #include "system.h"
- 
- #ifdef HAS_EGL
--
- #include "utils/log.h"
- #include "EGLNativeTypeAndroid.h"
+diff --git a/xbmc/windowing/egl/EGLWrapper.cpp b/xbmc/windowing/egl/EGLWrapper.cpp
+index 045cdfc..52bf34b 100644
+--- a/xbmc/windowing/egl/EGLWrapper.cpp
++++ b/xbmc/windowing/egl/EGLWrapper.cpp
+@@ -27,6 +27,7 @@
  #include "EGLNativeTypeAmlogic.h"
  #include "EGLNativeTypeRaspberryPI.h"
  #include "EGLNativeTypeWayland.h"
-+#ifdef HAS_IMXVPU
 +#include "EGLNativeTypeIMX.h"
-+#endif
  #include "EGLWrapper.h"
  
  #define CheckError() m_result = eglGetError(); if(m_result != EGL_SUCCESS) CLog::Log(LOGERROR, "EGL error in %s: %x",__FUNCTION__, m_result);
-@@ -83,7 +84,11 @@ bool CEGLWrapper::Initialize(const std::string &implementation)
+@@ -83,7 +84,9 @@ bool CEGLWrapper::Initialize(const std::string &implementation)
    if ((nativeGuess = CreateEGLNativeType<CEGLNativeTypeWayland>(implementation)) ||
        (nativeGuess = CreateEGLNativeType<CEGLNativeTypeAndroid>(implementation)) ||
        (nativeGuess = CreateEGLNativeType<CEGLNativeTypeAmlogic>(implementation)) ||
 -      (nativeGuess = CreateEGLNativeType<CEGLNativeTypeRaspberryPI>(implementation)))
-+      (nativeGuess = CreateEGLNativeType<CEGLNativeTypeRaspberryPI>(implementation))
-+#ifdef HAS_IMXFB
-+      || (nativeGuess = CreateEGLNativeType<CEGLNativeTypeIMX>(implementation))
-+#endif
++      (nativeGuess = CreateEGLNativeType<CEGLNativeTypeRaspberryPI>(implementation)) ||
++      (nativeGuess = CreateEGLNativeType<CEGLNativeTypeIMX>(implementation))
 +      )
    {
      m_nativeTypes = nativeGuess;
  
-diff --git b/xbmc/windowing/egl/Makefile.in a/xbmc/windowing/egl/Makefile.in
-index f800b7f..ec84c1d 100644
---- b/xbmc/windowing/egl/Makefile.in
-+++ a/xbmc/windowing/egl/Makefile.in
-@@ -24,6 +24,10 @@ SRCS+= wayland/Callback.cpp \
-        wayland/XBMCSurface.cpp
- endif
- 
-+ifeq (@USE_IMXFB@,1)
+diff --git a/xbmc/windowing/egl/Makefile.in b/xbmc/windowing/egl/Makefile.in
+index f800b7f..f59f9cb 100644
+--- a/xbmc/windowing/egl/Makefile.in
++++ b/xbmc/windowing/egl/Makefile.in
+@@ -5,6 +5,7 @@ SRCS+= EGLNativeTypeAmlogic.cpp
+ SRCS+= EGLNativeTypeAndroid.cpp
+ SRCS+= EGLNativeTypeRaspberryPI.cpp
+ SRCS+= EGLNativeTypeWayland.cpp
 +SRCS+= EGLNativeTypeIMX.cpp
-+endif
-+
- LIB = windowing_egl.a
+ SRCS+= EGLWrapper.cpp
  
- include ../../../Makefile.include
+ # Wayland specific detail

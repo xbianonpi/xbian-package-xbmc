@@ -1,0 +1,49 @@
+diff --git a/xbmc/cores/VideoRenderers/LinuxRendererGLES.cpp b/xbmc/cores/VideoRenderers/LinuxRendererGLES.cpp
+index 8492459..7e66328 100644
+--- a/xbmc/cores/VideoRenderers/LinuxRendererGLES.cpp
++++ b/xbmc/cores/VideoRenderers/LinuxRendererGLES.cpp
+@@ -943,6 +945,17 @@ void CLinuxRendererGLES::ReleaseBuffer(int idx)
+     }
+   }
+ #endif
++#if defined(HAS_IMXVPU)
++  if ( m_renderMethod & RENDER_IMXMAP )
++  {
++    if (buf.codecinfo)
++    {
++     // The media buffer has been queued to the SurfaceView but we didn't render it
++     // We have to do to the updateTexImage or it will get stuck
++     SAFE_RELEASE(buf.codecinfo); buf.codecinfo = NULL;
++    }
++  }
++#endif
+ }
+ 
+ void CLinuxRendererGLES::Render(DWORD flags, int index)
+@@ -1007,6 +1020,7 @@ void CLinuxRendererGLES::Render(DWORD flags, int index)
+   else if (m_renderMethod & RENDER_IMXMAP)
+   {
+     RenderIMXMAPTexture(index, m_currentField);
++    VerifyGLState();
+   }
+   else
+   {
+@@ -2802,7 +2816,7 @@ bool CLinuxRendererGLES::CreateIMXMAPTexture(int index)
+   YUVFIELDS &fields = m_buffers[index].fields;
+   YUVPLANE  &plane  = fields[0][0];
+ 
+-  DeleteEGLIMGTexture(index);
++  DeleteIMXMAPTexture(index);
+ 
+   memset(&im    , 0, sizeof(im));
+   memset(&fields, 0, sizeof(fields));
+@@ -3003,7 +3017,8 @@ unsigned int CLinuxRendererGLES::GetProcessorSize()
+   if(m_format == RENDER_FMT_OMXEGL
+   || m_format == RENDER_FMT_CVBREF
+   || m_format == RENDER_FMT_EGLIMG
+-  || m_format == RENDER_FMT_MEDIACODEC)
++  || m_format == RENDER_FMT_MEDIACODEC
++  || m_format == RENDER_FMT_IMXMAP)
+     return 1;
+   else
+     return 0;
