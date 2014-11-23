@@ -1,5 +1,11 @@
 
-[ $config_platform_branch != rpi-nightly ] && return
+case $config_platform_branch in
+    *-nightly)
+        ;;
+    *)
+        return
+        ;;
+esac
 
 [ -e tools/depends/native/JsonSchemaBuilder/native ] && rm -fr tools/depends/native/JsonSchemaBuilder/native
 make -C tools/depends/native/JsonSchemaBuilder
