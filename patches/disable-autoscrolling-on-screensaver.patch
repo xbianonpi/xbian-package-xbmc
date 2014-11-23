@@ -19,16 +19,6 @@ index b7ef051..ba68fad 100644
  
  using namespace std;
  
-@@ -132,7 +133,7 @@ void CGUITextBox::Process(unsigned int currentTime, CDirtyRegionList &dirtyregio
-   // update our auto-scrolling as necessary
-   if (m_autoScrollTime && m_lines.size() > m_itemsPerPage)
-   {
--    if (!m_autoScrollCondition || m_autoScrollCondition->Get())
-+    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
-     {
-       if (m_lastRenderTime)
-         m_autoScrollDelayTime += currentTime - m_lastRenderTime;
-
 From 94ef7a7413590c9bedda85df88dc4c35da4c2a51 Mon Sep 17 00:00:00 2001
 From: anaconda <anaconda@menakite.eu>
 Date: Sat, 13 Sep 2014 19:49:01 +0200
@@ -76,7 +66,7 @@ index ba68fad..e149418 100644
    // update our auto-scrolling as necessary
    if (m_autoScrollTime && m_lines.size() > m_itemsPerPage)
    {
--    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.IsInScreenSaver())
+-    if (!m_autoScrollCondition || m_autoScrollCondition->Get())
 +    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !(g_application.IsInScreenSaver() &&
 +         (g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.black" ||
 +          g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.dim")) && !g_application.GetCecStandby())
