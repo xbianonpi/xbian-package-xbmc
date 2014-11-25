@@ -1,0 +1,35 @@
+commit eaa49e4a0750a5f63fb8f3d26bb01e9b58ea7a9b
+Author: Matus Kral <matuskral@me.com>
+Date:   Mon Nov 17 11:00:28 2014 +0100
+
+  egl-error fix on imx6 changing resolutions
+     - imx6 as only egl driver is destroying nativedisplay on resolution change
+     - xbmc's EGL code is not aware of this change
+     (pointer to EGLDisplay can change but xbmc uses old pointer
+      which was obtained on EGL init. in such case EGL properly 
+      throws error 300b - bad window - which comes from recreating 
+      new window on BAD display)
+
+     - InitDisplay() is refreshing display pointer
+     (and running eglInitialize() has no effect on already initialised display)
+
+diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemEGL.cpp
+index d2a94c9..af25897 100644
+--- a/xbmc/windowing/egl/WinSystemEGL.cpp
++++ b/xbmc/windowing/egl/WinSystemEGL.cpp
+@@ -151,6 +151,15 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
+   if(m_egl)
+     m_egl->SetNativeResolution(res);
+
++#ifdef HAS_IMXVPU
++  if (m_context != EGL_NO_CONTEXT )
++    if (!m_egl->InitDisplay(&m_display))
++    {
++      CLog::Log(LOGERROR, "%s: Could not reinit display",__FUNCTION__);
++      return false;
++    }
++#endif
++
+   if (!m_egl->CreateSurface(m_display, m_config, &m_surface))
+   {
+     CLog::Log(LOGNOTICE, "%s: Could not create a surface. Trying with a fresh Native Window.",__FUNCTION__);
