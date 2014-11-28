@@ -83,7 +83,7 @@ Date:   Wed Aug 04 00:35:47 2014 +0200
 +
 +    while (!m_adapter->m_cecAdapter->IsLibCECActiveSource() && 
 +           bContinue)
-+      bContinue = !m_event.WaitMSec(1000);
++      bContinue = !m_event.WaitMSec(10000);
 +  }
  
    // and let the gui know that we're done

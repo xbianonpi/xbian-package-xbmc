@@ -28,7 +28,7 @@ index 415e4c2..f82872e 100644
        break;
      case XBMC_KEYDOWN:
        g_application.OnKey(g_Keyboard.ProcessKeyDown(newEvent.key.keysym));
-@@ -2201,6 +2201,50 @@ float CApplication::GetDimScreenSaverLevel() const
+@@ -2186,6 +2191,39 @@ float CApplication::GetDimScreenSaverLevel() const
    return 100.0f;
  }
  
@@ -43,7 +43,7 @@ index 415e4c2..f82872e 100644
 +  if (status == m_cecStandby && !force)
 +    return;
 +
-+  CLog::Log(LOGDEBUG, "%s is %x, se %d, sa %d", __FUNCTION__, (int)status, m_screenSaver ? 1:0, m_bScreenSave);
++  CLog::Log(LOGDEBUG, "%s is %x, se %d, sa %d, csr %d", __FUNCTION__, (int)status, m_screenSaver ? 1:0, m_bScreenSave, m_cecStandbyRun);
 +
 +  m_cecStandby = status;
 +  if (g_application.m_bStop)
@@ -57,19 +57,8 @@ index 415e4c2..f82872e 100644
 +      ResetScreenSaver();
 +      WakeUpScreenSaverAndDPMS();
 +    }
-+    if (m_cecStandbyRun < 0) return;
 +    g_Windowing.UpdateResolutions();
-+#ifdef TARGET_RASPBERRY_PI
-+    //g_Windowing.ResizeWindow(g_Windowing.GetWidth(), g_Windowing.GetHeight(), 0, 0);
-+#endif
-+#ifdef HAS_IMXVPU
-+    /*RESOLUTION newRes = (RESOLUTION)g_Windowing.DesktopResolution(g_Windowing.GetCurrentScreen());
-+
-+    eglSwapInterval(g_Windowing.GetEGLDisplay(), 1);
-+    EGLint result = eglGetError();
-+    if(result != EGL_SUCCESS)
-+      CLog::Log(LOGERROR, "EGL error in %s: %x",__FUNCTION__, result);*/
-+#endif
++    g_graphicsContext.SetFullScreenVideo(g_graphicsContext.IsFullScreenVideo());
 +  }
 +  else
 +    if (!m_bScreenSave)
@@ -97,7 +86,7 @@ index 415e4c2..f82872e 100644
          else if (lowfps)
            singleFrameTime = 200;  // 5 fps, <=200 ms latency to wake up
        }
-@@ -5072,6 +5120,14 @@ void CApplication::Process()
+@@ -5072,6 +5120,13 @@ void CApplication::Process()
    {
      m_slowTimer.Reset();
      ProcessSlow();
@@ -106,7 +95,6 @@ index 415e4c2..f82872e 100644
 +    if (!g_application.m_bInitializing && m_cecStandbyRun > 0 && !(m_cecStandbyRun++ % 4))
 +    {
 +      SetCecStandby(false, true);
-+      m_cecStandbyRun = -1;
 +    }
 +#endif
    }
