@@ -377,14 +377,6 @@ diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemE
 index d2a94c9..af25897 100644
 --- a/xbmc/windowing/egl/WinSystemEGL.cpp
 +++ b/xbmc/windowing/egl/WinSystemEGL.cpp
-@@ -18,6 +18,7 @@
-  *
-  */
- #include "system.h"
-+#include "Application.h"
- 
- #ifdef HAS_EGL
- 
 @@ -111,7 +111,7 @@ bool CWinSystemEGL::InitWindowSystem()
          EGL_GREEN_SIZE,      8,
          EGL_BLUE_SIZE,       8,
@@ -410,25 +402,16 @@ index d2a94c9..af25897 100644
    if (!m_egl->CreateSurface(m_display, m_config, &m_surface))
    {
      CLog::Log(LOGNOTICE, "%s: Could not create a surface. Trying with a fresh Native Window.",__FUNCTION__);
-@@ -392,12 +401,21 @@ void CWinSystemEGL::UpdateResolutions()
-        (resDesktop.dwFlags & D3DPRESENTFLAG_MODEMASK) == (resolutions[i].dwFlags & D3DPRESENTFLAG_MODEMASK) &&
-        fabs(resDesktop.fRefreshRate - resolutions[i].fRefreshRate) < FLT_EPSILON)
-     {
-+      CLog::Log(LOGNOTICE, "Found resolution -- current active resolution %d\n", (int)res_index);
-       ResDesktop = res_index;
-     }
- 
-     res_index = (RESOLUTION)((int)res_index + 1);
-   }
- 
-+#ifdef HAS_IMXVPU
-+  /*if (g_application.IsPlayingFullScreenVideo())
-+    return;*/
-+
-+  if (CDisplaySettings::Get().GetDisplayResolution() != RES_DESKTOP)
-+    ResDesktop = CDisplaySettings::Get().GetDisplayResolution();
-+  resDesktop = CDisplaySettings::Get().GetResolutionInfo(ResDesktop);
-+#endif
-   // swap desktop index for desktop res if available
-   if (ResDesktop != RES_INVALID)
-   {
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index 43bc778..1c6229b 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -2296,7 +2344,7 @@ void CApplication::Render()
+   //when nothing has been rendered for m_guiDirtyRegionNoFlipTimeout milliseconds,
+   //we don't call g_graphicsContext.Flip() anymore, this saves gpu and cpu usage
+   bool flip;
+-  if (g_advancedSettings.m_guiDirtyRegionNoFlipTimeout >= 0)
++  if (g_advancedSettings.m_guiDirtyRegionNoFlipTimeout > 0)
+     flip = hasRendered || (now - m_lastRenderTime) < (unsigned int)g_advancedSettings.m_guiDirtyRegionNoFlipTimeout;
+   else
+     flip = true;
