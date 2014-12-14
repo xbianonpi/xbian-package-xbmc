@@ -1,0 +1,12 @@
+
+case $config_platform_branch in
+    *-nightly)
+        ;;
+    *)
+        return
+        ;;
+esac
+
+rm -f tools/depends/target/ffmpeg/.ffmpeg-installed
+rm -f tools/depends/target/ffmpeg/*.tar.gz
+
