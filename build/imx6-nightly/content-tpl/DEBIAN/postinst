@@ -10,7 +10,7 @@ if [[ $1 == "configure" ]]; then
 		# "Migrate" plugin.xbianconfig and script.service.xbian.upstart-bridge
 		# otherwise they just won't get loaded at all.
 		mv /usr/local/share/xbmc/addons/* /usr/local/share/kodi/addons
-		rmdir -p /usr/local/share/xbmc/addons
+		rmdir --ignore-fail-on-non-empty -p /usr/local/share/xbmc/addons
 
 		### TODO: remove in a future release, maybe? Surely the latter.
 		ln -s /home/xbian/.kodi /home/xbian/.xbmc
