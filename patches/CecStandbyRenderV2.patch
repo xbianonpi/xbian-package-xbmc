@@ -47,7 +47,7 @@ index 415e4c2..f82872e 100644
  }
  
  void CApplication::OnSettingAction(const CSetting *setting)
-@@ -2186,6 +2191,39 @@ float CApplication::GetDimScreenSaverLevel() const
+@@ -2186,6 +2191,37 @@ float CApplication::GetDimScreenSaverLevel() const
    return 100.0f;
  }
  
@@ -71,16 +71,14 @@ index 415e4c2..f82872e 100644
 +  //SetRenderGUI(!status);
 +  if (!status)
 +  {
-+    if (m_bScreenSave)
-+    {
-+      ResetScreenSaver();
++    if (!force && IsInScreenSaver())
 +      WakeUpScreenSaverAndDPMS();
-+    }
++
 +    g_Windowing.UpdateResolutions();
 +    g_graphicsContext.SetFullScreenVideo(g_graphicsContext.IsFullScreenVideo());
 +  }
 +  else
-+    if (!m_bScreenSave)
++    if (!force && !IsInScreenSaver())
 +      ActivateScreenSaver();
 +}
 +
