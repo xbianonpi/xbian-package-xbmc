@@ -1,0 +1,59 @@
+diff --git a/xbmc/filesystem/CurlFile.cpp b/xbmc/filesystem/CurlFile.cpp
+index 4808465..f6c82bf 100644
+--- a/xbmc/filesystem/CurlFile.cpp
++++ b/xbmc/filesystem/CurlFile.cpp
+@@ -45,6 +45,8 @@
+ #include "utils/log.h"
+ #include "utils/StringUtils.h"
+ 
++#include <proxy.h>
++
+ using namespace XFILE;
+ using namespace XCURL;
+ 
+@@ -574,6 +576,30 @@ void CCurlFile::SetCommonOptions(CReadState* state)
+   if (g_advancedSettings.m_curlDisableIPV6)
+     g_curlInterface.easy_setopt(h, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+ 
++  // libproxy
++  pxProxyFactory *pf = NULL;
++  pf = px_proxy_factory_new();
++  char **proxies = px_proxy_factory_get_proxies(pf, m_url.c_str());
++
++  for (int i=0 ; proxies[i] ; i++)
++  {
++    m_proxy = proxies[i];
++
++    /* HTTP Proxy */
++    if (!strncmp("http", proxies[i], 4))
++      m_proxytype = PROXY_HTTP;
++
++    /* SOCKS Proxy, is this correct??? */
++    /* What about SOCKS 4A, 5 and 5_HOSTNAME??? */
++    else if (!strncmp("socks", proxies[i], 4))
++      m_proxytype = PROXY_SOCKS5;
++
++    free(proxies[i]);
++  }
++  // libproxy cleanup
++  px_proxy_factory_free(pf);
++  free(proxies);
++
+   if (m_proxy.length() > 0)
+   {
+     g_curlInterface.easy_setopt(h, CURLOPT_PROXY, m_proxy.c_str());
+diff --git a/configure.in b/configure.in
+index 859ea36..5592035 100644
+--- a/configure.in
++++ b/configure.in
+@@ -1059,6 +1059,10 @@ if test "x$have_imxfb" = "xyes"; then
+   AC_SUBST([USE_IMXFB], 1)
+ fi
+ 
++# libproxy
++AC_CHECK_HEADER([proxy.h],, AC_MSG_ERROR($missing_library))
++AC_CHECK_LIB([proxy],  [main],, AC_MSG_ERROR($missing_library))
++
+ # Checks for platforms libraries.
+ if test "$use_gles" = "yes"; then
+   use_gl="no"
