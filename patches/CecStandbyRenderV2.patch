@@ -176,7 +176,7 @@ index 1a8fd59..7207988 100644
 -      if (m_cecAdapter->IsLibCECActiveSource())
 +      if (m_cecAdapter->IsLibCECActiveSource()) {
          StandbyDevices();
-+        g_application.SetCecStandby(true);
++        //g_application.SetCecStandby(true);
 +      }
      }
    }
@@ -192,21 +192,16 @@ index 1a8fd59..7207988 100644
        break;
      case CEC_OPCODE_SET_MENU_LANGUAGE:
        if (adapter->m_configuration.bUseTVMenuLanguage == 1 && command.initiator == CECDEVICE_TV && command.parameters.size == 3)
-@@ -1151,7 +1160,14 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
- 
-   // wake up the screensaver, so the user doesn't switch to a black screen
-   if (activated == 1)
-+  {
-+    g_application.SetCecStandby(false);
-     g_application.WakeUpScreenSaverAndDPMS();
-+  }
-+  else
-+  {
+@@ -1153,6 +1169,9 @@ void CPeripheralCecAdapter::CecSourceActivated(void *cbParam, const CEC::cec_log
+         CApplicationMessenger::Get().MediaPause();
+     }
+   }
++
++  if (activated != 1)
 +    g_application.SetCecStandby(true);
-+  }
+ }
  
-   if (adapter->GetSettingBool("pause_playback_on_deactivate"))
-   {
+ int CPeripheralCecAdapter::CecLogMessage(void *cbParam, const cec_log_message message)
 @@ -1582,6 +1598,8 @@ bool CPeripheralCecAdapterUpdateThread::SetInitialConfiguration(void)
  
    CSingleLock lock(m_critSection);

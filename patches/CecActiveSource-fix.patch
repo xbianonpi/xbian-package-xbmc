@@ -70,8 +70,8 @@ Date:   Wed Aug 04 00:35:47 2014 +0200
    m_adapter->m_bIsReady = true;
 +  if (m_configuration.bActivateSource == 1)
 +  {
-+    if (m_configuration.bActivateSource == 1 && m_adapter->m_cecAdapter->IsActiveDevice(CECDEVICE_TV))
-+      m_adapter->m_cecAdapter->SetMenuState(CEC_MENU_STATE_DEACTIVATED, false);
++    /*if (m_configuration.bActivateSource == 1 && m_adapter->m_cecAdapter->IsActiveDevice(CECDEVICE_TV))
++      m_adapter->m_cecAdapter->SetMenuState(CEC_MENU_STATE_DEACTIVATED, false);*/
 +
 +    m_adapter->ActivateSource();
 +    // wait until TV are powered up
