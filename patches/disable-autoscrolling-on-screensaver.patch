@@ -1,14 +1,68 @@
-From 26aacd5a811ac6be8ec613890dbf1175c7c64f27 Mon Sep 17 00:00:00 2001
+From 7365421ac4acc64013e93bd2548e42df5c58bede Mon Sep 17 00:00:00 2001
 From: anaconda <anaconda@menakite.eu>
 Date: Thu, 11 Sep 2014 21:30:43 +0200
-Subject: [PATCH 1/2] Disable textbox autoscrolling while on screensaver.
+Subject: [PATCH 1/2] [guilib] Disable autoscrolling while on screensaver.
 
 ---
- xbmc/guilib/GUITextBox.cpp | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ xbmc/Application.cpp          | 7 +++++++
+ xbmc/Application.h            | 2 ++
+ xbmc/guilib/GUIFont.cpp       | 4 ++++
+ xbmc/guilib/GUITextBox.cpp    | 3 ++-
+ xbmc/guilib/GUITextLayout.cpp | 4 ++++
+ 5 files changed, 19 insertions(+), 1 deletion(-)
 
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index e91b82b..471cedc 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -5874,3 +5874,10 @@ void CApplication::CloseNetworkShares()
+   CSFTPSessionManager::DisconnectAllSessions();
+ #endif
+ }
++
++bool CApplication::ScreenSaverDisablesAutoScrolling()
++{
++  return IsInScreenSaver() && m_screenSaver &&
++    (m_screenSaver->ID() == "screensaver.xbmc.builtin.black" ||
++     m_screenSaver->ID() == "screensaver.xbmc.builtin.dim");
++}
+diff --git a/xbmc/Application.h b/xbmc/Application.h
+index 0a332ff..fb271cf 100644
+--- a/xbmc/Application.h
++++ b/xbmc/Application.h
+@@ -380,6 +380,8 @@ public:
+ 
+   void SetLoggingIn(bool loggingIn) { m_loggingIn = loggingIn; }
+ 
++  bool ScreenSaverDisablesAutoScrolling();
++
+ protected:
+   virtual bool OnSettingsSaving() const;
+ 
+diff --git a/xbmc/guilib/GUIFont.cpp b/xbmc/guilib/GUIFont.cpp
+index a7ee668..4f52804 100644
+--- a/xbmc/guilib/GUIFont.cpp
++++ b/xbmc/guilib/GUIFont.cpp
+@@ -22,6 +22,7 @@
+ #include "GUIFontTTF.h"
+ #include "GraphicContext.h"
+ 
++#include "Application.h"
+ #include "threads/SingleLock.h"
+ #include "utils/TimeUtils.h"
+ #include "utils/MathUtils.h"
+@@ -121,6 +122,9 @@ bool CGUIFont::UpdateScrollInfo(const vecText &text, CScrollInfo &scrollInfo)
+   //   pixelPos is the amount in pixels to move the string by.
+   //   characterPos is the amount in characters to rotate the string by.
+   //
++  if (g_application.ScreenSaverDisablesAutoScrolling())
++    return false;
++
+   if (scrollInfo.waitTime)
+   {
+     scrollInfo.waitTime--;
 diff --git a/xbmc/guilib/GUITextBox.cpp b/xbmc/guilib/GUITextBox.cpp
-index b7ef051..ba68fad 100644
+index b7ef051..da1dfb9 100644
 --- a/xbmc/guilib/GUITextBox.cpp
 +++ b/xbmc/guilib/GUITextBox.cpp
 @@ -23,6 +23,7 @@
@@ -19,57 +73,66 @@ index b7ef051..ba68fad 100644
  
  using namespace std;
  
-From 94ef7a7413590c9bedda85df88dc4c35da4c2a51 Mon Sep 17 00:00:00 2001
-From: anaconda <anaconda@menakite.eu>
-Date: Sat, 13 Sep 2014 19:49:01 +0200
-Subject: [PATCH 2/2] SQUASH: only if dim or black
-
----
- xbmc/Application.cpp       | 7 +++++++
- xbmc/Application.h         | 2 ++
- xbmc/guilib/GUITextBox.cpp | 4 +++-
- 3 files changed, 12 insertions(+), 1 deletion(-)
-
-diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
-index 94ee013..43ae306 100644
---- a/xbmc/Application.cpp
-+++ b/xbmc/Application.cpp
-@@ -5857,3 +5857,10 @@ void CApplication::CloseNetworkShares()
-   CSFTPSessionManager::DisconnectAllSessions();
- #endif
- }
-+
-+std::string CApplication::GetScreenSaverId()
-+{
-+  if (m_screenSaver)
-+    return m_screenSaver->ID();
-+  return "";
-+}
-diff --git a/xbmc/Application.h b/xbmc/Application.h
-index b788471..ed19b79 100644
---- a/xbmc/Application.h
-+++ b/xbmc/Application.h
-@@ -356,6 +356,8 @@ class CApplication : public CXBApplicationEx, public IPlayerCallback, public IMs
- 
-   void SetLoggingIn(bool loggingIn) { m_loggingIn = loggingIn; }
- 
-+  std::string GetScreenSaverId();
-+
- protected:
-   virtual bool OnSettingsSaving() const;
- 
-diff --git a/xbmc/guilib/GUITextBox.cpp b/xbmc/guilib/GUITextBox.cpp
-index ba68fad..e149418 100644
---- a/xbmc/guilib/GUITextBox.cpp
-+++ b/xbmc/guilib/GUITextBox.cpp
-@@ -133,7 +133,9 @@ void CGUITextBox::Process(unsigned int currentTime, CDirtyRegionList &dirtyregio
+@@ -132,7 +133,7 @@ void CGUITextBox::Process(unsigned int currentTime, CDirtyRegionList &dirtyregio
    // update our auto-scrolling as necessary
    if (m_autoScrollTime && m_lines.size() > m_itemsPerPage)
    {
 -    if (!m_autoScrollCondition || m_autoScrollCondition->Get())
-+    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !(g_application.IsInScreenSaver() &&
-+         (g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.black" ||
-+          g_application.GetScreenSaverId() == "screensaver.xbmc.builtin.dim")) && !g_application.GetCecStandby())
++    if ((!m_autoScrollCondition || m_autoScrollCondition->Get()) && !g_application.ScreenSaverDisablesAutoScrolling())
      {
        if (m_lastRenderTime)
          m_autoScrollDelayTime += currentTime - m_lastRenderTime;
+diff --git a/xbmc/guilib/GUITextLayout.cpp b/xbmc/guilib/GUITextLayout.cpp
+index 031430d..4919afd 100644
+--- a/xbmc/guilib/GUITextLayout.cpp
++++ b/xbmc/guilib/GUITextLayout.cpp
+@@ -24,6 +24,7 @@
+ #include "GUIColorManager.h"
+ #include "utils/CharsetConverter.h"
+ #include "utils/StringUtils.h"
++#include "Application.h"
+ 
+ using namespace std;
+ 
+@@ -110,6 +111,9 @@ bool CGUITextLayout::UpdateScrollinfo(CScrollInfo &scrollInfo)
+ 
+ void CGUITextLayout::RenderScrolling(float x, float y, float angle, color_t color, color_t shadowColor, uint32_t alignment, float maxWidth, const CScrollInfo &scrollInfo)
+ {
++  if (g_application.ScreenSaverDisablesAutoScrolling())
++    return;
++
+   if (!m_font)
+     return;
+ 
+-- 
+2.2.1
+
+
+From 279781d00ee82e7e907ccb7a3adc4fd0bcaa7fd9 Mon Sep 17 00:00:00 2001
+From: Matus Kral <matuskral@me.com>
+Date: Thu, 25 Sep 2014 02:53:51 +0200
+Subject: [PATCH 2/2] Also check XBian-specific GetCecStandby().
+
+---
+ xbmc/Application.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index 471cedc..ed3434b 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -5877,6 +5877,11 @@ void CApplication::CloseNetworkShares()
+ 
+ bool CApplication::ScreenSaverDisablesAutoScrolling()
+ {
++  // This 'if' clause is completely unnecessary, but by not touching the 'return'
++  // below this patch becomes more easily maintainable.
++  if (GetCecStandby())
++    return true;
++
+   return IsInScreenSaver() && m_screenSaver &&
+     (m_screenSaver->ID() == "screensaver.xbmc.builtin.black" ||
+      m_screenSaver->ID() == "screensaver.xbmc.builtin.dim");
+-- 
+2.2.1
+
