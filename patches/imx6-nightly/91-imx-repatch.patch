@@ -386,22 +386,6 @@ index d2a94c9..af25897 100644
          EGL_STENCIL_SIZE,    0,
          EGL_SAMPLE_BUFFERS,  0,
          EGL_SAMPLES,         0,
-@@ -151,6 +151,15 @@ bool CWinSystemEGL::CreateWindow(RESOLUTION_INFO &res)
-   if(m_egl)
-     m_egl->SetNativeResolution(res);
- 
-+#ifdef HAS_IMXVPU
-+  if (m_context != EGL_NO_CONTEXT )
-+    if (!m_egl->InitDisplay(&m_display))
-+    {
-+      CLog::Log(LOGERROR, "%s: Could not reinit display",__FUNCTION__);
-+      return false;
-+    }
-+#endif
-+
-   if (!m_egl->CreateSurface(m_display, m_config, &m_surface))
-   {
-     CLog::Log(LOGNOTICE, "%s: Could not create a surface. Trying with a fresh Native Window.",__FUNCTION__);
 diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
 index 43bc778..1c6229b 100644
 --- a/xbmc/Application.cpp
