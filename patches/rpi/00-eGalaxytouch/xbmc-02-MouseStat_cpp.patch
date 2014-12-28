@@ -1,5 +1,5 @@
---- a/xbmc/input/MouseStat.cpp	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/input/MouseStat.cpp	2014-06-07 18:34:31.833980501 +0300
+--- a/xbmc/input/MouseStat.cpp	2014-08-24 18:41:38.000000000 +0300
++++ b/xbmc/input/MouseStat.cpp	2014-09-02 00:05:05.328878858 +0300
 @@ -20,10 +20,14 @@
  
  #include "MouseStat.h"
@@ -65,7 +65,7 @@
  
    // Fill in the public members
    if (newEvent.button.type == XBMC_MOUSEBUTTONDOWN)
-@@ -112,7 +124,23 @@
+@@ -113,7 +125,21 @@
  
      // CButtonState::Update does the hard work of checking the button state
      // and spotting drags, doubleclicks etc
@@ -75,13 +75,11 @@
 +    if(!ignore_action)
 +    {
 +      action = m_buttonState[i].Update(now, m_mouseState.x, m_mouseState.y, m_mouseState.button[i]);
-+	  }
++	}
 +
 +    /* Store raw action */
-+    if(i == 0)
-+    {
-+      m_RawAction = (uint32_t)action;
-+    }
++    m_RawAction = (uint32_t)action;
++    printf("%d-%d\n\r", i, m_RawAction);
 +
 +    //CLog::Log(LOGWARNING, "[AI]: |   (%d)dx,dy:(%d,%d),newEvent.motion:(%d,%d)\n",
 +    //  i, dx, dy, newEvent.motion.x, newEvent.motion.y);
@@ -90,15 +88,7 @@
      switch (action)
      {
      case CButtonState::MB_SHORT_CLICK:
-@@ -176,6 +204,7 @@
-   // reset the mouse state if nothing is held down
-   if (bNothingDown)
-     SetState(MOUSE_STATE_NORMAL);
-+
- }
- 
- void CMouseStat::SetResolution(int maxX, int maxY, float speedX, float speedY)
-@@ -224,6 +253,11 @@
+@@ -234,6 +260,16 @@
    return (m_mouseState.dx * m_mouseState.dx + m_mouseState.dy * m_mouseState.dy >= MOUSE_MINIMUM_MOVEMENT * MOUSE_MINIMUM_MOVEMENT);
  }
  
@@ -107,6 +97,16 @@
 +  return m_RawAction;
 +}
 +
- uint32_t CMouseStat::GetAction() const
++uint32_t CMouseStat::GetAction() const
++{
++  return m_Action;
++}
++
+ uint32_t CMouseStat::GetKey() const
  {
-   return m_Action;
+   return m_Key;
+@@ -331,3 +367,4 @@
+   return MB_NONE;
+ }
+ 
++

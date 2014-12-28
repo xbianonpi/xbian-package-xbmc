@@ -1,5 +1,5 @@
---- a/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-06-05 22:04:16.960222721 +0300
+--- a/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-04-27 07:55:16.000000000 +0300
++++ b/xbmc/visualizations/OpenGLSpectrum/opengl_spectrum.cpp	2014-08-08 21:31:00.613031426 +0300
 @@ -347,7 +347,7 @@
    glDepthFunc(GL_LESS);
    glPolygonMode(GL_FRONT, GL_FILL);

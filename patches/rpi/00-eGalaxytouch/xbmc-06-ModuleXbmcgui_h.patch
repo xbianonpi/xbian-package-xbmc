@@ -1,5 +1,5 @@
---- a/xbmc/interfaces/legacy/ModuleXbmcgui.h	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/interfaces/legacy/ModuleXbmcgui.h	2014-06-06 23:36:53.042113692 +0300
+--- a/xbmc/interfaces/legacy/ModuleXbmcgui.h	2014-04-27 07:55:16.000000000 +0300
++++ b/xbmc/interfaces/legacy/ModuleXbmcgui.h	2014-08-08 21:29:45.753030619 +0300
 @@ -60,6 +60,42 @@
       */
      long getCurrentWindowDialogId();

@@ -1,4 +1,4 @@
-<advancedsettings>
+ <advancedsettings>
     <fanartres>720</fanartres>
     <imageres>540</imageres>
 
@@ -13,9 +13,4 @@
     <network>
         <readbufferfactor>4.0</readbufferfactor>
     </network>
-
-    <video>
-        <defaultplayer>omxplayer</defaultplayer>
-        <defaultdvdplayer>omxplayer</defaultdvdplayer>
-    </video>
 </advancedsettings>

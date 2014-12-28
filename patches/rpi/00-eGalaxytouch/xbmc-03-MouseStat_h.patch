@@ -1,27 +1,29 @@
---- a/xbmc/input/MouseStat.h	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/input/MouseStat.h	2014-06-06 23:39:46.366311802 +0300
-@@ -78,13 +78,20 @@
+--- a/xbmc/input/MouseStat.h	2014-08-24 18:41:38.000000000 +0300
++++ b/xbmc/input/MouseStat.h_patched	2014-09-02 00:16:30.900858912 +0300
+@@ -79,6 +79,8 @@
+   void SetState(MOUSE_STATE state) { m_pointerState = state; };
    void SetEnabled(bool enabled = true);
    MOUSE_STATE GetState() const { return m_pointerState; };
-   uint32_t GetAction() const;
++  uint32_t GetAction() const;
 +  uint32_t GetRawAction() const;
+   uint32_t GetKey() const;
  
    int GetHold(int ButtonID) const;
-   inline int GetX(void) const { return m_mouseState.x; }
-   inline int GetY(void) const { return m_mouseState.y; }
+@@ -87,6 +89,13 @@
    inline int GetDX(void) const { return m_mouseState.dx; }
    inline int GetDY(void) const { return m_mouseState.dy; }
+ 
 +  inline int GetRawX(void) const { return g_rawX; }
 +  inline int GetRawY(void) const { return g_rawY; }
 +  void SetRawX(int rawX) { g_rawX = rawX; }
 +  void SetRawY(int rawY) { g_rawY = rawY; }
- 
++
 +  int g_rawX;           // raw value
 +  int g_rawY;           // raw value
  private:
    /*! \brief Holds information regarding a particular mouse button state
  
-@@ -125,7 +132,7 @@
+@@ -127,7 +136,7 @@
       */
      BUTTON_ACTION Update(unsigned int time, int x, int y, bool down);
    private:
@@ -30,11 +32,17 @@
      static const unsigned int short_click_time = 1000;   ///< time for mouse down/up to trigger a short click rather than a long click
      static const unsigned int double_click_time = 500;   ///< time for mouse down following a short click to trigger a double click
  
-@@ -169,6 +176,7 @@
-   bool bDoubleClick[5];
-   int  bHold[5];
+@@ -173,6 +182,8 @@
+   bool bLongClick[MOUSE_MAX_BUTTON];
  
+   uint32_t m_Key;
 +  uint32_t m_RawAction;
-   uint32_t m_Action;
++  uint32_t m_Action;
  };
  
+ extern CMouseStat g_Mouse;
+@@ -181,3 +192,4 @@
+ 
+ 
+ 
++

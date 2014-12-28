@@ -1,5 +1,5 @@
---- a/xbmc/interfaces/legacy/ModuleXbmcgui.cpp	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/interfaces/legacy/ModuleXbmcgui.cpp	2014-06-06 23:36:43.952414705 +0300
+--- a/xbmc/interfaces/legacy/ModuleXbmcgui.cpp	2014-04-27 07:55:16.000000000 +0300
++++ b/xbmc/interfaces/legacy/ModuleXbmcgui.cpp	2014-08-08 21:29:29.401030443 +0300
 @@ -22,6 +22,7 @@
  #include "LanguageHook.h"
  #include "guilib/GraphicContext.h"

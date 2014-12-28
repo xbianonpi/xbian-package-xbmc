@@ -1,5 +1,5 @@
---- a/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-06-05 14:48:24.000000000 +0300
-+++ b/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-06-05 22:03:47.521228220 +0300
+--- a/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-04-27 07:55:16.000000000 +0300
++++ b/xbmc/rendering/gles/RenderSystemGLES.cpp	2014-08-08 21:30:18.209030969 +0300
 @@ -210,7 +210,9 @@
    float g = GET_G(color) / 255.0f;
    float b = GET_B(color) / 255.0f;
