@@ -1,4 +1,4 @@
-config_source_configure=./configure --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --disable-debug --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp  --disable-pulse --disable-alsa --disable-projectm --with-platform=raspberry-pi --enable-libcec --enable-player=omxplayer
+config_source_configure=./configure --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --disable-debug --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp  --disable-projectm --with-platform=raspberry-pi --enable-libcec --enable-player=omxplayer
 config_build_env=schroot -c armhfwheezy -p --
 config_source_branch=Helix
 config_source_addr=git://github.com/xbmc/xbmc.git
