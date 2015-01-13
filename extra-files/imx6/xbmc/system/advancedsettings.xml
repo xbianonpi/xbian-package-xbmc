@@ -3,11 +3,6 @@
     <imageres>540</imageres>
     <useddsfanart>true</useddsfanart>
 
-    <gui>
-        <algorithmdirtyregions>1</algorithmdirtyregions>
-        <nofliptimeout>1000</nofliptimeout>
-    </gui>
-
     <libass>
         <styleoverrides>
             <style name="Blur" value="0" />
