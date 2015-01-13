@@ -1,0 +1,40 @@
+From 8b400c71ea398b19a73f6fd7b0850e8cb6cf06ae Mon Sep 17 00:00:00 2001
+From: anaconda <anaconda@menakite.eu>
+Date: Tue, 16 Dec 2014 16:37:08 +0100
+Subject: [PATCH] Fix state not saved after 5842 if playing from "Recently
+ added".
+
+See:
+  * http://forum.kodi.tv/showthread.php?tid=210479
+  * https://github.com/xbmc/xbmc/pull/5842#issuecomment-67107411
+  * http://trac.kodi.tv/ticket/15603
+---
+ xbmc/Application.cpp | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index e91b82b..96c4859 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -4383,8 +4383,10 @@ void CApplication::UpdateFileState()
+   if (m_progressTrackingItem->GetPath() != "" && m_progressTrackingItem->GetPath() != CurrentFile())
+   {
+     // Ignore for PVR channels, PerformChannelSwitch takes care of this.
+-    // Also ignore playlists as correct video settings have already been saved in PlayFile() - we're causing off-by-1 errors here.
+-    if (!m_progressTrackingItem->IsPVRChannel() && g_playlistPlayer.GetCurrentPlaylist() == PLAYLIST_NONE)
++    // Also ignore video playlists containing multiple items: video settings have already been saved in PlayFile()
++    // and we'd overwrite them with settings for the *previous* item.
++    int playlist = g_playlistPlayer.GetCurrentPlaylist();
++    if (!m_progressTrackingItem->IsPVRChannel() && !(playlist == PLAYLIST_VIDEO && g_playlistPlayer.GetPlaylist(playlist).size() > 1))
+       SaveFileState();
+ 
+     // Reset tracking item
+@@ -4413,7 +4415,7 @@ void CApplication::UpdateFileState()
+       if (m_pPlayer->IsPlayingVideo())
+       {
+         /* Always update streamdetails, except for DVDs where we only update
+-           streamdetails if title length > 15m (Should yield more correct info) */
++           streamdetails if total duration > 15m (Should yield more correct info) */
+         if (!(m_progressTrackingItem->IsDiscImage() || m_progressTrackingItem->IsDVDFile()) || m_pPlayer->GetTotalTime() > 15*60*1000)
+         {
+           CStreamDetails details;
