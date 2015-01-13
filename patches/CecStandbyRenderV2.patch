@@ -23,8 +23,8 @@ index 415e4c2..f82872e 100644
      case XBMC_QUIT:
        if (!g_application.m_bStop)
 +      {
-+        g_application.SetCecStandby(false);
          CApplicationMessenger::Get().Quit();
++        g_application.SetCecStandby(false);
 +      }
        break;
      case XBMC_KEYDOWN:

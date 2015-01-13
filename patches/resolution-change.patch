@@ -13,7 +13,7 @@ diff --git a/xbmc/cores/VideoRenderers/BaseRenderer.cpp b/xbmc/cores/VideoRender
 index 970b822..5e16841 100644
 --- a/xbmc/cores/VideoRenderers/BaseRenderer.cpp
 +++ b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-@@ -221,12 +225,31 @@ void CBaseRenderer::FindResolutionFromFpsMatch(float fps, float& weight)
+@@ -221,12 +225,34 @@ void CBaseRenderer::FindResolutionFromFpsMatch(float fps, float& weight)
  
  RESOLUTION CBaseRenderer::FindClosestResolution(float fps, float multiplier, RESOLUTION current, float& weight)
  {
@@ -31,12 +31,15 @@ index 970b822..5e16841 100644
 +    {
 +      const RESOLUTION_INFO info = g_graphicsContext.GetResInfo((RESOLUTION)i);
 +
-+      if (info.iScreenWidth  > curr.iScreenWidth || info.iScreenWidth < m_sourceWidth
-+      ||  info.iScreenHeight > curr.iScreenHeight || info.iScreenHeight < m_sourceHeight
-+      ||  info.iScreen       != curr.iScreen
-+      || (info.dwFlags) != (curr.dwFlags)
-+      ||  MathUtils::truncate_int((float)info.iScreenWidth/info.iScreenHeight * 100) != MathUtils::truncate_int((float)curr.iScreenWidth/curr.iScreenHeight * 100))
-+        continue;
++      if (abs(info.iScreenWidth*info.iScreenHeight - m_sourceWidth*m_sourceHeight) > abs(curr.iScreenHeight*curr.iScreenWidth - m_sourceWidth*m_sourceHeight)
++      ||  info.iScreen != curr.iScreen
++      ||  info.dwFlags != curr.dwFlags
++      || fabs(info.fPixelRatio - curr.fPixelRatio) > 0.001)
++        {
++          CLog::Log(LOGDEBUG, "curr %d, trying %d, %dx%d", MathUtils::truncate_int((float)curr.iScreenWidth/curr.iScreenHeight * 100),
++               MathUtils::truncate_int((float)info.iScreenWidth/info.iScreenHeight * 100), info.iScreenWidth, info.iScreenHeight);
++          continue;
++        }
 +
 +      current = (RESOLUTION)i;
 +      curr    = info;

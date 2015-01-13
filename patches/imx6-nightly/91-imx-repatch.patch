@@ -76,7 +76,7 @@ index 04cadc8..149591c 100644
 -  }
 -
 -  close(fd);
-+  CSettings::Get().SetInt("audiooutput.streamsilence", 0);
++  //CSettings::Get().SetInt("audiooutput.streamsilence", 0);
  
    // Check if we can change the framebuffer resolution
 -  fd = open("/sys/class/graphics/fb0/mode", O_RDWR);
@@ -86,7 +86,7 @@ index 04cadc8..149591c 100644
 -    CLog::Log(LOGNOTICE, "%s - graphics sysfs is writable", __FUNCTION__);
      m_readonly = false;
 +    close(fd);
-+    get_sysfs_str("/sys/class/graphics/fb0/mode", m_init);
++    GetNativeResolution(&m_init); m_init.fPixelRatio = (float)m_init.iScreenWidth/m_init.iScreenHeight;
    }
 -  else
 -  {
@@ -112,8 +112,8 @@ index 04cadc8..149591c 100644
 +
 +  if (!m_readonly)
 +  {
-+    CLog::Log(LOGDEBUG, "%s changing mode to %s\n", __FUNCTION__, m_init.c_str());
-+    set_sysfs_str("/sys/class/graphics/fb0/mode", m_init);
++    CLog::Log(LOGDEBUG, "%s changing mode to %s\n", __FUNCTION__, m_init.strId.c_str());
++    set_sysfs_str("/sys/class/graphics/fb0/mode", m_init.strId.c_str());
 +  }
 +
 +  return;
@@ -225,7 +225,7 @@ index 04cadc8..149591c 100644
  
 -  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId);
 -
-+  ShowWindow(false);
++  m_show = false; //ShowWindow(false);
 +  CLog::Log(LOGDEBUG,": %s - changing resolution to %s", __FUNCTION__, res.strId.c_str());
 +  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId.c_str());
    CreateNativeDisplay();
@@ -320,7 +320,7 @@ index 04cadc8..149591c 100644
 +  while ((len = read(fd, buf, 255)) > 0)
 +    valstr.append(buf, len);
 +  close(fd);
-+
++  StringUtils::Trim(valstr);
 +  return true;
  }
  
@@ -349,6 +349,15 @@ index 04cadc8..149591c 100644
  }
  
  bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res) const
+@@ -397,7 +398,7 @@ bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res)
+   res->iScreen       = 0;
+   res->bFullScreen   = true;
+   res->iSubtitles    = (int)(0.965 * res->iHeight);
+-  res->fPixelRatio   = 1.0f;
++  res->fPixelRatio   = (float)m_init.fPixelRatio / ((float)res->iScreenWidth/(float)res->iScreenHeight);
+   res->strMode       = StringUtils::Format("%dx%d @ %.2f%s - Full Screen", res->iScreenWidth, res->iScreenHeight, res->fRefreshRate,
+                                            res->dwFlags & D3DPRESENTFLAG_INTERLACED ? "i" : "");
+   res->strId         = mode;
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.h b/xbmc/windowing/egl/EGLNativeTypeIMX.h
 index c95dcfb..8444301 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.h
@@ -365,7 +374,7 @@ index c95dcfb..8444301 100644
 -  int get_sysfs_str(std::string path, std::string& valstr) const;
 -  int set_sysfs_str(std::string path, std::string val) const;
 +  bool m_show;
-+  std::string m_init;
++  RESOLUTION_INFO m_init;
 +  bool get_sysfs_str(std::string path, std::string& valstr) const;
 +  bool set_sysfs_str(std::string path, std::string val) const;
    bool ModeToResolution(std::string mode, RESOLUTION_INFO *res) const;
@@ -377,12 +386,13 @@ diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemE
 index d2a94c9..af25897 100644
 --- a/xbmc/windowing/egl/WinSystemEGL.cpp
 +++ b/xbmc/windowing/egl/WinSystemEGL.cpp
-@@ -111,7 +111,7 @@ bool CWinSystemEGL::InitWindowSystem()
+@@ -111,7 +111,8 @@ bool CWinSystemEGL::InitWindowSystem()
          EGL_GREEN_SIZE,      8,
          EGL_BLUE_SIZE,       8,
          EGL_ALPHA_SIZE,      8,
 -        EGL_DEPTH_SIZE,     16,
 +        EGL_DEPTH_SIZE,     24,
++        EGL_BUFFER_SIZE,    32,
          EGL_STENCIL_SIZE,    0,
          EGL_SAMPLE_BUFFERS,  0,
          EGL_SAMPLES,         0,
