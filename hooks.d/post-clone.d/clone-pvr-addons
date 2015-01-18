@@ -9,6 +9,10 @@ esac
 
 if test -d pvr-addons; then
     cd pvr-addons
+    if git status | grep -q 'Changes not staged\|Untracked files'; then
+        git add --all .; sync
+        git commit -m "$(echo auto commit on action clone at - $(date))" --no-edit || :
+    fi
     git pull origin $PVR_BRANCH
 else
     git clone -b $PVR_BRANCH --single-branch --depth 1 https://github.com/opdenkamp/xbmc-pvr-addons.git pvr-addons
