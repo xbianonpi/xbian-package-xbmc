@@ -2,7 +2,10 @@ case $config_source_branch in
   Gotham|gotham_rbp_backports)
     PVR_BRANCH="gotham"
     ;;
-  Helix|master)
+  Helix|helix_rbp_backports)
+    PVR_BRANCH="helix"
+    ;;
+  master)
     PVR_BRANCH="master"
     ;;
 esac
