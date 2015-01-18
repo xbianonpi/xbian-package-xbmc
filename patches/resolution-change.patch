@@ -18,7 +18,7 @@ index 970b822..5e16841 100644
  RESOLUTION CBaseRenderer::FindClosestResolution(float fps, float multiplier, RESOLUTION current, float& weight)
  {
 -  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(current);
-+  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(g_advancedSettings.m_adjustResolutionVideoMatch ? (RESOLUTION)CSettings::Get().GetInt("videoscreen.resolution") : current);
++  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(current);
  
    float fRefreshRate = fps;
  
