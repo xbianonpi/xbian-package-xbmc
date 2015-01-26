@@ -245,7 +245,7 @@ index 04cadc8..149591c 100644
 +  {
 +    if(resolutions[i].iScreenWidth == res.iScreenWidth &&
 +       resolutions[i].iScreenHeight == res.iScreenHeight &&
-+       resolutions[i].fRefreshRate == res.fRefreshRate)
++       resolutions[i].fRefreshRate == res.fRefreshRate && (resolutions[i].dwFlags & D3DPRESENTFLAG_MODEMASK) == (res.dwFlags & D3DPRESENTFLAG_MODEMASK))
 +    {
 +       return true;
 +    }

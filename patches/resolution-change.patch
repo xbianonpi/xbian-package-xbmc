@@ -13,19 +13,15 @@ diff --git a/xbmc/cores/VideoRenderers/BaseRenderer.cpp b/xbmc/cores/VideoRender
 index 970b822..5e16841 100644
 --- a/xbmc/cores/VideoRenderers/BaseRenderer.cpp
 +++ b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-@@ -221,12 +225,34 @@ void CBaseRenderer::FindResolutionFromFpsMatch(float fps, float& weight)
- 
- RESOLUTION CBaseRenderer::FindClosestResolution(float fps, float multiplier, RESOLUTION current, float& weight)
- {
--  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(current);
-+  RESOLUTION_INFO curr = g_graphicsContext.GetResInfo(current);
- 
+@@ -226,6 +230,36 @@ RESOLUTION CBaseRenderer::FindClosestResolution(float fps, float multiplier, RES
    float fRefreshRate = fps;
  
    float last_diff = fRefreshRate;
- 
++  unsigned resFlags = (curr.dwFlags & D3DPRESENTFLAG_MODEMASK) ? curr.dwFlags : m_iFlags;
++  RESOLUTION first = current;
++
 +  // CHANGERESOLUTION
-+  if (g_advancedSettings.m_adjustResolutionVideoMatch)
++  if (g_advancedSettings.m_adjustResolutionVideoMatch) while (current == first)
 +  {
 +    for (size_t i = (int)RES_DESKTOP; i < CDisplaySettings::Get().ResolutionInfoSize(); i++)
 +    {
@@ -33,36 +29,41 @@ index 970b822..5e16841 100644
 +
 +      if (abs(info.iScreenWidth*info.iScreenHeight - m_sourceWidth*m_sourceHeight) > abs(curr.iScreenHeight*curr.iScreenWidth - m_sourceWidth*m_sourceHeight)
 +      ||  info.iScreen != curr.iScreen
-+      ||  info.dwFlags != curr.dwFlags
-+      || fabs(info.fPixelRatio - curr.fPixelRatio) > 0.001)
++      ||  (info.dwFlags & D3DPRESENTFLAG_MODEMASK) != (resFlags & D3DPRESENTFLAG_MODEMASK)
++      ||  fabs(info.fPixelRatio - curr.fPixelRatio) > 0.001)
 +        {
-+          CLog::Log(LOGDEBUG, "curr %d, trying %d, %dx%d", MathUtils::truncate_int((float)curr.iScreenWidth/curr.iScreenHeight * 100),
-+               MathUtils::truncate_int((float)info.iScreenWidth/info.iScreenHeight * 100), info.iScreenWidth, info.iScreenHeight);
++          CLog::Log(LOGDEBUG, "curr %.2f, trying %.2f, mode nr. %d, %dx%d msk %d, m_msk %d", info.fPixelRatio, curr.fPixelRatio, i,
++               info.iScreenWidth, info.iScreenHeight, info.dwFlags & D3DPRESENTFLAG_MODEMASK,
++                    m_iFlags & D3DPRESENTFLAG_MODEMASK);
 +          continue;
 +        }
 +
 +      current = (RESOLUTION)i;
 +      curr    = info;
 +    }
-+  }
 +
++    if (resFlags != (resFlags = g_graphicsContext.GetResInfo(first).dwFlags))
++      continue;
++
++    break;
++  }
+ 
    // Find closest refresh rate
    for (size_t i = (int)RES_DESKTOP; i < CDisplaySettings::Get().ResolutionInfoSize(); i++)
-   {
 diff --git a/xbmc/settings/AdvancedSettings.cpp b/xbmc/settings/AdvancedSettings.cpp
 index eff43dd..c719b10 100644
 --- a/xbmc/settings/AdvancedSettings.cpp
 +++ b/xbmc/settings/AdvancedSettings.cpp
-@@ -135,6 +135,8 @@ void CAdvancedSettings::Initialize()
+@@ -135,6 +135,8 @@
+   m_audioDefaultPlayer = "paplayer";
    m_audioPlayCountMinimumPercent = 90.0f;
-   m_audioHost = "default";
  
 +  m_adjustResolutionVideoMatch = true;
 +
-   m_videoSubsDelayRange = 10;
+   m_videoSubsDelayRange = 60;
    m_videoAudioDelayRange = 10;
    m_videoSmallStepBackSeconds = 7;
-@@ -554,6 +556,7 @@ void CAdvancedSettings::ParseSettingsFile(const CStdString &file)
+@@ -554,6 +556,7 @@
      XMLUtils::GetString(pElement, "defaultplayer", m_videoDefaultPlayer);
      XMLUtils::GetString(pElement, "defaultdvdplayer", m_videoDefaultDVDPlayer);
      XMLUtils::GetBoolean(pElement, "fullscreenonmoviestart", m_fullScreenOnMovieStart);
