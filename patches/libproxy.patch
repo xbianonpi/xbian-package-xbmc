@@ -11,14 +11,16 @@ index 4808465..f6c82bf 100644
  using namespace XFILE;
  using namespace XCURL;
  
-@@ -574,6 +576,30 @@ void CCurlFile::SetCommonOptions(CReadState* state)
+@@ -574,6 +578,30 @@ void CCurlFile::SetCommonOptions(CReadState* state)
    if (g_advancedSettings.m_curlDisableIPV6)
      g_curlInterface.easy_setopt(h, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
  
 +  // libproxy
 +  pxProxyFactory *pf = NULL;
 +  pf = px_proxy_factory_new();
-+  char **proxies = px_proxy_factory_get_proxies(pf, m_url.c_str());
++  char p[strlen(m_url.c_str())];
++  strcpy(p, m_url.c_str());
++  char **proxies = px_proxy_factory_get_proxies(pf, p);
 +
 +  for (int i=0 ; proxies[i] ; i++)
 +  {
