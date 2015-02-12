@@ -1,0 +1,13 @@
+--- b/xbmc/filesystem/CurlFile.cpp
++++ a/xbmc/filesystem/CurlFile.cpp
+@@ -583,7 +583,9 @@
+   // libproxy
+   pxProxyFactory *pf = NULL;
+   pf = px_proxy_factory_new();
+-  char **proxies = px_proxy_factory_get_proxies(pf, m_url.c_str());
++  char p[strlen(m_url.c_str())];
++  strcpy(p, m_url.c_str());
++  char **proxies = px_proxy_factory_get_proxies(pf, p);
+
+   for (int i=0 ; proxies[i] ; i++)
+   {
