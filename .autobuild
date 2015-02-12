@@ -1,4 +1,3 @@
 rpi stable rpi-wheezy
 imx6 stable imx6-jessie
-rpi-nightly staging rpi-wheezy
 imx6-nightly staging imx6-jessie
