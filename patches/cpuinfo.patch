@@ -64,7 +64,7 @@ index f3f275f..68f83e2 100644
 -    }
 -  }
 -
-+  has_neon = (m_cpuFeatures & CPU_FEATURE_NEON) ? 1 : 0;
++  has_neon = ((g_cpuInfo.GetCPUFeatures() & CPU_FEATURE_NEON) == CPU_FEATURE_NEON) ? 1 : 0;
  #endif
  
    return has_neon == 1;

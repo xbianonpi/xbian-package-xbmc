@@ -1,8 +1,6 @@
-diff --git a/xbmc/filesystem/CurlFile.cpp b/xbmc/filesystem/CurlFile.cpp
-index 4808465..f6c82bf 100644
 --- a/xbmc/filesystem/CurlFile.cpp
 +++ b/xbmc/filesystem/CurlFile.cpp
-@@ -45,6 +45,8 @@
+@@ -46,6 +46,8 @@
  #include "utils/log.h"
  #include "utils/StringUtils.h"
  
@@ -11,14 +9,16 @@ index 4808465..f6c82bf 100644
  using namespace XFILE;
  using namespace XCURL;
  
-@@ -574,6 +576,30 @@ void CCurlFile::SetCommonOptions(CReadState* state)
+@@ -578,6 +580,32 @@
    if (g_advancedSettings.m_curlDisableIPV6)
      g_curlInterface.easy_setopt(h, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
  
 +  // libproxy
 +  pxProxyFactory *pf = NULL;
 +  pf = px_proxy_factory_new();
-+  char **proxies = px_proxy_factory_get_proxies(pf, m_url.c_str());
++  char p[strlen(m_url.c_str())];
++  strcpy(p, m_url.c_str());
++  char **proxies = px_proxy_factory_get_proxies(pf, p);
 +
 +  for (int i=0 ; proxies[i] ; i++)
 +  {

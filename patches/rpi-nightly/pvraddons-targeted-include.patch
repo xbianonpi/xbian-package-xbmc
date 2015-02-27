@@ -1,0 +1,11 @@
+--- a/pvr-addons/xbmc/xbmc_codec_descriptor.hpp
++++ b/pvr-addons/xbmc/xbmc_codec_descriptor.hpp
+@@ -20,7 +20,7 @@
+ #ifndef XBMC_CODEC_DESCRIPTOR_HPP
+ #define	XBMC_CODEC_DESCRIPTOR_HPP
+ 
+-#include "libXBMC_codec.h"
++#include "../addons/library.xbmc.codec/libXBMC_codec.h"
+ 
+ /**
+  * Adapter which converts codec names used by tvheadend and VDR into their 

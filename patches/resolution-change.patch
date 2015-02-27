@@ -1,16 +1,22 @@
-commit 5e1284136211e73df6468842e6130cce2ef94e23
-Author: Matus Kral <matuskral@me.com>
-Date:   Wed Jul 30 00:35:47 2014 +0200
+From 71c7cfac2b7ead9800275b5b040e972ed3669bf0 Mon Sep 17 00:00:00 2001
+From: Matus Kral <matuskral@me.com>
+Date: Wed, 30 Jul 2014 00:35:47 +0200
+Subject: [PATCH] Resolution changing on play.
 
-    resolution changing on play
-    control parameter advancedsettings.xml:
-
+Control parameter in advancedsettings.xml:
   <video>
     <adjustdisplayrestomatchvideo>true</adjustdisplayrestomatchvideo>
   </video>
 
+This is enabled by default on i.MX6.
+---
+ xbmc/cores/VideoRenderers/BaseRenderer.cpp | 30 ++++++++++++++++++++++++++++++
+ xbmc/settings/AdvancedSettings.cpp         |  7 +++++++
+ xbmc/settings/AdvancedSettings.h           |  2 ++
+ 3 files changed, 39 insertions(+)
+
 diff --git a/xbmc/cores/VideoRenderers/BaseRenderer.cpp b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-index 970b822..5e16841 100644
+index 83c3adb..8e43060 100644
 --- a/xbmc/cores/VideoRenderers/BaseRenderer.cpp
 +++ b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
 @@ -34,6 +34,7 @@                                      
@@ -59,19 +65,23 @@ index 970b822..5e16841 100644
    for (size_t i = (int)RES_DESKTOP; i < CDisplaySettings::Get().ResolutionInfoSize(); i++)
    {
 diff --git a/xbmc/settings/AdvancedSettings.cpp b/xbmc/settings/AdvancedSettings.cpp
-index eff43dd..c719b10 100644
+index 478d725..9a424c3 100644
 --- a/xbmc/settings/AdvancedSettings.cpp
 +++ b/xbmc/settings/AdvancedSettings.cpp
-@@ -135,6 +135,8 @@
+@@ -129,6 +129,12 @@ void CAdvancedSettings::Initialize()
    m_audioDefaultPlayer = "paplayer";
    m_audioPlayCountMinimumPercent = 90.0f;
  
++#if defined(HAS_IMXVPU)
 +  m_adjustResolutionVideoMatch = true;
++#else
++  m_adjustResolutionVideoMatch = false;
++#endif
 +
    m_videoSubsDelayRange = 60;
    m_videoAudioDelayRange = 10;
    m_videoSmallStepBackSeconds = 7;
-@@ -554,6 +556,7 @@
+@@ -545,6 +551,7 @@ void CAdvancedSettings::ParseSettingsFile(const CStdString &file)
      XMLUtils::GetString(pElement, "defaultplayer", m_videoDefaultPlayer);
      XMLUtils::GetString(pElement, "defaultdvdplayer", m_videoDefaultDVDPlayer);
      XMLUtils::GetBoolean(pElement, "fullscreenonmoviestart", m_fullScreenOnMovieStart);
@@ -80,10 +90,10 @@ index eff43dd..c719b10 100644
      XMLUtils::GetFloat(pElement, "playcountminimumpercent", m_videoPlayCountMinimumPercent, 0.0f, 101.0f);
      XMLUtils::GetInt(pElement, "ignoresecondsatstart", m_videoIgnoreSecondsAtStart, 0, 900);
 diff --git a/xbmc/settings/AdvancedSettings.h b/xbmc/settings/AdvancedSettings.h
-index 3995f35..0f88418 100644
+index ca995e3..7106bff 100644
 --- a/xbmc/settings/AdvancedSettings.h
 +++ b/xbmc/settings/AdvancedSettings.h
-@@ -144,6 +144,8 @@ class CAdvancedSettings : public ISettingCallback, public ISettingsHandler
+@@ -146,6 +146,8 @@ class CAdvancedSettings : public ISettingCallback, public ISettingsHandler
      bool  m_omxHWAudioDecode;
      bool  m_omxDecodeStartWithValidFrame;
  
@@ -92,3 +102,6 @@ index 3995f35..0f88418 100644
      float m_videoSubsDelayRange;
      float m_videoAudioDelayRange;
      int m_videoSmallStepBackSeconds;
+-- 
+2.2.1
+

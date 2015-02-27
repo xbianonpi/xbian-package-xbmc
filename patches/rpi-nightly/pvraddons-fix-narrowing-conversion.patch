@@ -1,0 +1,33 @@
+--- a/pvr-addons/addons/pvr.argustv/src/uri.h
++++ b/pvr-addons/addons/pvr.argustv/src/uri.h
+@@ -35,7 +35,7 @@
+     char* begin_cstring; ///< begin cstring (or 0 if none)
+     char begin_char; ///< begin char (or 0 if none)
+     char end_char; ///< end char (or 0 if none)
+-    char char_class[256]; ///< map of char to class
++    int char_class[256]; ///< map of char to class
+   };
+ 
+   /**
+--- a/pvr-addons/addons/pvr.nextpvr/src/uri.h
++++ b/pvr-addons/addons/pvr.nextpvr/src/uri.h
+@@ -35,7 +35,7 @@
+     const char* begin_cstring; ///< begin cstring (or 0 if none)
+     const char begin_char;     ///< begin char (or 0 if none)
+     const char end_char;       ///< end char (or 0 if none)
+-    char char_class[256];      ///< map of char to class
++    int char_class[256];      ///< map of char to class
+   };
+ 
+   /**
+--- a/pvr-addons/addons/pvr.mediaportal.tvserver/src/uri.h
++++ b/pvr-addons/addons/pvr.mediaportal.tvserver/src/uri.h
+@@ -35,7 +35,7 @@
+     const char* begin_cstring;       ///< begin cstring (or 0 if none)
+     const char begin_char;           ///< begin char (or 0 if none)
+     const char end_char;             ///< end char (or 0 if none)
+-    const char char_class[256];      ///< map of char to class
++    const int char_class[256];      ///< map of char to class
+   };
+ 
+   /**
