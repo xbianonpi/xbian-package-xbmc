@@ -1,62 +1,25 @@
-commit eaa49e4a0750a5f63fb8f3d26bb01e9b58ea7a9b
-Author: Matus Kral <matuskral@me.com>
-Date:   Mon Nov 17 11:00:28 2014 +0100
-
-    IMX6 repatch:
-    - fixed resolution changes EGL errors
-    - allows GUI res other than RES_DESKTOP to work properly
-        (GUI is not clamped improperly to boot RES_DESKTOP
-         resolution on EGL resets - HDMI routing changes etc)
-    - allows DVI resolutions (not with HDMI-SOC as sound output)
-
-diff --git a/xbmc/cores/VideoRenderers/BaseRenderer.cpp b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-index 83c3adb..46be187 100644
---- a/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-+++ b/xbmc/cores/VideoRenderers/BaseRenderer.cpp
-@@ -34,6 +34,7 @@
- #include "settings/AdvancedSettings.h"
- #include "cores/VideoRenderers/RenderFlags.h"
- 
-+#include "cores/AudioEngine/AEFactory.h"
- 
- CBaseRenderer::CBaseRenderer()
- {
-@@ -97,8 +98,11 @@ void CBaseRenderer::ChooseBestResolution(float fps)
-   }
-   else
- #endif
--    CLog::Log(LOGNOTICE, "Display resolution %s : %s (%d)",
--        m_resolution == RES_DESKTOP ? "DESKTOP" : "USER", g_graphicsContext.GetResInfo(m_resolution).strMode.c_str(), m_resolution);
-+  {
-+    CAEFactory::DeviceChange();
-+    CLog::Log(LOGNOTICE, "Display resolution KEPT : %s (%d)",
-+        g_graphicsContext.GetResInfo(m_resolution).strMode.c_str(), m_resolution);
-+  }
- }
- 
- bool CBaseRenderer::FindResolutionFromOverride(float fps, float& weight, bool fallback)
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-index 04cadc8..149591c 100644
+index deef13b..fc1f64a 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
-@@ -18,7 +18,6 @@
+@@ -18,6 +18,8 @@
   *
   */
  
--#include "system.h"
++#include <linux/mxcfb.h>
++#include "system.h"
  #include <EGL/egl.h>
  
  #include "EGLNativeTypeIMX.h"
-@@ -33,6 +33,7 @@
- #include "windowing/WindowingFactory.h"
+@@ -33,11 +35,16 @@
  #include "cores/AudioEngine/AEFactory.h"
  #include <fstream>
-+#include "settings/Settings.h"
+ #include "settings/Settings.h"
++#include "settings/DisplaySettings.h"
++
++#include "guilib/GraphicContext.h"
  
  CEGLNativeTypeIMX::CEGLNativeTypeIMX()
-   : m_display(NULL)
- 
-@@ -38,6 +37,8 @@ CEGLNativeTypeIMX::CEGLNativeTypeIMX()
    : m_display(NULL)
    , m_window(NULL)
  {
@@ -65,7 +28,16 @@ index 04cadc8..149591c 100644
  }
  
  CEGLNativeTypeIMX::~CEGLNativeTypeIMX()
-@@ -61,33 +62,23 @@ void CEGLNativeTypeIMX::Initialize()
+@@ -52,7 +59,7 @@ bool CEGLNativeTypeIMX::CheckCompatibility()
+ 
+ void CEGLNativeTypeIMX::Initialize()
+ {
+-  int fd;
++  int fd; std::string res;
+ 
+   fd = open("/dev/fb0",O_RDWR);
+   if (fd < 0)
+@@ -61,33 +68,23 @@ void CEGLNativeTypeIMX::Initialize()
      return;
    }
  
@@ -105,18 +77,21 @@ index 04cadc8..149591c 100644
    struct fb_fix_screeninfo fixed_info;
    void *fb_buffer;
    int fd;
-@@ -115,16 +106,28 @@ void CEGLNativeTypeIMX::Destroy()
+@@ -111,20 +108,30 @@ void CEGLNativeTypeIMX::Destroy()
+     memset(fb_buffer, 0x0, fixed_info.smem_len);
+     munmap(fb_buffer, fixed_info.smem_len);
+   }
+-
    close(fd);
  
-   return;
-+
 +  if (!m_readonly)
 +  {
 +    CLog::Log(LOGDEBUG, "%s changing mode to %s\n", __FUNCTION__, m_init.strId.c_str());
 +    set_sysfs_str("/sys/class/graphics/fb0/mode", m_init.strId.c_str());
 +  }
 +
-+  return;
++  system("/usr/bin/splash --force -i -m \"stopping xbmc...\"");
+   return;
  }
  
  bool CEGLNativeTypeIMX::CreateNativeDisplay()
@@ -137,7 +112,7 @@ index 04cadc8..149591c 100644
    m_nativeDisplay = &m_display;
    return true;
  #else
-@@ -134,8 +137,14 @@ bool CEGLNativeTypeIMX::CreateNativeDisplay()
+@@ -134,8 +141,14 @@ bool CEGLNativeTypeIMX::CreateNativeDisplay()
  
  bool CEGLNativeTypeIMX::CreateNativeWindow()
  {
@@ -153,7 +128,7 @@ index 04cadc8..149591c 100644
    m_nativeWindow = &m_window;
    return true;
  #else
-@@ -145,8 +154,6 @@ bool CEGLNativeTypeIMX::CreateNativeWindow()
+@@ -145,30 +158,31 @@ bool CEGLNativeTypeIMX::CreateNativeWindow()
  
  bool CEGLNativeTypeIMX::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) const
  {
@@ -161,8 +136,10 @@ index 04cadc8..149591c 100644
 -    return false;
    if (!m_nativeDisplay)
      return false;
++
    *nativeDisplay = (XBNativeDisplayType*)m_nativeDisplay;
-@@ -155,9 +162,7 @@ bool CEGLNativeTypeIMX::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) co
+   return true;
+ }
  
  bool CEGLNativeTypeIMX::GetNativeWindow(XBNativeWindowType **nativeWindow) const
  {
@@ -171,9 +148,10 @@ index 04cadc8..149591c 100644
 -  if (!m_nativeWindow || !m_window)
 +  if (!m_nativeWindow)
      return false;
++
    *nativeWindow = (XBNativeWindowType*)m_nativeWindow;
    return true;
-@@ -165,10 +170,12 @@ bool CEGLNativeTypeIMX::GetNativeWindow(XBNativeWindowType **nativeWindow) const
+ }
  
  bool CEGLNativeTypeIMX::DestroyNativeDisplay()
  {
@@ -182,12 +160,13 @@ index 04cadc8..149591c 100644
    if (m_display)
      fbDestroyDisplay(m_display);
 -  m_display =  NULL;
++
 +  m_display = NULL;
 +  m_nativeDisplay = NULL;
    return true;
  #else
    return false;
-@@ -177,10 +184,12 @@ bool CEGLNativeTypeIMX::DestroyNativeDisplay()
+@@ -177,10 +191,13 @@ bool CEGLNativeTypeIMX::DestroyNativeDisplay()
  
  bool CEGLNativeTypeIMX::DestroyNativeWindow()
  {
@@ -196,12 +175,13 @@ index 04cadc8..149591c 100644
    if (m_window)
      fbDestroyWindow(m_window);
 -  m_window =  NULL;
++
 +  m_window = NULL;
 +  m_nativeWindow = NULL;
    return true;
  #else
    return false;
-@@ -191,6 +200,8 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
+@@ -191,6 +208,8 @@ bool CEGLNativeTypeIMX::GetNativeResolution(RESOLUTION_INFO *res) const
  {
    std::string mode;
    get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
@@ -210,7 +190,7 @@ index 04cadc8..149591c 100644
    return ModeToResolution(mode, res);
  }
  
-@@ -202,23 +213,37 @@ bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
+@@ -202,23 +221,38 @@ bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
    std::string mode;
    get_sysfs_str("/sys/class/graphics/fb0/mode", mode);
    if (res.strId == mode)
@@ -224,10 +204,10 @@ index 04cadc8..149591c 100644
    DestroyNativeDisplay();
  
 -  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId);
--
-+  m_show = false; //ShowWindow(false);
++  ShowWindow(false);
 +  CLog::Log(LOGDEBUG,": %s - changing resolution to %s", __FUNCTION__, res.strId.c_str());
 +  set_sysfs_str("/sys/class/graphics/fb0/mode", res.strId.c_str());
+ 
    CreateNativeDisplay();
 -
 -  CLog::Log(LOGDEBUG, "%s: %s",__FUNCTION__, res.strId.c_str());
@@ -256,21 +236,35 @@ index 04cadc8..149591c 100644
  bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
  {
    if (m_readonly)
-@@ -233,10 +258,11 @@ bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutio
+@@ -226,18 +260,23 @@ bool CEGLNativeTypeIMX::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutio
+ 
+   std::string valstr;
+   get_sysfs_str("/sys/class/graphics/fb0/modes", valstr);
+-  std::vector<std::string> probe_str;
+-  probe_str = StringUtils::Split(valstr, "\n");
++
++  std::vector<std::string> probe_str = StringUtils::Split(valstr, "\n");
++  std::sort(probe_str.begin(), probe_str.end());
+ 
+   resolutions.clear();
    RESOLUTION_INFO res;
    for (size_t i = 0; i < probe_str.size(); i++)
    {
 -    if(!StringUtils::StartsWith(probe_str[i], "S:"))
-+    if(!StringUtils::StartsWith(probe_str[i], "S:") && !StringUtils::StartsWith(probe_str[i], "U:"))
++    if(!StringUtils::StartsWith(probe_str[i], "S:") && !StringUtils::StartsWith(probe_str[i], "U:") &&
++       !StringUtils::StartsWith(probe_str[i], "H:") && !StringUtils::StartsWith(probe_str[i], "T:"))
        continue;
++
      if(ModeToResolution(probe_str[i], &res))
 -      resolutions.push_back(res);
 +      if(!FindMatchingResolution(res, resolutions))
 +         resolutions.push_back(res);
    }
++
    return resolutions.size() > 0;
  }
-@@ -248,48 +274,54 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
+ 
+@@ -248,48 +287,66 @@ bool CEGLNativeTypeIMX::GetPreferredResolution(RESOLUTION_INFO *res) const
  
  bool CEGLNativeTypeIMX::ShowWindow(bool show)
  {
@@ -284,10 +278,20 @@ index 04cadc8..149591c 100644
  
 -  return false;
 +  CLog::Log(LOGDEBUG, ": %s %s", __FUNCTION__, show?"show":"hide");
++  {
++    CSingleTryLock lock(g_graphicsContext);
++    if (!show)
++    {
++      int fd = open("/dev/fb0", O_WRONLY | O_NONBLOCK);
++      ioctl(fd, FBIO_WAITFORVSYNC, 0);
++      close(fd);
++      Sleep(50);
++    }
++    set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
++    if (lock.owns_lock()) lock.unlock();
++  }
 +
-+  set_sysfs_str("/sys/class/graphics/fb0/blank", show?"0":"1");
 +  m_show = show;
-+
 +  if(show)
 +    CAEFactory::DeviceChange();
 +
@@ -319,8 +323,10 @@ index 04cadc8..149591c 100644
 +
 +  while ((len = read(fd, buf, 255)) > 0)
 +    valstr.append(buf, len);
-+  close(fd);
++
 +  StringUtils::Trim(valstr);
++  close(fd);
++
 +  return true;
  }
  
@@ -349,63 +355,82 @@ index 04cadc8..149591c 100644
  }
  
  bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res) const
-@@ -397,7 +398,7 @@ bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res)
+@@ -306,8 +363,20 @@ bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res)
+   std::string fromMode = StringUtils::Mid(mode, 2);
+   StringUtils::Trim(fromMode);
+ 
+-  if (StringUtils::StartsWith(mode, "U:"))
+-    res->dwFlags = D3DPRESENTFLAG_WIDESCREEN;
++  res->dwFlags = 0;
++  res->fPixelRatio = 1.0f;
++
++  if (StringUtils::StartsWith(mode, "U:")) {
++    res->dwFlags |= D3DPRESENTFLAG_WIDESCREEN;
++  } else if (StringUtils::StartsWith(mode, "H:")) {
++    res->dwFlags |= D3DPRESENTFLAG_MODE3DSBS;
++    res->fPixelRatio = 2.0f;
++  } else if (StringUtils::StartsWith(mode, "T:")) {
++    res->dwFlags |= D3DPRESENTFLAG_MODE3DTB;
++    res->fPixelRatio = 0.5f;
++  } else if (StringUtils::StartsWith(mode, "F:")) {
++    return false;
++  }
+ 
+   CRegExp split(true);
+   split.RegComp("([0-9]+)x([0-9]+)([pi])-([0-9]+)");
+@@ -329,9 +398,11 @@ bool CEGLNativeTypeIMX::ModeToResolution(std::string mode, RESOLUTION_INFO *res)
    res->iScreen       = 0;
    res->bFullScreen   = true;
    res->iSubtitles    = (int)(0.965 * res->iHeight);
 -  res->fPixelRatio   = 1.0f;
-+  res->fPixelRatio   = (float)m_init.fPixelRatio / ((float)res->iScreenWidth/(float)res->iScreenHeight);
-   res->strMode       = StringUtils::Format("%dx%d @ %.2f%s - Full Screen", res->iScreenWidth, res->iScreenHeight, res->fRefreshRate,
-                                            res->dwFlags & D3DPRESENTFLAG_INTERLACED ? "i" : "");
+-  res->strMode       = StringUtils::Format("%dx%d @ %.2f%s - Full Screen", res->iScreenWidth, res->iScreenHeight, res->fRefreshRate,
+-                                           res->dwFlags & D3DPRESENTFLAG_INTERLACED ? "i" : "");
++  res->fPixelRatio  *= (float)m_init.fPixelRatio / ((float)res->iScreenWidth/(float)res->iScreenHeight);
++  res->strMode       = StringUtils::Format("%dx%d @ %.2f%s %s- Full Screen (%.3f)", res->iScreenWidth, res->iScreenHeight, res->fRefreshRate,
++                                           res->dwFlags & D3DPRESENTFLAG_INTERLACED ? "i" : "",
++                                           res->dwFlags & D3DPRESENTFLAG_MODE3DSBS ? "3DSBS " : res->dwFlags & D3DPRESENTFLAG_MODE3DTB ? "3DTB " : "",
++                                           res->fPixelRatio);
    res->strId         = mode;
+ 
+   return res->iWidth > 0 && res->iHeight> 0;
 diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.h b/xbmc/windowing/egl/EGLNativeTypeIMX.h
-index c95dcfb..8444301 100644
+index 804d104..fbb088c 100644
 --- a/xbmc/windowing/egl/EGLNativeTypeIMX.h
 +++ b/xbmc/windowing/egl/EGLNativeTypeIMX.h
-@@ -46,13 +46,16 @@ public:
-   virtual bool  ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions);
-   virtual bool  GetPreferredResolution(RESOLUTION_INFO *res) const;
+@@ -21,6 +21,7 @@
+  */
+ #include <linux/fb.h>
+ #include "EGLNativeType.h"
++#include <EGL/eglvivante.h>
  
--  virtual bool  ShowWindow(bool show);
-+  virtual bool  ShowWindow(bool show = true);
+ class CEGLNativeTypeIMX : public CEGLNativeType
+ {
+@@ -31,7 +32,7 @@ public:
+   virtual bool  CheckCompatibility();
+   virtual void  Initialize();
+   virtual void  Destroy();
+-  virtual int   GetQuirks() { return EGL_QUIRK_RECREATE_DISPLAY_ON_CREATE_WINDOW; }
++  virtual int   GetQuirks() { return EGL_QUIRK_NONE;/*EGL_QUIRK_KEEP_CONTEXT; */}
+ 
+   virtual bool  CreateNativeDisplay();
+   virtual bool  CreateNativeWindow();
+@@ -49,14 +50,16 @@ public:
+   virtual bool  ShowWindow(bool show = true);
  
  protected:
++  bool m_aResume;
    bool m_readonly;
--  int get_sysfs_str(std::string path, std::string& valstr) const;
--  int set_sysfs_str(std::string path, std::string val) const;
-+  bool m_show;
-+  RESOLUTION_INFO m_init;
-+  bool get_sysfs_str(std::string path, std::string& valstr) const;
-+  bool set_sysfs_str(std::string path, std::string val) const;
+   bool m_show;
+-  RESOLUTION_INFO m_init;
++  RESOLUTION_INFO m_init; //float m_initRatio;
++
+   bool get_sysfs_str(std::string path, std::string& valstr) const;
+   bool set_sysfs_str(std::string path, std::string val) const;
    bool ModeToResolution(std::string mode, RESOLUTION_INFO *res) const;
-+  bool FindMatchingResolution(const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions);
+   bool FindMatchingResolution(const RESOLUTION_INFO &res, const std::vector<RESOLUTION_INFO> &resolutions);
  
-   EGLNativeDisplayType m_display;
-   EGLNativeWindowType  m_window;
-diff --git a/xbmc/windowing/egl/WinSystemEGL.cpp b/xbmc/windowing/egl/WinSystemEGL.cpp
-index d2a94c9..af25897 100644
---- a/xbmc/windowing/egl/WinSystemEGL.cpp
-+++ b/xbmc/windowing/egl/WinSystemEGL.cpp
-@@ -111,7 +111,8 @@ bool CWinSystemEGL::InitWindowSystem()
-         EGL_GREEN_SIZE,      8,
-         EGL_BLUE_SIZE,       8,
-         EGL_ALPHA_SIZE,      8,
--        EGL_DEPTH_SIZE,     16,
-+        EGL_DEPTH_SIZE,     24,
-+        EGL_BUFFER_SIZE,    32,
-         EGL_STENCIL_SIZE,    0,
-         EGL_SAMPLE_BUFFERS,  0,
-         EGL_SAMPLES,         0,
-diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
-index 43bc778..1c6229b 100644
---- a/xbmc/Application.cpp
-+++ b/xbmc/Application.cpp
-@@ -2296,7 +2344,7 @@ void CApplication::Render()
-   //when nothing has been rendered for m_guiDirtyRegionNoFlipTimeout milliseconds,
-   //we don't call g_graphicsContext.Flip() anymore, this saves gpu and cpu usage
-   bool flip;
--  if (g_advancedSettings.m_guiDirtyRegionNoFlipTimeout >= 0)
-+  if (g_advancedSettings.m_guiDirtyRegionNoFlipTimeout > 0)
-     flip = hasRendered || (now - m_lastRenderTime) < (unsigned int)g_advancedSettings.m_guiDirtyRegionNoFlipTimeout;
-   else
-     flip = true;
+-  EGLNativeDisplayType m_display;
+-  EGLNativeWindowType  m_window;
++  EGLNativeDisplayType  m_display;
++  EGLNativeWindowType   m_window;
+ };

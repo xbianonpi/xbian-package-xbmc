@@ -1,8 +1,8 @@
 case $config_source_branch in
-  Gotham|gotham_rbp_backports|imx6)
+  imx6)
     PVR_BRANCH="gotham"
     ;;
-  Helix|helix_rbp_backports|imx6-nightly|rpi)
+  imx6-nightly|rpi)
     PVR_BRANCH="helix"
     ;;
   master|rpi-nightly)
