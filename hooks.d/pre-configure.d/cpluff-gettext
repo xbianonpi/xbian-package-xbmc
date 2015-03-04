@@ -1,2 +1,3 @@
 
-sed -i '/AM_GNU_GETTEXT/d' lib/cpluff/configure.ac
+[ -e lib/cpluff/configure.ac ] || return 0
+grep -q AM_GNU_GETTEXT lib/cpluff/configure.ac || sed -i '/AM_GNU_GETTEXT/d' lib/cpluff/configure.ac
