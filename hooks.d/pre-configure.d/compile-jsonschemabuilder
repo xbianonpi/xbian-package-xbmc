@@ -1,6 +1,6 @@
 
 case $config_platform_branch in
-    *-nightly|rpi)
+    *-nightly*|rpi*)
         ;;
     *)
         return

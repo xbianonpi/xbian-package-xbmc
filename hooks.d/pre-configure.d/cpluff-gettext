@@ -1,0 +1,2 @@
+
+sed -i '/AM_GNU_GETTEXT/d' lib/cpluff/configure.ac
