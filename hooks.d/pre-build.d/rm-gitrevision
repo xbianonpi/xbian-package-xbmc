@@ -1,5 +1,5 @@
 
-sed -i "s/S\[\"HAVE_GIT\"\]=\"yes\"/S\[\"HAVE_GIT\"\]=\"no\"/" ./config.status
-sed -i "s/shell which git/shell which true/g" ./xbmc/gen-compileinfo.mk
+grep -q 'HAVE_GIT\"\]=\"no' ./config.status || sed -i "s/S\[\"HAVE_GIT\"\]=\"yes\"/S\[\"HAVE_GIT\"\]=\"no\"/" ./config.status
+grep -q 'shell which true' ./xbmc/gen-compileinfo.mk || sed -i "s/shell which git/shell which true/g" ./xbmc/gen-compileinfo.mk
 
 ###rm -f xbmc/GitRevision.o xbmc/GitRevision.P
