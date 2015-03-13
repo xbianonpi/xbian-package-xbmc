@@ -1,0 +1,6 @@
+return 0
+
+[ ! -d tools/depends/native/libsquish-native/squish-install ] || return 0
+
+rm -f tools/depends/native/libsquish-native/.installed-native
+touch configure.in
