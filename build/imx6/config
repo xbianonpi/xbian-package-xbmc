@@ -1,6 +1,6 @@
 config_source_configure=./configure --with-ffmpeg --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-sdl --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --with-platform=cubox-i
 config_build_env=schroot -c armhfjessie -p --
-config_source_branch=imx6-nightly
+config_source_branch=imx6
 config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
 config_deb_pkgname=xbian-package-xbmc-6q
 config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~), linux-image-3.10.51-armmp, linux-image-3.10.30-armmp, linux-image-3.14.14-armmp, linux-image-3.14.27-armmp
