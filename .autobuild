@@ -1,3 +1,4 @@
 rpi stable rpi-wheezy
 rpi-nightly stable rpi-wheezy
-####imx6-nightly stable imx6-jessie
+imx6 stable imx6-jessie
+

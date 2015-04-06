@@ -1,0 +1,384 @@
+diff --git a/xbmc/Application.cpp b/xbmc/Application.cpp
+index 915ca43..5b4921e 100644
+--- a/xbmc/Application.cpp
++++ b/xbmc/Application.cpp
+@@ -4603,6 +4603,7 @@ bool CApplication::ToggleDPMS(bool manual)
+ 
+ bool CApplication::WakeUpScreenSaverAndDPMS(bool bPowerOffKeyPressed /* = false */)
+ {
++  CLog::LogF(LOGDEBUG,"%s - bPowerOffKeyPressed %d", __func__, (int)bPowerOffKeyPressed);
+   bool result;
+ 
+   // First reset DPMS, if active
+@@ -4619,6 +4620,7 @@ bool CApplication::WakeUpScreenSaverAndDPMS(bool bPowerOffKeyPressed /* = false
+   else
+     result = WakeUpScreenSaver(bPowerOffKeyPressed);
+ 
++  CLog::LogF(LOGDEBUG,"%s - result of WakeUpScreenSaver %d", __func__, (int)result);
+   if(result)
+   {
+     // allow listeners to ignore the deactivation if it preceeds a powerdown/suspend etc
+diff --git a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
+index bee0abe..f2511fe 100644
+--- a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
++++ b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
+diff --git a/xbmc/gen-compileinfo.mk b/xbmc/gen-compileinfo.mk
+index 11ded2a..bfba82f 100644
+--- a/xbmc/gen-compileinfo.mk
++++ b/xbmc/gen-compileinfo.mk
+@@ -3,7 +3,7 @@
+ FILEPATH := $(abspath $(dir $(MAKEFILE_LIST)))
+ VERSION.TXT := $(FILEPATH)/../version.txt
+ GITVERFILE := ../VERSION
+-GIT = $(notdir $(shell which git))
++GIT = $(notdir $(shell which true))
+ 
+ .PHONY: GitRevision $(FILEPATH)/.GitRevision
+ all: $(FILEPATH)/CompileInfo.cpp GitRevision
+diff --git a/xbmc/guilib/GraphicContext.cpp b/xbmc/guilib/GraphicContext.cpp
+index d40e7a7..aa892a6 100644
+--- a/xbmc/guilib/GraphicContext.cpp
++++ b/xbmc/guilib/GraphicContext.cpp
+@@ -36,6 +36,8 @@
+ #include "video/VideoReferenceClock.h"
+ #include "cores/IPlayer.h"
+ 
++#include "utils/log.h"
++
+ using namespace std;
+ 
+ extern bool g_fullScreen;
+@@ -319,11 +321,14 @@ void CGraphicContext::SetFullScreenVideo(bool bOnOff)
+ {
+   Lock();
+   m_bFullScreenVideo = bOnOff;
++  CLog::Log(LOGDEBUG,"%s : m_bFullScreenRoot %d", __func__, (int)m_bFullScreenRoot);
+ 
+ #if defined(HAS_VIDEO_PLAYBACK)
+   if(m_bFullScreenRoot)
+   {
+     bool allowDesktopRes = CSettings::Get().GetInt("videoplayer.adjustrefreshrate") == ADJUST_REFRESHRATE_ALWAYS;
++    CLog::Log(LOGDEBUG,"%s : allowDesktopRes %d, m_bFullScreenVideo %d, IsPlayingVideo %d", __func__,
++      (int)allowDesktopRes, (int)m_bFullScreenVideo, (int)g_application.m_pPlayer->IsPlayingVideo());
+     if(m_bFullScreenVideo || (!allowDesktopRes && g_application.m_pPlayer->IsPlayingVideo()))
+       SetVideoResolution(g_renderManager.GetResolution());
+     else if(CDisplaySettings::Get().GetCurrentResolution() > RES_DESKTOP)
+@@ -366,6 +371,7 @@ bool CGraphicContext::IsValidResolution(RESOLUTION res)
+ // call SetVideoResolutionInternal and ensure its done from mainthread
+ void CGraphicContext::SetVideoResolution(RESOLUTION res, bool forceUpdate)
+ {
++  CLog::Log(LOGDEBUG,"%s : changing to %d, force update %d", __func__, (int)res, (int)forceUpdate);
+   if (g_application.IsCurrentThread())
+   {
+     SetVideoResolutionInternal(res, forceUpdate);
+@@ -382,6 +388,7 @@ void CGraphicContext::SetVideoResolution(RESOLUTION res, bool forceUpdate)
+ void CGraphicContext::SetVideoResolutionInternal(RESOLUTION res, bool forceUpdate)
+ {
+   RESOLUTION lastRes = m_Resolution;
++  CLog::Log(LOGDEBUG,"%s : changing to %d, force update %d", __func__, (int)res, (int)forceUpdate);
+ 
+   // If the user asked us to guess, go with desktop
+   if (res == RES_AUTORES || !IsValidResolution(res))
+diff --git a/xbmc/network/AirPlayServer.cpp b/xbmc/network/AirPlayServer.cpp
+index ee0a1a7..37296af 100644
+--- a/xbmc/network/AirPlayServer.cpp
++++ b/xbmc/network/AirPlayServer.cpp
+@@ -66,6 +66,8 @@ using namespace std;
+ #define AIRPLAY_STATUS_NOT_IMPLEMENTED     501
+ #define AIRPLAY_STATUS_NO_RESPONSE_NEEDED  1000
+ 
++#define POLL_SOCKET_IN                     (POLLRDNORM | POLLIN)
++
+ CCriticalSection CAirPlayServer::ServerInstanceLock;
+ CAirPlayServer *CAirPlayServer::ServerInstance = NULL;
+ int CAirPlayServer::m_isPlaying = 0;
+@@ -340,22 +342,7 @@ void CAirPlayServer::Process()
+ 
+   while (!m_bStop)
+   {
+-    int             max_fd = 0;
+-    fd_set          rfds;
+-    struct timeval  to     = {1, 0};
+-    FD_ZERO(&rfds);
+-
+-    FD_SET(m_ServerSocket, &rfds);
+-    max_fd = m_ServerSocket;
+-
+-    for (unsigned int i = 0; i < m_connections.size(); i++)
+-    {
+-      FD_SET(m_connections[i].m_socket, &rfds);
+-      if (m_connections[i].m_socket > max_fd)
+-        max_fd = m_connections[i].m_socket;
+-    }
+-
+-    int res = select(max_fd+1, &rfds, NULL, NULL, &to);
++    int res = poll(&m_fds[0], m_connections.size(), 1000);
+     if (res < 0)
+     {
+       CLog::Log(LOGERROR, "AIRPLAY Server: Select failed");
+@@ -364,10 +351,10 @@ void CAirPlayServer::Process()
+     }
+     else if (res > 0)
+     {
+-      for (int i = m_connections.size() - 1; i >= 0; i--)
++      for (int i = m_connections.size() - 1; i > 0; i--)
+       {
+         int socket = m_connections[i].m_socket;
+-        if (FD_ISSET(socket, &rfds))
++        if (m_fds[i].revents & (POLL_SOCKET_IN))
+         {
+           char buffer[RECEIVEBUFFER] = {};
+           int  nread = 0;
+@@ -383,11 +370,12 @@ void CAirPlayServer::Process()
+             CLog::Log(LOGINFO, "AIRPLAY Server: Disconnection detected");
+             m_connections[i].Disconnect();
+             m_connections.erase(m_connections.begin() + i);
++            m_fds.erase(m_fds.begin() + i);
+           }
+         }
+       }
+ 
+-      if (FD_ISSET(m_ServerSocket, &rfds))
++      if (m_fds[0].revents & POLL_SOCKET_IN)
+       {
+         CLog::Log(LOGDEBUG, "AIRPLAY Server: New connection detected");
+         CTCPClient newconnection;
+@@ -408,8 +396,10 @@ void CAirPlayServer::Process()
+         else
+         {
+           CSingleLock lock (m_connectionLock);
++          struct pollfd newfds = { newconnection.m_socket, POLL_SOCKET_IN, 0 };
+           CLog::Log(LOGINFO, "AIRPLAY Server: New connection added");
+           m_connections.push_back(newconnection);
++          m_fds.push_back(newfds);
+         }
+       }
+     }
+@@ -430,7 +420,9 @@ bool CAirPlayServer::Initialize()
+   
+   if ((m_ServerSocket = CreateTCPServerSocket(m_port, !m_nonlocal, 10, "AIRPLAY")) == INVALID_SOCKET)
+     return false;
+-  
++
++  struct pollfd server = { m_ServerSocket, POLL_SOCKET_IN, 0 };
++  m_fds.push_back(server);
+   CLog::Log(LOGINFO, "AIRPLAY Server: Successfully initialized");
+   return true;
+ }
+@@ -450,6 +442,7 @@ void CAirPlayServer::Deinitialize()
+     close(m_ServerSocket);
+     m_ServerSocket = INVALID_SOCKET;
+   }
++  m_fds.clear();
+ }
+ 
+ CAirPlayServer::CTCPClient::CTCPClient()
+diff --git a/xbmc/network/AirPlayServer.h b/xbmc/network/AirPlayServer.h
+index 3668e30..b73d0e6 100644
+--- a/xbmc/network/AirPlayServer.h
++++ b/xbmc/network/AirPlayServer.h
+@@ -27,6 +27,7 @@
+ 
+ #include <map>
+ #include <sys/socket.h>
++#include <poll.h>
+ #include "threads/Thread.h"
+ #include "threads/CriticalSection.h"
+ #include "utils/HttpParser.h"
+@@ -103,6 +104,7 @@ private:
+ 
+   CCriticalSection m_connectionLock;
+   std::vector<CTCPClient> m_connections;
++  std::vector<struct pollfd> m_fds;
+   std::map<std::string, int> m_reverseSockets;
+   int m_ServerSocket;
+   int m_port;
+diff --git a/xbmc/network/Network.cpp b/xbmc/network/Network.cpp
+index d0c80c0..c526a29 100644
+--- a/xbmc/network/Network.cpp
++++ b/xbmc/network/Network.cpp
+@@ -21,6 +21,7 @@
+ #include <netinet/in.h>
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
++#include <poll.h>
+ 
+ #include "Network.h"
+ #include "ApplicationMessenger.h"
+@@ -330,6 +331,9 @@ static const char* ConnectHostPort(SOCKET soc, const struct sockaddr_in& addr, s
+   int result = fcntl(soc, F_SETFL, fcntl(soc, F_GETFL) | O_NONBLOCK);
+ #endif
+ 
++  struct pollfd fdset = { soc, 0, 0 };
++  u_long timeout = timeOut.tv_sec *1000 + timeOut.tv_usec /1000;
++
+   if (result != 0)
+     return "set non-blocking option failed";
+ 
+@@ -345,11 +349,8 @@ static const char* ConnectHostPort(SOCKET soc, const struct sockaddr_in& addr, s
+       return "unexpected connect fail";
+ 
+     { // wait for connect to complete
+-      fd_set wset;
+-      FD_ZERO(&wset); 
+-      FD_SET(soc, &wset); 
+-
+-      result = select(FD_SETSIZE, 0, &wset, 0, &timeOut);
++      fdset.events = POLLWRNORM | POLLOUT | POLLWRBAND;
++      result = poll(&fdset, 1, timeout);
+     }
+ 
+     if (result < 0)
+@@ -374,12 +375,8 @@ static const char* ConnectHostPort(SOCKET soc, const struct sockaddr_in& addr, s
+ 
+   if (tryRead)
+   {
+-    fd_set rset;
+-    FD_ZERO(&rset); 
+-    FD_SET(soc, &rset); 
+-
+-    result = select(FD_SETSIZE, &rset, 0, 0, &timeOut);
+-
++    fdset.events = POLLIN | POLLHUP | POLLRDNORM | POLLNVAL | POLLPRI;
++    result = poll(&fdset, 1, timeout);
+     if (result > 0)
+     {
+       char message [32];
+diff --git a/xbmc/network/Socket.cpp b/xbmc/network/Socket.cpp
+index 06bf080..c4af890 100644
+--- a/xbmc/network/Socket.cpp
++++ b/xbmc/network/Socket.cpp
+@@ -27,6 +27,7 @@
+ #include "Socket.h"
+ #include "utils/log.h"
+ #include <vector>
++#include <poll.h>
+ 
+ using namespace SOCKETS;
+ //using namespace std; On VS2010, bind conflicts with std::bind
+@@ -163,7 +164,8 @@ void CSocketListener::AddSocket(CBaseSocket *sock)
+   if (sock && sock->Ready())
+   {
+     m_sockets.push_back(sock);
+-    FD_SET(sock->Socket(), &m_fdset);
++    struct pollfd newfd = { sock->Socket(), POLLIN | POLLRDNORM, 0 };
++    m_fdset.push_back(newfd);
+ #ifndef WINSOCK_VERSION
+     if (sock->Socket() > m_iMaxSockets)
+       m_iMaxSockets = sock->Socket();
+@@ -182,20 +184,7 @@ bool CSocketListener::Listen(int timeout)
+   m_iReadyCount = 0;
+   m_iCurrentSocket = 0;
+ 
+-  FD_ZERO(&m_fdset);
+-  for (unsigned int i = 0 ; i<m_sockets.size() ; i++)
+-  {
+-    FD_SET(m_sockets[i]->Socket(), &m_fdset);
+-  }
+-
+-  // set our timeout
+-  struct timeval tv;
+-  int rem = timeout % 1000;
+-  tv.tv_usec = rem * 1000;
+-  tv.tv_sec = timeout / 1000;
+-
+-  m_iReadyCount = select(m_iMaxSockets+1, &m_fdset, NULL, NULL, (timeout < 0 ? NULL : &tv));
+-
++  m_iReadyCount = poll(&m_fdset[0], m_sockets.size(), timeout <= 0 ? -1 : timeout);
+   if (m_iReadyCount<0)
+   {
+     CLog::Log(LOGERROR, "SOCK: Error selecting socket(s)");
+@@ -212,7 +201,7 @@ bool CSocketListener::Listen(int timeout)
+ void CSocketListener::Clear()
+ {
+   m_sockets.clear();
+-  FD_ZERO(&m_fdset);
++  m_fdset.clear();
+   m_iReadyCount = 0;
+   m_iMaxSockets = 0;
+   m_iCurrentSocket = 0;
+@@ -225,7 +214,7 @@ CBaseSocket* CSocketListener::GetFirstReadySocket()
+ 
+   for (int i = 0 ; i < (int)m_sockets.size() ; i++)
+   {
+-    if (FD_ISSET((m_sockets[i])->Socket(), &m_fdset))
++    if (m_fdset[i].revents & (POLLIN | POLLRDNORM))
+     {
+       m_iCurrentSocket = i;
+       return m_sockets[i];
+@@ -241,7 +230,7 @@ CBaseSocket* CSocketListener::GetNextReadySocket()
+ 
+   for (int i = m_iCurrentSocket+1 ; i<(int)m_sockets.size() ; i++)
+   {
+-    if (FD_ISSET(m_sockets[i]->Socket(), &m_fdset))
++    if (m_fdset[i].revents & (POLLIN | POLLRDNORM))
+     {
+       m_iCurrentSocket = i;
+       return m_sockets[i];
+diff --git a/xbmc/network/Socket.h b/xbmc/network/Socket.h
+index ed4c78a..868177a 100644
+--- a/xbmc/network/Socket.h
++++ b/xbmc/network/Socket.h
+@@ -32,6 +32,7 @@
+ #include <sys/time.h>
+ #include <sys/types.h>
+ #include <unistd.h>
++#include <poll.h>
+ #ifdef TARGET_POSIX
+ typedef int SOCKET;
+ #endif
+@@ -209,7 +210,7 @@ namespace SOCKETS
+     int                       m_iReadyCount;
+     int                       m_iMaxSockets;
+     int                       m_iCurrentSocket;
+-    fd_set                    m_fdset;
++    std::vector<struct pollfd> m_fdset;
+   };
+ 
+ }
+diff --git a/xbmc/network/UdpClient.cpp b/xbmc/network/UdpClient.cpp
+index dd2a899..16254f9 100644
+--- a/xbmc/network/UdpClient.cpp
++++ b/xbmc/network/UdpClient.cpp
+@@ -22,6 +22,7 @@
+ #include "UdpClient.h"
+ #ifdef TARGET_POSIX
+ #include <sys/ioctl.h>
++#include <poll.h>
+ #endif
+ #include "Network.h"
+ #include "guilib/GraphicContext.h"
+@@ -154,15 +155,12 @@ void CUdpClient::Process()
+ 
+   while ( !m_bStop )
+   {
+-    fd_set readset, exceptset;
+-    FD_ZERO(&readset);    FD_SET(client_socket, &readset);
+-    FD_ZERO(&exceptset);  FD_SET(client_socket, &exceptset);
+-
+-    int nfds = (int)(client_socket);
+-    timeval tv = { 0, 100000 };
+-    if (select(nfds, &readset, NULL, &exceptset, &tv) < 0)
++    struct pollfd fds;
++    fds.fd = (int)client_socket;
++    fds.events = POLLIN | POLLRDNORM | POLLHUP;
++    if (poll(&fds, 1, 1000) < 0);
+     {
+-      CLog::Log(LOGERROR, "UDPCLIENT: failed to select on socket");
++      CLog::Log(LOGERROR, "UDPCLIENT: failed to poll on socket");
+       break;
+     }
+ 
+diff --git a/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp b/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
+index 461a4fc..0104fa0 100644
+--- a/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
++++ b/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
+@@ -234,7 +234,7 @@ bool CPeripheralBusUSB::WaitForUpdate()
+   pollFd.fd = udevFd;
+   pollFd.events = POLLIN;
+   int iPollResult;
+-  while (!m_bStop && ((iPollResult = poll(&pollFd, 1, 100)) <= 0))
++  while (!m_bStop && ((iPollResult = poll(&pollFd, 1, 1000)) <= 0))
+     if (errno != EINTR && iPollResult != 0)
+       break;
+ 

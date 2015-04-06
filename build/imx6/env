@@ -1,3 +1,3 @@
-CFLAGS=-D__ARM_NEON__=1 -O3 -pipe -funroll-loops -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations 
-CPPFLAGS=-D__ARM_NEON__=1 -O3 -pipe
-CXXFLAGS=-D__ARM_NEON__=1 -O3 -pipe
+CFLAGS=-D__ARM_NEON__=1 -O3 -pipe  -mno-unaligned-access -funroll-loops -march=armv7-a -mtune=cortex-a9 -mcpu=cortex-a9 -mfloat-abi=hard -mfpu=neon -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations 
+CPPFLAGS=-D__ARM_NEON__=1 -O3 -pipe -mno-unaligned-access
+CXXFLAGS=-D__ARM_NEON__=1 -O3 -pipe -mno-unaligned-access
