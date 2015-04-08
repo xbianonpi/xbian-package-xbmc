@@ -1,11 +1,8 @@
 case $config_source_branch in
-  imx6)
-    PVR_BRANCH="gotham"
-    ;;
-  imx6-nightly|rpi)
+  imx6|rpi)
     PVR_BRANCH="helix"
     ;;
-  master|rpi-nightly)
+  master|rpi-nightly|imx6-nightly)
     PVR_BRANCH="master"
     ;;
 esac
