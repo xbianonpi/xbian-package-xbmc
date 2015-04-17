@@ -1,0 +1,9 @@
+case $config_source_branch in
+  imx6*)
+    ;;
+  *)
+    return 0
+    ;;
+esac
+
+find lib/cpluff/ -iname Makefile -exec sed -i -- 's/@LTLIBINTL@//g' {} +
