@@ -18,10 +18,6 @@ index 915ca43..5b4921e 100644
    if(result)
    {
      // allow listeners to ignore the deactivation if it preceeds a powerdown/suspend etc
-diff --git a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
-index bee0abe..f2511fe 100644
---- a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
-+++ b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
 diff --git a/xbmc/gen-compileinfo.mk b/xbmc/gen-compileinfo.mk
 index 11ded2a..bfba82f 100644
 --- a/xbmc/gen-compileinfo.mk
@@ -368,17 +364,4 @@ index dd2a899..16254f9 100644
 +      CLog::Log(LOGERROR, "UDPCLIENT: failed to poll on socket");
        break;
      }
- 
-diff --git a/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp b/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
-index 461a4fc..0104fa0 100644
---- a/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
-+++ b/xbmc/peripherals/bus/linux/PeripheralBusUSBLibUdev.cpp
-@@ -234,7 +234,7 @@ bool CPeripheralBusUSB::WaitForUpdate()
-   pollFd.fd = udevFd;
-   pollFd.events = POLLIN;
-   int iPollResult;
--  while (!m_bStop && ((iPollResult = poll(&pollFd, 1, 100)) <= 0))
-+  while (!m_bStop && ((iPollResult = poll(&pollFd, 1, 1000)) <= 0))
-     if (errno != EINTR && iPollResult != 0)
-       break;
  

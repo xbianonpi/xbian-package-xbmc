@@ -23,7 +23,7 @@
 +FILE *c_fp;
 +/* [AI]: calibration values */
 +
- CLinuxInputDevice::CLinuxInputDevice(const std::string fileName, int index)
+ CLinuxInputDevice::CLinuxInputDevice(const std::string& fileName, int index):
  {
    m_fd = -1;
 @@ -297,6 +316,50 @@

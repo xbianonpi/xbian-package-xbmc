@@ -1,16 +1,31 @@
 #!/bin/bash
 
 if [[ $1 == "configure" ]]; then
-	
-	sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.xbmc/userdata/sources.xml
+
+	# Migrate XBMC home directory to Kodi
+	if [ -d /home/xbian/.xbmc -a ! -d /home/xbian/.kodi ]; then
+		mv /home/xbian/.xbmc /home/xbian/.kodi
+
+		# TODO: remove in a future release, when these packages have been migrated to new location.
+		# "Migrate" plugin.xbianconfig and script.service.xbian.upstart-bridge
+		# otherwise they just won't get loaded at all.
+		mv /usr/local/share/xbmc/addons/* /usr/local/share/kodi/addons
+		rmdir --ignore-fail-on-non-empty -p /usr/local/share/xbmc/addons
+
+		### TODO: remove in a future release, maybe? Surely the latter.
+		ln -s /home/xbian/.kodi /home/xbian/.xbmc
+		ln -s /usr/local/share/kodi /usr/local/share/xbmc
+	fi
+
+        test -e /home/xbian/.kodi/userdata/sources.xml && \
+	    sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.kodi/userdata/sources.xml
 
         mkdir -p /home/xbian/run_on_reboot
         
 cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 #!/bin/bash
 
-[ "$(findmnt -n -o FSTYPE $(df /home/xbian/.xbmc/userdata/Database|tail -1|awk '{print $6}'))" != btrfs ] && exit 0
-
+[ "$(findmnt -n -o FSTYPE $(df /home/xbian/.kodi/userdata/Database | tail -1 | awk '{print $6}'))" != btrfs ] && exit 0
 
 checkdb() {
     cd "$1"
@@ -22,12 +37,11 @@ checkdb() {
 }
 
 # set noCoW flag for database files
-for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
-
+for d in $(find /home/xbian/.kodi/ -type d | grep -w Database$); do
     if [ -e "$d.old" ]; then
 	if ! rm -fr "$d.old" 2>/dev/null; then
 	    if [ $(du -sh "$d.old" | awk '{print $1}') -eq 0 ]; then
-		mv "$d.old" $(mktemp -u -p /home/xbian/.xbmc/userdata)
+		mv "$d.old" $(mktemp -u -p /home/xbian/.kodi/userdata)
 	    fi
 	fi
     fi
@@ -44,7 +58,6 @@ for d in $(find /home/xbian/.xbmc/ -type d | grep -w Database$); do
         mv -T "$d".old "$d"
         exit 1
     fi
-
 done
 
 exit 0
@@ -57,7 +70,7 @@ EOF
 
 	dpkg-trigger --no-await trigger-xbian-package-xbmc
 
-        pgrep xbmc.bin >/dev/null && { echo "xbian-package-xbmc" >>  /var/run/reboot-required; exit 0; }
+        { pgrep kodi.bin >/dev/null || pgrep xbmc.bin >/dev/null; } && { echo "xbian-package-xbmc" >>  /var/run/reboot-required; exit 0; }
         
         /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh && rm -f /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 

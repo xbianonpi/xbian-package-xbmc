@@ -1,5 +1,5 @@
 case $config_source_branch in
-  imx6*)
+  imx6*|rpi*)
     ;;
   *)
     return 0
