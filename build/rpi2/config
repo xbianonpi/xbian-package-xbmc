@@ -1,0 +1,8 @@
+config_source_configure=./configure --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --disable-debug --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp  --disable-projectm --with-platform=raspberry-pi2 --enable-libcec --enable-player=omxplayer
+config_build_env=schroot -c armhfjessie -p --
+config_source_branch=rpi
+config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
+config_deb_pkgname=xbian-package-xbmc
+config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+config_source_reset=yes
+config_source_refresh=yes

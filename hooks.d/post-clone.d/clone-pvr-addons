@@ -1,5 +1,5 @@
 case $config_source_branch in
-  imx6|rpi)
+  imx6|rpi|rpi2)
     PVR_BRANCH="helix"
     ;;
   master|rpi-nightly|imx6-nightly)
