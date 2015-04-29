@@ -1,0 +1,3 @@
+
+[ -d ./usr/src ] && rm -fr ./usr/src || :
+
