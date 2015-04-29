@@ -1,0 +1,14 @@
+--- a/project/cmake/scripts/common/prepare-env.cmake	2015-04-21 00:43:51.000000000 +0200
++++ b/project/cmake/scripts/common/prepare-env.cmake	2015-04-28 19:27:32.305943514 +0200
+@@ -43,9 +43,9 @@
+ 
+ # make sure C++11 is always set
+ if(NOT WIN32)
+-  string(REGEX MATCH "-std=(gnu|c)\\+\\+11" cxx11flag "${CMAKE_CXX_FLAGS}")
++  string(REGEX MATCH "-std=(gnu|c)\\+\\+0x" cxx11flag "${CMAKE_CXX_FLAGS}")
+   if(NOT cxx11flag)
+-    set(CXX11_SWITCH "-std=c++11")
++    set(CXX11_SWITCH "-std=c++0x -fpermissive")
+   endif()
+ endif()
+ 
