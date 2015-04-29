@@ -21,14 +21,14 @@ case $config_source_branch in
 
     # CMake makes some strange things if running multiple times with already
     # existing CMakeCache.txt. So it's better to remove before running cmake
-    [ -e CMakeCache.txt ] && rm -f CMakeCache.txt
+    [ -e CMakeCache.txt ] && rm -f CMakeCache.txt :
     [ -d ../../../../../content/usr ]       || mkdir ../../../../../content/usr
     [ -d ../../../../../content/usr/local ] || mkdir ../../../../../content/usr/local
     #export DESTDIR=$(readlink -f ../../../../../content)
     if $config_build_env c++ --version | grep -q "4.6"; then
         echo "Warning: You are using g++ 4.6, pvr.vbox will currently not compiled without errors, so removing it from source tree"
         echo "         If you need this addon, you have to use g++ 4.7"
-        [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox
+        [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox :
     fi
     [ -d ./addons/addons/audiodecoder.modplug ] && rm -rf ./addons/addons/audiodecoder.modplug
     echo "Warning: Addon audiodecoder.modplug currently unsupported (causing errors in building Debian Package)"
