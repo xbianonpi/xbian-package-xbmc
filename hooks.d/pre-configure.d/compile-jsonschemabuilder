@@ -1,11 +1,3 @@
 
-case $config_platform_branch in
-    *-nightly*|rpi*)
-        ;;
-    *)
-        return
-        ;;
-esac
 
-[ -e tools/depends/native/JsonSchemaBuilder/native ] && rm -fr tools/depends/native/JsonSchemaBuilder/native
-make -C tools/depends/native/JsonSchemaBuilder
+eval $config_build_env make -C tools/depends/native/JsonSchemaBuilder all

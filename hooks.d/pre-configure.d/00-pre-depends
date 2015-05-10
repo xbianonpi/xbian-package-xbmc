@@ -1,0 +1,11 @@
+cd tools/depends
+
+test -e configure || ./bootstrap
+
+test -e config.status || eval $config_build_env ./configure --prefix=$(pwd)
+
+test -e ./Makefile.include || exit 1
+
+eval $config_build_env make -C native/autoconf-native all
+eval $config_build_env make -C native/automake-native all
+

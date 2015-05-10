@@ -8,6 +8,5 @@ sed -i 's/$(DOXY_XML_PATH): $(SWIG) $(JAVA)/$(DOXY_XML_PATH): $(SWIG)/' codegene
 sed -i 's/codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)/codegenerated: $(DOXYGEN) $(SWIG) $(GENERATED)/' codegenerator.mk || exit 1
 
 rm -f xbmc/interfaces/python/generated/*.cpp
-#rm -rf xbmc/interfaces/python/generated
 
 BOOTSTRAP_STANDALONE=1 make -f codegenerator.mk

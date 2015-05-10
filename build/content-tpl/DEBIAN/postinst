@@ -6,14 +6,19 @@ if [[ $1 == "configure" ]]; then
 	if [ -d /home/xbian/.xbmc -a ! -d /home/xbian/.kodi ]; then
 		mv /home/xbian/.xbmc /home/xbian/.kodi
 
+		### TODO: remove in a future release, maybe? Surely the latter.
+		ln -s /home/xbian/.kodi /home/xbian/.xbmc
+	fi
+
+	if [ ! -L /usr/local/share/xbmc ]; then
 		# TODO: remove in a future release, when these packages have been migrated to new location.
 		# "Migrate" plugin.xbianconfig and script.service.xbian.upstart-bridge
 		# otherwise they just won't get loaded at all.
-		mv /usr/local/share/xbmc/addons/* /usr/local/share/kodi/addons
-		rmdir --ignore-fail-on-non-empty -p /usr/local/share/xbmc/addons
+		cp -Rdp -u  /usr/local/share/xbmc/* /usr/local/share/kodi/
+		rm -fr /usr/local/share/xbmc
 
 		### TODO: remove in a future release, maybe? Surely the latter.
-		ln -s /home/xbian/.kodi /home/xbian/.xbmc
+		test -d /usr/local/share/xbmc && mv /usr/local/share/xbmc /usr/local/share/xbmc.to-kodi
 		ln -s /usr/local/share/kodi /usr/local/share/xbmc
 	fi
 

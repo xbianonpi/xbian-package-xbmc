@@ -1,3 +1,11 @@
 
+case $config_platform_branch in
+    *-nightly*)
+        ;;
+    *)
+        return
+        ;;
+esac
+
 rm -f tools/depends/native/TexturePacker/.installed-native
 touch configure.in
