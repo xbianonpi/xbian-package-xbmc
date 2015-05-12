@@ -12,7 +12,7 @@ case $config_source_branch in
 
     # Testing
     if [ x"$config_source_reset" = x"yes" ]; then
-        [ -d ../cmake.afterprepare ] || rsync -aAXH ./ ../cmake.afterprepare/
+        [ -d ../cmake.afterprepare ] && [ -e ../cmake.afterprepare/kodi-config.cmake ] || rsync --delete -aAXH ./ ../cmake.afterprepare/
         echo $config_build_env
         echo $config_build_addons
         rsync -aAXH --delete ../cmake.afterprepare/ .
@@ -22,9 +22,7 @@ case $config_source_branch in
     # CMake makes some strange things if running multiple times with already
     # existing CMakeCache.txt. So it's better to remove before running cmake
     [ -e CMakeCache.txt ] && rm -f CMakeCache.txt || :
-    [ -d ../../../../../content/usr ]       || mkdir ../../../../../content/usr
-    [ -d ../../../../../content/usr/local ] || mkdir ../../../../../content/usr/local
-    #export DESTDIR=$(readlink -f ../../../../../content)
+
     if $config_build_env c++ --version | grep -q "4.6"; then
         echo "Warning: You are using g++ 4.6, pvr.vbox will currently not compiled without errors, so removing it from source tree"
         echo "         If you need this addon, you have to use g++ 4.7"
@@ -34,6 +32,9 @@ case $config_source_branch in
     echo "Warning: Addon audiodecoder.modplug currently unsupported (causing errors in building Debian Package)"
     echo "         removing it from source tree"
     sleep 5
-    $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DCMAKE_INSTALL_PREFIX=/usr/local addons
+
+    [ -d addons/build ] || mkdir addons/build
+    cd addons/build
+    $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_DESTDIR=$(readlink -f ../../../../../../../content) ..
     ;;
 esac

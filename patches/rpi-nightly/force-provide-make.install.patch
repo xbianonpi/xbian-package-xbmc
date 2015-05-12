@@ -1,0 +1,36 @@
+--- a/project/cmake/addons/CMakeLists.txt
++++ b/project/cmake/addons/CMakeLists.txt
+@@ -119,14 +119,8 @@ endif()
+ # include check_target_platform() function
+ include(${APP_ROOT}/project/cmake/scripts/common/check_target_platform.cmake)
+ 
+-# check install permissions
+-set(ADDON_INSTALL_DIR ${CMAKE_INSTALL_PREFIX})
+-check_install_permissions(${CMAKE_INSTALL_PREFIX} can_write)
+-if(NOT ${can_write} AND CMAKE_SYSTEM_NAME STREQUAL "Linux")
+-  set(NEED_SUDO TRUE)
+-  set(ADDON_INSTALL_DIR ${CMAKE_BINARY_DIR}/.install)
+-  message(STATUS "NEED_SUDO: ${NEED_SUDO}")
+-endif()
++# Make sure that we are always installing to .install
++set(ADDON_INSTALL_DIR ${CMAKE_BINARY_DIR}/.install)
+ 
+ ### prepare the build environment for the binary addons
+ # copy the prepare-env.cmake script to the depends path so that we can include it
+@@ -286,14 +280,8 @@ foreach(addon ${addons})
+   endif()
+ endforeach()
+ 
+-if(NEED_SUDO)
+-  add_custom_target(install
+-                    COMMAND ${CMAKE_COMMAND} -E echo "\n\n"
+-                    COMMAND ${CMAKE_COMMAND} -E echo "WARNING: sudo rights needed to install to ${CMAKE_INSTALL_PREFIX}\n"
+-                    COMMAND sudo ${CMAKE_COMMAND} -E copy_directory ${ADDON_INSTALL_DIR}/ ${CMAKE_INSTALL_PREFIX}/
+-                    COMMAND sudo ${CMAKE_COMMAND} -E remove_directory ${ADDON_INSTALL_DIR}/
+-                    COMMAND sudo -k)
+-endif()
++# Note: build-in command copy_directory does not preserve symlinks
++add_custom_target(install COMMAND cp -a ${ADDON_INSTALL_DIR}/* ${CMAKE_INSTALL_DESTDIR}/${CMAKE_INSTALL_PREFIX}/)
+ 
+ # add custom target "supported_addons" that returns all addons that are supported on this platform
+ string(REPLACE ";" " " ALL_ADDONS_BUILDING "${ALL_ADDONS_BUILDING}")

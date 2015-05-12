@@ -7,5 +7,5 @@ config_deb_ctrlextra=Provides: xbian-package-xbmc\\nConflicts: xbian-package-xbm
 config_source_reset=yes
 config_source_refresh=yes
 config_build_addons=all
-config_build_targets=--directory=. --directory=project/cmake
-config_install_targets=install --directory=project/cmake
+config_build_targets=--directory=. --directory=project/cmake/addons/build
+config_install_targets=install
