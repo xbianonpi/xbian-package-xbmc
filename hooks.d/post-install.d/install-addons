@@ -1,0 +1,11 @@
+
+case $config_source_branch in
+  imx6|rpi)
+    return 0
+    ;;
+  rpi-nightly|imx6-nightly)
+    cd project/cmake/addons/build
+    $config_build_env make install
+    ;;
+esac
+
