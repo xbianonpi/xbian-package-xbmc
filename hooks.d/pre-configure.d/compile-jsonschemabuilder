@@ -1,3 +1,4 @@
 
 
-eval $config_build_env make -C tools/depends/native/JsonSchemaBuilder all
+make -C tools/depends/native/JsonSchemaBuilder all
+[ -e tools/depends/native/JsonSchemaBuilder/bin ] || ln -s armv7l-linux-gnueabihf-native tools/depends/native/JsonSchemaBuilder/bin
