@@ -1,6 +1,5 @@
-return 0
 
-[ ! -d tools/depends/native/libsquish-native/squish-install ] || return 0
+rm -f tools/depends/native/libsquish-native/.installed-*-native
 
-rm -f tools/depends/native/libsquish-native/.installed-native
-touch configure.in
+eval $config_build_env make make -C tools/depends/native/libsquish-native all
+[ -e tools/depends/native/libsquish-native/squish-install ] || ln -s ../../armv7l-linux-gnueabihf-native tools/depends/native/libsquish-native/squish-install
