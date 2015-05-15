@@ -6,6 +6,20 @@ test -e config.status || eval $config_build_env ./configure --prefix=$(pwd)
 
 test -e ./Makefile.include || exit 1
 
+[ -d xbmc-tarballs ] || mkdir xbmc-tarballs # If a build is run twice w/o wipe, this dir is removed
+
 eval $config_build_env make -C native/autoconf-native all
 eval $config_build_env make -C native/automake-native all
 
+
+case $config_platform_branch in
+    *-nightly*)
+        ;;
+    *)
+        return
+        ;;
+esac
+
+eval $config_build_env make -C native/pkg-config-native all # TexturePacker configure needs pkg.m4
+eval $config_build_env make -C native/libpng-native all     # TexturePacker configure needs it
+eval $config_build_env make -C native/giflib-native all     # Wheezy comes with outdated giflib
