@@ -1,0 +1,4 @@
+return 0
+
+eval $config_build_env make -C $(readlink -f ./tools/depends/target/libdcadec)
+

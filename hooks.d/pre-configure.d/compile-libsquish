@@ -1,5 +1,9 @@
+[ -d tools/depends/native/libsquish-native ] || return 0
 
-rm -f tools/depends/native/libsquish-native/.installed-*-native
+eval $config_build_env make make -C tools/depends/native/libsquish-native all || \
+    ( cd tools/depends/native/; git clean -xdf; \
+    cd ../../../..; ./bootstrap; make -C tools/depends/native/JsonSchemaBuilder all )
 
-eval $config_build_env make make -C tools/depends/native/libsquish-native all
-[ -e tools/depends/native/libsquish-native/squish-install ] || ln -s ../../armv7l-linux-gnueabihf-native tools/depends/native/libsquish-native/squish-install
+a=$(find tools/depends/native/libsquish-native/.installed*)
+[ -e tools/depends/native/libsquish-native/squish-install ] || \
+    ln -s ${a#*.installed-} tools/depends/native/libsquish-native/squish-install

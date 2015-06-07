@@ -1,4 +1,9 @@
 
 
-make -C tools/depends/native/JsonSchemaBuilder all
-[ -e tools/depends/native/JsonSchemaBuilder/bin ] || ln -s armv7l-linux-gnueabihf-native tools/depends/native/JsonSchemaBuilder/bin
+make -C tools/depends/native/JsonSchemaBuilder all || \
+  ( cd tools/depends/native/JsonSchemaBuilder; git clean -xdf ./; \
+    cd ../../../..; ./bootstrap; make -C tools/depends/native/JsonSchemaBuilder all )
+
+a=$(find tools/depends/native/JsonSchemaBuilder/.installed*)
+
+[ -e tools/depends/native/JsonSchemaBuilder/bin ] || ln -s ${a#*.installed-} tools/depends/native/JsonSchemaBuilder/bin
