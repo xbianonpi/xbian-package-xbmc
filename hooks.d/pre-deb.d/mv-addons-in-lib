@@ -1,0 +1,4 @@
+
+# Hopefully only a temporary problem
+[ -d ./usr/local/lib/addons ] && mv ./usr/local/lib/addons/* ./usr/local/lib/kodi/addons/ && rm -rf ./usr/local/lib/addons || :
+

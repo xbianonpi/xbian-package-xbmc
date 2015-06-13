@@ -1,6 +1,16 @@
+diff --git a/project/cmake/addons/CMakeLists.txt b/project/cmake/addons/CMakeLists.txt
+index 54f73d0..e2320f4 100644
 --- a/project/cmake/addons/CMakeLists.txt
 +++ b/project/cmake/addons/CMakeLists.txt
-@@ -119,14 +119,8 @@ endif()
+@@ -70,6 +70,7 @@ set(BUILD_ARGS -DCMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}
+                -DCMAKE_USER_MAKE_RULES_OVERRIDE_CXX=${CMAKE_USER_MAKE_RULES_OVERRIDE_CXX}
+                -DCORE_SYSTEM_NAME=${CORE_SYSTEM_NAME}
+                -DBUILD_SHARED_LIBS=1
++               -DOVERRIDE_PATHS=${OVERRIDE_PATHS}
+                -DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}
+                -DCMAKE_CXX_FLAGS=${CMAKE_CXX_FLAGS})
+ 
+@@ -121,14 +122,8 @@ endif()
  # include check_target_platform() function
  include(${APP_ROOT}/project/cmake/scripts/common/check_target_platform.cmake)
  
@@ -17,7 +27,7 @@
  
  ### prepare the build environment for the binary addons
  # copy the prepare-env.cmake script to the depends path so that we can include it
-@@ -286,14 +280,8 @@ foreach(addon ${addons})
+@@ -288,14 +283,8 @@ foreach(addon ${addons})
    endif()
  endforeach()
  
