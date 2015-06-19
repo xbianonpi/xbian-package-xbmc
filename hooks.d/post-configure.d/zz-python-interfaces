@@ -4,9 +4,11 @@
 [ -n "$(find xbmc/interfaces/python -iname Makefile -newer Makefile.in 2>/dev/null)" ] && \
 [ -z "$(find xbmc/interfaces/python/generated -maxdepth 1 -iname \*.cpp ! -newer xbmc/interfaces/python/Makefile 2>/dev/null)" ] && return 0
 
-sed -i 's/$(DOXY_XML_PATH): $(SWIG) $(JAVA)/$(DOXY_XML_PATH): $(SWIG)/' codegenerator.mk || exit 1
-sed -i 's/codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)/codegenerated: $(DOXYGEN) $(SWIG) $(GENERATED)/' codegenerator.mk || exit 1
+! grep '$(DOXY_XML_PATH): $(SWIG) $(JAVA)' codegenerator.mk || \
+    sed -i 's/$(DOXY_XML_PATH): $(SWIG) $(JAVA)/$(DOXY_XML_PATH): $(SWIG)/' codegenerator.mk || exit 1
+
+! grep 'codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)' codegenerator.mk || \
+    sed -i 's/codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)/codegenerated: $(DOXYGEN) $(SWIG) $(GENERATED)/' codegenerator.mk || exit 1
 
 rm -f xbmc/interfaces/python/generated/*.cpp
-
 BOOTSTRAP_STANDALONE=1 make -f codegenerator.mk
