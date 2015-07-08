@@ -24,9 +24,10 @@ case $config_source_branch in
     [ -e CMakeCache.txt ] && rm -f CMakeCache.txt || :
 
     if $config_build_env c++ --version | grep -q "4.6"; then
-        echo "Warning: You are using g++ 4.6, pvr.vbox will currently not compiled without errors, so removing it from source tree"
+        echo "Warning: You are using g++ 4.6, pvr.vbox and pvr.stalker will currently not compiled without errors, so removing it from source tree"
         echo "         If you need this addon, you have to use g++ 4.7"
         [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox || :
+        [ -d ./addons/addons/pvr.stalker ] && rm -rf ./addons/addons/pvr.stalker || :
     fi
     [ -d ./addons/addons/audiodecoder.modplug ] && rm -rf ./addons/addons/audiodecoder.modplug || :
     echo "Warning: Addon audiodecoder.modplug currently unsupported (causing errors in building Debian Package)"
@@ -35,6 +36,6 @@ case $config_source_branch in
 
     [ -d addons/build ] || mkdir addons/build
     cd addons/build
-    $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_DESTDIR=$(readlink -f ../../../../../../../content) ..
+    $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_DESTDIR=$(readlink -f ../../../../../../../content) ..
     ;;
 esac
