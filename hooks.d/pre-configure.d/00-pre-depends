@@ -13,7 +13,7 @@ eval $config_build_env make -C native/automake-native all
 
 
 case $config_platform_branch in
-    *-nightly*)
+    *-nightly*|*-isengard)
         ;;
     *)
         return

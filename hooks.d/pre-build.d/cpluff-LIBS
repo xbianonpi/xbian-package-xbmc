@@ -1,8 +1,8 @@
 case $config_source_branch in
-  imx6*|rpi*)
-    ;;
-  *)
+  *Isengard)
     return 0
+    ;;
+  imx6*|rpi*)
     ;;
 esac
 

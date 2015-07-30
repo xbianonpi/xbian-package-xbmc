@@ -1,11 +1,7 @@
+[ -e project/cmake/addons/build/Makefile ] || return 0
 
-case $config_platform_branch in
-  *-nightly)
-    ;;
-  *)
-    return
-    ;;
-esac
-
-cd project/cmake/addons/build
-$config_build_env make install
+(
+    cd project/cmake/addons
+    $config_build_env make -C build kodiplatform_DIR=./build/depends
+    #DESTDIR=$XBIANPKGDIR/content
+)

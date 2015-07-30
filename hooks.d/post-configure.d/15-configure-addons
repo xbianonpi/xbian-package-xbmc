@@ -7,7 +7,7 @@ case $config_source_branch in
   imx6|rpi)
     return 0
     ;;
-  rpi-nightly|imx6-nightly)
+  rpi-nightly|imx6-nightly|*Isengard)
     cd project/cmake
 
     # Testing
@@ -36,6 +36,7 @@ case $config_source_branch in
 
     [ -d addons/build ] || mkdir addons/build
     cd addons/build
-    $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_DESTDIR=$(readlink -f ../../../../../../../content) ..
+    PREFIX=/usr/local
+    eval $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX -DBUILD_DIR=./ ..
     ;;
 esac

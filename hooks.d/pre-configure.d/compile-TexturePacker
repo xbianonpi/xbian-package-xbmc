@@ -1,6 +1,5 @@
-
 case $config_platform_branch in
-    *-nightly*)
+    *-nightly*|*-isengard)
         ;;
     *)
         return
@@ -8,6 +7,6 @@ case $config_platform_branch in
 esac
 
 rm -f tools/depends/native/TexturePacker/.installed-*-native
+eval $config_build_env make -C tools/depends/native/TexturePacker
 
-eval $config_build_env make -C tools/depends/native/TexturePacker all
-[ -e tools/depends/native/TexturePacker/bin ] || ln -s ../../armv7l-linux-gnueabihf-native/bin tools/depends/native/TexturePacker/bin
+[ -h tools/depends/native/TexturePacker/bin ] || ln -s ../../armv7l-linux-gnueabihf-native/bin tools/depends/native/TexturePacker/bin
