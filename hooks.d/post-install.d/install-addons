@@ -2,6 +2,7 @@
 
 (
     cd project/cmake/addons
-    $config_build_env make -C build kodiplatform_DIR=./build/depends
+    $config_build_env make -C build rebuild_cache kodiplatform_DIR=$(readlink -f ./depends)
+    $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends)
     #DESTDIR=$XBIANPKGDIR/content
 )
