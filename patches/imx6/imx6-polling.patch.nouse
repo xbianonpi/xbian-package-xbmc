@@ -31,50 +31,6 @@ index 11ded2a..bfba82f 100644
  
  .PHONY: GitRevision $(FILEPATH)/.GitRevision
  all: $(FILEPATH)/CompileInfo.cpp GitRevision
-diff --git a/xbmc/guilib/GraphicContext.cpp b/xbmc/guilib/GraphicContext.cpp
-index d40e7a7..aa892a6 100644
---- a/xbmc/guilib/GraphicContext.cpp
-+++ b/xbmc/guilib/GraphicContext.cpp
-@@ -36,6 +36,8 @@
- #include "video/VideoReferenceClock.h"
- #include "cores/IPlayer.h"
- 
-+#include "utils/log.h"
-+
- using namespace std;
- 
- extern bool g_fullScreen;
-@@ -319,11 +321,14 @@ void CGraphicContext::SetFullScreenVideo(bool bOnOff)
- {
-   Lock();
-   m_bFullScreenVideo = bOnOff;
-+  CLog::Log(LOGDEBUG,"%s : m_bFullScreenRoot %d", __func__, (int)m_bFullScreenRoot);
- 
- #if defined(HAS_VIDEO_PLAYBACK)
-   if(m_bFullScreenRoot)
-   {
-     bool allowDesktopRes = CSettings::Get().GetInt("videoplayer.adjustrefreshrate") == ADJUST_REFRESHRATE_ALWAYS;
-+    CLog::Log(LOGDEBUG,"%s : allowDesktopRes %d, m_bFullScreenVideo %d, IsPlayingVideo %d", __func__,
-+      (int)allowDesktopRes, (int)m_bFullScreenVideo, (int)g_application.m_pPlayer->IsPlayingVideo());
-     if(m_bFullScreenVideo || (!allowDesktopRes && g_application.m_pPlayer->IsPlayingVideo()))
-       SetVideoResolution(g_renderManager.GetResolution());
-     else if(CDisplaySettings::Get().GetCurrentResolution() > RES_DESKTOP)
-@@ -366,6 +371,7 @@ bool CGraphicContext::IsValidResolution(RESOLUTION res)
- // call SetVideoResolutionInternal and ensure its done from mainthread
- void CGraphicContext::SetVideoResolution(RESOLUTION res, bool forceUpdate)
- {
-+  CLog::Log(LOGDEBUG,"%s : changing to %d, force update %d", __func__, (int)res, (int)forceUpdate);
-   if (g_application.IsCurrentThread())
-   {
-     SetVideoResolutionInternal(res, forceUpdate);
-@@ -382,6 +388,7 @@ void CGraphicContext::SetVideoResolution(RESOLUTION res, bool forceUpdate)
- void CGraphicContext::SetVideoResolutionInternal(RESOLUTION res, bool forceUpdate)
- {
-   RESOLUTION lastRes = m_Resolution;
-+  CLog::Log(LOGDEBUG,"%s : changing to %d, force update %d", __func__, (int)res, (int)forceUpdate);
- 
-   // If the user asked us to guess, go with desktop
-   if (res == RES_AUTORES || !IsValidResolution(res))
 diff --git a/xbmc/network/AirPlayServer.cpp b/xbmc/network/AirPlayServer.cpp
 index ee0a1a7..37296af 100644
 --- a/xbmc/network/AirPlayServer.cpp
