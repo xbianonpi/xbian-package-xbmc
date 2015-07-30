@@ -1,3 +1,13 @@
+case $config_platform_branch in
+    *-nightly*|*-isengard)
+        return 0
+        ;;
+    *)
+        return 0
+        ;;
+esac
+
+
 case $config_source_branch in
   imx6|rpi|rpi2)
     PVR_BRANCH="helix"
@@ -5,7 +15,7 @@ case $config_source_branch in
   master)
     PVR_BRANCH="master"
     ;;
-  rpi-nightly|imx6-nightly)
+  rpi-nightly|imx6-nightly|*Isengard)
     return 0
     ;;
   *)
