@@ -15,7 +15,7 @@ case $config_source_branch in
 
     mkdir -p project/cmake/addons/addons/pvr.vdr.vnsi/
     echo 'pvr.vdr.vnsi file:///tmp pvr.vdr.vnsi' > project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
-    ( find project/cmake/addons/build/ -iname \*vnsi\* -exec rm -f {} + )
+    ( find project/cmake/addons/build/ -iname \*vnsi\* -exec rm -fr {} + )
 
     cd project/cmake
 
@@ -42,11 +42,12 @@ case $config_source_branch in
     [ -d ./addons/addons/audiodecoder.modplug ] && rm -rf ./addons/addons/audiodecoder.modplug || :
     echo "Warning: Addon audiodecoder.modplug currently unsupported (causing errors in building Debian Package)"
     echo "         removing it from source tree"
-    sleep 5
+    #sleep 5
 
     [ -d addons/build ] || mkdir addons/build
     cd addons/build
     PREFIX=/usr/local
-    eval $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX -DBUILD_DIR=$(readlink -f ./) ..
+    eval $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+      -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF ..
     ;;
 esac
