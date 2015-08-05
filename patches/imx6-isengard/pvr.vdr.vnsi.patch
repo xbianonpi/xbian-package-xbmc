@@ -1,0 +1,7 @@
+diff --git a/project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt b/project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
+index e1892df..ba6b28f 100644
+--- a/project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
++++ b/project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
+@@ -1 +1 @@
+-pvr.vdr.vnsi https://github.com/kodi-pvr/pvr.vdr.vnsi 550a4a2
++pvr.vdr.vnsi file:///tmp pvr.vdr.vnsi

@@ -1,0 +1,186 @@
+diff --git a/xbmc/video/VideoReferenceClock.cpp b/xbmc/video/VideoReferenceClock.cpp
+index bc5fbe0..e965d62 100644
+--- a/xbmc/video/VideoReferenceClock.cpp
++++ b/xbmc/video/VideoReferenceClock.cpp
+@@ -106,8 +106,6 @@ void CVideoReferenceClock::Process()
+   bool SetupSuccess = false;
+   int64_t Now;
+ 
+-  while(!m_bStop)
+-  {
+     //set up the vblank clock
+ #if defined(HAVE_X11)
+   std::string gpuvendor = g_Windowing.GetRenderVendor();
+@@ -131,6 +129,11 @@ void CVideoReferenceClock::Process()
+     m_pVideoSync = new CVideoSyncIMX();
+ #endif
+ 
++  if (m_pVideoSync)
++    m_pVideoSync->AdaptPriority();
++
++  while(!m_bStop)
++  {
+     if (m_pVideoSync)
+     {
+       SetupSuccess = m_pVideoSync->Setup(CBUpdateClock);
+@@ -170,15 +173,17 @@ void CVideoReferenceClock::Process()
+ 
+     //clean up the vblank clock
+     if (m_pVideoSync)
+-    {
+       m_pVideoSync->Cleanup();
+-      delete m_pVideoSync;
+-      m_pVideoSync = NULL;
+-    }
+ 
+     if (!SetupSuccess)
+       break;
+   }
++
++  if (m_pVideoSync)
++  {
++    delete m_pVideoSync;
++    m_pVideoSync = NULL;
++  }
+ }
+ 
+ //this is called from the vblank run function and from CVideoReferenceClock::Wait in case of a late update
+diff --git a/xbmc/video/videosync/VideoSync.h b/xbmc/video/videosync/VideoSync.h
+index af8a220..822c16e 100644
+--- a/xbmc/video/videosync/VideoSync.h
++++ b/xbmc/video/videosync/VideoSync.h
+@@ -30,6 +30,7 @@ public:
+   virtual void Cleanup() = 0;
+   virtual float GetFps() = 0;
+   virtual void RefreshChanged() {};
++  virtual void AdaptPriority() {};
+ protected:
+   PUPDATECLOCK UpdateClock;
+   float m_fps;
+diff --git a/xbmc/video/videosync/VideoSyncD3D.cpp b/xbmc/video/videosync/VideoSyncD3D.cpp
+index c40b5a4..c9924d3 100644
+--- a/xbmc/video/videosync/VideoSyncD3D.cpp
++++ b/xbmc/video/videosync/VideoSyncD3D.cpp
+@@ -51,6 +51,13 @@ void CVideoSyncD3D::RefreshChanged()
+   m_displayReset = true;
+ }
+ 
++void CVideoSyncD3D::AdaptPriority()
++{
++  //we need a high priority thread to get accurate timing
++  if (!SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL))
++    CLog::Log(LOGDEBUG, "CVideoSyncD3D: SetThreadPriority failed");
++}
++
+ bool CVideoSyncD3D::Setup(PUPDATECLOCK func)
+ {
+   int ReturnV;
+@@ -64,9 +71,6 @@ bool CVideoSyncD3D::Setup(PUPDATECLOCK func)
+ 
+   //get d3d device
+   m_D3dDev = g_Windowing.Get3DDevice();
+-  //we need a high priority thread to get accurate timing
+-  if (!SetThreadPriority(GetCurrentThread(), THREAD_PRIORITY_TIME_CRITICAL))
+-    CLog::Log(LOGDEBUG, "CVideoSyncD3D: SetThreadPriority failed");
+ 
+   D3DCAPS9 DevCaps;
+   ReturnV = m_D3dDev->GetDeviceCaps(&DevCaps);
+diff --git a/xbmc/video/videosync/VideoSyncD3D.h b/xbmc/video/videosync/VideoSyncD3D.h
+index 3dc1466..a59350f 100644
+--- a/xbmc/video/videosync/VideoSyncD3D.h
++++ b/xbmc/video/videosync/VideoSyncD3D.h
+@@ -34,6 +34,7 @@ public:
+   virtual void Cleanup();
+   virtual float GetFps();
+   virtual void RefreshChanged();
++  virtual void AdaptPriority();
+ 
+   virtual void OnCreateDevice() {}
+   virtual void OnDestroyDevice();
+diff --git a/xbmc/video/videosync/VideoSyncIMX.cpp b/xbmc/video/videosync/VideoSyncIMX.cpp
+index e36bece..b8b79f0 100644
+--- a/xbmc/video/videosync/VideoSyncIMX.cpp
++++ b/xbmc/video/videosync/VideoSyncIMX.cpp
+@@ -48,7 +48,8 @@ bool CVideoSyncIMX::Setup(PUPDATECLOCK func)
+     return false;
+ 
+   bool bContinue = !ioctl(fb0, FBIOGET_VSCREENINFO, &screen_info);
+-  if (bContinue) {
++  if (bContinue)
++  {
+     bContinue = !ioctl(m_fddcic, DCIC_IOC_CONFIG_DCIC, &screen_info.sync);
+ 
+     if (bContinue)
+@@ -68,12 +69,16 @@ bool CVideoSyncIMX::Setup(PUPDATECLOCK func)
+   return true;
+ }
+ 
++void CVideoSyncIMX::AdaptPriority()
++{
++  /* This shouldn't be very busy and timing is important so increase priority */
++  CThread::GetCurrentThread()->SetPriority(CThread::GetCurrentThread()->GetPriority()+1);
++}
++
+ void CVideoSyncIMX::Run(volatile bool& stop)
+ {
+   unsigned long counter;
+   unsigned long last = 0;
+-  /* This shouldn't be very busy and timing is important so increase priority */
+-  CThread::GetCurrentThread()->SetPriority(CThread::GetCurrentThread()->GetPriority()+1);
+ 
+   while (!stop && !m_abort)
+   {
+@@ -95,8 +100,7 @@ void CVideoSyncIMX::Cleanup()
+ 
+ float CVideoSyncIMX::GetFps()
+ {
+-  RESOLUTION_INFO info = g_graphicsContext.GetResInfo();
+-  m_fps = info.fRefreshRate;
++  m_fps = g_graphicsContext.GetFPS();
+   CLog::Log(LOGDEBUG, "CVideoReferenceClock: fps: %.3f", m_fps);
+   return m_fps;
+ }
+diff --git a/xbmc/video/videosync/VideoSyncIMX.h b/xbmc/video/videosync/VideoSyncIMX.h
+index 3e7bbbe..0c14423 100644
+--- a/xbmc/video/videosync/VideoSyncIMX.h
++++ b/xbmc/video/videosync/VideoSyncIMX.h
+@@ -33,6 +33,7 @@ public:
+   virtual float GetFps();
+   virtual void OnResetDevice();
+   virtual void RefreshChanged();
++  virtual void AdaptPriority();
+ private:
+   volatile bool m_abort;
+   int m_fddcic;
+diff --git a/xbmc/video/videosync/VideoSyncPi.cpp b/xbmc/video/videosync/VideoSyncPi.cpp
+index debe85b..43e0975 100644
+--- a/xbmc/video/videosync/VideoSyncPi.cpp
++++ b/xbmc/video/videosync/VideoSyncPi.cpp
+@@ -39,11 +39,14 @@ bool CVideoSyncPi::Setup(PUPDATECLOCK func)
+   return true;
+ }
+ 
+-void CVideoSyncPi::Run(volatile bool& stop)
++void CVideoSyncPi::AdaptPriority()
+ {
+   /* This shouldn't be very busy and timing is important so increase priority */
+   CThread::GetCurrentThread()->SetPriority(CThread::GetCurrentThread()->GetPriority()+1);
++}
+ 
++void CVideoSyncPi::Run(volatile bool& stop)
++{
+   while (!stop && !m_abort)
+   {
+     g_RBP.WaitVsync();
+diff --git a/xbmc/video/videosync/VideoSyncPi.h b/xbmc/video/videosync/VideoSyncPi.h
+index 783cd19..e349922 100644
+--- a/xbmc/video/videosync/VideoSyncPi.h
++++ b/xbmc/video/videosync/VideoSyncPi.h
+@@ -32,6 +32,7 @@ public:
+   virtual void Cleanup();
+   virtual float GetFps();
+   virtual void OnResetDevice();
++  virtual void AdaptPriority();
+ private:
+   volatile bool m_abort;
+ };

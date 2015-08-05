@@ -1,0 +1,13 @@
+diff --git a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
+index 1fc8478..c965695 100644
+--- a/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
++++ b/xbmc/windowing/egl/EGLNativeTypeIMX.cpp
+@@ -318,7 +318,7 @@ bool CEGLNativeTypeIMX::SetNativeResolution(const RESOLUTION_INFO &res)
+   SysfsUtils::SetString("/sys/class/graphics/fb0/mode", res.strId + "\n");
+ 
+   CreateNativeDisplay();
+-  CreateNativeWindow();
++  //CreateNativeWindow();
+ 
+   return true;
+ #else
