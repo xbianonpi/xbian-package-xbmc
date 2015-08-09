@@ -1,0 +1,24 @@
+[ -n "$config_build_env" ] || return 0
+
+makefile=0
+
+! grep -q '$(DOXY_XML_PATH): $(SWIG) $(JAVA)' codegenerator.mk || \
+    {  sed -i 's/$(DOXY_XML_PATH): $(SWIG) $(JAVA)/$(DOXY_XML_PATH): $(SWIG)/' codegenerator.mk || exit 1
+       makefile=1
+    }
+
+! grep -q 'codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)' codegenerator.mk || \
+    { sed -i 's/codegenerated: $(DOXYGEN) $(SWIG) $(JAVA) $(GENERATED)/codegenerated: $(DOXYGEN) $(SWIG) $(GENERATED)/' codegenerator.mk || exit 1
+      makefile=1
+    }
+
+if [ -e .reconfigure ]; then
+    rm -f .reconfigure
+    makefile=1
+fi
+[ $makefile -eq 1 ] || return 0
+
+rm -f xbmc/interfaces/python/generated/*.cpp
+BOOTSTRAP_STANDALONE=1 make -f codegenerator.mk
+
+make -f Makefile.python-interfaces Makefile || :
