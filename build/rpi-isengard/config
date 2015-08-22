@@ -1,5 +1,5 @@
 config_source_configure=./configure --enable-texturepacker --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --disable-debug --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp --disable-projectm --with-platform=raspberry-pi --enable-libcec --enable-player=omxplayer
-config_build_env=schroot -c armhfjessie -p --
+config_build_env=schroot -c armhfjessiev6 -p --
 config_source_branch=treeIsengard
 config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
 config_deb_pkgname=xbian-package-xbmc
