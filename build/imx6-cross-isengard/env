@@ -1,0 +1,7 @@
+CC=arm-linux-gnueabihf-gcc
+CXX=arm-linux-gnueabihf-g++
+CPP=arm-linux-gnueabihf-gcc -E
+OS=linux
+CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I/usr/include
+LDFLAGS=-L$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib) -L/usr/lib/arm-linux-gnueabihf
+PKG_CONFIG_PATH="/usr/lib/arm-linux-gnueabihf/pkgconfig:$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib/pkgconfig/)"
