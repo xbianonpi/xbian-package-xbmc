@@ -2,3 +2,4 @@ CFLAGS=-O3 -pipe  -mno-unaligned-access -funroll-loops -mfloat-abi=hard -mfpu=ne
 INCLUDES=-I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -Itools/depends/target/libdcadec/armv7l-linux-gnueabihf
 CPPFLAGS=-O3 -pipe -mno-unaligned-access -Wa,-mno-warn-deprecated -Wno-deprecated-declarations -Itools/depends/target/libdcadec/armv7l-linux-gnueabihf 
 LDFLAGS=-L/opt/vc/lib
+PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
