@@ -30,3 +30,4 @@ eval $config_build_env make -C native/pkg-config-native all # TexturePacker conf
 eval $config_build_env make -C native/libpng-native all     # TexturePacker configure needs it
 eval $config_build_env make -C native/giflib-native #all     # Wheezy comes with outdated giflib
 [ ! -d target/libdcadec ] || eval $config_build_env make -C target/libdcadec all     # 
+[ ! -d target/crossguid ] || eval make -C target/crossguid all
