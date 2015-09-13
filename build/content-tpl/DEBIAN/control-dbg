@@ -1,0 +1,9 @@
+Origin: XBian
+Package: __PKGNAME__-dbg
+Version: __VERSION__
+Section: devel
+Priority: optional
+Architecture: armhf
+Depends: __PKGNAME__ (= __VERSION__)
+Maintainer: Koenkk <development@xbian.org>
+Description: XBMC (__ARCHBRANCH__) Debugging symbols
