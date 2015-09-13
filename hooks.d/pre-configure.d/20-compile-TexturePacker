@@ -1,0 +1,15 @@
+case $config_platform_branch in
+    *-nightly*|*-isengard)
+        ;;
+    *)
+        return
+        ;;
+esac
+
+[ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
+
+eval $config_build_env make -C tools/depends/native/TexturePacker ||:
+
+dir=$(grep NATIVEPREFIX= tools/depends/Makefile.include | awk -F'=' '{print $2}')
+[ -h tools/depends/native/TexturePacker/bin ] || ln -s $dir/bin tools/depends/native/TexturePacker
+

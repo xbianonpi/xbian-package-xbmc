@@ -9,6 +9,8 @@ case $config_source_branch in
     ;;
   rpi-nightly|imx6-nightly|*Isengard)
 
+    [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
+
     ### it forces OPENGL, disable for now
     mkdir -p /tmp/archive
     cp ../../../extra-files/pvr.vdr.vnsi.tar.gz /tmp/archive

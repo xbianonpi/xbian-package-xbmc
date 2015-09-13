@@ -1,8 +1,14 @@
+[ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
 cd tools/depends
 
 test -e configure || ./bootstrap
 
-test -e config.status || eval $config_build_env ./configure --prefix=$(pwd)
+[ -z "$CC" ] || \
+  {
+    plat=$(eval $config_build_env $CC -v 2>&1| grep Target | awk '{print $2}')
+    extraargs="--host=$plat --build=$plat"
+  }
+test -e config.status || eval $config_build_env ./configure --prefix=$(pwd) $extraargs
 
 test -e ./Makefile.include || exit 1
 
@@ -22,5 +28,6 @@ esac
 
 eval $config_build_env make -C native/pkg-config-native all # TexturePacker configure needs pkg.m4
 eval $config_build_env make -C native/libpng-native all     # TexturePacker configure needs it
-eval $config_build_env make -C native/giflib-native all     # Wheezy comes with outdated giflib
+eval $config_build_env make -C native/giflib-native #all     # Wheezy comes with outdated giflib
 [ ! -d target/libdcadec ] || eval $config_build_env make -C target/libdcadec all     # 
+[ ! -d target/crossguid ] || eval make -C target/crossguid all

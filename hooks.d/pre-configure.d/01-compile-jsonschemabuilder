@@ -1,9 +1,8 @@
-
-
 make -C tools/depends/native/JsonSchemaBuilder all || \
   ( cd tools/depends/native/JsonSchemaBuilder; git clean -xdf ./; \
     cd ../../../..; ./bootstrap; make -C tools/depends/native/JsonSchemaBuilder all )
 
-a=$(find tools/depends/native/JsonSchemaBuilder/.installed*)
-[ -e tools/depends/native/JsonSchemaBuilder/bin ] || \
-    ln -s $(readlink -f tools/depends/native/JsonSchemaBuilder/${a#*.installed-}) tools/depends/native/JsonSchemaBuilder/bin
+
+dir=$(grep NATIVEPREFIX= tools/depends/Makefile.include | awk -F'=' '{print $2}')
+[ -h tools/depends/native/JsonSchemaBuilder/bin ] || ln -s $dir/bin tools/depends/native/JsonSchemaBuilder
+
