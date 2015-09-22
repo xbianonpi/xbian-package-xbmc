@@ -5,7 +5,7 @@
 
 case $config_source_branch in
   imx6|rpi)
-    return 0
+    exit 0
     ;;
   rpi-nightly|imx6-nightly|*Isengard)
 

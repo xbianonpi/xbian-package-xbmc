@@ -1,6 +1,6 @@
 case $config_source_branch in
   *Isengard)
-    return 0
+    exit 0
     ;;
   imx6*|rpi*)
     ;;

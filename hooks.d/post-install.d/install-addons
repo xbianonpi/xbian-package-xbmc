@@ -1,4 +1,4 @@
-[ -e project/cmake/addons/build/Makefile ] || return 0
+[ -e project/cmake/addons/build/Makefile ] || exit 0
 
 (
     [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
