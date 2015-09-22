@@ -17,7 +17,7 @@ case $config_source_branch in
 
     mkdir -p project/cmake/addons/addons/pvr.vdr.vnsi/
     echo 'pvr.vdr.vnsi file:///tmp pvr.vdr.vnsi' > project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
-    ( find project/cmake/addons/build/ -iname \*vnsi\* -exec rm -fr {} + )
+    ( find project/cmake/addons/build/ -iname \*vnsi\* -exec rm -fr {} + ) || :
 
     cd project/cmake
 
