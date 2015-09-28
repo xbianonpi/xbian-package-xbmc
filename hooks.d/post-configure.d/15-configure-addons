@@ -22,7 +22,7 @@ case $config_source_branch in
     cd project/cmake
 
     # Testing
-    if [ x"$config_source_reset" = x"yes" ]; then
+    if [ x"$config_source_reset" = x"donotrun" ]; then
         [ -d ../cmake.afterprepare ] && [ -e ../cmake.afterprepare/kodi-config.cmake ] || rsync --delete -aAXH ./ ../cmake.afterprepare/
         echo $config_build_env
         echo $config_build_addons
