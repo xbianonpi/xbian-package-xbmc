@@ -1,0 +1,77 @@
+commit ee762026329d0d0c0ff8e312cf04ecf9957b0fd0
+Author: popcornmix <popcornmix@gmail.com>
+Date:   Mon Nov 24 22:07:25 2014 +0000
+
+    [dvdplayervideo] Prod decoder when in stills mode
+    
+    An asynchronous hardware decoder doesn't only produce output pictures when new packets arrive.
+    In dvd stills mode give it a chance to return pictures that weren't ready when frame was decoded.
+
+diff --git a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
+index 0fe56c3..6ad751f 100644
+--- a/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
++++ b/xbmc/cores/dvdplayer/DVDPlayerVideo.cpp
+@@ -314,7 +314,8 @@ void CDVDPlayerVideo::Process()
+ 
+   while (!m_bStop)
+   {
+-    int iQueueTimeOut = (int)(m_stalled ? frametime / 4 : frametime * 10) / 1000;
++    bool bPictureWaiting = m_hints.stills && (m_pVideoCodec->Decode(NULL, 0, DVD_NOPTS_VALUE, DVD_NOPTS_VALUE) & VC_PICTURE);
++    int iQueueTimeOut = (int)(bPictureWaiting ? 0 : (m_hints.stills || m_stalled) ? frametime / 4 : frametime * 10) / 1000;
+     int iPriority = (m_speed == DVD_PLAYSPEED_PAUSE && m_started) ? 1 : 0;
+ 
+     CDVDMsg* pMsg;
+@@ -331,27 +332,36 @@ void CDVDPlayerVideo::Process()
+       if( iPriority )
+         continue;
+ 
+-      //Okey, start rendering at stream fps now instead, we are likely in a stillframe
+-      if( !m_stalled )
++      // check for picture waiting
++      if (bPictureWaiting)
+       {
+-        if(m_started)
+-          CLog::Log(LOGINFO, "CDVDPlayerVideo - Stillframe detected, switching to forced %f fps", m_fFrameRate);
+-        m_stalled = true;
+-        pts+= frametime*4;
++        // create a dummy demuxer packet to prod the decode logic
++        pMsg = new CDVDMsgDemuxerPacket(CDVDDemuxUtils::AllocateDemuxPacket(0), false);
+       }
+-
+-      //Waiting timed out, output last picture
+-      if( picture.iFlags & DVP_FLAG_ALLOCATED )
++      else
+       {
+-        //Remove interlaced flag before outputting
+-        //no need to output this as if it was interlaced
+-        picture.iFlags &= ~DVP_FLAG_INTERLACED;
+-        picture.iFlags |= DVP_FLAG_NOSKIP;
+-        OutputPicture(&picture, pts);
+-        pts+= frametime;
+-      }
++        //Okey, start rendering at stream fps now instead, we are likely in a stillframe
++        if( !m_stalled )
++        {
++          if(m_started)
++            CLog::Log(LOGINFO, "CDVDPlayerVideo - Stillframe detected, switching to forced %f fps", m_fFrameRate);
++          m_stalled = true;
++          pts+= frametime*4;
++        }
+ 
+-      continue;
++        //Waiting timed out, output last picture
++        if( picture.iFlags & DVP_FLAG_ALLOCATED )
++        {
++          //Remove interlaced flag before outputting
++          //no need to output this as if it was interlaced
++          picture.iFlags &= ~DVP_FLAG_INTERLACED;
++          picture.iFlags |= DVP_FLAG_NOSKIP;
++          OutputPicture(&picture, pts);
++          pts+= frametime;
++        }
++
++        continue;
++      }
+     }
+ 
+     if (pMsg->IsType(CDVDMsg::GENERAL_SYNCHRONIZE))
