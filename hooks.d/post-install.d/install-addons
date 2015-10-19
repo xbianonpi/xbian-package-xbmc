@@ -1,7 +1,8 @@
-[ -e project/cmake/addons/build/Makefile ] || return 0
+[ -e project/cmake/addons/build/Makefile ] || exit 0
 
 (
     [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
+    export CXXFLAGS="-fPIC $CXXFLAGS"
     cd project/cmake/addons
     $config_build_env make -C build clean kodiplatform_DIR=$(readlink -f ./depends)
     $config_build_env make -C build rebuild_cache kodiplatform_DIR=$(readlink -f ./depends)
