@@ -1,55 +1,38 @@
-#
-# Would better be placed in post-configure.d, but this hook does
-# unfortunately not exist
-#
 
-case $config_source_branch in
-  imx6|rpi)
-    exit 0
-    ;;
-  rpi-nightly|imx6-nightly|*Isengard)
-
-    [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
-
-    ### it forces OPENGL, disable for now
-    mkdir -p /tmp/archive
-    cp ../../../extra-files/pvr.vdr.vnsi.tar.gz /tmp/archive
-
-    mkdir -p project/cmake/addons/addons/pvr.vdr.vnsi/
-    echo 'pvr.vdr.vnsi file:///tmp pvr.vdr.vnsi' > project/cmake/addons/addons/pvr.vdr.vnsi/pvr.vdr.vnsi.txt
-    ( find project/cmake/addons/build/ -iname \*vnsi\* -exec rm -fr {} + 2>/dev/null) || :
-
-    cd project/cmake
-
-    # Testing
-    if [ x"$config_source_reset" = x"donotrun" ]; then
-        [ -d ../cmake.afterprepare ] && [ -e ../cmake.afterprepare/kodi-config.cmake ] || rsync --delete -aAXH ./ ../cmake.afterprepare/
-        echo $config_build_env
-        echo $config_build_addons
-        rsync -aAXH --delete ../cmake.afterprepare/ .
-    fi
-    # Testing end
-
-    # CMake makes some strange things if running multiple times with already
-    # existing CMakeCache.txt. So it's better to remove before running cmake
-    [ -e addons/build/CMakeCache.txt ] && rm -f addons/build/CMakeCache.txt || :
-
-    if $config_build_env c++ --version | grep -q "4.6"; then
-        echo "Warning: You are using g++ 4.6, pvr.vbox and pvr.stalker will currently not compiled without errors, so removing it from source tree"
-        echo "         If you need this addon, you have to use g++ 4.7"
-        [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox || :
-        [ -d ./addons/addons/pvr.stalker ] && rm -rf ./addons/addons/pvr.stalker || :
-    fi
-
-    [ -d ./addons/addons/audiodecoder.modplug ] && rm -rf ./addons/addons/audiodecoder.modplug || :
-    echo "Warning: Addon audiodecoder.modplug currently unsupported (causing errors in building Debian Package)"
-    echo "         removing it from source tree"
-    #sleep 5
-
-    [ -d addons/build ] || mkdir addons/build
-    cd addons/build
-    PREFIX=/usr/local
-    eval $config_build_env cmake -DADDONS_TO_BUILD="$config_build_addons" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-      -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF ..
-    ;;
+case $config_platform_branch in
+    *-nightly*|*-isengard|*-jarvis)
+        ;;
+    *)
+        exit
+        ;;
 esac
+
+[ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
+
+cd project/cmake
+
+# Testing
+if [ x"$config_source_reset" = x"donotrun" ]; then
+    [ -d ../cmake.afterprepare ] && [ -e ../cmake.afterprepare/kodi-config.cmake ] || rsync --delete -aAXH ./ ../cmake.afterprepare/
+    echo $config_build_env
+    echo $config_build_addons
+    rsync -aAXH --delete ../cmake.afterprepare/ .
+fi
+# Testing end
+
+# CMake makes some strange things if running multiple times with already
+# existing CMakeCache.txt. So it's better to remove before running cmake
+[ -e addons/build/CMakeCache.txt ] && rm -f addons/build/CMakeCache.txt || :
+
+if $config_build_env c++ --version | grep -q "4.6"; then
+    echo "Warning: You are using g++ 4.6, pvr.vbox and pvr.stalker will currently not compiled without errors, so removing it from source tree"
+    echo "         If you need this addon, you have to use g++ 4.7"
+    [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox || :
+    [ -d ./addons/addons/pvr.stalker ] && rm -rf ./addons/addons/pvr.stalker || :
+fi
+
+[ -d addons/build ] || mkdir addons/build
+cd addons/build
+PREFIX=/usr/local
+eval $config_build_env cmake -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF ..
