@@ -1,3 +1,5 @@
 imx6-cross-isengard stable imx6-jessie
 rpi2-cross-isengard stable rpi2-jessie
 rpi-isengard stable rpi-jessie
+rpi2-jarvis devel rpi2-jessie
+imx6-jarvis devel imx6-jessie
