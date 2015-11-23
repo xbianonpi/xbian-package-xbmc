@@ -1,0 +1,11 @@
+config_source_configure=./configure -C --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --enable-debug --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp  --disable-projectm --with-platform=raspberry-pi2 --enable-libcec --enable-player=omxplayer --host=arm-linux-gnueabihf
+config_build_env=schroot -c cross -p --
+config_source_branch=treeJarvis
+config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
+config_deb_pkgname=xbian-package-xbmc
+config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+config_source_reset=yes
+config_source_refresh=yes
+config_deb_depends=\${shlibs:Depends}, libgif4, consolekit, udisks2, upower, xbian-package-config-xbmc, libplist2, libnfs4, libass5, libsdl-image1.2, libssh-4, librtmp1, udisks, libpulse0, libmpeg2-4, libxslt1.1, xbian-package-xbianhome, xbian-package-xbmc-scripts (>= 1.1.0), alsa-base, alsa-tools, libbluetooth3, libcec (>=3.0.1), libmad0, libtiff5, libafpclient0, python-sqlite, libmysqlclient18, libtinyxml2.6.2, libyajl2, liblzo2-2, libpython2.7, libpcrecpp0, libcdio13, libsamplerate0, libsmbclient, libpng12-0, libaacs0, libbluray1, libenca0, libfontconfig1, libjasper1, ttf-dejavu-core, libvorbisfile3, libcurl3-gnutls, xbian-package-firmware (>=2.6.0)
+config_build_addons=audiodecoder.modplug audiodecoder.nosefart pvr.dvblink pvr.pctv pvr.nextpvr audiodecoder.stsound pvr.vdr.vnsi pvr.dvbviewer pvr.mediaportal.tvserver audiodecoder.snesapu pvr.filmon pvr.mythtv pvr.wmc pvr.hts pvr.njoy pvr.iptvsimple pvr.argustv audiodecoder.vgmstream audiodecoder.timidity pvr.vbox audiodecoder.sidplay pvr.stalker pvr.demo pvr.vuplus
+
