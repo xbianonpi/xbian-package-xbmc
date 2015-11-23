@@ -2,7 +2,7 @@ case $config_platform_branch in
     *-nightly*|*-isengard)
         ;;
     *)
-        return
+        exit 0
         ;;
 esac
 
