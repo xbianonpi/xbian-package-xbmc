@@ -1,5 +1,5 @@
 case $config_platform_branch in
-    *-nightly*|*-isengard)
+    *-nightly*|*-isengard|*-jarvis)
         ;;
     *)
         exit 0
