@@ -24,30 +24,33 @@ fi
 # existing CMakeCache.txt. So it's better to remove before running cmake
 [ -e addons/build/CMakeCache.txt ] && rm -f addons/build/CMakeCache.txt || :
 
-if $config_build_env c++ --version | grep -q "4.6"; then
+if $config_build_env c++ --version 2>/dev/null | grep -q "4.6"; then
     echo "Warning: You are using g++ 4.6, pvr.vbox and pvr.stalker will currently not compiled without errors, so removing it from source tree"
     echo "         If you need this addon, you have to use g++ 4.7"
     [ -d ./addons/addons/pvr.vbox ] && rm -rf ./addons/addons/pvr.vbox || :
     [ -d ./addons/addons/pvr.stalker ] && rm -rf ./addons/addons/pvr.stalker || :
 fi
 
+if [ "$config_build_addons" = "all" ] || [ "$config_build_addons" = "" ]; then
+    print_log info "Processing blacklist"
+    RF=/tmp/repo-binary-addons/
+    [ -d $RF ] && rm -rf $RF || :
+    git clone --depth 1 https://github.com/xbmc/repo-binary-addons $RF
+
+    PADDS=$(find $RF -mindepth 1 -maxdepth 1 -type d | grep -v "\.git" | sort)
+    config_build_addons=""
+
+    for AP in $PADDS; do
+        A=${AP##*/}
+        for B in $config_blacklisted_addons; do [ "$B" = "$A" ] && { AP=; break; }; done
+        ! [ "$AP" = "" ] && { print_log inf "Added $A"; config_build_addons+="$A "; } || print_log inf "Blacklisted $A"
+    done
+
+    print_log inf $config_build_addons
+fi
+
 [ -d addons/build ] || mkdir addons/build
 cd addons/build
 PREFIX=/usr/local
-
-case $config_platform_branch in
-    *-jarvis)
-        for f in $config_build_addons; do
-            eval $config_build_env cmake -DADDONS_TO_BUILD=$f -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-                -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDONS_DEFINITION_DIR=$(readlink -f ./bootstrap) ..
-            break
-        done
-        [ -z "$f" ] || rm -fr ../$f
-        ;;
-    *)
-        exit
-        ;;
-esac
-
 eval $config_build_env cmake -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDONS_DEFINITION_DIR=$(readlink -f ./bootstrap) ..
+  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF ..
