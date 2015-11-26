@@ -17,16 +17,6 @@ test -e ./Makefile.include || exit 1
 eval $config_build_env make -C native/autoconf-native all
 eval $config_build_env make -C native/automake-native all
 
-case $config_platform_branch in
-    *-jarvis)
-        eval $config_build_env make -C target/giflib all     # Wheezy comes with outdated giflib
-        ;;
-    *-nightly*|*-isengard)
-        ;;
-    *)
-        ;;
-esac
-
 eval $config_build_env make -C native/pkg-config-native all # TexturePacker configure needs pkg.m4
 eval $config_build_env make -C native/libpng-native all     # TexturePacker configure needs it
 eval $config_build_env make -C native/giflib-native #all     # Wheezy comes with outdated giflib
