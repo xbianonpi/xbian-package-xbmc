@@ -8,4 +8,3 @@ config_deb_depends=\${shlibs:Depends}, libxdamage1, libgif4, firmware-imx (>= 2.
 config_source_reset=yes
 config_source_refresh=yes
 config_build_addons=
-config_blacklisted_addons=audiodecoder.modplug
