@@ -1,0 +1,10 @@
+config_source_configure=./configure -C --enable-debug --with-ffmpeg --enable-gles --disable-sdl --disable-x11 --disable-xrandr --enable-optical-drive --enable-dvdcss --disable-joystick --enable-libbluray --disable-vtbdecoder --disable-vaapi --disable-vdpau --enable-rtmp --disable-projectm --with-platform=raspberry-pi --enable-libcec --enable-player=omxplayer
+config_build_env=schroot -c armhfjessiev6 -p --
+config_source_branch=treeJarvis
+config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
+config_deb_pkgname=xbian-package-xbmc
+config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+config_source_reset=yes
+config_source_refresh=yes
+config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+config_deb_depends=\${shlibs:Depends}, libgif4, consolekit, libplist2, libssl1.0.0, libudev0, libgcrypt20, libnfs4, libvorbisfile3, libvorbisenc2, xbian-package-firmware (>=1.8.0), libxslt1.1, xbian-package-xbmc-scripts, xbian-package-libtag (>=1.0-1), libbluetooth3, libcec3 (>=3.0.1), libmad0, libtiff4, libcurl3-gnutls, libafpclient0, python, python-sqlite, libmysqlclient18, libtinyxml2.6.2, libyajl2, liblzo2-2, libpython2.7, libpcrecpp0, libcdio13, libsamplerate0, libsmbclient, libssh-4, libavahi-client3, libmicrohttpd10, libpng12-0, fontconfig-config, libaacs0, libass5, libbluray1, libenca0, libfontconfig1, libjasper1, ttf-dejavu-core, xbian-package-shairplay, xbian-package-config-xbmc, libmpeg2-4
