@@ -43,6 +43,7 @@ if [ "$config_build_addons" = "all" ] || [ "$config_build_addons" = "" ]; then
     for AP in $PADDS; do
         A=${AP##*/}
         for B in $config_blacklisted_addons; do [ "$B" = "$A" ] && { AP=; break; }; done
+        ! [ "$AP" = "" ] && { for B in $config_blacklisted_addons_extra; do [ "$B" = "$A" ] && { AP=; break; }; done; }
         ! [ "$AP" = "" ] && { print_log inf "Added $A"; config_build_addons+="$A "; } || print_log inf "Blacklisted $A"
     done
 
