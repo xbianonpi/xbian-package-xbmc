@@ -1,7 +1,7 @@
 
 case $config_platform_branch in
     *-nightly*|rpi*|imx6*|*-isengard)
-        return
+        exit 0
         ;;
     *)
         ;;
