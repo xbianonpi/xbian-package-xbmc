@@ -19,6 +19,7 @@ eval $config_build_env make -C native/automake-native all
 
 eval $config_build_env make -C native/pkg-config-native all # TexturePacker configure needs pkg.m4
 eval $config_build_env make -C native/libpng-native all     # TexturePacker configure needs it
+eval $config_build_env make -C native/giflib-native all     # TexturePacker
 eval $config_build_env make -C target/libpng all
 eval $config_build_env make -C target/giflib all
 [ ! -d target/libdcadec ] || eval $config_build_env make -C target/libdcadec all     # 
