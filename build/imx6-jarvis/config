@@ -1,4 +1,4 @@
-config_source_configure=./configure -C --with-platform=cubox-i --enable-gif --with-ffmpeg --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --enable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --host=arm-linux-gnueabihf --enable-afpclient
+config_source_configure=./configure -C --with-platform=cubox-i --with-ffmpeg --enable-optical-drive --enable-dvdcss --enable-gles --enable-codec=imxvpu --enable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-x11 --disable-wayland --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --host=arm-linux-gnueabihf --enable-afpclient
 config_build_env=schroot -c cross -p --
 config_source_branch=treeJarvis
 config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
