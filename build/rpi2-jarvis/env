@@ -1,8 +1,9 @@
 CC=/usr/bin/arm-linux-gnueabihf-gcc
 CXX=/usr/bin/arm-linux-gnueabihf-g++
 CPP=/usr/bin/arm-linux-gnueabihf-gcc -E
+LD=/usr/bin/arm-linux-gnueabihf-ld.gold
 OS=linux
-CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I/usr/include
+CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I$(readlink -m ./project/cmake/addons/build/depends/include) -I/usr/include -L.
 CPPFLAGS=$CFLAGS
 LDFLAGS=-L/opt/vc/lib -L$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib) -L/usr/lib/arm-linux-gnueabihf
 PKG_CONFIG_PATH="/usr/lib/arm-linux-gnueabihf/pkgconfig:$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib/pkgconfig/)"
