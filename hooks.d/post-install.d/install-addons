@@ -9,7 +9,11 @@
 
     conc=''
     [ "$config_platform_branch" = rpi-jarvis ] && conc='-j1'
-    $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc
+    $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc || \
+        {
+            sed -i 's/#include "kodi\/AEChannelData.h"/#include "AEChannelData.h"/' build/depends/include/kodi/kodi_audiodec_types.h
+            $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc
+        }
     #DESTDIR=$XBIANPKGDIR/content
 )
 
