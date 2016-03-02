@@ -22,3 +22,19 @@ eval $config_build_env make -C native/libpng-native all     # TexturePacker conf
 eval $config_build_env make -C native/giflib-native all     # TexturePacker
 [ ! -d target/libdcadec ] || eval $config_build_env make -C target/libdcadec all     # 
 [ ! -d target/crossguid ] || eval $config_build_env make -C target/crossguid all
+
+
+### Kodi v17
+case $config_platform_branch in
+    *-v17)
+        ;;
+    *)
+        exit 0
+        ;;
+esac
+
+eval $config_build_env make -C native/libtool-native all    # libdvdcss
+[ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdcss
+[ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdread
+[ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdnav
+
