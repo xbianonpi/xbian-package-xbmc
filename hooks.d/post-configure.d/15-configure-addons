@@ -1,6 +1,6 @@
 
 case $config_platform_branch in
-    *-nightly*|*-isengard|*-jarvis)
+    *-v17|*-isengard|*-jarvis)
         ;;
     *)
         exit
@@ -54,4 +54,4 @@ fi
 cd addons/build
 PREFIX=/usr/local
 eval $config_build_env cmake -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF ..
+  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DDEPENDS_PATH=$(readlink -f ./depends) ..
