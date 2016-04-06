@@ -20,6 +20,8 @@ if [ x"$config_source_reset" = x"donotrun" ]; then
 fi
 # Testing end
 
+$config_build_env make -C addons/build clean kodiplatform_DIR=$(readlink -f ./addons/depends)
+
 # CMake makes some strange things if running multiple times with already
 # existing CMakeCache.txt. So it's better to remove before running cmake
 [ -e addons/build/CMakeCache.txt ] && rm -f addons/build/CMakeCache.txt || :

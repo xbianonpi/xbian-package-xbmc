@@ -4,8 +4,6 @@
     [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
     export CXXFLAGS="-fPIC $CXXFLAGS"
     cd project/cmake/addons
-    $config_build_env make -C build clean kodiplatform_DIR=$(readlink -f ./depends)
-    $config_build_env make -C build rebuild_cache kodiplatform_DIR=$(readlink -f ./depends)
 
     conc=''
     [ "$config_platform_branch" = rpi-jarvis ] && conc='-j1'
