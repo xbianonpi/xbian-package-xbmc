@@ -26,7 +26,7 @@ eval $config_build_env make -C native/giflib-native all     # TexturePacker
 
 ### Kodi v17
 case $config_platform_branch in
-    *-v17)
+    *-krypton)
         ;;
     *)
         exit 0

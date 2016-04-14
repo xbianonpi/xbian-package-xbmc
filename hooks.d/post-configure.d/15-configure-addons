@@ -1,6 +1,6 @@
 
 case $config_platform_branch in
-    *-v17|*-isengard|*-jarvis)
+    *-krypton|*-isengard|*-jarvis)
         ;;
     *)
         exit
