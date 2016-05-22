@@ -3,9 +3,9 @@ imx6-cross-isengard stable imx6-jessie
 rpi2-cross-isengard stable rpi2-jessie
 rpi-isengard stable rpi-jessie
 ## v16
-rpi-jarvis staging rpi-jessie
-rpi2-jarvis staging rpi2-jessie
-imx6-jarvis staging imx6-jessie
+rpi-jarvis stable rpi-jessie
+rpi2-jarvis stable rpi2-jessie
+imx6-jarvis stable imx6-jessie
 ## v17
 rpi-krypton devel rpi-jessie
 imx6-krypton devel imx6-jessie
