@@ -8,4 +8,5 @@ rpi2-jarvis stable rpi2-jessie
 imx6-jarvis stable imx6-jessie
 ## v17
 rpi-krypton devel rpi-jessie
+rpi2-krypton devel rpi2-jessie
 imx6-krypton devel imx6-jessie
