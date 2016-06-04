@@ -52,6 +52,8 @@ if [ "$config_build_addons" = "all" ] || [ "$config_build_addons" = "" ]; then
     print_log inf $config_build_addons
 fi
 
+config_build_addons="$config_build_addons $config_build_addons_extra"
+
 [ -d addons/build ] || mkdir addons/build
 cd addons/build
 PREFIX=/usr/local
