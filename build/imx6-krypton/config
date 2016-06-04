@@ -1,4 +1,4 @@
-config_source_configure=./configure -C --with-platform=cubox-i --enable-texturepacker --with-ffmpeg --enable-optical-drive --enable-gles --enable-codec=imxvpu --disable-profiling --disable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-x11 --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --host=arm-linux-gnueabihf
+config_source_configure=./configure -C --with-platform=cubox-i --disable-texturepacker --with-ffmpeg --enable-optical-drive --enable-gles --enable-codec=imxvpu --disable-profiling --enable-debug --enable-libbluray --enable-libcec --enable-airtunes --enable-airplay --enable-rtmp --enable-pulse  --disable-joystick --disable-x11 --disable-vaapi --disable-vdpau --disable-vtbdecoder --disable-openmax --enable-rtmp --host=arm-linux-gnueabihf
 config_build_env=schroot -c cross -p --
 config_source_branch=treeKrypton
 config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
