@@ -3,14 +3,8 @@ CXX=/usr/bin/arm-linux-gnueabihf-g++
 CPP=/usr/bin/arm-linux-gnueabihf-gcc -E
 LD=/usr/bin/arm-linux-gnueabihf-ld.gold
 OS=linux
-CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I$(readlink -m ./project/cmake/addons/build/depends/include) -I/usr/include -L.
+CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I$(readlink -m ./project/cmake/addons/build/depends/include) -I/usr/include
 CPPFLAGS=$CFLAGS
 CXXFLAGS=$CFLAGS
 LDFLAGS=-L/opt/vc/lib -L$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib) -L/usr/lib/arm-linux-gnueabihf
 PKG_CONFIG_PATH="/usr/lib/arm-linux-gnueabihf/pkgconfig:$(readlink -m ./tools/depends/arm-linux-gnueabihf/lib/pkgconfig/)"
-
-
-#CFLAGS=-I$(readlink -m ./tools/depends/armv7l-linux-gnueabihf/include) -I$(readlink -m ./project/cmake/addons/build/depends/include) -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include/interface/vmcs_host/linux -pipe -O3 -mcpu=arm1176jzf-s -mtune=arm1176jzf-s -mfloat-abi=hard -mfpu=vfp -mabi=aapcs-linux -Wno-psabi -Wa,-mno-warn-deprecated -Wno-deprecated-declarations
-#LDFLAGS=-L/opt/vc/lib -L$(readlink -m ./tools/depends/armv7l-linux-gnueabihf/lib) -L/usr/lib/arm-linux-gnueabihf
-#CPPFLAGS=$CFLAGS
-#PKG_CONFIG_PATH="$(readlink -m ./tools/depends/armv7l-linux-gnueabihf/lib/pkgconfig/):/usr/lib/arm-linux-gnueabihf/pkgconfig"
