@@ -1,7 +1,7 @@
-CC=/usr/bin/arm-linux-gnueabihf-gcc
-CXX=/usr/bin/arm-linux-gnueabihf-g++
-CPP=/usr/bin/arm-linux-gnueabihf-gcc -E
-LD=/usr/bin/arm-linux-gnueabihf-ld.gold
+CC=arm-linux-gnueabihf-gcc
+CXX=arm-linux-gnueabihf-g++
+CPP=arm-linux-gnueabihf-gcc -E
+LD=arm-linux-gnueabihf-ld.gold
 OS=linux
 CFLAGS=-I$(readlink -m ./tools/depends/arm-linux-gnueabihf/include) -I$(readlink -m ./project/cmake/addons/build/depends/include) -I/usr/include
 CPPFLAGS=$CFLAGS
