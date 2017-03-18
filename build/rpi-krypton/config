@@ -8,7 +8,7 @@ config_source_reset=yes
 config_source_refresh=yes
 config_deb_depends=\${shlibs:Depends}, xbian-package-firmware (>=2.6.0) | firmware-imx (>= 2.0.0),\
  xbian-package-config-xbmc, xbian-package-shairplay, xbian-package-xbmc-scripts (>= 1.1.0), xbian-package-xbianhome,\
- alsa-base, alsa-tools, consolekit, python-imaging, python-sqlite, ttf-dejavu-core, udisks2, upower,\
+ alsa-tools, consolekit, python-imaging, python-sqlite, ttf-dejavu-core, udisks2, upower,\
  libgif7, libplist2 | libplist3, libnfs4 | libnfs8, libass5, libsdl-image1.2, librtmp1, libmpeg2-4, libbluetooth3, libcec (>=4.0.0), libmad0, libtiff5,\
  libafpclient0, libsamplerate0, libpng12-0 | libpng16-16, libaacs0, libbluray1, libenca0, libfontconfig1, libvorbisfile3, libcurl3-gnutls
 config_blacklisted_addons_extra=audiodecoder.sidplay
