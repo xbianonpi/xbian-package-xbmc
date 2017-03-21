@@ -7,6 +7,6 @@ rpi-jarvis stable rpi-${config_os_version}
 rpi2-jarvis stable rpi2-${config_os_version}
 imx6-jarvis stable imx6-${config_os_version}
 ## v17
-rpi-krypton staging rpi-${config_os_version}
-rpi2-krypton staging rpi2-${config_os_version}
-imx6-krypton staging imx6-${config_os_version}
+rpi-krypton stable rpi-${config_os_version}
+rpi2-krypton stable rpi2-${config_os_version}
+imx6-krypton stable imx6-${config_os_version}
