@@ -51,17 +51,19 @@ for d in $(find /home/xbian/.kodi/ -type d | grep -w Database$); do
 	fi
     fi
     [ -e "$d.old" ] && exit 1
-    mv -T "$d" "$d.old"
-    mkdir "$d"
-    chattr +C "$d"
-    cp -r $d.old/* "$d"
-    if checkdb "$d"; then
-        rm -fr "$d".old
-        chown -Rc xbian:xbian "$d" > /dev/null
-    else
-        rm -fr "$d"
-        mv -T "$d".old "$d"
-        exit 1
+    if ! lsattr -d $d | awk '{print $1}' | grep -q 'C'; then
+        mv -T "$d" "$d.old"
+        mkdir "$d"
+        chattr +C "$d"
+        cp -r $d.old/* "$d"
+        if checkdb "$d"; then
+            rm -fr "$d".old
+            chown -Rc xbian:xbian "$d" > /dev/null
+       else
+            rm -fr "$d"
+            mv -T "$d".old "$d"
+           exit 1
+       fi
     fi
 done
 
