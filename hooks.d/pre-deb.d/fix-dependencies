@@ -1,0 +1,16 @@
+
+case $config_os_version in
+
+    jessie) 
+        sed -i "s/libnfs4[^,]*,/libnfs4,/g" DEBIAN/control
+        sed -i "s/libplist2[^,]*,/libplist2,/g" DEBIAN/control
+        sed -i "s/libpng12-0[^,]*,/libpng12-0,/g" DEBIAN/control
+        ;;
+
+    stretch|buster)
+        sed -i "s/libnfs4[^,]*,/libnfs8,/g" DEBIAN/control
+        sed -i "s/libplist2[^,]*,/libplist3,/g" DEBIAN/control
+        sed -i "s/libpng12-0[^,]*,/libpng16-16,/g" DEBIAN/control
+        ;;
+
+esac
