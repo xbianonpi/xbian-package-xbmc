@@ -1,4 +1,4 @@
-[ -n "$config_build_env" ] || exit 0
+[ -n "$config_build_env" -a -e codegenerator.mk ] || exit 0
 
 makefile=0
 
