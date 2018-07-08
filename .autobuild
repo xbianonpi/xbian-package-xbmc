@@ -10,3 +10,6 @@ imx6-jarvis stable imx6-${config_os_version}
 rpi-krypton stable rpi-${config_os_version}
 rpi2-krypton stable rpi2-${config_os_version}
 imx6-krypton stable imx6-${config_os_version}
+## v18
+rpi-leia devel rpi-${config_os_version}
+rpi2-leia devel rpi2-${config_os_version}
