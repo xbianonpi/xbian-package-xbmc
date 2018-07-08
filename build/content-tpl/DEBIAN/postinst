@@ -10,7 +10,7 @@ if [[ $1 == "configure" ]]; then
 		ln -s /home/xbian/.kodi /home/xbian/.xbmc
 	fi
 
-	if [ ! -L /usr/local/share/xbmc ]; then
+	if [ ! -L /usr/local/share/xbmc -a -d /usr/local/share/xbmc ]; then
 		# TODO: remove in a future release, when these packages have been migrated to new location.
 		# "Migrate" plugin.xbianconfig and script.service.xbian.upstart-bridge
 		# otherwise they just won't get loaded at all.
@@ -18,7 +18,6 @@ if [[ $1 == "configure" ]]; then
 		rm -fr /usr/local/share/xbmc
 
 		### TODO: remove in a future release, maybe? Surely the latter.
-		test -d /usr/local/share/xbmc && mv /usr/local/share/xbmc /usr/local/share/xbmc.to-kodi
 		ln -s /usr/local/share/kodi /usr/local/share/xbmc
 	fi
 
@@ -30,7 +29,7 @@ if [[ $1 == "configure" ]]; then
 cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 #!/bin/bash
 
-[ "$(findmnt -n -o FSTYPE $(df /home/xbian/.kodi/userdata/Database | tail -1 | awk '{print $6}'))" != btrfs ] && exit 0
+[ "$(findmnt -n -o FSTYPE $(df /home/xbian/.kodi/userdata/Database 2>/dev/null | tail -1 | awk '{print $6}'))" != btrfs ] && exit 0
 
 checkdb() {
     cd "$1"
