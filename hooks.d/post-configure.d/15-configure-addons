@@ -1,24 +1,13 @@
 
-case $config_platform_branch in
-    *-krypton|*-isengard|*-jarvis)
-        ;;
-    *)
-        exit
-        ;;
-esac
-
 [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
 
-cd project/cmake
+CMP=
+[ -d cmake/addons ] && CMP=cmake
+[ -d project/cmake/addons ] && CMP=project/cmake
+[ -z "$CMP" ] && exit 0
 
-# Testing
-if [ x"$config_source_reset" = x"donotrun" ]; then
-    [ -d ../cmake.afterprepare ] && [ -e ../cmake.afterprepare/kodi-config.cmake ] || rsync --delete -aAXH ./ ../cmake.afterprepare/
-    eval echo $config_build_env
-    echo $config_build_addons
-    rsync -aAXH --delete ../cmake.afterprepare/ .
-fi
-# Testing end
+cd $CMP
+rm -rf addons/build
 
 [ ! -e addons/build/Makefile ] || eval $config_build_env make -C addons/build clean kodiplatform_DIR=$(readlink -f ./addons/depends) || :
 
@@ -52,10 +41,23 @@ if [ "$config_build_addons" = "all" ] || [ "$config_build_addons" = "" ]; then
     print_log inf $config_build_addons
 fi
 
-config_build_addons="$config_build_addons $config_build_addons_extra"
+mkdir -p addons/build && cd addons/build
 
-[ -d addons/build ] || mkdir addons/build
-cd addons/build
 PREFIX=/usr/local
-eval $config_build_env cmake -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DDEPENDS_PATH=$(readlink -f ./depends) ..
+eval $config_build_env cmake $CMAKECONF -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDON_DEPENDS_PATH=$(readlink -f ./depends) ..
+
+
+# Extra addons have to proceed separately. That gives us the opportunity to
+# supply patches if needed
+#
+for addon in $config_build_addons_extra; do
+    (
+        repo=$(awk '{ print $2 }' ../addons/$addon/$addon.txt)
+        branch=$(awk '{ print $3 }' ../addons/$addon/$addon.txt)
+        print_log info "Configure addon $addon, fetching from $repo, branch $branch"
+        git clone $repo && cd $addon && mkdir -p build && cd build
+        eval $config_build_env cmake $CMAKECONF -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+            -DADDONS_DEPENDS_PATH=$(readlink -f ../../../depends) $(readlink -f ../../../.)
+    )
+done
