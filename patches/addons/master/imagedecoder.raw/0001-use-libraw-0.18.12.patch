@@ -1,0 +1,10 @@
+--- imagedecoder.raw/depends/common/libraw/libraw.txt-orig	2018-06-21 23:07:26.281587099 +0200
++++ imagedecoder.raw/depends/common/libraw/libraw.txt	2018-06-21 23:08:39.833557701 +0200
+@@ -1 +1 @@
+-libraw http://mirrors.kodi.tv/build-deps/sources/LibRaw-0.18.2.tar.gz
++libraw https://github.com/LibRaw/LibRaw/archive/0.18.12.tar.gz
+--- imagedecoder.raw/depends/common/libraw/libraw.sha256-orig	2018-06-23 17:43:31.896330083 +0200
++++ imagedecoder.raw/depends/common/libraw/libraw.sha256	2018-06-23 17:52:54.641599721 +0200
+@@ -1 +1 @@
+-ce366bb38c1144130737eb16e919038937b4dc1ab165179a225d5e847af2abc6
++54ba12723d00706958b844912aad466b36ba52a4581233816cf39d770404d8f5
