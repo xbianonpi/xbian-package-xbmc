@@ -1,0 +1,2 @@
+
+[ -e ./usr/local/lib/kodi/kodi-rbpi ] && ln -srf ./usr/local/lib/kodi/kodi-rbpi ./usr/local/lib/kodi/kodi.bin || :
