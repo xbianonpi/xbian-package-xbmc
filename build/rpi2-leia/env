@@ -1,0 +1,15 @@
+PLATFORM=raspberry-pi2
+CMAKECONF=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_X11=OFF -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
+
+CC=arm-linux-gnueabihf-gcc-7
+CXX=arm-linux-gnueabihf-g++-7
+CPP=arm-linux-gnueabihf-gcc-7 -E
+LD=arm-linux-gnueabihf-ld.gold
+
+CPATH=$(readlink -m ./cmake/addons/build/depends/include/p8-platform):$(readlink -m ./cmake/addons/build/depends/include)
+
+CFLAGS=-marm
+CPPFLAGS=$CFLAGS
+CXXFLAGS=$CFLAGS
+
+PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
