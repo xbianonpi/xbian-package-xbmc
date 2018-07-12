@@ -1,8 +1,9 @@
-make -C tools/depends/native/JsonSchemaBuilder all || \
-  ( cd tools/depends/native/JsonSchemaBuilder; git clean -xdf ./; \
-    cd ../../../..; ./bootstrap; make -C tools/depends/native/JsonSchemaBuilder all )
+pre=''
+[ -e codegenerator.mk ] || { [ "$(eval $config_build_env dpkg-architecture -q DEB_TARGET_ARCH)" = armhf ] && pre=$config_build_env; }
 
+eval $pre make -C tools/depends/native/JsonSchemaBuilder all || \
+  ( cd tools/depends/native/JsonSchemaBuilder; git clean -xdf ./; \
+    cd ../../../..; ./bootstrap; eval $pre make -C tools/depends/native/JsonSchemaBuilder all )
 
 dir=$(grep NATIVEPREFIX= tools/depends/Makefile.include | awk -F'=' '{print $2}')
 [ -h tools/depends/native/JsonSchemaBuilder/bin ] || ln -s $dir/bin tools/depends/native/JsonSchemaBuilder
-
