@@ -1,17 +1,46 @@
-[ -e project/cmake/addons/build/Makefile ] || exit 0
+
+CMP=
+[ -e cmake/addons/build/Makefile ] && CMP=cmake/addons
+[ -e project/cmake/addons/build/Makefile ] && CMP=project/cmake/addons
+[ -z $CMP ] && exit 0
 
 (
     [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
     export CXXFLAGS="-fPIC $CXXFLAGS"
-    cd project/cmake/addons
 
+    cd $CMP
     conc=''
     [ "$config_platform_branch" = rpi-jarvis ] && conc='-j1'
-    eval $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc || \
-        {
-            sed -i 's/#include "kodi\/AEChannelData.h"/#include "AEChannelData.h"/' build/depends/include/kodi/kodi_audiodec_types.h
-            eval $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc
-        }
-    #DESTDIR=$XBIANPKGDIR/content
+    eval $config_build_env make -C build kodiplatform_DIR=$(readlink -f ./depends) $conc
+
+    BRANCH=$(awk '{ print $3 }' bootstrap/repositories/binary-addons.txt)
+    echo "Using addon branch is $BRANCH"
+    for ADDON2PATH in $(find $XBIANPKGDIR/patches/addons/$BRANCH/* -type d); do
+        ADDON2PATCH=${ADDON2PATH##*/}
+        echo "patching addon $ADDON2PATCH, patches are in $ADDON2PATH"
+        for PATCH in $(find $ADDON2PATH/*.patch -type f); do
+            (
+                [ "$use_silent" = yes ] || echo "checking patch ${PATCH##*/} for addon $ADDON2PATCH"
+                if [ -d "build/$ADDON2PATCH" ]; then
+                    cd build/$ADDON2PATCH
+                    if patch -p1 --dry-run -F $config_patch_fuzzy < $PATCH >/dev/null; then
+                        [ $use_silent = yes ] || echo "Patching addon $ADDON2PATCH with $PATCH"
+                        do_run patch -p1 -F $config_patch_fuzzy < $PATCH
+                    else
+                        echo "! won't patch addon $ADDON2PATCH with ${PATCH##*/}" >/dev/stderr
+                    fi
+                fi
+                echo "-----------------"
+            )
+        done
+    done
+
+    for addon in $config_build_addons_extra; do
+        (
+            echo "Building addon $addon"
+            cd build/$addon/build
+            eval $config_build_env make
+        )
+    done
 )
 
