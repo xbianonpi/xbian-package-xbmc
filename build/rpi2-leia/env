@@ -1,5 +1,5 @@
 PLATFORM=raspberry-pi2
-CMAKECONF=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_X11=OFF -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
+CMAKECONF=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_X11=OFF -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
 
 CC=arm-linux-gnueabihf-gcc-7
 CXX=arm-linux-gnueabihf-g++-7
