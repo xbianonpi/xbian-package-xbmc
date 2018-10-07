@@ -1,5 +1,5 @@
 config_source_configure=cmake -Bbuild/ -H./ $CMAKECONF
-config_build_env=schroot -c amd64${config_os_version}_gcc7 -p --
+config_build_env=schroot -c amd64${config_os_version} -p --
 config_source_branch=treeLeia
 config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
 config_deb_pkgname=xbian-package-xbmc
@@ -21,6 +21,7 @@ config_build_addons=audiodecoder.2sf audiodecoder.dumb audiodecoder.fluidsynth a
   imagedecoder.mpo inputstream.adaptive inputstream.rtmp\
   pvr.argustv pvr.dvblink pvr.dvbviewer pvr.filmon pvr.hdhomerun pvr.hts pvr.iptvsimple pvr.mediaportal.tvserver pvr.mythtv pvr.nextpvr pvr.njoy pvr.octonet\
   pvr.pctv pvr.stalker pvr.teleboy pvr.vbox pvr.vdr.vnsi pvr.vuplus pvr.zattoo pvr.wmc\
-  vfs.libarchive vfs.nfs vfs.rar vfs.sftp
+  vfs.libarchive vfs.nfs vfs.rar
 
-config_build_addons_extra=audiodecoder.modplug imagedecoder.raw
+config_build_addons_extra=audiodecoder.modplug imagedecoder.raw vfs.sftp
+

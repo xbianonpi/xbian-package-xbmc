@@ -8,7 +8,6 @@ LD=arm-linux-gnueabihf-ld.gold
 
 CPATH=$(readlink -m ./cmake/addons/build/depends/include/p8-platform):$(readlink -m ./cmake/addons/build/depends/include)
 
-CFLAGS=-marm
 CPPFLAGS=$CFLAGS
 CXXFLAGS=$CFLAGS
 
