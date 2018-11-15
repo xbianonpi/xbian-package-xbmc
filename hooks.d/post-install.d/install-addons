@@ -37,6 +37,7 @@ CMP=
 
     for addon in $config_build_addons_extra; do
         (
+            addon=${addon%%:*}
             echo "Building addon $addon"
             cd build/$addon/build
             eval $config_build_env make

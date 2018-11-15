@@ -44,7 +44,7 @@ fi
 mkdir -p addons/build && cd addons/build
 
 PREFIX=/usr/local
-eval $config_build_env cmake $CMAKECONF -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
   -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDON_DEPENDS_PATH=$(readlink -f ./depends) ..
 
 
@@ -53,11 +53,12 @@ eval $config_build_env cmake $CMAKECONF -DADDONS_TO_BUILD=\"$config_build_addons
 #
 for addon in $config_build_addons_extra; do
     (
+        commit=${addon#*:}; addon=${addon%%:*}; [ "$addon" = "$commit" ] && commit=''
         repo=$(awk '{ print $2 }' ../addons/$addon/$addon.txt)
         branch=$(awk '{ print $3 }' ../addons/$addon/$addon.txt)
         print_log info "Configure addon $addon, fetching from $repo, branch $branch"
-        git clone $repo && cd $addon && mkdir -p build && cd build
-        eval $config_build_env cmake $CMAKECONF -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-            -DADDONS_DEPENDS_PATH=$(readlink -f ../../../depends) $(readlink -f ../../../.)
+        git clone -b $branch $repo && cd $addon && git checkout $commit && mkdir -p build && cd build
+        eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+            $(readlink -f ../../../.)
     )
 done
