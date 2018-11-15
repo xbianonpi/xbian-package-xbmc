@@ -18,10 +18,9 @@ config_deb_depends=\${shlibs:Depends}, xbian-package-firmware (>=2.6.0) | firmwa
 config_build_addons=audiodecoder.2sf audiodecoder.dumb audiodecoder.fluidsynth audiodecoder.gme audiodecoder.gsf audiodecoder.ncsf audiodecoder.nosefart\
   audiodecoder.openmpt audiodecoder.organya audiodecoder.qsf audiodecoder.sidplay audiodecoder.snesapu audiodecoder.stsound audiodecoder.ssf audiodecoder.timidity\
   audiodecoder.vgmstream audioencoder.flac audioencoder.lame audioencoder.vorbis audioencoder.wav\
-  imagedecoder.mpo inputstream.adaptive inputstream.rtmp\
+  imagedecoder.mpo imagedecoder.raw inputstream.adaptive inputstream.rtmp\
   pvr.argustv pvr.dvblink pvr.dvbviewer pvr.filmon pvr.hdhomerun pvr.hts pvr.iptvsimple pvr.mediaportal.tvserver pvr.mythtv pvr.nextpvr pvr.njoy pvr.octonet\
   pvr.pctv pvr.stalker pvr.teleboy pvr.vbox pvr.vdr.vnsi pvr.vuplus pvr.zattoo pvr.wmc\
-  vfs.libarchive vfs.nfs vfs.rar
+  vfs.libarchive vfs.nfs vfs.rar vfs.sacd
 
-config_build_addons_extra=audiodecoder.modplug imagedecoder.raw vfs.sftp
-
+config_build_addons_extra=audiodecoder.modplug vfs.sftp:47cb680864b36df756f8e077767b7c094c349c33

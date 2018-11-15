@@ -1,14 +1,10 @@
 PLATFORM=raspberry-pi
-CMAKECONF=-DCMAKE_BUILD_TYPE=Release -DENABLE_X11=OFF -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
+CMAKECONF=-DCMAKE_BUILD_TYPE=Release -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
+CMAKECONF_ADDONS=-DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain_binaddons.cmake)
 
 CC=arm-linux-gnueabihf-gcc
 CXX=arm-linux-gnueabihf-g++
 CPP=arm-linux-gnueabihf-gcc -E
 LD=arm-linux-gnueabihf-ld.gold
-
-CPATH=$(readlink -m ./cmake/addons/build/depends/include/p8-platform):$(readlink -m ./cmake/addons/build/depends/include)
-
-CPPFLAGS=$CFLAGS
-CXXFLAGS=$CFLAGS
 
 PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
