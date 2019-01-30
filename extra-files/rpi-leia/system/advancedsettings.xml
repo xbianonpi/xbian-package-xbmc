@@ -1,0 +1,11 @@
+<advancedsettings>
+  <video>
+    <defaultplayer>dvdplayer</defaultplayer>
+    <defaultdvdplayer>dvdplayer</defaultdvdplayer>
+  </video>
+  <fanartres>720</fanartres>
+  <imageres>540</imageres>
+  <cache>
+    <readfactor>4.0</readfactor>
+  </cache>
+</advancedsettings>
