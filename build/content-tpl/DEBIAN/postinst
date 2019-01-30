@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 == "configure" ]]; then
+if [ "$1" = configure ]; then
 
 	# Migrate XBMC home directory to Kodi
 	if [ -d /home/xbian/.xbmc -a ! -d /home/xbian/.kodi ]; then
@@ -80,13 +80,8 @@ EOF
         
         /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh && rm -f /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 
-elif [ $1 = triggered ]; then
+elif [ "$1" = triggered ]; then
 
-    :
-#        if [ -f "/tmp/startxbmc" ]; then
-#                [ -e /etc/init/xbmc.conf ] || service xbmc start > /dev/null 2>&1
-#                [ -e /etc/init/xbmc.conf ] && start -n xbmc
-#                rm /tmp/startxbmc
-#        fi
+	:
 
 fi
