@@ -1,5 +1,5 @@
 PLATFORM=raspberry-pi2
-CMAKECONF=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
+CMAKECONF=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DENABLE_INTERNAL_FFMPEG=ON -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain.cmake)
 CMAKECONF_ADDONS=-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_TOOLCHAIN_FILE=$(readlink -m ./tools/depends/target/Toolchain_binaddons.cmake)
 
 CC=arm-linux-gnueabihf-gcc
