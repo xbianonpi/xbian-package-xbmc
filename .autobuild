@@ -11,5 +11,5 @@ rpi-krypton stable rpi-${config_os_version}
 rpi2-krypton stable rpi2-${config_os_version}
 imx6-krypton stable imx6-${config_os_version}
 ## v18
-rpi-leia staging rpi-${config_os_version}
-rpi2-leia staging rpi2-${config_os_version}
+rpi-leia detect rpi-${config_os_version}
+rpi2-leia detect rpi2-${config_os_version}
