@@ -47,18 +47,28 @@ PREFIX=/usr/local
 eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
   -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDON_DEPENDS_PATH=$(readlink -f ./depends) ..
 
-
 # Extra addons have to proceed separately. That gives us the opportunity to
 # supply patches if needed
 #
 for addon in $config_build_addons_extra; do
     (
-        commit=${addon#*:}; addon=${addon%%:*}; [ "$addon" = "$commit" ] && commit=''
-        repo=$(awk '{ print $2 }' ../addons/$addon/$addon.txt)
-        branch=$(awk '{ print $3 }' ../addons/$addon/$addon.txt)
+        branch=$(echo $addon | awk -F ',' '{print $2}')
+        commit=$(echo $addon | awk -F ',' '{print $3}')
+        addon=$(echo $addon | awk -F ',' '{print $1}')
+        url=${addon%/*}; addon=${addon##*/}; [ "$addon" = "$url" ] && url=''
+        if [ -z "$url" ]; then
+            repo=$(awk '{ print $2 }' ../addons/$addon/$addon.txt)
+            branch=$(awk '{ print $3 }' ../addons/$addon/$addon.txt)
+        else
+            repo="$url/$addon"
+            branch=${branch:-master}
+            mkdir -p ../addons/$addon
+            echo "linux rbpi" > ../addons/$addon/platforms.txt
+            echo "$addon $repo $branch" > ../addons/$addon/$addon.txt
+        fi
         print_log info "Configure addon $addon, fetching from $repo, branch $branch"
         git clone -b $branch $repo && cd $addon && git checkout $commit && mkdir -p build && cd build
-        eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-            $(readlink -f ../../../.)
+        eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX $(readlink -f ../../../.)
     )
 done
+
