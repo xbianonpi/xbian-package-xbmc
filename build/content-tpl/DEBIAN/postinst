@@ -21,6 +21,14 @@ if [ "$1" = configure ]; then
 		ln -s /usr/local/share/kodi /usr/local/share/xbmc
 	fi
 
+	if ! grep -q ^DAEMON=/usr/local/lib/kodi/kodi.bin /etc/default/xbmc; then
+		if grep -q ^DAEMON= /etc/default/xbmc; then
+			sed -i "s:^DAEMON=.*:DAEMON=/usr/local/lib/kodi/kodi.bin:g" /etc/default/xbmc
+		else
+			echo DAEMON=/usr/local/lib/kodi/kodi.bin >> /etc/default/xbmc
+		fi
+	fi
+
         test -e /home/xbian/.kodi/userdata/sources.xml && \
 	    sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.kodi/userdata/sources.xml
 
