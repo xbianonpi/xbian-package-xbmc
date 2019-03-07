@@ -52,22 +52,31 @@ eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=\"$config_build
 #
 for addon in $config_build_addons_extra; do
     (
-        branch=$(echo $addon | awk -F ',' '{print $2}')
-        commit=$(echo $addon | awk -F ',' '{print $3}')
-        addon=$(echo $addon | awk -F ',' '{print $1}')
-        url=${addon%/*}; addon=${addon##*/}; [ "$addon" = "$url" ] && url=''
+        branch=$(echo $addon | awk -F ',' '{print $3}')
+        commit=$(echo $addon | awk -F ',' '{print $4}')
+        addonsrc=$(echo $addon | awk -F ',' '{print $1}')
+        addon=$(echo $addon | awk -F ',' '{print $2}')
+        url=${addonsrc%/*}; addonsrc=${addonsrc##*/}; [ "$addonsrc" = "$url" ] && url=''
+        if [ -n "$addon" ]; then
+            mkdir -p ../addons/$addon
+            cp -a  ../addons/$addonsrc/* ../addons/$addon
+            mv ../addons/$addon/$addonsrc.txt ../addons/$addon/$addon.txt
+            sed -i "s/^$addonsrc/$addon/g" ../addons/$addon/$addon.txt
+        else
+            addon=$addonsrc
+        fi
         if [ -z "$url" ]; then
             repo=$(awk '{ print $2 }' ../addons/$addon/$addon.txt)
             branch=$(awk '{ print $3 }' ../addons/$addon/$addon.txt)
         else
-            repo="$url/$addon"
+            repo="$url/$addonsrc"
             branch=${branch:-master}
             mkdir -p ../addons/$addon
             echo "linux rbpi" > ../addons/$addon/platforms.txt
             echo "$addon $repo $branch" > ../addons/$addon/$addon.txt
         fi
         print_log info "Configure addon $addon, fetching from $repo, branch $branch"
-        git clone -b $branch $repo && cd $addon && git checkout $commit && mkdir -p build && cd build
+        git clone -b $branch $repo $addon && cd $addon && git checkout $commit && mkdir -p build && cd build
         eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX $(readlink -f ../../../.)
     )
 done

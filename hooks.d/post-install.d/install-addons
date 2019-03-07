@@ -26,6 +26,8 @@ CMP=
                     if patch -p1 --dry-run -F $config_patch_fuzzy < $PATCH >/dev/null; then
                         [ $use_silent = yes ] || echo "Patching addon $ADDON2PATCH with $PATCH"
                         do_run patch -p1 -F $config_patch_fuzzy < $PATCH
+                    elif git apply --check < $PATCH >/dev/null 2>&1 ; then
+                        do_run git apply --whitespace=nowarn < $PATCH >/dev/null
                     else
                         echo "! won't patch addon $ADDON2PATCH with ${PATCH##*/}" >/dev/stderr
                     fi
@@ -37,7 +39,12 @@ CMP=
 
     for addon in $config_build_addons_extra; do
         (
+            addonsrc=$(echo $addon | awk -F ',' '{print $2}')
             addon=${addon##*/}; addon=${addon%%,*}
+            if [ -n "$addonsrc" ]; then
+                [ -d "build/$addonsrc/$addon" ] && mv build/$addonsrc/$addon build/$addonsrc/$addonsrc
+                addon=$addonsrc
+            fi
             echo "Building addon $addon"
             cd build/$addon/build
             eval $config_build_env make
