@@ -1,0 +1,43 @@
+diff --git a/depends/common/libssh/08-static-openssl.patch b/depends/common/libssh/08-static-openssl.patch
+index 59f9240..0ba7cda 100644
+--- a/depends/common/libssh/08-static-openssl.patch
++++ b/depends/common/libssh/08-static-openssl.patch
+@@ -1,5 +1,5 @@
+---- a/ConfigureChecks.cmake
+-+++ b/ConfigureChecks.cmake
++--- a/ConfigureChecks.cmake	2018-08-13 22:12:21.000000000 +0200
+++++ b/ConfigureChecks.cmake	2018-10-05 20:42:48.103813879 +0200
+ @@ -76,6 +76,15 @@
+  endif (WIN32)
+  
+@@ -16,7 +16,7 @@
+      set(CMAKE_REQUIRED_INCLUDES ${OPENSSL_INCLUDE_DIR})
+      check_include_file(openssl/des.h HAVE_OPENSSL_DES_H)
+      if (NOT HAVE_OPENSSL_DES_H)
+-@@ -101,27 +110,27 @@
++@@ -101,27 +110,28 @@
+      check_include_file(openssl/ecdsa.h HAVE_OPENSSL_ECDSA_H)
+  
+      set(CMAKE_REQUIRED_INCLUDES ${OPENSSL_INCLUDE_DIR})
+@@ -43,6 +43,7 @@
+ -    set(CMAKE_REQUIRED_LIBRARIES ${OPENSSL_CRYPTO_LIBRARY})
+ +    set(CMAKE_REQUIRED_LIBRARIES ${LIBSSH_LINK_LIBRARIES})
+      check_function_exists(EVP_CIPHER_CTX_new HAVE_OPENSSL_EVP_CIPHER_CTX_NEW)
+++    set(HAVE_OPENSSL_EVP_CIPHER_CTX_NEW 1)
+  
+      set(CMAKE_REQUIRED_INCLUDES ${OPENSSL_INCLUDE_DIR})
+ -    set(CMAKE_REQUIRED_LIBRARIES ${OPENSSL_CRYPTO_LIBRARY})
+@@ -50,3 +51,13 @@
+      check_function_exists(RAND_priv_bytes HAVE_OPENSSL_RAND_PRIV_BYTES)
+  
+      unset(CMAKE_REQUIRED_INCLUDES)
++--- a/src/libcrypto.c	2018-08-10 11:06:03.000000000 +0200
+++++ b/src/libcrypto.c	2018-10-05 20:45:12.359818807 +0200
++@@ -43,6 +43,7 @@
++ #include <openssl/hmac.h>
++ #include <openssl/opensslv.h>
++ #include <openssl/rand.h>
+++#include <openssl/modes.h>
++ #include "libcrypto-compat.h"
++ 
++ #ifdef HAVE_OPENSSL_AES_H
