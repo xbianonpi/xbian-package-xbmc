@@ -25,4 +25,4 @@ config_build_addons=audiodecoder.2sf audiodecoder.asap audiodecoder.dumb audiode
   visualization.shadertoy visualization.spectrum visualization.waveform\
   vfs.libarchive vfs.nfs vfs.rar vfs.sacd vfs.sftp
 
-config_build_addons_extra=audiodecoder.modplug pvr.iptvsimple,pvr.iptvarchive https://github.com/popcornmix/screensaver.shadertoy
+config_build_addons_extra=audiodecoder.modplug pvr.iptvsimple,pvr.iptvarchive,,aa9690259b5320e17f4253218d982f6aa8e3de53 https://github.com/popcornmix/screensaver.shadertoy
