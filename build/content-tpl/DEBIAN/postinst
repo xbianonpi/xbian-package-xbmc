@@ -21,13 +21,19 @@ if [ "$1" = configure ]; then
 		ln -s /usr/local/share/kodi /usr/local/share/xbmc
 	fi
 
-	if ! grep -q ^DAEMON=/usr/local/lib/kodi/kodi.bin /etc/default/xbmc; then
+	DAEMON='/usr/local/lib/kodi/kodi.bin'
+	if ! grep -q ^"DAEMON=$DAEMON" /etc/default/xbmc; then
 		if grep -q ^DAEMON= /etc/default/xbmc; then
-			sed -i "s:^DAEMON=.*:DAEMON=/usr/local/lib/kodi/kodi.bin:g" /etc/default/xbmc
+			sed -i "s:^DAEMON=.*:DAEMON=$DAEMON:g" /etc/default/xbmc
 		else
-			echo DAEMON=/usr/local/lib/kodi/kodi.bin >> /etc/default/xbmc
+			echo "DAEMON=$DAEMON" >> /etc/default/xbmc
 		fi
 	fi
+
+	case $(xbian-arch revision) in
+		rpi4) [ "$(readlink $DAEMON)" != kodi-gbm ]  && [ -f /usr/local/lib/kodi/kodi-gbm ]  && ln -sfr /usr/local/lib/kodi/kodi-gbm  $DAEMON ;;
+		rpi*) [ "$(readlink $DAEMON)" != kodi-rbpi ] && [ -f /usr/local/lib/kodi/kodi-rbpi ] && ln -sfr /usr/local/lib/kodi/kodi-rbpi $DAEMON ;;
+	esac
 
         test -e /home/xbian/.kodi/userdata/sources.xml && \
 	    sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.kodi/userdata/sources.xml

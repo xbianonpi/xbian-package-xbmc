@@ -1,2 +1,5 @@
 
+exit 0
+
 [ -e ./usr/local/lib/kodi/kodi-rbpi ] && ln -srf ./usr/local/lib/kodi/kodi-rbpi ./usr/local/lib/kodi/kodi.bin || :
+[ -e ./usr/local/lib/kodi/kodi-gbm ] && ln -srf ./usr/local/lib/kodi/kodi-gbm ./usr/local/lib/kodi/kodi.bin || :
