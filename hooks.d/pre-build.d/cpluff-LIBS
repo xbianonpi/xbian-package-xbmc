@@ -6,4 +6,4 @@ case $config_source_branch in
     ;;
 esac
 
-find lib/cpluff/ -iname Makefile -exec sed -i -- 's/@LTLIBINTL@//g' {} +
+find lib/cpluff/ -iname Makefile -exec sed -i -- 's/@LTLIBINTL@//g' {} + 2>/dev/null || :
