@@ -12,4 +12,7 @@ rpi2-krypton stable rpi2-${config_os_version}
 imx6-krypton stable imx6-${config_os_version}
 ## v18
 rpi-leia detect rpi-${config_os_version}
-rpi2-leia detect rpi2-${config_os_version}
+rpi4-leia detect rpi2-${config_os_version}
+## v19
+#rpi-matrix detect rpi-${config_os_version}
+rpi4-matrix detect rpi2-${config_os_version}
