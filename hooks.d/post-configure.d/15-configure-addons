@@ -44,13 +44,15 @@ fi
 mkdir -p addons/build && cd addons/build
 
 PREFIX=/usr/local
-eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
-  -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDON_DEPENDS_PATH=$(readlink -f ./depends) ..
 
-# Extra addons have to proceed separately. That gives us the opportunity to
-# supply patches if needed
-#
-for addon in $config_build_addons_extra; do
+if [ "$config_build_addons" != none ]; then
+    eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=\"$config_build_addons\" -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_DESTDIR=$PREFIX -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX \
+      -DBUILD_DIR=$(readlink -f ./) -DCMAKE_RULE_MESSAGES=OFF -DADDON_DEPENDS_PATH=$(readlink -f ./depends) ..
+
+    # Extra addons have to proceed separately. That gives us the opportunity to
+    # supply patches if needed
+    #
+    for addon in $config_build_addons_extra; do
     (
         branch=$(echo $addon | awk -F ',' '{print $3}')
         commit=$(echo $addon | awk -F ',' '{print $4}')
@@ -76,8 +78,9 @@ for addon in $config_build_addons_extra; do
             echo "$addon $repo $branch" > ../addons/$addon/$addon.txt
         fi
         print_log info "Configure addon $addon, fetching from $repo, branch $branch"
-        git clone -b $branch $repo $addon && cd $addon && git checkout $commit && mkdir -p build && cd build
+        git clone -b $branch $repo $addon && cd $addon && { [ -n "$commit" -a ! -n "${commit//[0-9]/}" ] && { git fetch origin pull/$commit/head:pr && git checkout pr; } || git checkout $commit; } && mkdir -p build && cd build
         eval $config_build_env cmake $CMAKECONF_ADDONS -DADDONS_TO_BUILD=$addon -DADDON_SRC_PREFIX=../.. -DOVERRIDE_PATHS=1 -DCMAKE_INSTALL_PREFIX=$XBIANPKGDIR/content/$PREFIX $(readlink -f ../../../.)
     )
-done
+    done
+fi
 
