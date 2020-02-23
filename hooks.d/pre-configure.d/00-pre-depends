@@ -34,8 +34,6 @@ case $config_platform_branch in
         [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdcss
         [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdread
         [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdnav
-        [ ! -d target/taglib ]    || eval $config_build_env make -C target/taglib
-        [ ! -d target/tinyxml ]   || eval $config_build_env make -C target/tinyxml
         ;;
     *-l*|*-m*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
