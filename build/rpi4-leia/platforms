@@ -1,0 +1,3 @@
+config_platforms=rbpi gbm
+config_rename_addons=visualization.shadertoy screensaver.shadertoy
+
