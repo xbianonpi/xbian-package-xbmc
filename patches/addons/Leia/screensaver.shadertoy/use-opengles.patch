@@ -1,0 +1,29 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 00c61d5..aa4139b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,13 +7,17 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
+ find_package(Kodi REQUIRED)
+ find_package(p8-platform REQUIRED)
+ 
+-find_package(OpenGL)
+-if(OPENGL_FOUND)
+-  find_package(GLEW REQUIRED)
+-  set(INCLUDES ${OpenGL_INCLUDE_DIR}
+-               ${GLEW_INCLUDE_DIR})
+-  add_definitions(-DHAS_OPENGL)
+-  set(DEPLIBS ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
++if(APP_RENDER_SYSTEM STREQUAL "gl" OR NOT APP_RENDER_SYSTEM)
++  find_package(OpenGL)
++  if(OPENGL_FOUND)
++    find_package(GLEW REQUIRED)
++    set(INCLUDES ${OpenGL_INCLUDE_DIR}
++                 ${GLEW_INCLUDE_DIR})
++    add_definitions(-DHAS_OPENGL)
++    set(DEPLIBS ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
++  else()
++    message(FATAL_ERROR "No rendering API found. Bailing")
++  endif()
+ else()
+   find_package(OpenGLES2)
+   if(OPENGLES2_FOUND)

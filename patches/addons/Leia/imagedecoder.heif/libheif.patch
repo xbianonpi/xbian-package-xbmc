@@ -1,0 +1,65 @@
+diff --git a/depends/common/libheif/04-windows-warnings.patch b/depends/common/libheif/04-windows-warnings.patch
+index c3b8bd0..4730662 100644
+--- a/depends/common/libheif/04-windows-warnings.patch
++++ b/depends/common/libheif/04-windows-warnings.patch
+@@ -20,3 +20,49 @@
+    int out_cb_stride=0, out_cr_stride=0, out_y_stride=0, out_a_stride=0;
+  
+    const uint8_t *in_p;
++--- a/libheif/box.cc
+++++ a/libheif/box.cc
++@@ -1029,15 +1029,15 @@
++ 
++       // --- move file pointer to start of data
++ 
++-      bool success = istr->seek(extent.offset + item.base_offset);
++-      assert(success);
+++      //bool success = istr->seek(extent.offset + item.base_offset);
+++      //assert(success);
++ 
++ 
++       // --- read data
++ 
++       dest->resize(static_cast<size_t>(old_size + extent.length));
++-      success = istr->read((char*)dest->data() + old_size, static_cast<size_t>(extent.length));
++-      assert(success);
+++      //success = istr->read((char*)dest->data() + old_size, static_cast<size_t>(extent.length));
+++      //assert(success);
++     }
++     else if (item.construction_method==1) {
++       if (!idat) {
++@@ -2460,17 +2460,17 @@
++                  heif_suberror_End_of_data);
++   }
++ 
++-  bool success;
++-  success = istr->seek(m_data_start_pos + (std::streampos)start);
++-  assert(success);
+++  //bool success;
+++  //success = istr->seek(m_data_start_pos + (std::streampos)start);
+++  //assert(success);
++ 
++   // reserve space for the data in the output array
++ 
++   out_data.resize(static_cast<size_t>(curr_size + length));
++-  uint8_t* data = &out_data[curr_size];
+++  //uint8_t* data = &out_data[curr_size];
++ 
++-  success = istr->read((char*)data, static_cast<size_t>(length));
++-  assert(success);
+++  //success = istr->read((char*)data, static_cast<size_t>(length));
+++  //assert(success);
++ 
++   return Error::Ok;
++ }
+--- CMakeLists.txt-orig	2019-05-20 15:07:42.960733796 +0200
++++ CMakeLists.txt	2019-05-20 16:04:39.903417383 +0200
+@@ -28,7 +28,7 @@
+ if(UNIX)
+   include (${CMAKE_ROOT}/Modules/FindPkgConfig.cmake)
+   pkg_check_modules (LIBDE265 libde265)
+-  pkg_check_modules (X265 x265)
++  #pkg_check_modules (X265 x265)
+ else()
+   find_path(de265_INCLUDE_DIR NAMES libde265/de265.h)
+   set(LIBDE265_CFLAGS /I${de265_INCLUDE_DIR})
