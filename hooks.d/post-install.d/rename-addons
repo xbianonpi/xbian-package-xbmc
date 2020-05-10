@@ -1,0 +1,11 @@
+
+arch_config=$(readlink -f ../config | awk -F. '{print $2}')
+
+#[ -z "$arch_config" -o "$config_arch_config" = none ] && exit 0
+[ -z "$arch_config" ] && exit 0
+
+for a in $config_rename_addons; do
+(
+    cd $(readlink -f $XBIANPKGDIR/content/usr/local/lib/kodi/addons) && rm -rf $a-$arch_config && mv $a $a-$arch_config || :
+)
+done
