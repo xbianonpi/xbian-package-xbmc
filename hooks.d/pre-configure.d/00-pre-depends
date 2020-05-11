@@ -35,8 +35,13 @@ case $config_platform_branch in
         [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdread
         [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdnav
         ;;
-    *-l*|*-m*)
+    *-l*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
+        ;;
+    *-m*)
+        eval $config_build_env make -C native/libtool$NS all    # for libdvd*
+        [ ! -d target/libfmt ] || eval $config_build_env make -C target/libfmt
+        [ ! -d target/libspdlog ] || eval $config_build_env make -C target/libspdlog
         ;;
     *)
         exit 0
