@@ -40,7 +40,6 @@ case $config_platform_branch in
         ;;
     *-m*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
-        [ ! -d target/libfmt ] || eval $config_build_env make -C target/libfmt
         [ ! -d target/libspdlog ] || eval $config_build_env make -C target/libspdlog
         ;;
     *)
