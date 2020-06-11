@@ -41,6 +41,7 @@ case $config_platform_branch in
     *-m*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
         [ ! -d target/libspdlog ] || eval $config_build_env make -C target/libspdlog
+        [ ! -d target/libudfread ] || eval $config_build_env make -C target/libudfread
         ;;
     *)
         exit 0
