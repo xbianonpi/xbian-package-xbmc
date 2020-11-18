@@ -21,6 +21,7 @@ config_build_addons=audiodecoder.2sf audiodecoder.asap audiodecoder.dumb audiode
   audiodecoder.ssf audiodecoder.timidity audiodecoder.upse audiodecoder.usf audiodecoder.vgmstream audiodecoder.wsr\
   audioencoder.flac audioencoder.lame audioencoder.vorbis audioencoder.wav\
   imagedecoder.heif imagedecoder.mpo imagedecoder.raw inputstream.adaptive inputstream.rtmp\
+  peripheral.joystick peripheral.xarcade\
   pvr.argustv pvr.dvblink pvr.dvbviewer pvr.filmon pvr.hdhomerun pvr.hts pvr.iptvsimple pvr.mediaportal.tvserver pvr.mythtv pvr.nextpvr pvr.njoy pvr.octonet\
   pvr.pctv pvr.stalker pvr.teleboy pvr.vbox pvr.vdr.vnsi pvr.vuplus pvr.waipu pvr.wmc pvr.zattoo\
   visualization.shadertoy visualization.spectrum visualization.waveform\
