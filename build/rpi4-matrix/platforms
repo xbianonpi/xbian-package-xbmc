@@ -1,0 +1,2 @@
+config_platforms=rbpi gbm
+config_rename_addons=visualization.fishbmc visualization.shadertoy screensaver.shadertoy
