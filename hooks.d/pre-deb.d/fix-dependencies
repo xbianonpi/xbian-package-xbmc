@@ -22,4 +22,10 @@ case "$c" in
         sed -i "s/libpng12-0[^,]*,/libpng16-16,/g" DEBIAN/control
         ;;
 
+    *bullseye*)
+        sed -i "s/libnfs4[^,]*,/libnfs13,/g" DEBIAN/control
+        sed -i "s/libplist2[^,]*,/libplist3,/g" DEBIAN/control
+        sed -i "s/libpng12-0[^,]*,/libpng16-16,/g" DEBIAN/control
+        ;;
+
 esac
