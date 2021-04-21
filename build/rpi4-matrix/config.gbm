@@ -13,7 +13,7 @@ config_source_type_extra=--single-branch
 
 config_deb_depends=\${shlibs:Depends}, xbian-package-firmware (>=2.6.0) | firmware-imx (>= 2.0.0),\
  xbian-package-config-xbmc, xbian-package-shairplay, xbian-package-xbmc-scripts (>= 1.9.0), xbian-package-xbianhome,\
- alsa-tools, consolekit | logind, python-imaging, python3-pycryptodome, ttf-dejavu-core, udisks2, upower,\
+ alsa-tools, consolekit | logind, python3-pil, python3-pycryptodome, fonts-dejavu-core, udisks2, upower,\
  libgif7, libplist2 | libplist3, libgl1-mesa-dri, libnss3, libsdl-image1.2, librtmp1, libmpeg2-4, libbluetooth3, libmad0,\
  libtiff5, libafpclient0, libsamplerate0, libpng12-0 | libpng16-16, libaacs0, libenca0, libfontconfig1, libvorbisfile3
 
