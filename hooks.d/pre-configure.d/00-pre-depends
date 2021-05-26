@@ -38,7 +38,7 @@ case $config_platform_branch in
     *-l*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
         ;;
-    *-m*)
+    *-m*|*-n*)
         eval $config_build_env make -C native/libtool$NS all    # for libdvd*
         eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || eval $config_build_env make -C target/libspdlog
         eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || eval $config_build_env make -C target/libudfread
