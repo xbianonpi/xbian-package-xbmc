@@ -35,9 +35,6 @@ if [ "$1" = configure ]; then
 		rpi*) [ "$(readlink $DAEMON)" != kodi-rbpi ] && [ -f /usr/local/lib/kodi/kodi-rbpi ] && ln -sfr /usr/local/lib/kodi/kodi-rbpi $DAEMON ;;
 	esac
 
-        test -e /home/xbian/.kodi/userdata/sources.xml && \
-	    sed --follow-symlinks -i 's%http://mirrors.superrepo.org/addons/frodo/.xml/repositories/addons.xml%http://mirrors.superrepo.org/Gotham/All/%' /home/xbian/.kodi/userdata/sources.xml
-
         mkdir -p /home/xbian/run_on_reboot
         
 cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
