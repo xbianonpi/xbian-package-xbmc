@@ -18,30 +18,40 @@ test -e ./Makefile.include || exit 1
 
 [ -d native/autoconf-native ] && NS='-native' || NS=''
 
-eval $config_build_env make -C native/autoconf$NS all
-eval $config_build_env make -C native/automake$NS all
+build_env () {
+    for i in 1 2 3; do
+        eval $config_build_env make -C $@ && return || :
+        echo "[]--------------------------------------------------[]"
+        echo "[] Build error, pass $i                              []"
+        echo "[]--------------------------------------------------[]"
+    done
+    exit 1
+}
+
+build_env native/autoconf$NS all
+build_env native/automake$NS all
 
 # Kodi v18: libdvd* wont't built without pkg-config
-eval $config_build_env make -C native/pkg-config$NS all # TexturePacker configure needs pkg.m4
-[ ! -d target/libdcadec ] || eval $config_build_env make -C target/libdcadec all     # 
-[ ! -d target/crossguid ] || eval $config_build_env make -C target/crossguid all
+build_env  native/pkg-config$NS all # TexturePacker configure needs pkg.m4
+[ ! -d target/libdcadec ] || build_env target/libdcadec all     #
+[ ! -d target/crossguid ] || build_env target/crossguid all
 
 
 ### Kodi v17, v18, v19
 case $config_platform_branch in
     *-krypton)
-        eval $config_build_env make -C native/libtool$NS all    # for libdvd*
-        [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdcss
-        [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdread
-        [ ! -d target/libdvdcss ] || eval $config_build_env make -C target/libdvdnav
+        build_env native/libtool$NS all    # for libdvd*
+        [ ! -d target/libdvdcss ] || build_env target/libdvdcss
+        [ ! -d target/libdvdcss ] || build_env target/libdvdread
+        [ ! -d target/libdvdcss ] || build_env target/libdvdnav
         ;;
     *-l*)
-        eval $config_build_env make -C native/libtool$NS all    # for libdvd*
+        build_env native/libtool$NS all    # for libdvd*
         ;;
     *-m*|*-n*)
-        eval $config_build_env make -C native/libtool$NS all    # for libdvd*
-        eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || eval $config_build_env make -C target/libspdlog
-        eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || eval $config_build_env make -C target/libudfread
+        build_env native/libtool$NS all    # for libdvd*
+        eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || build_env target/libspdlog
+        eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || build_env target/libudfread
         ;;
     *)
         exit 0
