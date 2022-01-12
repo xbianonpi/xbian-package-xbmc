@@ -28,18 +28,24 @@ build_env () {
     exit 1
 }
 
-build_env native/autoconf$NS all
-build_env native/automake$NS all
-
-# Kodi v18: libdvd* wont't built without pkg-config
-build_env  native/pkg-config$NS all # TexturePacker configure needs pkg.m4
-[ ! -d target/libdcadec ] || build_env target/libdcadec all     #
-[ ! -d target/crossguid ] || build_env target/crossguid all
-
-
-### Kodi v17, v18, v19
 case $config_platform_branch in
-    *-krypton)
+    *-[mno]*)
+        : # Building tools not longer required
+        ;;
+    *)
+        build_env native/autoconf$NS all
+        build_env native/automake$NS all
+        # Kodi v18: libdvd* wont't built without pkg-config
+        build_env  native/pkg-config$NS all # TexturePacker configure needs pkg.m4
+        [ ! -d target/crossguid ] || build_env target/crossguid all
+        ;;
+esac
+
+[ ! -d target/libdcadec ] || build_env target/libdcadec all
+
+### Kodi v17, v18, v19, v20
+case $config_platform_branch in
+    *-k*)
         build_env native/libtool$NS all    # for libdvd*
         [ ! -d target/libdvdcss ] || build_env target/libdvdcss
         [ ! -d target/libdvdcss ] || build_env target/libdvdread
@@ -48,8 +54,7 @@ case $config_platform_branch in
     *-l*)
         build_env native/libtool$NS all    # for libdvd*
         ;;
-    *-m*|*-n*)
-        build_env native/libtool$NS all    # for libdvd*
+    *-[mno]*)
         eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || build_env target/libspdlog
         eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || build_env target/libudfread
         ;;
