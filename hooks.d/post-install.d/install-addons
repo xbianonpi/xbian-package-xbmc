@@ -5,7 +5,6 @@ CMP=
 [ -z $CMP ] && exit 0
 
 (
-    [ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
     export CXXFLAGS="-fPIC $CXXFLAGS"
 
     cd $CMP
@@ -25,9 +24,9 @@ CMP=
                     cd build/$ADDON2PATCH
                     if patch -p1 --dry-run -F $config_patch_fuzzy < $PATCH >/dev/null; then
                         [ $use_silent = yes ] || echo "Patching addon $ADDON2PATCH with $PATCH"
-                        do_run patch -p1 -F $config_patch_fuzzy < $PATCH
+                        patch -p1 -F $config_patch_fuzzy < $PATCH
                     elif git apply --check < $PATCH >/dev/null 2>&1 ; then
-                        do_run git apply --whitespace=nowarn < $PATCH >/dev/null
+                        git apply --whitespace=nowarn < $PATCH >/dev/null
                     else
                         echo "! won't patch addon $ADDON2PATCH with ${PATCH##*/}" >/dev/stderr
                     fi

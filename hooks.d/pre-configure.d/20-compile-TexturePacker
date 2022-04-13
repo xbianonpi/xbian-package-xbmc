@@ -9,8 +9,6 @@ case $config_platform_branch in
         ;;
 esac
 
-[ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
-
 eval $config_build_env make -C tools/depends/native/TexturePacker ||:
 
 dir=$(grep NATIVEPREFIX= tools/depends/Makefile.include | awk -F'=' '{print $2}')

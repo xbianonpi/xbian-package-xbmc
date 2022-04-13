@@ -1,7 +1,5 @@
 [ -d tools/depends/native/libsquish-native ] || exit 0
 
-[ ! -e $XBIANROOT/common.functions ] || . $XBIANROOT/common.functions && { [ ! -e ../env ] || rexp ../env; }
-
 eval $config_build_env make -C tools/depends/native/libsquish-native all
 
 dir=$(grep NATIVEPREFIX= tools/depends/Makefile.include | awk -F'=' '{print $2}')
