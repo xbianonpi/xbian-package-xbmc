@@ -30,13 +30,17 @@ if [ "$1" = configure ]; then
 		fi
 	fi
 
-	case $(xbian-arch revision) in
-		rpi4) [ "$(readlink $DAEMON)" != kodi-gbm ]  && [ -f /usr/local/lib/kodi/kodi-gbm ]  && ln -sfr /usr/local/lib/kodi/kodi-gbm  $DAEMON ;;
-		rpi*) [ "$(readlink $DAEMON)" != kodi-rbpi ] && [ -f /usr/local/lib/kodi/kodi-rbpi ] && ln -sfr /usr/local/lib/kodi/kodi-rbpi $DAEMON ;;
+	rev=$(xbian-arch revision | sed "s/^r//g")
+	vcc=$(grep -A2 "\[$rev\]$" /boot/config.txt 2>/dev/null) || vcc="[$rev]"
+	case $rev in
+		pi|pi0|pi0w) arch=rbpi; rm -f /usr/local/share/kodi/system/settings/rbp2.xml ;;
+		pi[023]*)    echo "$vcc" | grep -qE ^dtoverlay=vc4-f?kms-v3d.*,cma-.* && arch=gbm || arch=rbpi ;;
+		pi*)         arch=gbm ;;
 	esac
+	[ "$(readlink $DAEMON)" != kodi-$arch ] && [ -f /usr/local/lib/kodi/kodi-$arch ] && ln -sfr /usr/local/lib/kodi/kodi-$arch $DAEMON
 
         mkdir -p /home/xbian/run_on_reboot
-        
+
 cat <<\EOF > /home/xbian/run_on_reboot/xbian-xbmc-db-update.sh
 #!/bin/bash
 
