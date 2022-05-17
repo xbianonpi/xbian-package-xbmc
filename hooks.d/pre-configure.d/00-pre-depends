@@ -7,8 +7,10 @@ test -e configure || ./bootstrap
     [ "$(dirname $CC)" == "." ] && CCPATH="/usr/bin/" || CCPATH='' # Bypassing ccache
     plat=$(eval $config_build_env $CCPATH$CC -v 2>&1| grep Target | awk '{print $2}')
     extraargs="--host=$plat --build=$plat"
-    [ -z "$PLATFORM" ] || extraargs="--with-platform=$PLATFORM --with-rendersystem=gles $extraargs"
   }
+
+[ -z "$config_with_platform" ] || PLATFORM=$config_with_platform
+[ -z "$PLATFORM" ] || extraargs="--with-platform=$PLATFORM --with-rendersystem=gles $extraargs"
 test -e config.status || eval $config_build_env ./configure --prefix=$(pwd) $extraargs
 
 test -e ./Makefile.include || exit 1
