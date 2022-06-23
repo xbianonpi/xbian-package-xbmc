@@ -57,6 +57,7 @@ checkdb() {
 
 # set noCoW flag for database files
 for d in $(find /home/xbian/.kodi/ -type d | grep -w Database$); do
+    mountpoint -q "$d" && continue
     if [ -e "$d.old" ]; then
 	if ! rm -fr "$d.old" 2>/dev/null; then
 	    if [ $(du -sh "$d.old" | awk '{print $1}') -eq 0 ]; then
