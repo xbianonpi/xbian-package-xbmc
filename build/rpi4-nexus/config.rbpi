@@ -1,0 +1,37 @@
+config_with_platform=raspberry-pi2
+
+config_source_configure=cmake -Bbuild/ -H./ $CMAKECONF
+config_build_env=schroot -c amd64${config_os_version} -p --
+config_source_branch=treeNexus
+config_source_addr=https://github.com/xbianonpi/xbian-sources-xbmc.git
+config_deb_pkgname=xbian-package-xbmc
+config_deb_ctrlextra=Breaks: xbian-package-xbmc-gotham-nightly (<<3.0.0~)
+config_source_reset=yes
+config_source_refresh=yes
+config_source_prepare=mkdir -p build/
+config_build_make=make -C build/
+config_deb_contentclean=yes
+config_source_type_extra=--single-branch
+
+config_deb_depends=\${shlibs:Depends}, xbian-package-firmware (>=2.6.0) | firmware-imx (>= 2.0.0),\
+ xbian-package-config-xbmc, xbian-package-shairplay, xbian-package-xbmc-scripts (>= 1.9.0), xbian-package-xbianhome,\
+ alsa-tools, consolekit | logind, python3-pil, python3-pycryptodome, fonts-dejavu-core, udisks2, upower,\
+ libgif7, libplist2 | libplist3, libgl1-mesa-dri, libnss3, libsdl-image1.2, librtmp1, libmpeg2-4, libbluetooth3, libmad0,\
+ libtiff5, libafpclient0, libsamplerate0, libpng12-0 | libpng16-16, libaacs0, libenca0, libfontconfig1, libvorbisfile3
+
+config_build_addons=audiodecoder.2sf audiodecoder.asap audiodecoder.dumb audiodecoder.fluidsynth audiodecoder.gme audiodecoder.gsf audiodecoder.hvl\
+  audiodecoder.ncsf audiodecoder.nosefart audiodecoder.openmpt audiodecoder.organya audiodecoder.qsf audiodecoder.sacd audiodecoder.sidplay\
+  audiodecoder.snesapu audiodecoder.ssf audiodecoder.stsound audiodecoder.timidity audiodecoder.upse audiodecoder.usf audiodecoder.vgmstream\
+  audiodecoder.wsr audioencoder.flac audioencoder.lame audioencoder.vorbis audioencoder.wav\
+  game.libretro game.libretro.2048 game.libretro.mrboom\
+  imagedecoder.heif imagedecoder.mpo imagedecoder.raw\
+  inputstream.adaptive inputstream.ffmpegdirect inputstream.rtmp\
+  peripheral.joystick peripheral.xarcade\
+  pvr.argustv pvr.dvblink pvr.dvbviewer pvr.filmon pvr.freebox pvr.hdhomerun pvr.hts pvr.iptvsimple pvr.mediaportal.tvserver pvr.mythtv pvr.nextpvr\
+  pvr.njoy pvr.octonet pvr.pctv pvr.plutotv pvr.sledovanitv.cz pvr.stalker pvr.teleboy pvr.vbox pvr.vdr.vnsi pvr.vuplus pvr.waipu pvr.wmc pvr.zattoo\
+  screensaver.shadertoy\
+  visualization.fishbmc visualization.shadertoy visualization.spectrum visualization.waveform\
+  vfs.libarchive vfs.rar vfs.sftp
+
+# [url]addon[,addonname[,[branch][,commit|pr]]]
+config_build_addons_extra=audiodecoder.modplug
