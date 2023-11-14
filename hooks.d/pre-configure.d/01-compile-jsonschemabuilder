@@ -1,5 +1,5 @@
 pre=''
-[ -e codegenerator.mk ] || { [ "$(eval $config_build_env dpkg-architecture -q DEB_TARGET_ARCH)" = armhf ] && pre=$config_build_env; }
+[ -e codegenerator.mk ] || { eval $config_build_env dpkg-architecture -q DEB_TARGET_ARCH | grep -qE "armhf|arm64" && pre=$config_build_env; }
 
 eval $pre make -C tools/depends/native/JsonSchemaBuilder all || \
   ( cd tools/depends/native/JsonSchemaBuilder; git clean -xdf ./; \
