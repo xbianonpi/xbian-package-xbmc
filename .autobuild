@@ -19,3 +19,7 @@ rpi4-matrix detect rpi2-${config_os_version}
 ## v20
 rpi-nexus detect rpi-${config_os_version}
 rpi4-nexus detect rpi2-${config_os_version}
+## v21
+rpi-omega detect rpi-${config_os_version}
+rpi4-omega detect rpi2-${config_os_version}
+rpi5-omega detect rpi2-${config_os_version}
