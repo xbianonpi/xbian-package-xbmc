@@ -30,7 +30,7 @@ build_env () {
 }
 
 case $config_platform_branch in
-    *-[mno]*)
+    *-[mnop]*)
         : # Building tools not longer required
         ;;
     *)
@@ -55,7 +55,7 @@ case $config_platform_branch in
     *-l*)
         build_env native/libtool$NS all    # for libdvd*
         ;;
-    *-[mno]*)
+    *-[mnop]*)
         eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || build_env target/libspdlog
         eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || build_env target/libudfread
         ;;
