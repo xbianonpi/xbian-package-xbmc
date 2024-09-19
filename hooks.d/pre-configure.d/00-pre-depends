@@ -44,7 +44,7 @@ esac
 
 [ ! -d target/libdcadec ] || build_env target/libdcadec all
 
-### Kodi v17, v18, v19, v20
+### Kodi v17, v18, v19, v20, v21, v22
 case $config_platform_branch in
     *-k*)
         build_env native/libtool$NS all    # for libdvd*
@@ -55,9 +55,14 @@ case $config_platform_branch in
     *-l*)
         build_env native/libtool$NS all    # for libdvd*
         ;;
-    *-[mnop]*)
+    *-[mno]*)
         eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || build_env target/libspdlog
         eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || build_env target/libudfread
+        ;;
+    *-[p]*)
+        eval $config_build_env dpkg-query -s libspdlog-dev:armhf 2>&1 >/dev/null || build_env target/libspdlog
+        eval $config_build_env dpkg-query -s libudfread-dev:armhf 2>&1 >/dev/null || build_env target/libudfread
+        eval $config_build_env dpkg-query -s libexiv2-dev:armhf 2>&1 >/dev/null || build_env target/exiv2
         ;;
     *)
         exit 0
