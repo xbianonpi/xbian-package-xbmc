@@ -35,4 +35,11 @@ case "$c" in
         sed -i "s/libtiff5[^,]*,/libtiff6,/g" DEBIAN/control
         ;;
 
+    *trixie*)
+        sed -i "s/libnfs4[^,]*,/libnfs14,/g" DEBIAN/control
+        sed -i "s/libplist2[^,]*,/libplist-2.0-4,/g" DEBIAN/control
+        sed -i "s/libpng12-0[^,]*,/libpng16-16t64,/g" DEBIAN/control
+        sed -i "s/libtiff5[^,]*,/libtiff6,/g" DEBIAN/control
+        ;;
+
 esac
